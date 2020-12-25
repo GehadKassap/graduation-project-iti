@@ -1,0 +1,131 @@
+CREATE TABLE Users(
+user_id int NOT NULL auto_increment ,
+f_name VARCHAR(20) NOT NULL,
+l_name VARCHAR(20) NOT NULL,
+password VARCHAR(20) NOT NULL,
+email VARCHAR(50) NOT NULL,
+phone_no VARCHAR(11) NOT NULL ,
+admin_id int NOT NULL,
+primary_key(user_id),
+FOREIGN KEY (admin_id) REFERENCES Admins (admin_id)
+);
+//2
+CREATE TABLE Admins(
+admin_id int not null auto_increment ,
+user_id int not null ,
+FOREIGN KEY(user_id) REFERENCES Users (user_id)
+);
+//3
+CREATE TABLE User_Address(
+adress_id int not null auto_increment,
+user_id int not null ,
+house_no varchar(20) not null,
+government VARCHAR(100),
+city VARCHAR(100),
+street_Name VARCHAR(100),
+PRIMARY KEY (adress_id),
+FOREIGN KEY(user_id) REFERENCES Users (user_id)
+);
+//4
+CREATE TABLE Payment_Card(
+card_no int auto_increment not null,
+user_id int not null ,
+card_type varchar(100) not null,
+card_expdate DATE not null,
+card_password varchar(100) not null,
+order_id int not null ,
+distributed_id int not null,
+PRIMARY KEY (card_no),
+FOREIGN KEY(user_id) REFERENCES Users (user_id) ,
+FOREIGN KEY(order_id) REFERENCES Orders (order_id) ,
+);
+//5
+CREATE TABLE favs(
+userfav_id int auto_increment not null,
+user_id int not null ,
+product_id int not null ,
+PRIMARY KEY (userfav_id),
+FOREIGN KEY(user_id) REFERENCES Users (user_id) ,
+FOREIGN KEY(product_id) REFERENCES Products (product_id) ,
+);
+//6
+CREATE TABLE Cart(
+usercart_id int auto_increment not null,
+product_quantity int not null ,
+user_id int ,
+product_id int ,
+PRIMARY KEY (usercart_id),
+FOREIGN KEY(user_id) REFERENCES Users (user_id) ,
+FOREIGN KEY(product_id) REFERENCES Products (product_id) ,
+);
+//7
+CREATE TABLE Orders(
+order_id int not null auto_increment,
+user_id int not null ,
+product_id int not null ,
+order_tax int , ///***
+order_date date not null,
+order_delivery_time date not null ,
+total_price float not null ,
+total_order_amount int not null,
+distributer_id int not null,
+ship_details varchar(50) not null ,
+PRIMARY KEY (order_id),
+FOREIGN KEY(user_id) REFERENCES Users (user_id) ,
+FOREIGN KEY(product_id) REFERENCES Products (product_id) ,
+FOREIGN KEY(distributer_id) REFERENCES Distributers(distributer_id) ,
+);
+//8
+CREATE TABLE Products(
+product_id int not null auto_increment,
+product_name varchar(100) not null ,
+product_description TEXT,
+product_price float not null ,
+product_quantity int not null,
+admin_id int ,
+user_id int ,
+PRIMARY KEY (product_id),
+FOREIGN KEY(admin_id) REFERENCES Admins (admin_id),
+FOREIGN KEY(user_id) REFERENCES Users (user_id)
+);
+//19
+CREATE TABLE SizeProd(
+size_id int not null auto_increment,
+product_id int not nll ,
+PRIMARY KEY (size_id),
+FOREIGN KEY() REFERENCES  (), 
+FOREIGN KEY(product_id) REFERENCES Products (product_id) 
+);
+//20
+CREATE TABLE CategoryProd(
+cat_id int not null auto_increment,
+product_id int not null ,
+PRIMARY KEY (cat_id),
+FOREIGN KEY() REFERENCES  (), 
+FOREIGN KEY(product_id) REFERENCES Products (product_id) 
+);
+//21
+CREATE TABLE ImageProd(
+img_id int not null auto_increment,
+product_id int not null ,
+PRIMARY KEY (img_id),
+FOREIGN KEY() REFERENCES  (), 
+FOREIGN KEY(product_id) REFERENCES Products (product_id) 
+);
+
+//22
+CREATE TABLE Reviews(
+review_id int not null auto_increment,
+user_id int not null ,
+admin_id int not null ,
+product_id int not null , 
+review_content varchar(200)  null , 
+PRIMARY KEY (review_id),
+FOREIGN KEY(admin_id) REFERENCES Admins (admin_id),
+FOREIGN KEY(user_id) REFERENCES Users (user_id) ,
+FOREIGN KEY(product_id) REFERENCES Products (product_id) 
+);
+
+
+///ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
