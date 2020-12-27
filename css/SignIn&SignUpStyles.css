@@ -92,6 +92,7 @@ img{
   animation-name: animate-login;
 }
 
+
 @keyframes animate-login{
   0%{
     transform: scale(1,1);
@@ -170,7 +171,7 @@ img{
   background-color: var(--first-color-dark);
 }
 
-.login__account, .login__signin{
+.login__account, .login__signin, .login__signup{
   font-weight: 600;
   font-size: var(--small-font-size);
 }
@@ -179,11 +180,11 @@ img{
   color: var(--first-color-dark);
 }
 
-.login__signin{
+.login__signin, .login__signup{
   color: var(--first-color);
   cursor: pointer;
 }
-.login__signin:hover{
+.login__signin:hover, .login__signup:hover{
   color: var(--first-color-dark);
   cursor: pointer;
 
@@ -219,7 +220,6 @@ color: var(--first-color);
     width: 348px;
     justify-self: center;
   }
-  
 }
 
 @media screen and (min-width: 1024px){
@@ -240,13 +240,12 @@ color: var(--first-color);
     width: 600px;
     height: 588px;
     background-color: var(--first-color-lighten);
-    
     border-radius: 1rem;
     padding-left: 1rem;
   }
 
   .login__img img{
-    width: 370px;
+    width: 390px;
     margin-top: 0;
   }
 
@@ -257,6 +256,7 @@ color: var(--first-color);
   .login__registre{
     bottom: -2rem;
   }
+  
 
   .login__create{
     bottom: -5.5rem;
