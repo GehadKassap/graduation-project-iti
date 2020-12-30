@@ -1921,7 +1921,135 @@
 /*======================================
    End Most Popular CSS
 ========================================*/
-
+/*=============================
+	Start Cowndown CSS
+===============================*/
+.cown-down {
+	position: relative;
+	height: 515px;
+	overflow:hidden;
+}
+.cown-down .padding-right{
+	padding-right:0;
+}
+.cown-down .padding-left{
+	padding-left:0;
+}
+.cown-down .image img {
+	width:100%;
+	height:100%;
+}
+.cown-down .content {
+	text-align: center;
+	background: #FDFBEF;
+	height: 100%;
+	position:relative;
+}
+.cown-down .content .heading-block{
+	position:absolute;
+	left:0;
+	top:50%;
+	transform:translateY(-50%);
+	padding: 75px;
+}
+.cown-down .content .small-title {
+	font-size: 13px;
+	color: #777;
+	display: block;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+.cown-down .content .title {
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+.cown-down .content .price {
+	margin-top: 35px;
+	font-size: 35px;
+	font-weight: 700;
+	color: #F7941D;
+}
+.cown-down .content .price s{
+	margin-top: 35px;
+	font-size: 24px;
+	font-weight: 500;
+	color:#666;
+}
+.cown-down .content .cdown {
+	float: none;
+	text-align:center;
+	margin-top:40px;
+	width: 80px;
+	display:inline-block;
+	
+}
+.cown-down .content .cdown {
+	text-align: center;
+}
+.cown-down .content .cdown{
+	display:inline-block;
+}
+.cown-down .content .cdown span {
+	color: #333;
+	font-size: 22px;
+	font-weight:400;
+	text-transform:uppercase;
+}
+.cown-down .content .cdown p{
+	font-size:13px;
+	color:#666;
+	text-transform:uppercase;
+}
+/*=============================
+	End Cowndown CSS
+===============================*/
+/*======================================
+   Start Shop Services CSS
+========================================*/
+.shop-services.section {
+	padding: 80px 0 0px 0;
+	background: #fff;
+}
+.shop-services.home{
+	padding:60px 0;
+	background:#F6F7FB;
+}
+.shop-services .single-service {
+	position: relative;
+	padding-left: 65px;
+}
+.shop-services .single-service i {
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #333;
+	background: transparent;
+	border-radius: 100%;
+	display: block;
+	font-size: 32px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.shop-services .single-service h4 {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 22px;
+	color: #333;
+}
+.shop-services .single-service p {
+	color: #898989;
+	line-height: 28px;
+	font-size:14px;
+}
+/*======================================
+   End Shop Services CSS
+========================================*/
 .footer{
 	background:#222;
 }
