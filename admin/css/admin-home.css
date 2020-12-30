@@ -210,10 +210,15 @@ body {
     color: #4e4e4e;
     font-size: 14px;
 }
+.user-setting-menu li  :hover{
+    text-decoration: none !important;
+    color : #7934f3 !important;
+}
 .user-setting-menu>li>a i {
     margin-right: 10px;
     font-size: 15px;
 }
+
 
 /***************side menu content************/
 .main-menu .main-menu-content {
@@ -586,10 +591,29 @@ body {
     color: #e52d27!important;
 }
 
+/*************************footer*******************************/
 
+.footer {
+    bottom: 0px;
+    color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    padding: 12px 30px;
+    position: absolute;
+    right: 0;
+    left: 250px;
+    background-color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
-
-
+@media only screen and (max-width: 1024px){
+    .footer {
+        position: absolute;
+        left: 0px;
+    }}
 
 
 
