@@ -1,0 +1,100 @@
+
+/******************dashboard**************/
+
+.gradient-deepblue {
+    background: #6a11cb;
+    background: -webkit-linear-gradient(45deg, #6a11cb, #2575fc)!important;
+    background: linear-gradient(45deg, #6a11cb , #2575fc)!important;
+}
+.gradient-ohhappiness {
+    background: #00b09b;
+    background: -webkit-linear-gradient(45deg, #00b09b, #96c93d)!important;
+    background: linear-gradient(45deg, #00b09b, #96c93d)!important;
+}
+.gradient-orange {
+    background: #fc4a1a;
+    background: -webkit-linear-gradient(45deg, #fc4a1a, #f7b733)!important;
+    background: linear-gradient(45deg, #fc4a1a, #f7b733)!important;
+}
+.gradient-ibiza {
+    background: #ee0979;
+    background: -webkit-linear-gradient(45deg, #ee0979, #ff6a00)!important;
+    background: linear-gradient(45deg, #ee0979, #ff6a00)!important;
+}
+.card {
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(57, 98, 254, 0.02), 0 3px 6px rgba(117, 108, 254, 0.12);
+    border: none;
+    background-color: #ffffff;
+}
+
+/************************site charts*************************************/
+@media only screen and (max-width: 1024px){
+.card {
+    margin-bottom: 25px;
+}}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+    font-size: 14px;
+    color: #353434;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.chart-container-1 {
+    position: relative;
+    height: 260px;
+}
+.border-light-3 {
+    border-color: rgba(0, 0, 0, 0.05)!important;
+}
+@media only screen and (max-width: 1199px){
+.row.row-group>div {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+}
+/*************************social interaction*******************************/
+.w_chart {
+     position: relative; 
+     display: inline-block; 
+     width: 60px !important; 
+     height: 60px !important; 
+     text-align: center; 
+}
+.w_percent {
+    display: inline-block;
+    line-height: 65px !important;
+    z-index: 2;
+    color: #353434;
+}
+.w_chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px !important;
+    height: 60px !important;
+}
+.text-facebook {
+    color: #3b5998!important;
+}
+.text-twitter {
+    color: #55acee!important;
+}
+.text-youtube {
+    color: #e52d27!important;
+}
+
+
+
+
+
+
+

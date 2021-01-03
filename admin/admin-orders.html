@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no ">
+        <title>Admin|Home</title>
+    <!--***************styel sheets and bootstrap*******-->
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--************** Web Fonts******* -->
+        <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css">
+        <!--*************Internal style sheet****************-->
+        <link rel="stylesheet" type="text/css" href="css/admin-orders.css" />
+        <link rel="stylesheet" type="text/css" href="css/admin-mainCSS.css" />
+
+        
+    </head>
+
+<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-chartbg" data-col="2-columns">
+<!--start side menue--------------------------------------------------------->
+<div id="wrapper"  >
+<div id="sidebar-wrapper"  data-simplebar="" data-simplebar-auto-hide="true">
+  <div class="brand-logo">
+   
+    <img src="imgs/favicon.png" class="logo-icon" alt="logo icon">
+    <h5 class="logo-text">shop Admin</h5>
+ 
+</div>
+<div class="user-details">
+ <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
+   <div class="avatar"><img class="mr-3 side-user-img" src="imgs/avatar-s-12.jpg" alt="user avatar"></div>
+    <div class="media-body">
+    <h6 class="side-user-name">Mark Johnson <i class="fas fa-angle-left"></i></h6>
+   </div>
+    </div>
+  <div id="user-dropdown" class="collapse">
+   <ul class="user-setting-menu">
+         <li><a href="#"><i class="far fa-user"></i>  My Profile</a></li>
+         <li><a href="#"><i class="fas fa-cog"></i> Setting</a></li>
+         <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+   </ul>
+  </div>
+   </div>
+  <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true" >
+  <div class="main-menu-content">
+    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+      <li class=" nav-item"><a href="admin-home.html"><i class="fas fa-chart-line icons"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span class="menu-title" data-i18n="">Orders</span></a>
+      </li>
+      <li class=" nav-item"><a href="#"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
+      </li>
+      <li class=" nav-item"><a href="#"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
+      </li>
+      <li class=" nav-item"><a href="#"><i class="fas fa-ad icons"></i><span class="menu-title" data-i18n="">Prmotions</span></a>
+      </li>
+      <li class=" nav-item"><a href="#"><i class="fas fa-hand-holding-usd icons"></i><span class="menu-title" data-i18n="">Offers</span></a>
+      </li>
+      <li class="nav-item"><a href="#"><i class="fas fa-envelope-open-text icons"></i><span class="menu-title" data-i18n="">Support</span></a>
+      </li>
+
+    </ul>
+  </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1" href="#" > Log Out!</a>
+  
+</div>
+</div>
+<!----------------------------------------------------------------End Side menu-->
+<!--start nav bar header-------------------------------------------------->
+<header class="topbar-nav">
+  <nav id="header-setting" class="navbar navbar-expand fixed-top">
+   <ul class="navbar-nav mr-auto align-items-center">
+     <li class="nav-item">
+       <a class="nav-link toggle-menu" href="#" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </a>
+     </li>
+     <li class="nav-item">
+       <form class="search-bar">
+         <input type="text" class="form-control" placeholder="What You Want To Find ?">
+          <a href="#"><i class="fas fa-search"></i></a>
+       </form>
+     </li>
+   </ul>
+      
+   <ul class="navbar-nav align-items-center right-nav-link">
+     <li class="nav-item dropdown-lg">
+       <a class="nav-link  waves-effect"  href="#">
+        <i class="far fa-envelope-open"></i><span class="badge badge-primary badge-up">12</span></a>
+       
+     </li>
+     <li class="nav-item dropdown-lg">
+       <a class="nav-link  waves-effect" data-toggle="dropdown" href="#">
+        <i class="far fa-bell"></i><span class="badge badge-info badge-up">14</span></a>
+      
+          
+    
+     <li class="nav-item">
+       <a class="nav-link " data-toggle="dropdown" href="#">
+         <span class="user-profile"><img src="imgs/avatar-s-12.jpg" class="img-circle" alt="user avatar"></span>
+       </a>
+       
+     </li>
+   </ul>
+ </nav>
+ </header>
+<!-------------------------------------------------------end nav bar header-->
+
+<!--start main-contenet---------------------------------------------------------->
+<div class="content-wrapper">
+  <div class="container-fluid">
+      <!--start earnin area------------------------------------------------------------->
+      <div class="row mt-3">
+        <div class="col-12 col-lg-6 col-xl-4">
+          <div class="card">
+          <div class="card-body">
+              <p class="mb-0 ">Earnings <span class="float-right badge badge-primary">Monthly</span></p>
+               <div class="">
+               <h4 class="mb-0 py-3 text-primary">$92,403 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
+               </div>
+               <div class="progress-wrapper">
+                <div class="progress" style="height:5px;">
+                <div class="progress-bar bg-primary" style="width:60%"></div>
+                 </div>
+              </div>
+              <p class="mb-0 mt-2 small-font">Compare to last month <span class="float-right">+15% <i class="fa fa-long-arrow-up"></i></span></p>
+            </div>
+          </div>
+         </div>
+    
+         <div class="col-12 col-lg-6 col-xl-4">
+          <div class="card">
+          <div class="card-body">
+              <p class="text-danger mb-0">Earnings <span class="float-right badge badge-danger">Weekly</span></p>
+               <div class="">
+               <h4 class="mb-0 py-3 text-danger">$15,456 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
+               </div>
+               <div class="progress-wrapper">
+                <div class="progress" style="height:5px;">
+                <div class="progress-bar bg-danger" style="width:45%"></div>
+                 </div>
+              </div>
+              <p class="mb-0 mt-2 small-font">Compare to last week <span class="float-right">+32% <i class="fa fa-long-arrow-up"></i></span></p>
+            </div>
+          </div>
+         </div>
+
+         <div class="col-12 col-lg-6 col-xl-4">
+            <div class="card">
+            <div class="card-body">
+                <p class="text-success mb-0">Earnings <span class="float-right badge badge-success">Today</span></p>
+                 <div class="">
+                 <h4 class="mb-0 py-3 text-success">$7,803 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
+                 </div>
+                 <div class="progress-wrapper">
+                  <div class="progress" style="height:5px;">
+                  <div class="progress-bar bg-success" style="width:80%"></div>
+                   </div>
+                </div>
+                <p class="mb-0 mt-2 small-font">Compare to yesterday <span class="float-right">+43% <i class="fa fa-long-arrow-up"></i></span></p>
+              </div>
+            </div>
+           </div>
+    
+       </div>
+       <!-----------------------------------------------end of earning area-->
+<!--start of recent orders-------------------------------------------------------------------->
+<!-- <div class="row">
+    <div class="col-12 col-lg-12">
+      <div class="card">
+        <div class="card-header border-0">Recent Order Tables
+         <div class="card-action">
+            <div class="dropdown">
+            <a  id="user-dropdown" class="collapse">
+                <i class="fas fa-ellipsis-h"></i>
+            </a>
+             
+             </div>
+            </div>
+        </div>
+          <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                 <thead>
+                  <tr>
+                    <th>Photo</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Completion</th>
+                    <th>Date</th>
+                  </tr>
+                  </thead>
+          <tbody><tr>
+                   <td>
+                     <img alt="Image placeholder" src="imgs/pro1.png" class="product-img">
+                   </td>
+         <td>Headphone GL</td>
+                   <td>$1,840 USD</td>
+                   <td>
+                     <span class="badge-dot">
+                       <i class="bg-danger"></i> pending
+                     </span>
+                   </td>
+                   <td>
+            <div class="progress shadow" style="height: 4px;">
+                         <div class="progress-bar gradient-ibiza" role="progressbar" style="width: 60%"></div>
+                      </div>
+                   </td>
+         <td>10 July 2018</td>
+                  </tr>
+          <tr>
+                   <td>
+                    <img alt="Image placeholder" src="imgs/pro2.png" class="product-img">
+                   </td>
+         <td>Clasic Shoes</td>
+                   <td>$1,520 USD</td>
+                   <td>
+                     <span class="badge-dot">
+                       <i class="bg-success"></i> completed
+                     </span>
+                   </td>
+                   <td>
+            <div class="progress shadow" style="height: 4px;">
+                         <div class="progress-bar gradient-ohhappiness" role="progressbar" style="width: 100%"></div>
+                      </div>
+                   </td>
+         <td>12 July 2018</td>
+                  </tr>
+          <tr>
+                   <td>
+                     <img alt="Image placeholder" src="imgs/pro3.png" class="product-img">
+                   </td>
+                   <td>Hand Watch</td>
+                   <td>$1,620 USD</td>
+                   <td>
+                     <span class="badge-dot">
+                       <i class="bg-warning"></i> delayed
+                     </span>
+                   </td>
+                   <td>
+            <div class="progress shadow" style="height: 4px;">
+                         <div class="progress-bar gradient-orange" role="progressbar" style="width: 70%"></div>
+                      </div>
+                   </td>
+         <td>14 July 2018</td>
+                  </tr>
+          <tr>
+                   <td>
+                     <img alt="Image placeholder" src="imgs/pro4.png" class="product-img">
+                   </td>
+                   <td>Hand Camera</td>
+                   <td>$2,220 USD</td>
+                   <td>
+                     <span class="badge-dot">
+                       <i class="bg-info"></i> on schedule
+                     </span>
+                   </td>
+                   <td>
+            <div class="progress shadow" style="height: 4px;">
+                         <div class="progress-bar gradient-scooter" role="progressbar" style="width: 85%"></div>
+                      </div>
+                   </td>
+         <td>16 July 2018</td>
+                  </tr>
+          <tr>
+                   <td>
+                     <img alt="Image placeholder" src="imgs/pro5.png" class="product-img">
+                   </td>
+                   <td>Iphone-X Pro</td>
+                   <td>$9,890 USD</td>
+                   <td>
+                     <span class="badge-dot">
+                       <i class="bg-success"></i> completed
+                     </span>
+                   </td>
+                   <td>
+            <div class="progress shadow" style="height: 4px;">
+                         <div class="progress-bar gradient-ohhappiness" role="progressbar" style="width: 100%"></div>
+                      </div>
+                   </td>
+         <td>17 July 2018</td>
+                  </tr>
+          <tr>
+                   <td>
+                     <img alt="Image placeholder" src="imgs/pro6.png" class="product-img">
+                   </td>
+                   <td>Ladies Purse</td>
+                   <td>$3,420 USD</td>
+                   <td>
+                     <span class="badge-dot">
+                       <i class="bg-danger"></i> pending
+                     </span>
+                   </td>
+                   <td>
+            <div class="progress shadow" style="height: 4px;">
+                         <div class="progress-bar gradient-ibiza" role="progressbar" style="width: 80%"></div>
+                      </div>
+                   </td>
+         <td>18 July 2018</td>
+                  </tr>
+                </tbody></table>
+              </div>
+      </div>
+    </div>
+   </div> -->
+  
+   <div class="row">
+    <div id="recent-transactions" class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Recent Transactions</h4>
+                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right" href="#" target="_blank">See All Orders</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="card-content">                
+                <div class="table-responsive">
+                    <table id="recent-orders" class="table table-hover table-xl mb-0">
+                        <thead>
+                            <tr>
+                                <th class="border-top-0">Status</th>                                
+                                <th class="border-top-0">Customer Name</th>
+                                <th class="border-top-0">Products</th>
+                                <th class="border-top-0">Categories</th>
+                                <th class="border-top-0">Shipping</th>
+                                <th class="border-top-0">Amount</th>
+                            </tr>
+                        </thead
+                        <tbody>
+                            <tr>
+                                <td class="text-truncate"><i class="far fa-dot-circle success font-medium-1 mr-1"></i> Paid</td>
+                                <td class="text-truncate">
+                                    <span class="avatar avatar-xs">
+                                        <img class="box-shadow-2" src="imgs/avatar-s-1.png" alt="avatar">
+                                    </span>
+                                    <span>Walter R.</span>
+                                </td>
+                                <td class="text-truncate p-1">
+                                    <ul class="list-unstyled users-list m-0">                                               
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro2.png" alt="Avatar">
+                                        </li>
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro4.png" alt="Avatar">
+                                        </li>
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro5.png" alt="Avatar">
+                                        </li>
+                                        <li class="avatar avatar-sm">                                            
+                                            <span class="badge badge-info">+1 more</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-danger round">Food</button>
+                                </td>
+                                <td>
+                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+                                        <div class="progress-bar bg-gradient-x-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-truncate">$ 1200.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-truncate"><i class="far fa-dot-circle danger font-medium-1 mr-1"></i> Declined</td>
+                                <td class="text-truncate">
+                                    <span class="avatar avatar-xs">
+                                        <img class="box-shadow-2" src="imgs/avatar-s-10.jpg" alt="avatar">
+                                    </span>
+                                    <span>Doris R.</span>
+                                </td>
+                                <td class="text-truncate p-1">
+                                    <ul class="list-unstyled users-list m-0">                                               
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro1.png" alt="Avatar">
+                                        </li>
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro4.png" alt="Avatar">
+                                        </li>                                        
+                                        <li class="avatar avatar-sm">                                            
+                                            <span class="badge badge-info">+2 more</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-warning round">Electronics</button>
+                                </td>
+                                <td>
+                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+                                        <div class="progress-bar bg-gradient-x-warning" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-truncate">$ 1850.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-truncate"><i class="far fa-dot-circle warning font-medium-1 mr-1"></i> Pending</td>
+                                <td class="text-truncate">
+                                    <span class="avatar avatar-xs">
+                                        <img class="box-shadow-2" src="imgs/avatar-s-4.jpg" alt="avatar">
+                                    </span>
+                                    <span>Megan S.</span>
+                                </td>
+                                <td class="text-truncate p-1">
+                                    <ul class="list-unstyled users-list m-0">                                               
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro6.png" alt="Avatar">
+                                        </li>
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro5.png" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-success round">Groceries</button>
+                                </td>
+                                <td>
+                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+                                        <div class="progress-bar bg-gradient-x-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-truncate">$ 3200.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-truncate"><i class="far fa-dot-circle success font-medium-1 mr-1"></i> Paid</td>
+                                <td class="text-truncate">
+                                    <span class="avatar avatar-xs">
+                                        <img class="box-shadow-2" src="imgs/avatar-s-5.jpg" alt="avatar">
+                                    </span>
+                                    <span>Andrew D.</span>
+                                </td>
+                                <td class="text-truncate p-1">
+                                    <ul class="list-unstyled users-list m-0">                                               
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro4.png" alt="Avatar">
+                                        </li>
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro3.png" alt="Avatar">
+                                        </li>
+                                        <li class="avatar avatar-sm">                                            
+                                            <span class="badge badge-info">+1 more</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-info round">Apparels</button>
+                                </td>
+                                <td>
+                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+                                        <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-truncate">$ 4500.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-truncate"><i class="far fa-dot-circle success font-medium-1 mr-1"></i> Paid</td>
+                                <td class="text-truncate">
+                                    <span class="avatar avatar-xs">
+                                        <img class="box-shadow-2" src="imgs/avatar-s-12.jpg" alt="avatar">
+                                    </span>
+                                    <span>Elizabeth W.</span>
+                                </td>
+                                <td class="text-truncate p-1">
+                                    <ul class="list-unstyled users-list m-0">                                               
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro2.png" alt="Avatar">
+                                        </li>
+                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro1.png" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-danger round">Food</button>
+                                </td>
+                                <td>
+                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
+                                        <div class="progress-bar bg-gradient-x-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-truncate">$ 1500.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------------------------------------------------------end of dash board-->
+<!--start site chart----------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------end of charts-->
+<!--start social interaction----------------------------------------------------------->
+
+  </div>
+
+</div>
+<!-------------------------------------------------------------------------end main-contenet-->
+<!--start footer------------------------------------------------------------------------------>
+<footer class="footer ">
+    <div class="container">
+      <div class="text-center">
+        Copyright © 2020 ITI students
+      </div>
+    </div>
+  </footer>
+  <!--------------------------------------------------------------------------------end footer-->
+</div>
+
+<!-----------------------------------------------------------end of main main page wrapper----------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <!--***************javascript**********-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home-admin.js"></script>
+</body>
+</html>
