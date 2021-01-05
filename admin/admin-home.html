@@ -1,62 +1,27 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no ">
         <title>Admin|Home</title>
+        <link rel="icon" type="imgs/logo.png" href="imgs/favicon.png">
     <!--***************styel sheets and bootstrap*******-->
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!--************** Web Fonts******* -->
+        <!--************** Plugins******* -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css">
         <!--*************Internal style sheet****************-->
         <link rel="stylesheet" type="text/css" href="css/admin-home.css" />
         <link rel="stylesheet" type="text/css" href="css/admin-mainCSS.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/animate.css" /> -->
+
+
+        
         
     </head>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin|Home</title>
-<!--***************styel sheets and bootstrap*******-->
-    <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-</head>
-<body>
-
-
-=======
-<p>admin home </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-chartbg" data-col="2-columns">
 <!--start side menue--------------------------------------------------------->
@@ -77,9 +42,9 @@
     </div>
   <div id="user-dropdown" class="collapse">
    <ul class="user-setting-menu">
-         <li><a href="#"><i class="far fa-user"></i>  My Profile</a></li>
-         <li><a href="#"><i class="fas fa-cog"></i> Setting</a></li>
-         <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+         <li><a href="admin-profile.html"><i class="far fa-user"></i>  My Profile</a></li>
+         <li><a href="admin-profile-edit.html"><i class="fas fa-cog "></i> Setting</a></li>
+         <li><a href="admin-login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
    </ul>
   </div>
    </div>
@@ -90,19 +55,19 @@
       </li>
       <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span class="menu-title" data-i18n="">Orders</span></a>
       </li>
-      <li class=" nav-item"><a href="#"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
+      <li class=" nav-item"><a href="admin-users.html"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
       </li>
-      <li class=" nav-item"><a href="#"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
+      <li class=" nav-item"><a href="admin-products.html"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
       </li>
-      <li class=" nav-item"><a href="#"><i class="fas fa-ad icons"></i><span class="menu-title" data-i18n="">Prmotions</span></a>
+      <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span class="menu-title" data-i18n="">Promotion</span></a>
       </li>
-      <li class=" nav-item"><a href="#"><i class="fas fa-hand-holding-usd icons"></i><span class="menu-title" data-i18n="">Offers</span></a>
+      <li class=" nav-item"><a href="admin-offers.html"><i class="fas fa-hand-holding-usd icons"></i><span class="menu-title" data-i18n="">Offers</span></a>
       </li>
-      <li class="nav-item"><a href="#"><i class="fas fa-envelope-open-text icons"></i><span class="menu-title" data-i18n="">Support</span></a>
+      <li class="nav-item"><a href="admin-support.html"><i class="fas fa-envelope-open-text icons"></i><span class="menu-title" data-i18n="">Support</span></a>
       </li>
 
     </ul>
-  </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1" href="#" > Log Out!</a>
+  </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up" href="admin-login.html" > Log Out!</a>
   
 </div>
 </div>
@@ -112,9 +77,11 @@
   <nav id="header-setting" class="navbar navbar-expand fixed-top">
    <ul class="navbar-nav mr-auto align-items-center">
      <li class="nav-item">
-       <a class="nav-link toggle-menu" href="#" onclick="openMenu()">
-        <i class="fas fa-bars"></i>
-      </a>
+      <div class="nav-control">
+        <div class="hamburger">
+            <span class="line"></span><span class="line"></span><span class="line"></span>
+        </div>
+    </div>
      </li>
      <li class="nav-item">
        <form class="search-bar">
@@ -126,19 +93,14 @@
       
    <ul class="navbar-nav align-items-center right-nav-link">
      <li class="nav-item dropdown-lg">
-       <a class="nav-link  waves-effect"  href="#">
-        <i class="far fa-envelope-open"></i><span class="badge badge-primary badge-up">12</span></a>
-       
+       <a class="nav-link  waves-effect"  href="admin-support.html">
+        <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up ">12</span></a>
      </li>
-     <li class="nav-item dropdown-lg">
-       <a class="nav-link  waves-effect" data-toggle="dropdown" href="#">
-        <i class="far fa-bell"></i><span class="badge badge-info badge-up">14</span></a>
-      
-          
-    
-     <li class="nav-item">
-       <a class="nav-link " data-toggle="dropdown" href="#">
-         <span class="user-profile"><img src="imgs/avatar-s-12.jpg" class="img-circle" alt="user avatar"></span>
+     <li><a href="admin-profile-edit.html"><i class="bx bx-cog bx-spin"></i></a></li>
+     
+    <li class="nav-item">
+       <a class="nav-link "  href="admin-profile.html">
+         <span class="user-profile"><img src="imgs/avatar-s-12.jpg" class="img-circle pull-up" alt="user avatar"></span>
        </a>
        
      </li>
@@ -152,47 +114,47 @@
   <div class="container-fluid">
 <!--start of dash board-------------------------------------------------------------------->
     <div class="row mt-3">
+        <div class="col-12 col-lg-6 col-xl-3 ">
+          <div class="card gradient-deepblue pull-up">
+            <div class="card-body">
+               <h5 class="text-white mb-0">9526 <span class="float-right"><i class="fa fa-shopping-cart"></i></span></h5>
+                 <div class="progress my-3" style="height:3px;">
+                    <div class="progress-bar" style="width:55%"></div>
+                 </div>
+              <p class="mb-0 text-white small-font">Total Orders <span class="float-right">+4.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
+             </div>
+          </div> 
+        </div>
       <div class="col-12 col-lg-6 col-xl-3">
-        <div class="card gradient-deepblue">
-          <div class="card-body">
-             <h5 class="text-white mb-0">9526 <span class="float-right"><i class="fa fa-shopping-cart"></i></span></h5>
-               <div class="progress my-3" style="height:3px;">
-                  <div class="progress-bar" style="width:55%"></div>
-               </div>
-             <p class="mb-0 text-white small-font">Total Orders <span class="float-right">+4.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
-           </div>
-        </div> 
-      </div>
-      <div class="col-12 col-lg-6 col-xl-3">
-        <div class="card gradient-orange">
+        <div class="card gradient-orange pull-up">
           <div class="card-body">
              <h5 class="text-white mb-0">8323 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h5>
                <div class="progress my-3" style="height:3px;">
                   <div class="progress-bar" style="width:55%"></div>
                </div>
-             <p class="mb-0 text-white small-font">Total Revenue <span class="float-right">+1.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
+             <p class="mb-0 text-white small-font">Total Products <span class="float-right">+1.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
            </div>
         </div>
       </div>
       <div class="col-12 col-lg-6 col-xl-3">
-        <div class="card gradient-ohhappiness">
+        <div class="card gradient-ohhappiness pull-up">
            <div class="card-body">
-             <h5 class="text-white mb-0">6200 <span class="float-right"><i class="fa fa-eye"></i></span></h5>
+             <h5 class="text-white mb-0">6200 <span class="float-right"><i class="far fa-user"></i></span></h5>
                <div class="progress my-3" style="height:3px;">
                   <div class="progress-bar" style="width:55%"></div>
                </div>
-             <p class="mb-0 text-white small-font">Visitors <span class="float-right">+5.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
+             <p class="mb-0 text-white small-font">Total Users <span class="float-right">+5.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
            </div>
         </div>
       </div>
       <div class="col-12 col-lg-6 col-xl-3">
-        <div class="card gradient-ibiza">
+        <div class="card gradient-ibiza pull-up">
            <div class="card-body">
              <h5 class="text-white mb-0">5630 <span class="float-right"><i class="fas fa-feather-alt"></i></span></h5>
                <div class="progress my-3" style="height:3px;">
                   <div class="progress-bar" style="width:55%"></div>
                </div>
-             <p class="mb-0 text-white small-font">Messages <span class="float-right">+2.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
+             <p class="mb-0 text-white small-font">Total Messages <span class="float-right">+2.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
            </div>
         </div>
       </div>
@@ -200,7 +162,7 @@
 <!----------------------------------------------------------------------------end of dash board-->
 <!--start site chart----------------------------------------------------------------------------->
 <div class="row">
-  <div class="col-12 col-lg-8 col-xl-8">
+  <div class="col-12 col-lg-8 col-xl-8 ">
    <div class="card">
   <div class="card-header">Site Traffic
   </div>
@@ -261,22 +223,22 @@
           <table class="table align-items-center">
             <tbody>
               <tr>
-                <td><i class="fa fa-circle mr-2" style="color: #14abef"></i> Direct</td>
+                <td><i class="fa fa-circle mr-2" style="color: #14abef"></i> Sales</td>
                 <td>$5856</td>
                 <td>+55%</td>
               </tr>
               <tr>
-                <td><i class="fa fa-circle mr-2" style="color: #02ba5a"></i>Affiliate</td>
+                <td><i class="fa fa-circle mr-2" style="color: #02ba5a"></i>Products</td>
                 <td>$2602</td>
                 <td>+25%</td>
               </tr>
               <tr>
-                <td><i class="fa fa-circle mr-2" style="color: #d13adf"></i>E-mail</td>
+                <td><i class="fa fa-circle mr-2" style="color: #d13adf"></i>Users</td>
                 <td>$1802</td>
                 <td>+15%</td>
               </tr>
               <tr>
-                <td><i class="fa fa-circle mr-2" style="color: #fba540"></i>Other</td>
+                <td><i class="fa fa-circle mr-2" style="color: #fba540"></i>Category</td>
                 <td>$1105</td>
                 <td>+5%</td>
               </tr>
@@ -290,7 +252,7 @@
 <!--start social interaction----------------------------------------------------------->
 <div class="row">
 	<div class="col-12 col-lg-6 col-xl-3">
-	   <div class="card">
+	   <div class="card pull-up">
 	     <div class="card-body">
 		   <div class="media align-items-center">
 		     
@@ -304,7 +266,7 @@
 	   </div>
 	 </div>
 	 <div class="col-12 col-lg-6 col-xl-3">
-	   <div class="card">
+	   <div class="card pull-up">
 	     <div class="card-body">
 		   <div class="media align-items-center">
 		     
@@ -318,7 +280,7 @@
 	   </div>
 	 </div>
 	 <div class="col-12 col-lg-6 col-xl-3">
-	   <div class="card">
+	   <div class="card pull-up">
 	     <div class="card-body">
 		   <div class="media align-items-center">
 			 <div class="media-body ml-3">
@@ -331,7 +293,7 @@
 	   </div>
    </div>
    <div class="col-12 col-lg-6 col-xl-3">
-    <div class="card">
+    <div class="card pull-up">
       <div class="card-body">
       <div class="media align-items-center">
       <div class="media-body ml-3">
@@ -343,8 +305,14 @@
     </div>
     </div>
   </div>
-	</div>
   </div>
+ 
+
+
+
+
+
+</div>
 
 </div>
 <!-------------------------------------------------------------------------end main-contenet-->
@@ -366,5 +334,6 @@
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/home-admin.js"></script>
+    
 </body>
 </html>
