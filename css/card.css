@@ -3,29 +3,15 @@
     font-family: sans-serif;
     letter-spacing: 1px;
 }
-.test
-{
-    
-}
+
 #card h2
 {
-    background-color: #0062cc;
-    color: #fff;
-    width: 200px;
-    height: 40px;
+   
+ 
     font-size: 24px;
-    padding: 5px;
-}
-#card h2::after
-{
-    content: '';
-    border-top: 40px solid #0062cc;
-    border-right: 60px solid transparent;
-    position: relative;
-    left: 85px;
-    top: 34px;
    
 }
+
 /***    design overlay for icons **/
 .proudct-top .overLay
 {
