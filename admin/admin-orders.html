@@ -4,13 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no ">
-        <title>Admin|Home</title>
+        <title>Admin|orders</title>
+        <link rel="icon" type="imgs/logo.png" href="imgs/favicon.png">
+
     <!--***************styel sheets and bootstrap*******-->
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!--************** Web Fonts******* -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css">
         <!--*************Internal style sheet****************-->
         <link rel="stylesheet" type="text/css" href="css/admin-orders.css" />
         <link rel="stylesheet" type="text/css" href="css/admin-mainCSS.css" />
@@ -37,9 +39,9 @@
     </div>
   <div id="user-dropdown" class="collapse">
    <ul class="user-setting-menu">
-         <li><a href="#"><i class="far fa-user"></i>  My Profile</a></li>
-         <li><a href="#"><i class="fas fa-cog"></i> Setting</a></li>
-         <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+         <li><a href="admin-profile.html"><i class="far fa-user"></i>  My Profile</a></li>
+         <li><a href="admin-profile-edit.html"><i class="fas fa-cog"></i> Setting</a></li>
+         <li><a href="admin-login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
    </ul>
   </div>
    </div>
@@ -50,19 +52,19 @@
       </li>
       <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span class="menu-title" data-i18n="">Orders</span></a>
       </li>
-      <li class=" nav-item"><a href="#"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
+      <li class=" nav-item"><a href="admin-users.html"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
       </li>
-      <li class=" nav-item"><a href="#"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
+      <li class=" nav-item"><a href="admin-products.html"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
       </li>
-      <li class=" nav-item"><a href="#"><i class="fas fa-ad icons"></i><span class="menu-title" data-i18n="">Prmotions</span></a>
+      <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span class="menu-title" data-i18n="">Promotion</span></a>
       </li>
-      <li class=" nav-item"><a href="#"><i class="fas fa-hand-holding-usd icons"></i><span class="menu-title" data-i18n="">Offers</span></a>
+      <li class=" nav-item"><a href="admin-offers.html"><i class="fas fa-hand-holding-usd icons"></i><span class="menu-title" data-i18n="">Offers</span></a>
       </li>
-      <li class="nav-item"><a href="#"><i class="fas fa-envelope-open-text icons"></i><span class="menu-title" data-i18n="">Support</span></a>
+      <li class="nav-item"><a href="admin-support.html"><i class="fas fa-envelope-open-text icons"></i><span class="menu-title" data-i18n="">Support</span></a>
       </li>
 
     </ul>
-  </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1" href="#" > Log Out!</a>
+  </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up" href="admin-login.html" > Log Out!</a>
   
 </div>
 </div>
@@ -72,9 +74,11 @@
   <nav id="header-setting" class="navbar navbar-expand fixed-top">
    <ul class="navbar-nav mr-auto align-items-center">
      <li class="nav-item">
-       <a class="nav-link toggle-menu" href="#" onclick="openMenu()">
-        <i class="fas fa-bars"></i>
-      </a>
+        <div class="nav-control">
+            <div class="hamburger">
+                <span class="line"></span><span class="line"></span><span class="line"></span>
+            </div>
+        </div>
      </li>
      <li class="nav-item">
        <form class="search-bar">
@@ -83,22 +87,16 @@
        </form>
      </li>
    </ul>
-      
    <ul class="navbar-nav align-items-center right-nav-link">
-     <li class="nav-item dropdown-lg">
-       <a class="nav-link  waves-effect"  href="#">
-        <i class="far fa-envelope-open"></i><span class="badge badge-primary badge-up">12</span></a>
-       
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link  waves-effect"  href="admin-support.html">
+        <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up">12</span></a>
      </li>
-     <li class="nav-item dropdown-lg">
-       <a class="nav-link  waves-effect" data-toggle="dropdown" href="#">
-        <i class="far fa-bell"></i><span class="badge badge-info badge-up">14</span></a>
-      
-          
-    
+     <li><a href="admin-profile-edit.html"><i class="bx bx-cog bx-spin"></i></a></li>
+
      <li class="nav-item">
-       <a class="nav-link " data-toggle="dropdown" href="#">
-         <span class="user-profile"><img src="imgs/avatar-s-12.jpg" class="img-circle" alt="user avatar"></span>
+       <a class="nav-link " data-toggle="dropdown" href="admin-profile.html">
+         <span class="user-profile"><img src="imgs/avatar-s-12.jpg" class="img-circle pull-up" alt="user avatar"></span>
        </a>
        
      </li>
@@ -113,7 +111,7 @@
       <!--start earnin area------------------------------------------------------------->
       <div class="row mt-3">
         <div class="col-12 col-lg-6 col-xl-4">
-          <div class="card">
+          <div class="card pull-up">
           <div class="card-body">
               <p class="mb-0 ">Earnings <span class="float-right badge badge-primary">Monthly</span></p>
                <div class="">
@@ -130,7 +128,7 @@
          </div>
     
          <div class="col-12 col-lg-6 col-xl-4">
-          <div class="card">
+          <div class="card pull-up">
           <div class="card-body">
               <p class="text-danger mb-0">Earnings <span class="float-right badge badge-danger">Weekly</span></p>
                <div class="">
@@ -147,7 +145,7 @@
          </div>
 
          <div class="col-12 col-lg-6 col-xl-4">
-            <div class="card">
+            <div class="card pull-up">
             <div class="card-body">
                 <p class="text-success mb-0">Earnings <span class="float-right badge badge-success">Today</span></p>
                  <div class="">
@@ -166,144 +164,7 @@
        </div>
        <!-----------------------------------------------end of earning area-->
 <!--start of recent orders-------------------------------------------------------------------->
-<!-- <div class="row">
-    <div class="col-12 col-lg-12">
-      <div class="card">
-        <div class="card-header border-0">Recent Order Tables
-         <div class="card-action">
-            <div class="dropdown">
-            <a  id="user-dropdown" class="collapse">
-                <i class="fas fa-ellipsis-h"></i>
-            </a>
-             
-             </div>
-            </div>
-        </div>
-          <div class="table-responsive">
-                <table class="table align-items-center table-flush">
-                 <thead>
-                  <tr>
-                    <th>Photo</th>
-                    <th>Product</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                    <th>Completion</th>
-                    <th>Date</th>
-                  </tr>
-                  </thead>
-          <tbody><tr>
-                   <td>
-                     <img alt="Image placeholder" src="imgs/pro1.png" class="product-img">
-                   </td>
-         <td>Headphone GL</td>
-                   <td>$1,840 USD</td>
-                   <td>
-                     <span class="badge-dot">
-                       <i class="bg-danger"></i> pending
-                     </span>
-                   </td>
-                   <td>
-            <div class="progress shadow" style="height: 4px;">
-                         <div class="progress-bar gradient-ibiza" role="progressbar" style="width: 60%"></div>
-                      </div>
-                   </td>
-         <td>10 July 2018</td>
-                  </tr>
-          <tr>
-                   <td>
-                    <img alt="Image placeholder" src="imgs/pro2.png" class="product-img">
-                   </td>
-         <td>Clasic Shoes</td>
-                   <td>$1,520 USD</td>
-                   <td>
-                     <span class="badge-dot">
-                       <i class="bg-success"></i> completed
-                     </span>
-                   </td>
-                   <td>
-            <div class="progress shadow" style="height: 4px;">
-                         <div class="progress-bar gradient-ohhappiness" role="progressbar" style="width: 100%"></div>
-                      </div>
-                   </td>
-         <td>12 July 2018</td>
-                  </tr>
-          <tr>
-                   <td>
-                     <img alt="Image placeholder" src="imgs/pro3.png" class="product-img">
-                   </td>
-                   <td>Hand Watch</td>
-                   <td>$1,620 USD</td>
-                   <td>
-                     <span class="badge-dot">
-                       <i class="bg-warning"></i> delayed
-                     </span>
-                   </td>
-                   <td>
-            <div class="progress shadow" style="height: 4px;">
-                         <div class="progress-bar gradient-orange" role="progressbar" style="width: 70%"></div>
-                      </div>
-                   </td>
-         <td>14 July 2018</td>
-                  </tr>
-          <tr>
-                   <td>
-                     <img alt="Image placeholder" src="imgs/pro4.png" class="product-img">
-                   </td>
-                   <td>Hand Camera</td>
-                   <td>$2,220 USD</td>
-                   <td>
-                     <span class="badge-dot">
-                       <i class="bg-info"></i> on schedule
-                     </span>
-                   </td>
-                   <td>
-            <div class="progress shadow" style="height: 4px;">
-                         <div class="progress-bar gradient-scooter" role="progressbar" style="width: 85%"></div>
-                      </div>
-                   </td>
-         <td>16 July 2018</td>
-                  </tr>
-          <tr>
-                   <td>
-                     <img alt="Image placeholder" src="imgs/pro5.png" class="product-img">
-                   </td>
-                   <td>Iphone-X Pro</td>
-                   <td>$9,890 USD</td>
-                   <td>
-                     <span class="badge-dot">
-                       <i class="bg-success"></i> completed
-                     </span>
-                   </td>
-                   <td>
-            <div class="progress shadow" style="height: 4px;">
-                         <div class="progress-bar gradient-ohhappiness" role="progressbar" style="width: 100%"></div>
-                      </div>
-                   </td>
-         <td>17 July 2018</td>
-                  </tr>
-          <tr>
-                   <td>
-                     <img alt="Image placeholder" src="imgs/pro6.png" class="product-img">
-                   </td>
-                   <td>Ladies Purse</td>
-                   <td>$3,420 USD</td>
-                   <td>
-                     <span class="badge-dot">
-                       <i class="bg-danger"></i> pending
-                     </span>
-                   </td>
-                   <td>
-            <div class="progress shadow" style="height: 4px;">
-                         <div class="progress-bar gradient-ibiza" role="progressbar" style="width: 80%"></div>
-                      </div>
-                   </td>
-         <td>18 July 2018</td>
-                  </tr>
-                </tbody></table>
-              </div>
-      </div>
-    </div>
-   </div> -->
+
   
    <div class="row">
     <div id="recent-transactions" class="col-12">
@@ -311,28 +172,24 @@
             <div class="card-header">
                 <h4 class="card-title">Recent Transactions</h4>
                 <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                <div class="heading-elements">
-                    <ul class="list-inline mb-0">
-                        <li><a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right" href="#" target="_blank">See All Orders</a></li>
-                    </ul>
-                </div>
+                
             </div>            
             <div class="card-content">                
                 <div class="table-responsive">
                     <table id="recent-orders" class="table table-hover table-xl mb-0">
                         <thead>
                             <tr>
-                                <th class="border-top-0">Status</th>                                
+                                <th class="border-top-0">#Order Id</th>                                
                                 <th class="border-top-0">Customer Name</th>
                                 <th class="border-top-0">Products</th>
                                 <th class="border-top-0">Categories</th>
                                 <th class="border-top-0">Shipping</th>
                                 <th class="border-top-0">Amount</th>
                             </tr>
-                        </thead
+                        </thead>
                         <tbody>
                             <tr>
-                                <td class="text-truncate"><i class="far fa-dot-circle success font-medium-1 mr-1"></i> Paid</td>
+                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>3212</td>
                                 <td class="text-truncate">
                                     <span class="avatar avatar-xs">
                                         <img class="box-shadow-2" src="imgs/avatar-s-1.png" alt="avatar">
@@ -350,13 +207,11 @@
                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
                                             <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro5.png" alt="Avatar">
                                         </li>
-                                        <li class="avatar avatar-sm">                                            
-                                            <span class="badge badge-info">+1 more</span>
-                                        </li>
+                                        
                                     </ul>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-danger round">Food</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger round">books</button>
                                 </td>
                                 <td>
                                     <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
@@ -366,7 +221,7 @@
                                 <td class="text-truncate">$ 1200.00</td>
                             </tr>
                             <tr>
-                                <td class="text-truncate"><i class="far fa-dot-circle danger font-medium-1 mr-1"></i> Declined</td>
+                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>4332</td>
                                 <td class="text-truncate">
                                     <span class="avatar avatar-xs">
                                         <img class="box-shadow-2" src="imgs/avatar-s-10.jpg" alt="avatar">
@@ -381,9 +236,7 @@
                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
                                             <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro4.png" alt="Avatar">
                                         </li>                                        
-                                        <li class="avatar avatar-sm">                                            
-                                            <span class="badge badge-info">+2 more</span>
-                                        </li>
+                                        
                                     </ul>
                                 </td>
                                 <td>
@@ -397,7 +250,7 @@
                                 <td class="text-truncate">$ 1850.00</td>
                             </tr>
                             <tr>
-                                <td class="text-truncate"><i class="far fa-dot-circle warning font-medium-1 mr-1"></i> Pending</td>
+                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>7654</td>
                                 <td class="text-truncate">
                                     <span class="avatar avatar-xs">
                                         <img class="box-shadow-2" src="imgs/avatar-s-4.jpg" alt="avatar">
@@ -415,7 +268,7 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-success round">Groceries</button>
+                                    <button type="button" class="btn btn-sm btn-outline-success round">fashion</button>
                                 </td>
                                 <td>
                                     <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
@@ -425,7 +278,7 @@
                                 <td class="text-truncate">$ 3200.00</td>
                             </tr>
                             <tr>
-                                <td class="text-truncate"><i class="far fa-dot-circle success font-medium-1 mr-1"></i> Paid</td>
+                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>8765</td>
                                 <td class="text-truncate">
                                     <span class="avatar avatar-xs">
                                         <img class="box-shadow-2" src="imgs/avatar-s-5.jpg" alt="avatar">
@@ -440,13 +293,11 @@
                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
                                             <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="imgs/pro3.png" alt="Avatar">
                                         </li>
-                                        <li class="avatar avatar-sm">                                            
-                                            <span class="badge badge-info">+1 more</span>
-                                        </li>
+                                        
                                     </ul>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-info round">Apparels</button>
+                                    <button type="button" class="btn btn-sm btn-outline-info round">cosmetics</button>
                                 </td>
                                 <td>
                                     <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
@@ -456,7 +307,7 @@
                                 <td class="text-truncate">$ 4500.00</td>
                             </tr>
                             <tr>
-                                <td class="text-truncate"><i class="far fa-dot-circle success font-medium-1 mr-1"></i> Paid</td>
+                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>2589</td>
                                 <td class="text-truncate">
                                     <span class="avatar avatar-xs">
                                         <img class="box-shadow-2" src="imgs/avatar-s-12.jpg" alt="avatar">
@@ -474,7 +325,7 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-danger round">Food</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger round">Furniture</button>
                                 </td>
                                 <td>
                                     <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
@@ -512,12 +363,12 @@
 </div>
 
 <!-----------------------------------------------------------end of main main page wrapper----------------------------------------->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <!--***************javascript**********-->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/home-admin.js"></script>
+    
 </body>
 </html>

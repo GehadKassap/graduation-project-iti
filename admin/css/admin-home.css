@@ -1,32 +1,36 @@
 
 /******************dashboard**************/
+html{scroll-behavior:smooth}
 
 .gradient-deepblue {
-    background: #6a11cb;
-    background: -webkit-linear-gradient(45deg, #6a11cb, #2575fc)!important;
-    background: linear-gradient(45deg, #6a11cb , #2575fc)!important;
-}
-.gradient-ohhappiness {
-    background: #00b09b;
-    background: -webkit-linear-gradient(45deg, #00b09b, #96c93d)!important;
-    background: linear-gradient(45deg, #00b09b, #96c93d)!important;
+    /* background-image: -webkit-gradient(linear, left top, right bottom, from(#863ee2), to(#571f9e)); */
+    background-image: linear-gradient(to bottom right, #863ee2, #571f9e);
+    color: #fff;
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(126,55,216,0.3);
+    box-shadow: 2px 12px 26px 3px rgba(126,55,216,0.3);
 }
 .gradient-orange {
-    background: #fc4a1a;
-    background: -webkit-linear-gradient(45deg, #fc4a1a, #f7b733)!important;
-    background: linear-gradient(45deg, #fc4a1a, #f7b733)!important;
+    /* background-image: -webkit-gradient(linear, left top, right bottom, from(#ff9cc3), to(#fd3484)); */
+    background-image: linear-gradient(to bottom right, #ff9cc3, #fd3484);
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(254,128,178,0.3);
+    box-shadow: 2px 12px 26px 3px rgba(254,128,178,0.3);
+    color: #fff;
 }
+
+.gradient-ohhappiness {
+    /* background-image: -webkit-gradient(linear, left top, right bottom, from(#ffd85d), to(#ffc200)); */
+    background-image: linear-gradient(to bottom right, #ffd85d, #ffc200);
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(255,199,23,0.3);
+    box-shadow: 2px 12px 26px 3px rgba(255,199,23,0.3);
+}
+
 .gradient-ibiza {
-    background: #ee0979;
-    background: -webkit-linear-gradient(45deg, #ee0979, #ff6a00)!important;
-    background: linear-gradient(45deg, #ee0979, #ff6a00)!important;
+    /* background-image: -webkit-gradient(linear, left top, right bottom, from(#00d2d7), to(#07b2dd)); */
+    background-image: linear-gradient(to bottom right, #00d2d7, #07b2dd);
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(6,181,221,0.3);
+    box-shadow: 2px 12px 26px 3px rgba(6,181,221,0.3);
 }
-.card {
-    margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(57, 98, 254, 0.02), 0 3px 6px rgba(117, 108, 254, 0.12);
-    border: none;
-    background-color: #ffffff;
-}
+
 
 /************************site charts*************************************/
 @media only screen and (max-width: 1024px){
@@ -91,10 +95,5 @@
 .text-youtube {
     color: #e52d27!important;
 }
-
-
-
-
-
 
 
