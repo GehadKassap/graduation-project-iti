@@ -1,0 +1,45 @@
+
+/*******************users traffic***************************/
+
+.card {
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(57, 98, 254, 0.02), 0 3px 6px rgba(117, 108, 254, 0.12);
+    border: none;
+    background-color: #ffffff;
+}
+
+.bg-primary {
+    background-color: #7934f3!important;
+}
+
+
+.border-white {
+    border-color: #fff!important;
+}
+.w-circle-icon {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+.w-circle-icon i {
+    position: relative;
+    top: 18px;
+    font-size: 24px;
+}
+
+.product-img {
+    height: 32px;
+}
+
+.table  .fas{
+font-size: 1.5rem;
+color: tomato;
+}
+.table  .far{
+font-size: 1.5rem;
+color:#3b5998;
+padding-right: .5rem;
+}
+.table tbody td i:hover{
+    cursor: pointer;
+    }

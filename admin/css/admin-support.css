@@ -1,0 +1,14 @@
+/****************support table********************/
+.table td, .table th {
+    vertical-align: middle;
+}
+b, strong {
+    font-weight: bolder;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 500;
+}
+.table tbody td i{
+    size: .5rem;
+}
