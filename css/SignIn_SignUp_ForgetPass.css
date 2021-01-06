@@ -70,7 +70,10 @@ img{
 
 .login__img{
   justify-self: center;
+ 
+  
 }
+
 
 .login__img img{
   width: 400px;
@@ -214,14 +217,15 @@ img{
     width: 348px;
     justify-self: center;
   }
- 
 
 }
+
 
 @media screen and (min-width: 1024px){
   .login{
     height: 100vh;
     overflow: hidden;
+  
   }
 
   .login__content{
@@ -242,6 +246,7 @@ img{
   }
 
   .login__img img{
+    display: flex;
     width: 600px;
     margin-top: 0;
   }
