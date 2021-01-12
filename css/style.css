@@ -1921,6 +1921,220 @@
 /*======================================
    End Most Popular CSS
 ========================================*/
+
+    
+/*======================================
+  21. Contact CSS
+========================================*/
+.contact-us {
+	position: relative;
+	z-index: 43;
+}
+.contact-us .title{
+	margin-bottom: 30px;
+}
+.contact-us .title h4 {
+	font-size: 17px;
+	font-weight: 500;
+	margin-bottom: 5px;
+	color: #F7941D;
+}
+.contact-us .title h3 {
+	font-size: 25px;
+	text-transform: capitalize;
+	font-weight: 600;
+}
+.contact-us .single-head {
+	padding: 50px;
+	box-shadow: 0px 0px 15px #0000001a;
+	height: 100%;
+}
+.contact-us .single-info {
+	text-align: left;
+	margin-bottom:30px;
+}
+.contact-us .single-info i {
+	color: #fff;
+	font-size: 18px;
+	display: inline-block;
+	margin-bottom: 15px;
+	height: 40px;
+	width: 40px;
+	display: block;
+	text-align: center;
+	border-radius: 3px;
+	line-height: 40px;
+	background:#F7941D;
+}
+.contact-us .single-info ul
+.contact-us .single-info ul li{
+	margin-bottom:5px;
+}
+.contact-us .single-info ul li:last-child{
+	margin-bottom:0;
+}
+.contact-us .single-info ul li a{
+	font-weight:400;
+}
+.contact-us .single-info ul li a:hover{
+	color:#F7941D;
+}
+.contact-us .single-info .title {
+	margin-bottom: 10px;
+	font-weight: 500;
+	color: #333;
+	font-size: 18px;
+}
+.contact-us .form-main {
+	box-shadow: 0px 0px 15px #0000001a;
+	padding: 50px;
+}
+.contact-us .form .form-group input {
+	height: 48px;
+	line-height: 48px;
+	width: 100%;
+	border: 1px solid #e6e2f5;
+	padding: 0px 20px;
+	color: #333;
+	border-radius: 0px;
+	font-weight: 400;
+}
+.contact-us .form .form-group textarea {
+	height: 180px;
+	width: 100%;
+	border: 1px solid #e6e2f5;
+	padding: 15px 20px;
+	color: #333;
+	border-radius: 0px;
+	resize: none;
+	font-weight:400;
+}
+.contact-us .form .form-group label {
+	color: #333;
+	position: relative;
+}
+.contact-us .form .form-group label span {
+	color: #ff2c18;
+	display: inline-block;
+	position: absolute;
+	right: -12px;
+	top: 4px;
+	font-size: 16px;
+}
+.contact-us .form .button {
+	margin:0;
+}
+.contact-us .form .button .btn {
+	height: 50px;
+	border: none;
+}
+#myMap {
+	height: 500px;
+	width: 100%;
+}
+/*======================================
+  End Contact CSS
+========================================*/
+
+/* Mail Success */
+.mail-success .mail-inner {
+	text-align: center;
+	background: #fff;
+	padding: 0px 30px;
+}
+.mail-success .mail-inner h2 {
+	margin-bottom: 10px;
+	display: block;
+	font-weight: 600;
+	color: #F7941D;
+	text-transform: uppercase;
+	font-size: 30px;
+}
+.mail-success .mail-inner p {
+	font-size: 14;
+	color: #333;
+	margin-bottom: 30px;
+	line-height: 22px;
+}
+.mail-success .mail-inner .btn {
+	color: #fff;
+	padding: 10px 30px;
+}
+.mail-success .mail-inner .btn i{
+	margin-right:5px;
+}
+
+/*======================================
+   Start Shop Newsletter CSS
+========================================*/
+.shop-newsletter{
+	background:#fff;
+}
+.shop-newsletter .inner{
+	text-align:center;
+}
+.shop-newsletter .inner h4 {
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+.shop-newsletter .inner p{
+	color:#777;
+	font-size:14px;
+	font-weight:400;
+	margin-bottom:30px;
+}
+.shop-newsletter .inner p span{
+	color:#F7941D;
+}
+.shop-newsletter .newsletter-inner{
+	position:relative;
+	display: inline-block;
+}
+.shop-newsletter .newsletter-inner input {
+	width: 480px;
+	height: 55px;
+	border-radius: 0px;
+	padding: 0px 30px;
+	font-weight: 400;
+	display: inline-block;
+	text-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	border: none;
+	border: 1px solid #ececec;
+	border-radius: 30px 0 0 30px;
+}
+.shop-newsletter .newsletter-inner button{
+	border:none;
+	text-shadow:none;
+	box-shadow:none;
+	border-radius:0;
+}
+.shop-newsletter .newsletter-inner .btn {
+	display: inline-block;
+	height: 55px;
+	padding: 10px 30px;
+	position: relative;
+	top: 0;
+	background: #F7941D;
+	color: #fff;
+	left: -4px;
+	border-radius: 0 30px 30px 0;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.shop-newsletter .newsletter-inner .btn:hover{
+	background:#333;
+	color:#fff;
+}
+/*======================================
+   End Shop Newsletter CSS
+========================================*/
+
 /*=============================
 	Start Cowndown CSS
 ===============================*/
@@ -2144,3 +2358,236 @@
 	color:#fff;
 	text-decoration:underline;
 }
+
+/*======================================
+   Start Checkout Form CSS
+========================================*/
+.shop.checkout {
+	padding: 0;
+	background: #fff;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+.shop.checkout .checkout-form {
+	margin-top: 30px;
+}
+.shop.checkout .checkout-form h2 {
+	font-size: 25px;
+	color: #333;
+	font-weight: 700;
+	line-height: 27px;
+}
+.shop.checkout .checkout-form p {
+	font-size: 16px;
+	color: #333;
+	font-weight: 400;
+	margin-top: 12px;
+	margin-bottom: 30px;
+}
+.shop.checkout .form{}
+.shop.checkout .form .form-group {
+	margin-bottom: 25px;
+}
+.shop.checkout .form .form-group label{
+	color:#333;
+	position:relative;
+}
+.shop.checkout .form .form-group label span {
+	color: #ff2c18;
+	display: inline-block;
+	position: absolute;
+	right: -12px;
+	top: 4px;
+	font-size: 16px;
+}
+.shop.checkout .form .form-group input {
+	width: 100%;
+	height: 45px;
+	line-height: 50px;
+	padding: 0 20px;
+	border-radius: 3px;
+	border-radius: 0px;
+	color: #333 !important;
+	border: none;
+	background: #F6F7FB;
+}
+.shop.checkout .form .form-group input:hover{
+	
+}
+.shop.checkout .nice-select {
+	width: 100%;
+	height: 45px;
+	line-height: 50px;
+	margin-bottom: 25px;
+	background: #F6F7FB;
+	border-radius: 0px;
+	border:none;
+}
+.shop.checkout .nice-select .list {
+	width: 100%;
+	height: 300px;
+	overflow: scroll;
+}
+.shop.checkout .nice-select .list li{}
+.shop.checkout .nice-select .list li.option{
+	color:#333;
+}
+.shop.checkout .nice-select .list li.option:hover{
+	background:#F6F7FB;
+	color:#333;
+}
+.shop.checkout .form .address input {
+	margin-bottom: 15px;
+}
+.shop.checkout .form .address input:last-child{
+	margin:0;
+}
+.shop.checkout .form .create-account {
+	margin: 0;
+}
+.shop.checkout .form .create-account input {
+	width: auto;
+	display: inline-block;
+	height: auto;
+	border-radius: 100%;
+	margin-right: 3px;
+}
+.shop.checkout .form .create-account label {
+	display: inline-block;
+	margin: 0;
+}
+.shop.checkout .order-details {
+	margin-top: 30px;
+	background: #fff;
+	padding: 15px 0 30px 0;
+	border: 1px solid #eee;
+}
+.shop.checkout .single-widget {
+	margin-bottom: 30px;
+}
+.shop.checkout .single-widget:last-child{
+	margin:0;
+}
+.shop.checkout .single-widget h2 {
+	position:relative;
+	font-size: 15px;
+	font-weight: 600;
+	padding: 10px 30px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #333;
+	padding-bottom: 5px;
+}
+.shop.checkout .single-widget h2:before{
+	position:absolute;
+	content:"";
+	left:30px;
+	bottom:0;
+	height:2px;
+	width:50px;
+	background:#F7941D;
+}
+.shop.checkout .single-widget .content ul{
+	margin-top:30px;
+}
+.shop.checkout .single-widget .content ul li {
+	display: block;
+	padding: 0px 30px;
+	font-size: 15px;
+	font-weight: 400;
+	color: #333;
+	margin-bottom: 12px;
+}
+.shop.checkout .single-widget .content ul li span{
+	display:inline-block;
+	float:right;
+}
+.shop.checkout .single-widget .content ul li.last {
+	padding-top: 12px;
+	border-top: 1px solid #ebebeb;
+	display: block;
+	font-size: 15px;
+	font-weight: 400;
+	color: #333;
+}
+.shop.checkout .single-widget .checkbox {
+	text-align: left;
+	margin: 0;
+	padding: 0px 30px;
+	margin-top:30px;
+}
+.shop.checkout .single-widget .checkbox label {
+	color: #555555;
+	position: relative;
+	font-size: 14px;
+	padding-left: 20px;
+	margin-top: -5px;
+	font-weight: 400;
+	display: block;
+	margin-bottom: 15px;
+}
+.shop.checkout .single-widget .checkbox label:last-child{
+	margin-bottom:0;
+}
+.shop.checkout .single-widget .checkbox label:hover{
+	cursor:pointer;
+}
+.shop.checkout .single-widget .checkbox label input{
+	display:none;
+}
+.shop.checkout .single-widget .checkbox label::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 7px;
+	width: 12px;
+	height: 12px;
+	line-height: 16px;
+	border: 1px solid #666;
+	border-radius: 100%;
+}
+.shop.checkout .single-widget .checkbox label::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 7px;
+	width: 12px;
+	height: 12px;
+	line-height: 16px;
+	border-radius: 100%;
+	display:block;
+	background:#666;
+	transform:scale(0);
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+}
+.shop.checkout .single-widget .checkbox label.checked::after{
+	opacity:1;
+	visibility:visible;
+	transform:scale(1);
+}
+.shop.checkout .single-widget.payement {
+	padding: 0px 38px;
+	text-align: center;
+	margin-top: 30px;
+}
+.shop.checkout .single-widget.get-button {
+	text-align: center;
+	padding:0px 35px;
+}
+.shop.checkout .single-widget.get-button .btn {
+	height: 46px;
+	width: 100%;
+	line-height: 19px;
+	text-align: center;
+	border-radius: 0;
+	text-transform: uppercase;
+	color: #fff;
+}
+/*======================================
+   End Checkout Form CSS
+========================================*/
+
+
+
