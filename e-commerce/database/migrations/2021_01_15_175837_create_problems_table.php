@@ -15,6 +15,11 @@ class CreateProblemsTable extends Migration
     {
         Schema::create('problems', function (Blueprint $table) {
             $table->id();
+            $table->string('description' , 500);
+            $table->enum('state',['solved' , 'not solved']);
+            $table->unsignedBigInteger('order_id');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('SET NULL');
+
             $table->timestamps();
         });
     }
