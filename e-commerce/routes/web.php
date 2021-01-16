@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\user\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +19,12 @@ Route::get('/', function () {
 Route::get('/allcategories', function () {
     return view('user.homeCategories');
 });
+
+Route::get('/signin', function () {
+    return view('user.Auth.signin');
+});
+Route::get('/forgetpass', function () {
+    return view('user.Auth.forgetpass');
+});
+//user signUp
+Route::get('/register',[UserController::class , "registerForm"]);

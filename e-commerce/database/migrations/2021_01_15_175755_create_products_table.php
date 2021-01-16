@@ -15,27 +15,17 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('summary');
-            $table->longText('description')->nullable();
-            $table->text('photo');
+            $table->string('name' , 100);
+            $table->longText('description' , 500)->nullable();
             $table->float('price');
             $table->float('discount')->nullabale();
-            $table->unsignedBigInteger('quantity');
+             $table->enum('colors',['red','white' ,'green','babyblue' , 'blue'])->default('user');
+             $table->enum('sizes',['xl','xxl' ,'large','small' ,'xxl' ,'medium'])->default('user');
+            $table->integer('quantity');
             #category table
-            $table->unsignedBigInteger('cat_id')->nullable();
-            $table->foreign('cat_id')->references('id')->on('categories')->onDelete('SET NULL');
+           # $table->unsignedBigInteger('cat_id');
+           # $table->foreign('cat_id')->references('id')->on('categories')->onDelete('SET NULL');
             $table->timestamps();
-            ###################################
-
-
-            $table->integer('stock')->default(1);
-            #$table->string('size')->default('M')->nullable();
-            $table->enum('condition',['default','new','hot'])->default('default');
-            $table->enum('status',['active','inactive'])->default('inactive');
-            $table->boolean('is_featured')->deault(false);
-            $table->unsignedBigInteger('child_cat_id')->nullable();
-            #$table->foreign('child_cat_id')->references('id')->on('categories')->onDelete('SET NULL');
 
         });
         ###########################################################

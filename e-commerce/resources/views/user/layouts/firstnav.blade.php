@@ -25,7 +25,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url('/css/flex-slider.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/skitter.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/slicknav.min.css') }}">
-        
+
 </head>
 <body class="js">
 	<!-- Preloader -->
@@ -38,11 +38,11 @@
 		</div>
 	</div>
 	<!-- End Preloader -->
-	
-	
+
+
 	<!-- Header -->
 	<header class="header shop">
-	
+
 		<div class="middle-inner">
 			<div class="container">
 				<div class="row">
@@ -89,11 +89,11 @@
 					<div class="col-lg-2 col-md-3 col-12">
 						<div class="right-bar">
 							<!-- Search Form -->
-						
+
 							<div class="sinlge-bar">
 								<a href="account.html" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
 							</div>
-							
+
 							<div class="sinlge-bar shopping">
 								<a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
 								<!-- Shopping Item -->
@@ -158,7 +158,6 @@
 
 <script type="text/javascript" src="{{ asset('js/active.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/homecategory.js') }}"></script>
-
 
 
 </body>
