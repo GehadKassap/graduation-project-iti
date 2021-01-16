@@ -16,8 +16,7 @@ class CreateProimgsTable extends Migration
         Schema::create('proimgs', function (Blueprint $table) {
             $table->id();
             $table->string('img');
-            $table->unsignedBigInteger('pro_id');
-            $table->foreign('pro_id')->references('id')->on('products')->onDelete('SET NULL');
+
             $table->timestamps();
         });
     }

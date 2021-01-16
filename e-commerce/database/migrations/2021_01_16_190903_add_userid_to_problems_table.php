@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFavsTable extends Migration
+class AddUseridToProblemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateFavsTable extends Migration
      */
     public function up()
     {
-        Schema::create('favs', function (Blueprint $table) {
-            $table->id();
-
-            $table->timestamps();
+        Schema::table('problems', function (Blueprint $table) {
+            //
+            $table->unsignedBigInteger('order_id');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
         });
     }
 
@@ -27,6 +27,8 @@ class CreateFavsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favs');
+        Schema::table('problems', function (Blueprint $table) {
+            //
+        });
     }
 }

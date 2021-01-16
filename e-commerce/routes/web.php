@@ -28,3 +28,9 @@ Route::get('/forgetpass', function () {
 });
 //user signUp
 Route::get('/register',[UserController::class , "registerForm"]);
+Route::post('/register',[UserController::class , "handleForm"]);
+
+//user signIn
+Route::get('/login',[UserController::class , "loginForm"]);
+Route::post('/login',[UserController::class , "handleLogin"]);
+
