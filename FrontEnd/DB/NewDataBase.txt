@@ -1,0 +1,114 @@
+create table Users(
+
+user_id  int not null auto_increment,
+
+user_name varchar(100) not null,
+
+user_email varchar(100) not null unique,
+
+user_phone varchar(20) unique,
+
+user_role boolean default'0' not null?????,
+user_house varchar(20) not null,
+user_city varchar(20) not null,
+user_street varchar(50) not null,
+user_gov varchar(50) not null,
+primary key(user_id)
+
+
+);
+______________________________________size - image - color
+create table Products(
+
+pro_id  int not null auto_increment,
+pro_quan int(50) not null,
+pro_desc varchar(300) not null,
+pro_name varchar(50) not null,
+pro_price float not null,
+pro_offers varchar(50) not null,
+primary key(pro_id)
+
+);
+_____________________________________
+create table Size(
+
+pro_id  int,
+size varchar(50) not null,
+FOREIGN KEY (pro_id) REFERENCES Products (pro_id),
+primary key (pro_id,size)
+);
+__________________________________
+create table Color(
+
+pro_id  int,
+color varchar(50) not null,
+FOREIGN KEY (pro_id) REFERENCES Products (pro_id),
+primary key (pro_id,color)
+);
+_________________________________
+create table Image(
+
+pro_id  int,
+image varchar(50) not null,
+FOREIGN KEY (pro_id) REFERENCES Products (pro_id),
+primary key (pro_id,image)
+);
+
+
+_________________________________
+create table Orders(
+
+ord_id  int not null auto_increment,
+ord_date datetime not null,
+ord_amount int not null,
+ord_state varchar(100) not null,
+primary key(ord_id)
+
+FOREIGN KEY (pro_id) REFERENCES Products (pro_id),
+);
+_____________________________________
+create table Distributer(
+
+dist_id  int not null auto_increment,
+dist_date datetime not null,
+dist_name varchar(100) not null,
+primary key(dist_id)
+
+);
+_____________________________________
+create table Problems(
+
+prob_id  int not null auto_increment,
+prob_state varchar(50) not null,  ?????
+prob_desc varchar(300) not null,
+primary key(prob_id)
+
+);
+______________________________________
+
+create table Payment(
+
+pay_id  int not null auto_increment,
+pay_address varchar(100) not null,  
+pay_method varchar(50) not null,
+primary key(pay_id)
+
+);
+___________________________________??????
+
+create table Promotions(
+
+prom_id  int not null auto_increment,
+prom_percentage varchar(50) not null,  
+primary key(prom_id)
+
+);
+__________________________________
+create table Category(
+
+cat_id  int not null auto_increment,
+cat_type varchar(50) not null,  
+primary key(cat_id)
+
+);
+_____________________________________

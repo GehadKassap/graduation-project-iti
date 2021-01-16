@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no ">
+        <title>Admin|Home</title>
+        <link rel="icon" type="imgs/logo.png" href="imgs/favicon.png">
+    <!--***************styel sheets and bootstrap*******-->
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--************** Plugins******* -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css">
+        <!--*************Internal style sheet****************-->
+        <link rel="stylesheet" type="text/css" href="css/admin-home.css" />
+        <link rel="stylesheet" type="text/css" href="css/admin-mainCSS.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/animate.css" /> -->
+
+
+        
+        
+    </head>
+
+<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-chartbg" data-col="2-columns">
+<!--start side menue--------------------------------------------------------->
+<div id="wrapper"  >
+<div id="sidebar-wrapper"  data-simplebar="" data-simplebar-auto-hide="true">
+  <div class="brand-logo">
+   
+    <img src="imgs/favicon.png" class="logo-icon" alt="logo icon">
+    <h5 class="logo-text">shop Admin</h5>
+ 
+</div>
+<div class="user-details">
+ <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
+   <div class="avatar"><img class="mr-3 side-user-img" src="imgs/avatar-s-12.jpg" alt="user avatar"></div>
+    <div class="media-body">
+    <h6 class="side-user-name">Mark Johnson <i class="fas fa-angle-left"></i></h6>
+   </div>
+    </div>
+  <div id="user-dropdown" class="collapse">
+   <ul class="user-setting-menu">
+         <li><a href="admin-profile.html"><i class="far fa-user"></i>  My Profile</a></li>
+         <li><a href="admin-profile-edit.html"><i class="fas fa-cog "></i> Setting</a></li>
+         <li><a href="admin-login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+   </ul>
+  </div>
+   </div>
+  <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true" >
+  <div class="main-menu-content">
+    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+      <li class=" nav-item"><a href="admin-home.html"><i class="fas fa-chart-line icons"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span class="menu-title" data-i18n="">Orders</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-users.html"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-products.html"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span class="menu-title" data-i18n="">Promotion</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-offers.html"><i class="fas fa-hand-holding-usd icons"></i><span class="menu-title" data-i18n="">Offers</span></a>
+      </li>
+      <li class="nav-item"><a href="admin-support.html"><i class="fas fa-envelope-open-text icons"></i><span class="menu-title" data-i18n="">Support</span></a>
+      </li>
+
+    </ul>
+  </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up" href="admin-login.html" > Log Out!</a>
+  
+</div>
+</div>
+<!----------------------------------------------------------------End Side menu-->
+<!--start nav bar header-------------------------------------------------->
+<header class="topbar-nav">
+  <nav id="header-setting" class="navbar navbar-expand fixed-top">
+   <ul class="navbar-nav mr-auto align-items-center">
+     <li class="nav-item">
+      <div class="nav-control">
+        <div class="hamburger">
+            <span class="line"></span><span class="line"></span><span class="line"></span>
+        </div>
+    </div>
+     </li>
+     <li class="nav-item">
+       <form class="search-bar">
+         <input type="text" class="form-control" placeholder="What You Want To Find ?">
+          <a href="#"><i class="fas fa-search"></i></a>
+       </form>
+     </li>
+   </ul>
+      
+   <ul class="navbar-nav align-items-center right-nav-link">
+     <li class="nav-item dropdown-lg">
+       <a class="nav-link  waves-effect"  href="admin-support.html">
+        <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up ">12</span></a>
+     </li>
+     <li><a href="admin-profile-edit.html"><i class="bx bx-cog bx-spin"></i></a></li>
+     
+    <li class="nav-item">
+       <a class="nav-link "  href="admin-profile.html">
+         <span class="user-profile"><img src="imgs/avatar-s-12.jpg" class="img-circle pull-up" alt="user avatar"></span>
+       </a>
+       
+     </li>
+   </ul>
+ </nav>
+ </header>
+<!-------------------------------------------------------end nav bar header-->
+
+<!--start main-contenet---------------------------------------------------------->
+<div class="content-wrapper">
+  <div class="container-fluid">
+<!--start of dash board-------------------------------------------------------------------->
+    <div class="row mt-3">
+        <div class="col-12 col-lg-6 col-xl-3 ">
+          <div class="card gradient-deepblue pull-up">
+            <div class="card-body">
+               <h5 class="text-white mb-0">9526 <span class="float-right"><i class="fa fa-shopping-cart"></i></span></h5>
+                 <div class="progress my-3" style="height:3px;">
+                    <div class="progress-bar" style="width:55%"></div>
+                 </div>
+              <p class="mb-0 text-white small-font">Total Orders <span class="float-right">+4.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
+             </div>
+          </div> 
+        </div>
+      <div class="col-12 col-lg-6 col-xl-3">
+        <div class="card gradient-orange pull-up">
+          <div class="card-body">
+             <h5 class="text-white mb-0">8323 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h5>
+               <div class="progress my-3" style="height:3px;">
+                  <div class="progress-bar" style="width:55%"></div>
+               </div>
+             <p class="mb-0 text-white small-font">Total Products <span class="float-right">+1.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
+           </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-3">
+        <div class="card gradient-ohhappiness pull-up">
+           <div class="card-body">
+             <h5 class="text-white mb-0">6200 <span class="float-right"><i class="far fa-user"></i></span></h5>
+               <div class="progress my-3" style="height:3px;">
+                  <div class="progress-bar" style="width:55%"></div>
+               </div>
+             <p class="mb-0 text-white small-font">Total Users <span class="float-right">+5.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
+           </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-3">
+        <div class="card gradient-ibiza pull-up">
+           <div class="card-body">
+             <h5 class="text-white mb-0">5630 <span class="float-right"><i class="fas fa-feather-alt"></i></span></h5>
+               <div class="progress my-3" style="height:3px;">
+                  <div class="progress-bar" style="width:55%"></div>
+               </div>
+             <p class="mb-0 text-white small-font">Total Messages <span class="float-right">+2.2% <i class="fas fa-long-arrow-alt-up"></i></span></p>
+           </div>
+        </div>
+      </div>
+    </div>
+<!----------------------------------------------------------------------------end of dash board-->
+<!--start site chart----------------------------------------------------------------------------->
+<div class="row">
+  <div class="col-12 col-lg-8 col-xl-8 ">
+   <div class="card">
+  <div class="card-header">Site Traffic
+  </div>
+  <div class="card-body">
+     <ul class="list-inline">
+     <li class="list-inline-item"><i class="fa fa-circle mr-2" style="color: #14abef"></i>New Visitor</li>
+     <li class="list-inline-item"><i class="fa fa-circle mr-2" style="color: #ade2f9"></i>Old Visitor</li>
+   </ul>
+   <div class="chart-container-1"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+       <canvas id="chart1" width="592" height="325" class="chartjs-render-monitor" style="display: block; height: 260px; width: 474px;"></canvas>
+   </div>
+  </div>
+  
+  <div class="row m-0 row-group text-center border-top border-light-3">
+    <div class="col-12 col-lg-4">
+      <div class="p-3">
+        <h5 class="mb-0">45.87M</h5>
+      <small class="mb-0">Overall Visitor <span> <i class="fa fa-arrow-up"></i> 2.43%</span></small>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="p-3">
+        <h5 class="mb-0">15:48</h5>
+      <small class="mb-0">Visitor Duration <span> <i class="fa fa-arrow-up"></i> 12.65%</span></small>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="p-3">
+        <h5 class="mb-0">245.65</h5>
+      <small class="mb-0">Pages/Visit <span> <i class="fa fa-arrow-up"></i> 5.62%</span></small>
+      </div>
+    </div>
+  </div>
+  
+ </div>
+</div>
+
+  <div class="col-12 col-lg-4 col-xl-4">
+     <div class="card">
+        <div class="card-header">Weekly sales
+        </div>
+        <div class="card-body">
+           <div class="chart-container-2">
+             <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+              <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                </div>
+              </div>
+              <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:200%;height:200%;left:0; top:0">
+                </div>
+              </div>
+            </div>
+          <canvas id="chart2" width="256" height="235" class="chartjs-render-monitor" style="display: block; height: 188px; width: 205px;"></canvas>
+     </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center">
+            <tbody>
+              <tr>
+                <td><i class="fa fa-circle mr-2" style="color: #14abef"></i> Sales</td>
+                <td>$5856</td>
+                <td>+55%</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-circle mr-2" style="color: #02ba5a"></i>Products</td>
+                <td>$2602</td>
+                <td>+25%</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-circle mr-2" style="color: #d13adf"></i>Users</td>
+                <td>$1802</td>
+                <td>+15%</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-circle mr-2" style="color: #fba540"></i>Category</td>
+                <td>$1105</td>
+                <td>+5%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>
+<!------------------------------------------------------------------------end of charts-->
+<!--start social interaction----------------------------------------------------------->
+<div class="row">
+	<div class="col-12 col-lg-6 col-xl-3">
+	   <div class="card pull-up">
+	     <div class="card-body">
+		   <div class="media align-items-center">
+		     
+			 <div class="media-body ml-3">
+			   <h6 class="mb-0">Facebook Followers</h6>
+			   <small class="mb-0">22.14% <i class="fa fa-arrow-up"></i> Last Week</small>
+			 </div>
+			 <i class="fab fa-facebook-f text-facebook text-right fa-2x"></i>
+		   </div>
+		 </div>
+	   </div>
+	 </div>
+	 <div class="col-12 col-lg-6 col-xl-3">
+	   <div class="card pull-up">
+	     <div class="card-body">
+		   <div class="media align-items-center">
+		     
+			 <div class="media-body ml-3">
+			   <h6 class="mb-0">Twitter Tweets</h6>
+			   <small class="mb-0">32.15% <i class="fa fa-arrow-up"></i> Last Week</small>
+			 </div>
+			 <i class="fab fa-twitter text-twitter text-right fa-2x"></i>
+		   </div>
+		 </div>
+	   </div>
+	 </div>
+	 <div class="col-12 col-lg-6 col-xl-3">
+	   <div class="card pull-up">
+	     <div class="card-body">
+		   <div class="media align-items-center">
+			 <div class="media-body ml-3">
+			   <h6 class="mb-0">Youtube Subscribers</h6>
+			   <small class="mb-0">58.24% <i class="fa fa-arrow-up"></i>  Last Week</small>
+			 </div>
+			 <i class="fab fa-youtube text-youtube fa-2x"></i>
+		   </div>
+		 </div>
+	   </div>
+   </div>
+   <div class="col-12 col-lg-6 col-xl-3">
+    <div class="card pull-up">
+      <div class="card-body">
+      <div class="media align-items-center">
+      <div class="media-body ml-3">
+        <h6 class="mb-0">pinterest Followers</h6>
+        <small class="mb-0">58.24% <i class="fa fa-arrow-up"></i> Last Week</small>
+      </div>
+      <i class="fab fa-pinterest-p text-youtube fa-2x"></i>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+ 
+
+
+
+
+
+</div>
+
+</div>
+<!-------------------------------------------------------------------------end main-contenet-->
+<!--start footer------------------------------------------------------------------------------>
+<footer class="footer">
+  <div class="container">
+    <div class="text-center">
+      Copyright © 2020 ITI students
+    </div>
+  </div>
+</footer>
+<!--------------------------------------------------------------------------------end footer-->
+</div>
+<!-----------------------------------------------------------end of main main page wrapper----------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <!--***************javascript**********-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home-admin.js"></script>
+    
+</body>
+</html>

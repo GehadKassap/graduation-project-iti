@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no ">
+		<title>Admin|orders-deatils</title>
+		<link rel="icon" type="imgs/logo.png" href="imgs/favicon.png">
+    <!--***************styel sheets and bootstrap*******-->
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!--************** Web Fonts******* -->
+		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
+        <!--*************Internal style sheet****************-->
+        <link rel="stylesheet" type="text/css" href="css/admin-orders-details.css" />
+        <link rel="stylesheet" type="text/css" href="css/admin-mainCSS.css" />
+
+        
+    </head>
+
+<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-chartbg" data-col="2-columns">
+<!--start side menue--------------------------------------------------------->
+<div id="wrapper"  >
+<div id="sidebar-wrapper"  data-simplebar="" data-simplebar-auto-hide="true">
+  <div class="brand-logo">
+   
+    <img src="imgs/favicon.png" class="logo-icon" alt="logo icon">
+    <h5 class="logo-text">shop Admin</h5>
+ 
+</div>
+<div class="user-details">
+ <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
+   <div class="avatar"><img class="mr-3 side-user-img" src="imgs/avatar-s-12.jpg" alt="user avatar"></div>
+    <div class="media-body">
+    <h6 class="side-user-name">Mark Johnson <i class="fas fa-angle-left"></i></h6>
+   </div>
+    </div>
+  <div id="user-dropdown" class="collapse">
+   <ul class="user-setting-menu">
+         <li><a href="admin-profile.html"><i class="far fa-user"></i>  My Profile</a></li>
+         <li><a href="admin-profile-edit.html"><i class="fas fa-cog"></i> Setting</a></li>
+         <li><a href="admin-login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+   </ul>
+  </div>
+   </div>
+  <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true" >
+  <div class="main-menu-content">
+    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+      <li class=" nav-item"><a href="admin-home.html"><i class="fas fa-chart-line icons"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span class="menu-title" data-i18n="">Orders</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-users.html"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-products.html"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span class="menu-title" data-i18n="">Promotion</span></a>
+      </li>
+      <li class=" nav-item"><a href="admin-offers.html"><i class="fas fa-hand-holding-usd icons"></i><span class="menu-title" data-i18n="">Offers</span></a>
+      </li>
+      <li class="nav-item"><a href="admin-support.html"><i class="fas fa-envelope-open-text icons"></i><span class="menu-title" data-i18n="">Support</span></a>
+      </li>
+
+    </ul>
+  </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up" href="admin-login.html" > Log Out!</a>
+  
+</div>
+</div>
+<!----------------------------------------------------------------End Side menu-->
+<!--start nav bar header-------------------------------------------------->
+<header class="topbar-nav">
+  <nav id="header-setting" class="navbar navbar-expand fixed-top">
+   <ul class="navbar-nav mr-auto align-items-center">
+     <li class="nav-item">
+        <div class="nav-control">
+			<div class="hamburger">
+				<span class="line"></span><span class="line"></span><span class="line"></span>
+			</div>
+		</div>
+     </li>
+     <li class="nav-item">
+       <form class="search-bar">
+         <input type="text" class="form-control" placeholder="What You Want To Find ?">
+          <a href="#"><i class="fas fa-search"></i></a>
+       </form>
+     </li>
+   </ul>
+      
+   <ul class="navbar-nav align-items-center right-nav-link">
+     <li class="nav-item dropdown-lg">
+       <a class="nav-link  waves-effect"  href="admin-support.html">
+        <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up">12</span></a>
+	 </li>
+	 <li><a href="admin-profile-edit.html"><i class="bx bx-cog bx-spin"></i></a></li>
+
+     <li class="nav-item">
+       <a class="nav-link " data-toggle="dropdown" href="admin-profile.html">
+         <span class="user-profile"><img src="imgs/avatar-s-12.jpg" class="img-circle pull-up" alt="user avatar"></span>
+       </a>
+       
+     </li>
+   </ul>
+ </nav>
+ </header>
+<!-------------------------------------------------------end nav bar header-->
+
+<!--start main-contenet---------------------------------------------------------->
+<div class="content-wrapper">
+  <div class="container-fluid">
+      <!--start order details------------------------------------------------------------->
+      
+  
+      <div class="tab-content pt-1">
+		<div class="tab-pane active" id="comp-order-tab" aria-expanded="true" role="tablist" aria-labelledby="complete-order">
+			<div class="card">
+				<div class="card-header">
+					<h4 class="card-title text-center">Order Details User Name.</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-body">
+						<div class="d-flex justify-content-around lh-condensed">
+							<div class="order-details text-center ">
+								<div class="order-title ">Order Number</div>
+								<div class="order-info">#CV45632</div>
+							</div>
+							<div class="order-details text-center">
+								<div class="order-title">Date</div>
+								<div class="order-info">10<sup>th</sup> Oct, 2018</div>
+							</div>
+							<div class="order-details text-center">
+								<div class="order-title">Amount Paid</div>
+								<div class="order-info">$2550</div>
+							</div>
+							<div class="order-details text-center">
+								<div class="order-title">Payment Method</div>
+								<div class="order-info">Credit Card</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card pull-up">
+				<div class="card-header">
+					<div class="float-left">
+						<a href="#" class="btn btn-info">#CV45632</a>
+					</div>
+					<div class="float-right">
+						<a href="#" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</a>
+						<a href="#" class="btn btn-outline-danger"><i class="fas fa-recycle"></i>Decline</a>
+					</div>
+				</div>
+				<div class="card-content">
+					<div class="card-body py-0">
+						<div class="d-flex justify-content-between lh-condensed">
+							<div class="order-details text-center">
+								<div class="product-img d-flex align-items-center">
+									<img class="img-fluid" src="imgs/pro1.png" alt="Card image cap">
+								</div>
+							</div>
+							<div class="order-details">
+								<h6 class="my-0">Fitbit Alta HR Special Edition x 1</h6>
+								<small class="text-muted">Brief description</small>
+							</div>
+							<div class="order-details">
+								<div class="order-info">$250</div>
+							</div>
+							<div class="order-details">
+								<h6 class="my-0">Delivered on Sun, Oct 15th 2018</h6>
+								<small class="text-muted">Brief description</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
+					<span class="float-left">
+						<span class="text-muted">Ordered On</span>
+						<strong>Wed, Oct 3rd 2018</strong>
+					</span>
+					<span class="float-right">
+						<span class="text-muted">Ordered Amount</span>
+						<strong>$250</strong>
+					</span>
+				</div>
+			</div>
+			<div class="card pull-up">
+				<div class="card-header">
+					<div class="float-left">
+						<a href="#" class="btn btn-info">#CV65472</a>
+					</div>
+					<div class="float-right">
+						<a href="#" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</a>
+						<a href="#" class="btn btn-outline-danger"><i class="fas fa-recycle"></i>Decline</a>
+					</div>
+				</div>
+				<div class="card-content">
+					<div class="card-body py-0">
+						<div class="d-flex justify-content-between lh-condensed">
+							<div class="order-details text-center">
+								<div class="product-img d-flex align-items-center">
+									<img class="img-fluid" src="imgs/pro4.png" alt="Card image cap">
+								</div>
+							</div>
+							<div class="order-details">
+								<h6 class="my-0">Mackbook pro 19'' x 1</h6>
+								<small class="text-muted">Brief description</small>
+							</div>
+							<div class="order-details">
+								<div class="order-info">$1150</div>
+							</div>
+							<div class="order-details">
+								<h6 class="my-0">Delivered on Mon, Oct 16th 2018</h6>
+								<small class="text-muted">Brief description</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
+					<span class="float-left">
+						<span class="text-muted">Ordered On</span>
+						<strong>Wed, Oct 3rd 2018</strong>
+					</span>
+					<span class="float-right">
+						<span class="text-muted">Ordered Amount</span>
+						<strong>$1150</strong>
+					</span>
+				</div>
+			</div>
+			<div class="card pull-up">
+				<div class="card-header">
+					<div class="float-left">
+						<a href="#" class="btn btn-info">#CV78645</a>
+					</div>
+					<div class="float-right">
+						<a href="#" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</a>
+						<a href="#" class="btn btn-outline-danger"><i class="fas fa-recycle"></i>Decline</a>
+					</div>
+				</div>
+				<div class="card-content">
+					<div class="card-body py-0">
+						<div class="d-flex justify-content-between lh-condensed">
+							<div class="order-details text-center">
+								<div class="product-img d-flex align-items-center">
+									<img class="img-fluid" src="imgs/pro3.png" alt="Card image cap">
+								</div>
+							</div>
+							<div class="order-details">
+								<h6 class="my-0">VR Headset x 2</h6>
+								<small class="text-muted">Brief description</small>
+							</div>
+							<div class="order-details">
+								<div class="order-info">$700</div>
+							</div>
+							<div class="order-details">
+								<h6 class="my-0">Delivered on Tue, Oct 17th 2018</h6>
+								<small class="text-muted">Brief description</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
+					<span class="float-left">
+						<span class="text-muted">Ordered On</span>
+						<strong>Wed, Oct 3rd 2018</strong>
+					</span>
+					<span class="float-right">
+						<span class="text-muted">Ordered Amount</span>
+						<strong>$700</strong>
+					</span>
+				</div>
+			</div>
+			<div class="card pull-up">
+				<div class="card-header">
+					<div class="float-left">
+						<a href="#" class="btn btn-info">#CV84123</a>
+					</div>
+					<div class="float-right">
+						<a href="#" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</a>
+						<a href="#" class="btn btn-outline-danger"><i class="fas fa-recycle"></i>Decline</a>
+					</div>
+				</div>
+				<div class="card-content">
+					<div class="card-body py-0">
+						<div class="d-flex justify-content-between lh-condensed">
+							<div class="order-details text-center">
+								<div class="product-img d-flex align-items-center">
+									<img class="img-fluid" src="imgs/pro2.png" alt="Card image cap">
+								</div>
+							</div>
+							<div class="order-details">
+								<h6 class="my-0">Smart Watch with LED x 1</h6>
+								<small class="text-muted">Brief description</small>
+							</div>
+							<div class="order-details">
+								<div class="order-info">$700</div>
+							</div>
+							<div class="order-details">
+								<h6 class="my-0">Delivered on Wed, Oct 18th 2018</h6>
+								<small class="text-muted">Brief description</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
+					<span class="float-left">
+						<span class="text-muted">Ordered On</span>
+						<strong>Wed, Oct 3rd 2018</strong>
+					</span>
+					<span class="float-right">
+						<span class="text-muted">Ordered Amount</span>
+						<strong>$700</strong>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-------------------------------------------------------end of order details-->
+
+  </div>
+
+</div>
+<!-------------------------------------------------------------------------end main-contenet-->
+<!--start footer------------------------------------------------------------------------------>
+<footer class="footer ">
+    <div class="container">
+      <div class="text-center">
+        Copyright © 2020 ITI students
+      </div>
+    </div>
+  </footer>
+  <!--------------------------------------------------------------------------------end footer-->
+</div>
+
+<!-----------------------------------------------------------end of main main page wrapper----------------------------------------->
+
+    <!--***************javascript**********-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home-admin.js"></script>
+    
+</body>
+</html>

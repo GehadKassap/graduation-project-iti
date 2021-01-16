@@ -1,0 +1,56 @@
+#card
+{
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+#card h2
+{
+   
+ 
+    font-size: 24px;
+   
+}
+
+/***    design overlay for icons **/
+.proudct-top .overLay
+{
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 10%;
+    width: 70px;
+    margin-left: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.proudct-top:hover .overLay
+{
+    opacity: 1;
+    margin-left: 5%;
+
+}
+.proudct-top img 
+{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    height: 350px;
+}
+
+/*design icons */
+.product-bottom i 
+{
+    color: #28a745;
+    font-size: 10px;
+}
+.product-bottom h6 
+{
+    font-size: 20px;
+    font-weight: bold;
+}

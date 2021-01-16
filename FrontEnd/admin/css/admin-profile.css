@@ -1,0 +1,99 @@
+
+
+
+/***************pfofile card************************/
+.card {
+    margin-bottom: 30px;
+    border: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+    box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+}
+ .hovercard .cardheader {
+    background: url(../imgs/bg5.jpg) !important;
+    background-size: cover !important;
+    background-position: 10% !important;
+    height: 470px !important;
+}
+.hovercard .cardheader {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.hovercard .user-image {
+    position: relative;
+    height: 0;
+}
+.hovercard .user-image .avatar {
+    margin-top: -100px;
+}
+.hovercard .user-image .avatar img {
+    width: 125px;
+    height: 125px;
+    max-width: 155px;
+    max-height: 155px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+}
+
+.hovercard .user-image .icon-wrapper {
+    position: absolute;
+    bottom: -20px;
+    left: 51%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 17px;
+    -webkit-box-shadow: 0 0 6px 3px rgba(68, 102, 242, 0.1);
+    box-shadow: 0 0 6px 3px rgba(68, 102, 242, 0.1);
+}
+.hovercard .info {
+    padding: 30px;
+}
+
+.ttl-info h6 {
+    font-size: 12px;
+    color: #59667a;
+}
+
+
+ .hovercard .info .title a {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #2c323f;
+    vertical-align: middle;
+    
+}
+.hovercard .info a{
+    text-decoration: none !important;
+}
+.hovercard .info .social-media ul li {
+    padding-top: 3px;
+}
+ .social-media a {
+    padding: 0 15px;
+    color: #59667a;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+

@@ -1,0 +1,99 @@
+
+/******************dashboard**************/
+html{scroll-behavior:smooth}
+
+.gradient-deepblue {
+    /* background-image: -webkit-gradient(linear, left top, right bottom, from(#863ee2), to(#571f9e)); */
+    background-image: linear-gradient(to bottom right, #863ee2, #571f9e);
+    color: #fff;
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(126,55,216,0.3);
+    box-shadow: 2px 12px 26px 3px rgba(126,55,216,0.3);
+}
+.gradient-orange {
+    /* background-image: -webkit-gradient(linear, left top, right bottom, from(#ff9cc3), to(#fd3484)); */
+    background-image: linear-gradient(to bottom right, #ff9cc3, #fd3484);
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(254,128,178,0.3);
+    box-shadow: 2px 12px 26px 3px rgba(254,128,178,0.3);
+    color: #fff;
+}
+
+.gradient-ohhappiness {
+    /* background-image: -webkit-gradient(linear, left top, right bottom, from(#ffd85d), to(#ffc200)); */
+    background-image: linear-gradient(to bottom right, #ffd85d, #ffc200);
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(255,199,23,0.3);
+    box-shadow: 2px 12px 26px 3px rgba(255,199,23,0.3);
+}
+
+.gradient-ibiza {
+    /* background-image: -webkit-gradient(linear, left top, right bottom, from(#00d2d7), to(#07b2dd)); */
+    background-image: linear-gradient(to bottom right, #00d2d7, #07b2dd);
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(6,181,221,0.3);
+    box-shadow: 2px 12px 26px 3px rgba(6,181,221,0.3);
+}
+
+
+/************************site charts*************************************/
+@media only screen and (max-width: 1024px){
+.card {
+    margin-bottom: 25px;
+}}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+    font-size: 14px;
+    color: #353434;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.chart-container-1 {
+    position: relative;
+    height: 260px;
+}
+.border-light-3 {
+    border-color: rgba(0, 0, 0, 0.05)!important;
+}
+@media only screen and (max-width: 1199px){
+.row.row-group>div {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+}
+/*************************social interaction*******************************/
+.w_chart {
+     position: relative; 
+     display: inline-block; 
+     width: 60px !important; 
+     height: 60px !important; 
+     text-align: center; 
+}
+.w_percent {
+    display: inline-block;
+    line-height: 65px !important;
+    z-index: 2;
+    color: #353434;
+}
+.w_chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px !important;
+    height: 60px !important;
+}
+.text-facebook {
+    color: #3b5998!important;
+}
+.text-twitter {
+    color: #55acee!important;
+}
+.text-youtube {
+    color: #e52d27!important;
+}
+
+

@@ -1,0 +1,95 @@
+#supportContact
+{
+    background-color: rgb(250,250,250);
+}
+.supportContact 
+{
+    background-image: url(../imgs/bgSupport.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+label 
+{
+    color: rgb(234,99,34);
+  
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.sendBtn
+{
+    border: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+/*----------------------------------about section-------------------------*/
+.cont
+{
+    margin-top: 5rem !important;
+}
+.cont h6
+{
+   font-size: 0.8rem;
+   font-weight: 700 ;
+   letter-spacing: 0.047rem;
+   color: #1f1f1f !important;
+}
+.cont p
+{
+    font-size: 1.37rem;
+    color: #787878;
+    margin-bottom: 0.4rem !important;
+  
+}
+@media only screen and (max-width: 700px) 
+{
+  .cont p
+  {
+      font-size: 1rem;
+  }
+}
+
+
+.cont span::after
+{
+    content: "";
+    color: rgb(247,148,29) !important;
+  font-weight: 500;
+  animation-name: text;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes text
+{
+    0%{content: "kitchen";}
+    25%{content: "mobiles|";}
+    50%{content: "beauty";}
+    75%{content: "clothes|";}
+    100%{content: "apps|";}
+}
+
+.cont a
+{
+    color: #000;
+    font-size: 0.76rem;
+    font-weight: 500;
+    border-radius: 0px;
+    border: 1px solid #e6e6e6;
+    margin: 2rem;
+    margin-bottom: 6rem !important;
+}
+
+.cont a:hover
+{
+    background-color: #000;
+    color: #fff;
+}
+
+/*---------------------------------------------------*/
