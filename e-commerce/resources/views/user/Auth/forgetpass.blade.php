@@ -1,4 +1,15 @@
-@include("user.layouts.firstnav")
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forgetPassword</title>
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/all.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/SignIn_SignUp_ForgetPass.css') }}">
+</head>
+<body>
 <div class="container">
         <div class="login">
             <div class="login__content">
@@ -30,4 +41,7 @@
         </div>
 
     </div>
+    <!---------------->
+</body>
+</html>
 

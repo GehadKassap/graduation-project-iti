@@ -17,6 +17,7 @@ class UserController extends Controller
     {
         //
     }
+    //to
     function registerForm()
     {
        return view('user.Auth.register');
