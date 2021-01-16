@@ -22,11 +22,13 @@
 
                 <div class="login__forms">
 
-                    <form action="" class="login__create " id="form" >
+                    <form action="register" method="post" class="login__create " id="form" >
+
                         <h1 class="login__title"> Create Account </h1>
 
                     <div class="form-group  col-md-12">
-                            <input type="text" class="form-control" id="username" placeholder="Username">
+                    @csrf
+                            <input name="fullname" type="text" class="form-control" id="username" placeholder="Username">
                             <!-- <i class="fa fa-check-circle"></i> -->
 		                	<i class="fa fa-exclamation-circle"></i>
 			                 <small>Error message</small>
@@ -34,7 +36,7 @@
 
                           <div class="form-group col-md-12">
 
-                            <input type="email" class="form-control" id="email" placeholder=" Email">
+                            <input  name="email" type="email" class="form-control" id="email" placeholder=" Email">
                             <!-- <i class="fa fa-check-circle"></i> -->
 			                <i class="fa fa-exclamation-circle"></i>
 			                <small>Error message</small>
@@ -42,7 +44,7 @@
 
                           <div class="form-group col-md-12">
 
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <input  name="password" type="password" class="form-control" id="password" placeholder="Password">
                             <!-- <i class="fa fa-check-circle"></i> -->
 			                <i class="fa fa-exclamation-circle"></i>
 			                <small>Error message</small>
@@ -50,7 +52,7 @@
 
                           <div class="form-group col-md-12">
 
-                            <input type="password" class="form-control" id="password2" placeholder="Confirm Password">
+                            <input  name="confirmpassword" type="password" class="form-control" id="password2" placeholder="Confirm Password">
                             <!-- <i class="fa fa-check-circle"></i> -->
 			                <i class="fa fa-exclamation-circle"></i>
 			                <small>Error message</small>
@@ -88,6 +90,6 @@
 
 
 <!----->
-<script type="text/javascript" src="{{ asset('js/SignUp.js') }}"></script>
+<!-- <script type="text/javascript" src="{{ asset('js/SignUp.js') }}"></script> -->
 </body>
 </html>

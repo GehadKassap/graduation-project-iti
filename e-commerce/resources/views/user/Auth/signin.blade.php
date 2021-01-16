@@ -22,13 +22,14 @@
 
                 <div class="login__forms">
 
-                    <form action="" class="login__registre " id="form">
+                    <form action="login" method="post" class="login__registre " id="form">
 
                         <h1 class="login__title"> Sign In </h1>
 
                         <div class="form-group col-md-12">
+                            @csrf
                             <div class="input-icons">
-                            <input type="text" class="form-control" id="username" placeholder="Enter your Username">
+                            <input type="text" name="email" class="form-control" id="username" placeholder="Enter your email">
                             <!-- <i class="fa fa-check-circle"></i> -->
                             <i class="fa fa-exclamation-circle"></i>
                             <small>Error message</small>    </div>
@@ -36,7 +37,7 @@
                           </div>
                           <div class="form-group col-md-12">
 
-                            <input type="email" class="form-control" id="email" placeholder="Enter your Email">
+                            <input name="password" type="password" class="form-control" id="email" placeholder="Enter your password">
                             <!-- <i class="fa fa-check-circle"></i> -->
 		                	<i class="fa fa-exclamation-circle"></i>
 			                 <small>Error message</small>
@@ -70,6 +71,6 @@
 
     </div>
 
-    <script type="text/javascript" src="{{ asset('js/SignIn.js') }}"></script>
+    <!-- <script type="text/javascript" src="{{ asset('js/SignIn.js') }}"></script> -->
 </body>
 </html>
