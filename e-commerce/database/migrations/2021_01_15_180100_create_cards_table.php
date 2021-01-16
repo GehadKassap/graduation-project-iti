@@ -15,6 +15,11 @@ class CreateCardsTable extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
+             $table->integer('quantity');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');
+            $table->unsignedBigInteger('pro_id');
+            $table->foreign('pro_id')->references('id')->on('products')->onDelete('SET NULL');
             $table->timestamps();
         });
     }

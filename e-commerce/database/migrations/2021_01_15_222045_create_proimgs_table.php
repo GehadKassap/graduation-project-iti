@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePromotionsTable extends Migration
+class CreateProimgsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreatePromotionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('promotions', function (Blueprint $table) {
+        Schema::create('proimgs', function (Blueprint $table) {
             $table->id();
+            $table->string('img');
+            $table->unsignedBigInteger('pro_id');
+            $table->foreign('pro_id')->references('id')->on('products')->onDelete('SET NULL');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreatePromotionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('promotions');
+        Schema::dropIfExists('proimgs');
     }
 }
