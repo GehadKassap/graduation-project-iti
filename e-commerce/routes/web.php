@@ -54,4 +54,3 @@ Route::post('/login',[UserController::class , "handleLogin"]);
 Route::get('/register',[UserController::class , "registerForm"]);
 Route::post('/register',[UserController::class , "handleForm"]);
 
-

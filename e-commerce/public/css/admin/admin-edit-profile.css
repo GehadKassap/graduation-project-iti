@@ -1,0 +1,152 @@
+/*****************content**********************/
+.main-panel > .content {
+    padding: 0 30px 30px;
+    min-height: calc(100vh - 123px);
+    margin-top: -30px;
+}
+.card {
+    border: 0;
+    border-radius: 0.1875rem;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 15px 1px rgba(39, 39, 39, 0.1);
+}
+.card .card-header:not([data-background-color]) {
+    background-color: transparent;
+}
+.card .card-header {
+    padding: 15px 15px 0;
+    border: 0;
+}
+.title {
+    font-weight: 700;
+}
+h5, .h5 {
+    font-size: 1.57em;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+.card .card-body {
+    padding: 15px 15px 10px 15px;
+}
+.fileinput {
+    display: inline-block;
+    margin-bottom: 9px;
+}
+
+.fileinput .thumbnail.img-circle {
+    border-radius: 50%;
+    max-width: 100px;
+}
+.fileinput .thumbnail {
+    display: inline-block;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    max-width: 250px;
+    box-shadow: 0 1px 15px 1px rgba(39, 39, 39, 0.1);
+}
+.fileinput .thumbnail > img {
+    max-height: 100%;
+}
+img {
+    max-width: 100%;
+    border-radius: 0.1875rem;
+}
+.fileinput .btn-rose {
+    vertical-align: middle;
+}
+.btn-rose {
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.btn-rose ,.save {
+    border-width: 1px;
+    border-radius: 30px !important;
+    padding-right: 23px;
+    padding-left: 23px;
+}
+.btn-rose  {
+    border-width: 2px;
+    font-weight: 400;
+    font-size: 0.8571em;
+    line-height: 1.35em;
+    border: none;
+    margin: 10px 1px;
+    border-radius: 0.1875rem;
+    padding: 11px 22px;
+    cursor: pointer;
+    background-color: #888 !important;
+    color: #FFFFFF;
+}
+.card label {
+    font-size: 0.8571em;
+    margin-bottom: 5px;
+    color: #9A9A9A;
+}
+.form-group .form-control, .input-group .form-control {
+    padding: 10px 18px 10px 18px;
+}
+
+.form-control {
+    background-color: transparent;
+    border: 1px solid #E3E3E3;
+    border-radius: 30px;
+    color: #2c2c2c;
+    line-height: normal;
+    height: auto;
+    font-size: 0.8571em;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: none;
+}
+
+
+.card .card-footer {
+    background-color: transparent;
+    border: 0;
+}
+/***********************side card********************/
+
+.card-user .image {
+    height: 120px;
+}
+.card .image {
+    overflow: hidden;
+    
+    position: relative;
+}
+.card-user .card-body {
+    min-height: 240px;
+}
+.card-user .author {
+    text-align: center;
+    text-transform: none;
+    margin-top: -77px;
+}
+a {
+    
+    text-decoration: none !important;
+}
+.card .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.card-user .avatar {
+    width: 124px;
+    height: 124px;
+    border: 1px solid #FFFFFF;
+    position: relative;
+}
+
+
+.card-user .button-container {
+     margin-bottom: 6px; 
+    text-align: center;
+}
