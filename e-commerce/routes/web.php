@@ -38,6 +38,3 @@ Route::get('/login',[UserController::class , "loginForm"]);
 Route::post('/login',[UserController::class , "handleLogin"]);
 
 
-Route::get('/fashion', function () {
-    return view('user.fashion');
-});

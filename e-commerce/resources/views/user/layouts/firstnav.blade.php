@@ -18,11 +18,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url('/css/reset.css') }}">
          <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url('/css/responsive.css') }}">
-		
-      <!--  <link rel="stylesheet" type="text/css" href="{{ url('/css/animate.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url('/css/flex-slider.min.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url('/css/skitter.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url('/css/slicknav.min.css') }}"> -->
+	
 </head>
 <body class="js">
 
