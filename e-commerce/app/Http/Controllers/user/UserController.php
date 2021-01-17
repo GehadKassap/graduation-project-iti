@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+// use  Auth;
 
 class UserController extends Controller
 {
@@ -34,18 +35,38 @@ class UserController extends Controller
         $user->email = $req->email;
         $user->save();
         // return $user->password ;
-        return view("user.index");
+         return view("user.index");
     }
     //to redirect user to signIn form
     function loginForm()
     {
-       return view('user.Auth.register');
+       return view('user.Auth.signin');
     }
     //match user in db;
     function handleLogin(Request $req)
     {
          //return $req->input();
-          dd($req->all());
+        //   dd($req->all());
+
+        // $cred = array('email' => $req->email , 'password'=>$req->password);
+        // if(Auth::attempt($cred))
+        // {
+        //         return "true valid" ;
+        // }
+        // else
+        // {
+        //     return "not true valid" ;
+        // }
+        $user = User::where(['email'=>$req->email ])->first();
+        if( !$user ||  !Hash::check($req->password , $user->password))
+        {
+            return " lsssoginn in" ;
+        }
+        else
+        {
+            $req->session()->put('user' , $user);
+            return "loginn in" ;
+        }
     }
 
     /**
