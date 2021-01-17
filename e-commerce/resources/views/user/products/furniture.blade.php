@@ -1,9 +1,8 @@
-
 @include("user.layouts.firstnav")
 <style>
     .hero-slider .single-slider {
-	background-image: url('/images/category/stunning-barefooted-woman-trendy-fur-coat-dancing-laughing-photoshoot.jpg');
-	background-position:top;}
+	background-image: url('/images/category/coverFurniture.jpg');
+	background-position:center;}
 </style>
 @include("user.layouts.secondnav")
 
