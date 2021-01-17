@@ -10,7 +10,7 @@
 										<ul class="sub-category">
 											<li><a href="kitchenCategory.html">Kitchen</a></li>
 											<li><a href="#">Furniture</a></li>
-											<li><a href="fashoinCtegory.html">Fashion</a></li>
+											<li><a href="/fashion">Fashion</a></li>
 											<li><a href="#">Books</a></li>
 											<li><a href="#">Cosmatics</a></li>
 											<li><a href="#">Electronics</a></li>
@@ -19,7 +19,7 @@
 									<li><a href="#">mobile</a></li>
 									<li><a href="#">books</a></li>
 									<li><a href="#">cosmatics</a></li>
-									<li><a href="fashoinCtegory.html">fashion</a></li>
+									<li><a href="fashion">fashion</a></li>
 									<li><a href="kitchenCategory.html">kitchen</a></li>
 									<li><a href="#">labtops</a></li>
 								</ul>

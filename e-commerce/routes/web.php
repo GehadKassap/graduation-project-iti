@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/allcategories', function () {
     return view('user.homeCategories');
 });
+Route::get('/home', function () {
+    return view('user.index');
+});
 
 Route::get('/signin', function () {
     return view('user.Auth.signin');
