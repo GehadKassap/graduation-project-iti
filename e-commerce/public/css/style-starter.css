@@ -3993,7 +3993,7 @@ a.read-more-btn2.btn:hover {
 }
 
 .w3l-banner-slider-main .carousel-item {
-    background: url(../assets/images/banner1.jpg) no-repeat center;
+    background: url(/images/assets/images/banner1.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -4002,7 +4002,7 @@ a.read-more-btn2.btn:hover {
 }
 
 .w3l-banner-slider-main .carousel-item.item2 {
-    background: url(../assets/images/banner2.jpg) no-repeat center;
+    background: url(/images/assets/images/banner2.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -4011,7 +4011,7 @@ a.read-more-btn2.btn:hover {
 }
 
 .w3l-banner-slider-main .carousel-item.item3 {
-    background: url(../assets/images/banner3.jpg) no-repeat center;
+    background: url(/images/assets/images/banner3.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -4020,7 +4020,7 @@ a.read-more-btn2.btn:hover {
 }
 
 .w3l-banner-slider-main .carousel-item.item4 {
-    background: url(../assets/images/banner4.jpg) no-repeat center;
+    background: url(/images/assets/images/banner4.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -4075,7 +4075,7 @@ a.read-more-btn2.btn:hover {
 }
 
 .w3l-banner-slider-main .right-banner {
-    background: url(../assets/images/left3.jpg) no-repeat center;
+    background: url(/images/assets/images/left3.jpg) no-repeat center;
     background-size: cover;
     display: grid;
     align-items: center;
@@ -4176,7 +4176,7 @@ a.read-more-btn2.btn:hover {
 }
 
 .w3l-banner-slider-main .right-2 {
-    background: url(../assets/images/1.jpg) no-repeat center;
+    background: url(/images/assets/images/1.jpg) no-repeat center;
     background-size: cover;
     display: grid;
     align-items: center;
@@ -4187,7 +4187,7 @@ a.read-more-btn2.btn:hover {
 }
 
 .w3l-banner-slider-main .left-2 {
-    background: url(../assets/images/2.jpg) no-repeat center;
+    background: url(/images/assets/images/2.jpg) no-repeat center;
     background-size: cover;
     display: grid;
     align-items: center;
@@ -6136,7 +6136,7 @@ button::-moz-focus-inner {
 }
 
 .video-gd-right {
-    background: url(../assets/images/33.jpg) no-repeat center;
+    background: url(/images/assets/images/33.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -6212,7 +6212,7 @@ iframe {
 }
 
 .w3l-content-5 .content-5-main {
-    background: url(../assets/images/bg3.jpg) no-repeat bottom;
+    background: url(/images/assets/images/bg3.jpg) no-repeat bottom;
     background-size: cover;
     z-index: 9;
     position: relative;
@@ -6862,7 +6862,7 @@ iframe {
 }
 
 .w3l-subscription-6 .subscription-left {
-    background: url(../assets/images/11.jpg) no-repeat center;
+    background: url(/images/assets/images/11.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -6929,7 +6929,7 @@ iframe {
 @media (max-width: 1080px) {
     .w3l-subscription-6 .subscription-left {
         min-height: 36em;
-        background: url(../assets/images/11.jpg) no-repeat center;
+        background: url(/images/assets/images/11.jpg) no-repeat center;
         background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -6941,7 +6941,7 @@ iframe {
 @media (max-width: 480px) {
     .w3l-subscription-6 .subscription-left {
         min-height: 17em;
-        background: url(../assets/images/11.jpg) no-repeat center;
+        background: url(/images/assets/images/11.jpg) no-repeat center;
         background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -7190,7 +7190,7 @@ iframe {
 }
 
 .w3l-banner-slider-main.inner-pagehny .breadcrumb-infhny {
-    background: url(../assets/images/bg1.jpg) no-repeat center;
+    background: url(/images/assets/images/bg1.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -7424,7 +7424,7 @@ iframe {
 }
 
 .w3l-services-6 .services-grids-6 {
-    background: url(../assets/images/banner4.jpg) no-repeat center;
+    background: url(/images/assets/images/banner4.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -7705,7 +7705,7 @@ iframe {
 }
 
 .w3l-contacts-8 .form-bg-img {
-    background: url(../assets/images/banner4.jpg) no-repeat 0px 0px;
+    background: url(/images/assets/images/banner4.jpg) no-repeat 0px 0px;
     background-attachment: fixed;
     background-size: cover;
 }

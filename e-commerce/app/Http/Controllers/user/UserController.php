@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view("user.index");
     }
     //to redirect user to signUp form
     function registerForm()
