@@ -1,6 +1,32 @@
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/all.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/bootstrap.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/reset.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/responsive.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/themify-icons.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/niceselect.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/owl.theme.default.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/font-awesome.css') }}">
+        
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/magnific-popup.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/jquery.fancybox.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/animate.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/flex-slider.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/skitter.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/slicknav.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url('/css/card.css') }}">
+</head>	
 <body class="js">
+
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader-inner">
@@ -105,9 +131,35 @@
 			</div>
 		</div>
 
+<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-migrate-3.0.0.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/colors.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.skitter.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/slicknav.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/nicesellect.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/owl-carousel.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/magnific-popup.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/waypoints.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/finalcountdown.min.js') }}"></script>
+
+
+<script type="text/javascript" src="{{ asset('js/flex-slider.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/scrollup.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/onepage-nav.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/easing.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('js/active.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/homecategory.js') }}"></script>
+
 
 
 
 </body>
-
+</html>
 
