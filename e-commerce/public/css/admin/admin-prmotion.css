@@ -1,0 +1,95 @@
+/***********************prmotions card***********************/
+/* .card {
+    margin-bottom: 30px;
+    border: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+    box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+} */
+.card .card-header {
+    background-color: #fff;
+    padding: 40px;
+    border-bottom: 1px solid #ecf3fa;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+}
+.card .card-header h5:not(.mb-0), .card .card-header h5:not(.m-0) {
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.card .card-header h5 {
+    font-size: 22px;
+}
+.card .card-body {
+    padding: 40px;
+    background-color: transparent;
+}
+@media only screen and (max-width: 991.98px){
+ .card .card-header,  .card .card-body,  .card .card-footer {
+    padding: 20px;
+}}
+.pricingtable {
+    text-align: center;
+    padding: 30px 30px 70px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 40px rgba(8, 21, 66, 0.05);
+    box-shadow: 0 0 40px rgba(8, 21, 66, 0.05);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+@media only screen and (max-width: 991px){
+.pricingtable {
+    margin-bottom: 30px;
+}}
+.pricingtable .title {
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.pricingtable .price-value {
+    color: #fff;
+    background-color:#7366ff ;
+    width: 130px;
+    height: 130px;
+    padding: 45px 0 0;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+}
+.pricingtable .price-value .currency {
+    vertical-align: top;
+    
+}
+.pricingtable .price-value .amount {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 45px;
+    display: inline-block;
+}
+.pricingtable .price-value .duration {
+    margin: 0 0 0 -5px;
+}
+
+.pricingtable .pricing-content {
+    margin: 0 0 25px;
+    display: inline-block;
+}
+ul {
+    padding-left: 0px;
+    list-style-type: none;
+    margin-bottom: 0;
+}
+.pricingtable .pricing-content li {
+    font-weight: 500;
+    text-align: left;
+    margin: 0 0 20px;
+    position: relative;
+    padding-left: 30px;
+}
+.btn-primary {
+    background-color: #7366ff !important;
+    border-color: #7366ff !important;
+}

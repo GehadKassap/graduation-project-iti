@@ -58,7 +58,7 @@ php artisan make:migration add_orderid_to_orders_table --table=orders
 
  $table->foreign('pro_id')->references('id')->on('products')->onDelete('cascade');
  $table->unsignedBigInteger('order_id');
-     $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+  $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
 
 php artisan make:migration add_orderid_to_productorders_table --table=productorders
 
