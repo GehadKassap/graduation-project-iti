@@ -5,7 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-// use App\Models\User;
+
 
 class UserController extends Controller
 {
@@ -27,7 +27,14 @@ class UserController extends Controller
     function handleForm(Request $req)
     {
          //return $req->input();
-          dd($req->all());
+        //   dd($req->all());
+        $user = new User ;
+        $user->fullname = $req->fullname;
+        $user->password = \Hash::make( $req->password);
+        $user->email = $req->email;
+        $user->save();
+        // return $user->password ;
+        return view("user.index");
     }
     //to redirect user to signIn form
     function loginForm()
