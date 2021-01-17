@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" type="text/css" href="{{ url('/css/fav.css') }}">
+
       <link rel="stylesheet" type="text/css" href="{{ url('/css/all.min.css') }}">
        <link rel="stylesheet" type="text/css" href="{{ url('/css/owl.theme.default.min.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url('/css/skitter.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url('/css/card.css') }}">
+
     <style>
         .slider img {height:300px;}
         </style>
@@ -107,5 +109,6 @@
       
 <script type="text/javascript" src="{{ asset('js/homecategory.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/fav.js') }}"></script>
+
 
 </html>
