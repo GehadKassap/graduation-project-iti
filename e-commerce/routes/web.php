@@ -29,20 +29,19 @@ Route::get('/signin', function () {
 Route::get('/forgetpass', function () {
     return view('user.Auth.forgetpass');
 });
-//user signUp
-Route::get('/register',[UserController::class , "registerForm"]);
+
 
 //favorite
 Route::get('/favorite', function () {return view('user.products.favorite');});
-//cart details 
+//cart details
 Route::get('/cart', function () {return view('user.products.cartdetails');});
-//profile 
+//profile
 Route::get('/profile', function () {return view('user.products.profile');});
-//checkout 
+//checkout
 Route::get('/checkout ', function () {return view('user.products.checkout ');});
-//contactus 
+//contactus
 Route::get('/contactus  ', function () {return view('user.products.contactus  ');});
-//productdetails 
+//productdetails
 Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
 
 Route::post('/register',[UserController::class , "handleForm"]);
@@ -50,5 +49,9 @@ Route::post('/register',[UserController::class , "handleForm"]);
 //user signIn
 Route::get('/login',[UserController::class , "loginForm"]);
 Route::post('/login',[UserController::class , "handleLogin"]);
+
+//user signUp
+Route::get('/register',[UserController::class , "registerForm"]);
+Route::post('/register',[UserController::class , "handleForm"]);
 
 

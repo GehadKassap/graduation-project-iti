@@ -23,15 +23,18 @@ class UserController extends Controller
     {
        return view('user.Auth.register');
     }
+    //to store user info in db;
     function handleForm(Request $req)
     {
          //return $req->input();
           dd($req->all());
     }
+    //to redirect user to signIn form
     function loginForm()
     {
        return view('user.Auth.register');
     }
+    //match user in db;
     function handleLogin(Request $req)
     {
          //return $req->input();
