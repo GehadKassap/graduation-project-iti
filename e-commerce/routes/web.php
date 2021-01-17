@@ -57,3 +57,9 @@ Route::post('/login',[UserController::class , "handleLogin"]);
 Route::get('/register',[UserController::class , "registerForm"]);
 Route::post('/register',[UserController::class , "handleForm"]);
 
+// user logout
+Route::get('/logout' , function(){
+    Session::forget('user');
+    return view('user.Auth.signin');
+});
+

@@ -88,9 +88,7 @@
 							<div class="sinlge-bar">
 								<a href="account.html" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                             </div>
-                            <div class="sinlge-bar">
-								<a href="account.html" class="single-icon">logout</a>
-                            </div>
+
 
 
 							<div class="sinlge-bar shopping">
@@ -130,7 +128,17 @@
 
 
 								<!--/ End Shopping Item -->
-							</div>
+                            </div>
+                            @if(Session::has('user'))
+                            <div class="sinlge-bar">
+                          <a class="single-icon" href="/logout">Logout </a>
+                            </div>
+                            @else
+                            <div class="sinlge-bar">
+                          <a class="single-icon" href="/signin">signIn <i class="fas fa-sign-in-alt"></i> </a>
+                            </div>
+                            @endif
+
 						</div>
 					</div>
 				</div>
@@ -156,5 +164,21 @@
 <script type="text/javascript" src="{{ asset('js/onepage-nav.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/easing.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/active.js') }}"></script>
+
+<!-- <div class="sinlge-bar">
+                            <ul class="navbar-nav mr-auto ">
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Dropdown
+                              </a>
+                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                              <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                      </li>
+                      </ul>
+                      </div> -->
 </body>
 </html>
