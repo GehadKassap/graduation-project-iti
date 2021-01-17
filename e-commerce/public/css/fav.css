@@ -11,7 +11,9 @@
     font-size: 24px;
    
 }
-
+.remove{
+    cursor: pointer;
+}
 /***    design overlay for icons **/
 .proudct-top .overLay
 {
