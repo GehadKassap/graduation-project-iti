@@ -14,7 +14,7 @@ use App\Http\Controllers\user\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.index');
 });
 Route::get('/allcategories', function () {
     return view('user.homeCategories');
