@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/allcategories', function () {
     return view('user.homeCategories');
 });
+Route::get('/home', function () {
+    return view('user.index');
+});
 
 Route::get('/signin', function () {
     return view('user.Auth.signin');
@@ -34,3 +37,7 @@ Route::post('/register',[UserController::class , "handleForm"]);
 Route::get('/login',[UserController::class , "loginForm"]);
 Route::post('/login',[UserController::class , "handleLogin"]);
 
+
+Route::get('/fashion', function () {
+    return view('user.fashion');
+});
