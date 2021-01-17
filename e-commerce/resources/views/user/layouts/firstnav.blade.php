@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url('/css/owl.carousel.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/owl.theme.default.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/font-awesome.css') }}">
-        
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/card.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/magnific-popup.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/jquery.fancybox.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/animate.css') }}">
@@ -131,6 +131,7 @@
 			</div>
 		</div>
 
+
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-migrate-3.0.0.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
@@ -156,8 +157,6 @@
 
 <script type="text/javascript" src="{{ asset('js/active.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/homecategory.js') }}"></script>
-
-
 
 
 </body>
