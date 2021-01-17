@@ -19,7 +19,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url('/css/reset.css') }}">
          <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url('/css/responsive.css') }}">
-	
+
 </head>
 <body class="js">
 
@@ -87,7 +87,11 @@
 
 							<div class="sinlge-bar">
 								<a href="account.html" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-							</div>
+                            </div>
+                            <div class="sinlge-bar">
+								<a href="account.html" class="single-icon">logout</a>
+                            </div>
+
 
 							<div class="sinlge-bar shopping">
 								<a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
@@ -118,7 +122,13 @@
 										</div>
 										<a href="fav.html" class="btn animate">Checkout</a>
 									</div>
-								</div>
+                                </div>
+
+                                <!-- <div class="sinlge-bar">
+								<a href="account.html" class="single-icon">logout</a>
+                                </div> -->
+
+
 								<!--/ End Shopping Item -->
 							</div>
 						</div>
@@ -128,7 +138,7 @@
 		</div>
 
 
-	
+
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-migrate-3.0.0.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
