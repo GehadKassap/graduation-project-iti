@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Proimg;
 use Illuminate\Http\Request;
-// use App\Models\User;
 
-class UserController extends Controller
+class ProimgController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,25 +16,6 @@ class UserController extends Controller
     public function index()
     {
         //
-    }
-    //to redirect user to signUp form
-    function registerForm()
-    {
-       return view('user.Auth.register');
-    }
-    function handleForm(Request $req)
-    {
-         //return $req->input();
-          dd($req->all());
-    }
-    function loginForm()
-    {
-       return view('user.Auth.register');
-    }
-    function handleLogin(Request $req)
-    {
-         //return $req->input();
-          dd($req->all());
     }
 
     /**
@@ -62,10 +42,10 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Proimg  $proimg
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Proimg $proimg)
     {
         //
     }
@@ -73,10 +53,10 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Proimg  $proimg
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Proimg $proimg)
     {
         //
     }
@@ -85,10 +65,10 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Proimg  $proimg
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Proimg $proimg)
     {
         //
     }
@@ -96,10 +76,10 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Proimg  $proimg
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Proimg $proimg)
     {
         //
     }

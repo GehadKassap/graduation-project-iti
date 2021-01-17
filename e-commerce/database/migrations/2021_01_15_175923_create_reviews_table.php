@@ -15,11 +15,8 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('description' , 500);
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');
-            $table->unsignedBigInteger('pro_id');
-            $table->foreign('pro_id')->references('id')->on('products')->onDelete('SET NULL');
+            $table->string('content' , 500);
+
             $table->timestamps();
         });
     }

@@ -19,12 +19,10 @@ class CreateProductsTable extends Migration
             $table->longText('description' , 500)->nullable();
             $table->float('price');
             $table->float('discount')->nullabale();
-             $table->enum('colors',['red','white' ,'green','babyblue' , 'blue'])->default('user');
-             $table->enum('sizes',['xl','xxl' ,'large','small' ,'xxl' ,'medium'])->default('user');
+             $table->enum('colors',['red','white' ,'green','babyblue' , 'blue']);
+             $table->enum('sizes',['xl','xxl' ,'large','small'  ,'medium']);
             $table->integer('quantity');
-            #category table
-           # $table->unsignedBigInteger('cat_id');
-           # $table->foreign('cat_id')->references('id')->on('categories')->onDelete('SET NULL');
+
             $table->timestamps();
 
         });

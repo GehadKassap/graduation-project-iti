@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFavsTable extends Migration
+class AddProidToProimgsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateFavsTable extends Migration
      */
     public function up()
     {
-        Schema::create('favs', function (Blueprint $table) {
-            $table->id();
-
-            $table->timestamps();
+        Schema::table('proimgs', function (Blueprint $table) {
+            //
+             $table->unsignedBigInteger('pro_id');
+            $table->foreign('pro_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 
@@ -27,6 +27,8 @@ class CreateFavsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favs');
+        Schema::table('proimgs', function (Blueprint $table) {
+            //
+        });
     }
 }
