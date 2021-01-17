@@ -14,10 +14,13 @@ use App\Http\Controllers\user\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.index');
 });
 Route::get('/allcategories', function () {
-    return view('user.homeCategories');
+    return view('user.products.homeCategories');
+});
+Route::get('/fashion', function () {
+    return view('user.products.fashion');
 });
 Route::get('/home', function () {
     return view('user.index');
@@ -53,5 +56,4 @@ Route::post('/login',[UserController::class , "handleLogin"]);
 //user signUp
 Route::get('/register',[UserController::class , "registerForm"]);
 Route::post('/register',[UserController::class , "handleForm"]);
-
 

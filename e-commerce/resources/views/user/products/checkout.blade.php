@@ -9,6 +9,7 @@
 </head>
 <body>
 @include("user.layouts.firstnav")
+</header>
 	<!-- Start Checkout -->
 	<section class="shop checkout section">
 		<div class="container">
