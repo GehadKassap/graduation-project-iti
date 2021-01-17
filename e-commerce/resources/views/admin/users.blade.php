@@ -104,7 +104,7 @@
                    <td>
                    {{$user->address}}
                    </td>
-                   <td>0109-552-221</td>
+                   <td>{{$user->phone}}</td>
                   <td>{{$user->created_at}}</td>
                   <td><i class="far fa-trash-alt " title="delete"></i> <i class="fas fa-plus-circle" title="edit"></i></td>
                   </tr>
