@@ -13,12 +13,34 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/admona', function () {
-    return 'welcome ya admona';
-});
+//admin-dashboard
+Route::get('/dashboard', function () {return view('admin.dashboard');});
 
-Route::get('/test' , [TestController::class , "testFun"]);
+//admin-orders
+Route::get('/orders', function () {return view('admin.orders');});
+
+//admin-order-details
+Route::get('/order-details', function () {return view('admin.orderdetails');});
+
+//admin-users
+Route::get('/users', function () {return view('admin.users');});
+
+//admin-products
+Route::get('/products', function () {return view('admin.products');});
+
+//admin-add-product
+Route::get('/add-product', function () {return view('admin.addnewproduct');});
+
+//admin-Promotion
+Route::get('/Promotion', function () {return view('admin.Promotion');});
+
+//admin-offers
+Route::get('/offers', function () {return view('admin.offers');});
+
+//admin-support
+Route::get('/support', function () {return view('admin.support');});
+
