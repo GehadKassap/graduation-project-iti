@@ -79,9 +79,9 @@
                 <table class="table align-items-center table-flush table-hover">
                  <thead>
                   <tr>
-                    <th>Photo</th>
-                    <th>Name</th>
+                    <!-- <th>Photo</th> -->
                     <th>#ID</th>
+                    <th>Name</th>
                     <th>Email</th>
                     <th>City</th>
                     <th>Phone</th>
@@ -89,102 +89,30 @@
                     <th>Action</th>
                   </tr>
                   </thead>
-          <tbody><tr>
-                   <td>
+
+          <tbody>
+          @foreach($users as $user)
+          <tr>
+                   <!-- <td>
                      <img alt="Image placeholder" src="{{asset('images/admin/avatar-s-1.png')}}"  class="product-img">
-                   </td>
-                   <td>john adam</td>
-                   <td>123</td>
+                   </td> -->
+                   <td>{{$user->id}}</td>
+                   <td>{{$user->fullname}}</td>
                    <td>
-                     aa@a.com
+                   {{$user->email}}
                    </td>
                    <td>
-                       cairo
+                   {{$user->address}}
                    </td>
-                   <td>0109-552-221</td>
-                  <td>10 July 2018</td>
+                   <td>{{$user->phone}}</td>
+                  <td>{{$user->created_at}}</td>
                   <td><i class="far fa-trash-alt " title="delete"></i> <i class="fas fa-plus-circle" title="edit"></i></td>
                   </tr>
-                  <tr>
-                    <td>
-                      <img alt="Image placeholder" src="{{asset('images/admin/avatar-s-11.jpg')}}" class="product-img">
-                    </td>
-                    <td>chris evan</td>
-                    <td>123</td>
-                    <td>
-                      gg@g.com
-                    </td>
-                    <td>
-                        Alex
-                    </td>
-                    <td>0109-552-221</td>
-                   <td>10 July 2019</td>
-                   <td><i class="far fa-trash-alt" title="delete"></i> <i class="fas fa-plus-circle" title="edit"></i></td>
-                   </tr>
-                   <tr>
-                    <td>
-                      <img alt="Image placeholder" src="{{asset('images/admin/avatar-s-10.jpg')}}" class="product-img">
-                    </td>
-                    <td>sara sami</td>
-                    <td>333</td>
-                    <td>
-                      vv@v.com
-                    </td>
-                    <td>
-                        cairo
-                    </td>
-                    <td>0109-552-221</td>
-                   <td>10 July 2020</td>
-                   <td><i class="far fa-trash-alt" title="delete"></i> <i class="fas fa-plus-circle" title="edit"></i></td>
-                   </tr>
-                   <tr>
-                    <td>
-                      <img alt="Image placeholder" src="{{asset('images/admin/avatar-s-5.jpg')}}" class="product-img">
-                    </td>
-                    <td>john smith</td>
-                    <td>444</td>
-                    <td>
-                      dd@d.com
-                    </td>
-                    <td>
-                        cairo
-                    </td>
-                    <td>0109-552-221</td>
-                   <td>10 june 2020</td>
-                   <td><i class="far fa-trash-alt" title="delete"></i> <i class="fas fa-plus-circle" title="edit"></i></td>
-                   </tr>
-                   <tr>
-                    <td>
-                      <img alt="Image placeholder" src="{{asset('images/admin/avatar-s-4.jpg')}}" class="product-img">
-                    </td>
-                    <td> mari jack</td>
-                    <td>555</td>
-                    <td>
-                      ss@s.com
-                    </td>
-                    <td>
-                        cairo
-                    </td>
-                    <td>0109-552-221</td>
-                   <td>5 July 2018</td>
-                   <td><i class="far fa-trash-alt " title="delete"></i> <i class="fas fa-plus-circle " title="edit"></i></td>
-                   </tr>
-                   <tr>
-                    <td>
-                      <img alt="Image placeholder" src="{{asset('images/admin/avatar-s-4.jpg')}}" class="product-img">
-                    </td>
-                    <td>nora sam</td>
-                    <td>321</td>
-                    <td>
-                      mm@m.com
-                    </td>
-                    <td>
-                        giza
-                    </td>
-                    <td>0109-552-221</td>
-                   <td>10 July 2019</td>
-                   <td><i class="far fa-trash-alt " title="delete"></i> <i class="fas fa-plus-circle " title="edit"></i></td>
-                   </tr>
+                  
+                   
+                         
+                  @endforeach
+
                    
          
                 </tbody></table>
