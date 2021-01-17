@@ -23,8 +23,6 @@
 </head>
 <body class="js">
 
-=======
-
 
 	<div class="preloader">
 		<div class="preloader-inner">
@@ -128,7 +126,6 @@
 				</div>
 			</div>
 		</div>
-
 
 
 	

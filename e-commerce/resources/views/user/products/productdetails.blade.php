@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="{{ url('/css/single_product.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/nivo-slider.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/resp.css') }}">
@@ -331,18 +333,23 @@
         </div>
     </section>
     <!-- subscrive section area end -->
+
+    @include("user.layouts.footer") 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery-migrate-3.0.0.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/owl-carousel.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/jquery-migrate-3.0.0.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/owl-carousel.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.nivo.slider.pack.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     
 
-@include("user.layouts.footer") 
+
 </body>
 </html>

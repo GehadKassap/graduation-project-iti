@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckOut</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 <body>
 @include("user.layouts.firstnav")
@@ -153,6 +155,11 @@
 	</section>
 	<!-- End Shop Newsletter -->
 	
-@include("user.layouts.footer")  
+
+	@include("user.layouts.footer")
+
+<script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.skitter.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/homecategory.js') }}"></script> 
 </body>
 </html>
