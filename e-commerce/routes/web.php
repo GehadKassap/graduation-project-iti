@@ -14,10 +14,13 @@ use App\Http\Controllers\user\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.index');
 });
 Route::get('/allcategories', function () {
-    return view('user.homeCategories');
+    return view('user.products.homeCategories');
+});
+Route::get('/fashion', function () {
+    return view('user.products.fashion');
 });
 Route::get('/home', function () {
     return view('user.index');

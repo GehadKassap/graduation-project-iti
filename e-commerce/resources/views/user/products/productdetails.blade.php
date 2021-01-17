@@ -1,63 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/single_product.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eshop</title>
     <link rel="stylesheet" type="text/css" href="{{ url('/css/nivo-slider.css') }}">
+    <!-- owl-carousel -->
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/owl.carousel.min.css') }}">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/font-awesome.min.css') }}">
+    <!-- animate css -->
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/bootstrap.min.css') }}">
+    <!-- reset link -->
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/reset_single_product.css') }}">
+    <!-- style _css -->
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/single_product.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/resp.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/style-starter.css') }}">
-    
-
-
+    <!-- <link rel="icon" type="..imgs/favicon.png" href="../imgs/favicon.png"> -->
 </head>
+
 <body>
-@include("user.layouts.firstnav")
-   <!-- header -->
-   <section class="page_title_area sectionp">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="page_title">
-                        <h3>
-                            <a href="home.html">home</a>
-                            <span>/</span>
-                            <a href="homeCategories.html">shop</a>
-                            <span>/</span>
-                            <a class="active-pr" href="product_single.html">Product</a>
-                        </h3>
+    <!-- header -->
+    @include("user.layouts.firstnav")
+    <div class="header-inner">
+                <div class="container">
+                    <div class="cat-nav-head">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <!-- <div class="all-category">
+                                    <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
+                                    <ul class="main-category">
+                                        <li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                            <ul class="sub-category">
+                                                <li><a href="kitchenCategory.html">Kitchen</a></li>
+                                                <li><a href="#">Furniture</a></li>
+                                                <li><a href="fashoinCtegory.html">Fashion</a></li>
+                                                <li><a href="#">Books</a></li>
+                                                <li><a href="#">Cosmatics</a></li>
+                                                <li><a href="#">Electronics</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">mobile</a></li>
+                                        <li><a href="#">books</a></li>
+                                        <li><a href="#">cosmatics</a></li>
+                                        <li><a href="fashoinCtegory.html">fashion</a></li>
+                                        <li><a href="kitchenCategory.html">kitchen</a></li>
+                                        <li><a href="#">labtops</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <div class="menu-area">
+                                    <!-- Main Menu -->
+                                    <nav class="navbar navbar-expand-lg">
+                                        <div class="navbar-collapse">
+                                            <div class="nav-inner">
+                                                <ul class="nav main-menu menu navbar-nav">
+                                                    <li class="active"><a href="#">Home</a></li>
+                                                    <li><a href="homeCategories.html">Products</a></li>
+                                                    <li><a href="#">Service</a></li>
+                                                    <li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="card.html">Cart</a></li>
+                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                        </ul>
+                                                    </li>
+
+
+                                                    <li><a href="contactus.html">Contact Us</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                    <!--/ End Main Menu -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- end page title  -->
+            <!--/ End Header Inner -->
+        </header>
+    <!-- header -->
+   
     <!-- single page content area start -->
     <section class="single_prodduct_page_area sectionp">
         <div class="container">
             <div class="row">
                 <div class="col-sm-5">
                     <div class="single_page_img">
-                        <img src="{{asset('images/category/1.jpg')}}" alt="">
+                        <img src="{{asset('images/assets/images/product/1.jpg')}}" alt="">
                     </div>
                     <div class="img_thumbnail">
                         <div class="single_thumb">
-                          <img src="{{asset('images/category/1.jpg')}}" alt="">
-                            
+                            <img src="{{asset('images/assets/images/product/1.jpg')}}" alt="">
                         </div>
                         <div class="single_thumb">
-                           <img src="{{asset('images/category/3.jpg')}}" alt="">
-                            
+                            <img src="{{asset('images/assets/images/product/3.jpg')}}" alt="">
                         </div>
                         <div class="single_thumb">
-                            <img src="{{asset('images/category/9.jpg')}}" alt="">
+                            <img src="{{asset('images/assets/images/product/9.jpg')}}" alt="">
                         </div>
                         <div class="single_thumb">
-                           <img src="{{asset('images/category/14.jpg')}}" alt="">
-                            
+                            <img src="{{asset('images/assets/images/product/14.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -171,8 +223,8 @@
                         <div class="single_img_slide">
                             <div class="sng_im_p">
                                 <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/category/1.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/category/2.jpg')}}" alt=""></div>
+                                    <div class="front_img"><img src="{{asset('images/assets/images/product/1.jpg')}}" alt=""></div>
+                                    <div class="back_img"><img src="{{asset('images/assets/images/product/2.jpg')}}" alt=""></div>
                                 </a>
                             </div>
                             <div class="si_img_ic prod_content_area">
@@ -198,8 +250,8 @@
                         <div class="single_img_slide">
                             <div class="sng_im_p">
                                 <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/category/1.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/category/1.jpg')}}" alt=""></div>
+                                    <div class="front_img"><img src="{{asset('images/assets/images/product/1.jpg')}}" alt=""></div>
+                                    <div class="back_img"><img src="{{asset('images/assets/images/product/2.jpg')}}" alt=""></div>
                                 </a>
                             </div>
                             <div class="si_img_ic prod_content_area">
@@ -227,8 +279,8 @@
                         <div class="single_img_slide">
                             <div class="sng_im_p">
                                 <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/category/3.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/category/4.jpg')}}" alt=""></div>
+                                    <div class="front_img"><img src="{{asset('images/assets/images/product/3.jpg')}}" alt=""></div>
+                                    <div class="back_img"><img src="{{asset('images/assets/images/product/4.jpg')}}" alt=""></div>
                                 </a>
                             </div>
                             <div class="si_img_ic prod_content_area">
@@ -257,8 +309,8 @@
                         <div class="single_img_slide">
                             <div class="sng_im_p">
                                 <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/category/5.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/category/6.jpg')}}" alt=""></div>
+                                    <div class="front_img"><img src="{{asset('images/assets/images/product/5.jpg')}}" alt=""></div>
+                                    <div class="back_img"><img src="{{asset('images/assets/images/product/6.jpg')}}" alt=""></div>
                                 </a>
                             </div>
                             <div class="si_img_ic prod_content_area">
@@ -284,8 +336,8 @@
                         <div class="single_img_slide">
                             <div class="sng_im_p">
                                 <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/category/7.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/category/8.jpg')}}" alt=""></div>
+                                    <div class="front_img"><img src="{{asset('images/assets/images/product/7.jpg')}}" alt=""></div>
+                                    <div class="back_img"><img src="{{asset('images/assets/images/product/8.jpg')}}" alt=""></div>
                                 </a>
                             </div>
                             <div class="si_img_ic prod_content_area">
@@ -314,42 +366,44 @@
         </div>
     </section>
     <!-- .single_slide_area end -->
-    <!-- subscrive section area start -->
-    <section class="subscrive_section sectionp">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="subscrive_content">
-                        <h2>Sign Up To Newsletter</h2>
-                        <div class="prod_search">
-                            <input type="text" placeholder="Enter Your Email Address">
-                            <button class="btnn  sub_search ">
-                                subscribe
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- subscrive section area end -->
+<!-- Start Shop Newsletter  -->
+<section class="shop-newsletter section">
+		<div class="container">
+			<div class="inner-top">
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 col-12">
+						<!-- Start Newsletter Inner -->
+						<div class="inner">
+							<h4>Newsletter</h4>
+							<p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
+							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+								<input name="EMAIL" placeholder="Your email address" required="" type="email">
+								<button class="btn">Subscribe</button>
+							</form>
+						</div>
+						<!-- End Newsletter Inner -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Shop Newsletter -->  
 
-    @include("user.layouts.footer") 
-
+    @include("user.layouts.footer")
+    <!-- js section -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
-   <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.js') }}"></script>
-   <script type="text/javascript" src="{{ asset('js/owl-carousel.min.js') }}"></script>
-   <script type="text/javascript" src="{{ asset('js/jquery-migrate-3.0.0.js') }}"></script>
-   <script type="text/javascript" src="{{ asset('js/owl-carousel.js') }}"></script>
-   <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+ 
+    <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.nivo.slider.pack.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
-    
-
-
+    <script type="text/javascript" src="{{ asset('js/skript.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.skitter.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/homecategory.js') }}"></script>
 </body>
+
 </html>

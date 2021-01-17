@@ -8,7 +8,8 @@
 
 </head>
 <body>
-@include("user.layouts.firstnav")	
+@include("user.layouts.firstnav")
+	
 
         <div class="header-inner">
 			<div class="container">
@@ -48,7 +49,7 @@
 			</div>
 		</div>
 		<!--/ End Header Inner -->
-	
+	</header>
 	
 
     <!--/ End Slider Area -->
