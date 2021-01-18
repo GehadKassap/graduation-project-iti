@@ -17,8 +17,9 @@ class ProductController extends Controller
     {
         //
         $products = Product::all();
-        $products["image"] = 'product_images/' . $products["image"];
-
+        // foreach ($products as $product) {
+        //     $product["image"] = 'product_images/' . $product["image"];
+        // }
         return view('admin.products', ["products" => $products]);
     }
 
