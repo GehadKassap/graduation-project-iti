@@ -868,7 +868,7 @@
 				<div class="row">
 					<div class="col-lg-6 col-12 padding-right">
 						<div class="image">
-							<img src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
+							<img src="{{asset('images/products/web2-12.jpg')}}" alt="#">
 						</div>	
 					</div>	
 					<div class="col-lg-6 col-12 padding-left">
