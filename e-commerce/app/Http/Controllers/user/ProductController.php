@@ -49,6 +49,13 @@ class ProductController extends Controller
     {
         $data=product ::all();
         return view('user.products.fashion',['product'=>$data]);
+        // return view('user.products.books',['product'=>$data]);
+    }
+    public function showbooks()
+    {
+        $data=product ::all();
+      
+        return view('user.products.books',['product'=>$data]);
     }
 
     /**
