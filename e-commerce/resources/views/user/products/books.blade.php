@@ -55,7 +55,7 @@
 													</div>
 												</div>
 												<div class="product-content">
-													<h3><a href="product_single.html">{{$pro['description']}}</h3>
+													<h3><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}}</h3>
 													<div class="product-price">
 														<span>{{$pro['price']}}$</span>
 													</div>

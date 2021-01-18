@@ -27,10 +27,7 @@ Route::get('/allcategories', function () {
 
 Route:: get('/fashion',[ProductController::class,'show']);
 Route:: get('/books',[ProductController ::class,'showbooks']);
-
-Route::get('/furniture', function () {
-    return view('user.products.furniture');
-});
+Route:: get('/furniture',[ProductController ::class,'showfurniture']);
 
 Route::get('/home', function () {
     return view('user.index');
