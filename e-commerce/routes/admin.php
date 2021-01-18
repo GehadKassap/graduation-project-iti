@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\admin;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,29 +22,49 @@ use App\Http\Controllers\TestController;
 // });
 
 //admin-dashboard
-Route::get('/dashboard', function () {return view('admin.dashboard');});
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
 
 //admin-orders
-Route::get('/orders', function () {return view('admin.orders');});
+Route::get('/orders', function () {
+    return view('admin.orders');
+});
 
 //admin-order-details
-Route::get('/order-details', function () {return view('admin.orderdetails');});
+Route::get('/order-details', function () {
+    return view('admin.orderdetails');
+});
 
 //admin-users
-Route::get('/users', function () {return view('admin.users');});
+Route::get('/users', function () {
+    return view('admin.users');
+});
 
 //admin-products
-Route::get('/products', function () {return view('admin.products');});
+Route::get('/products', function () {
+    return view('admin.products');
+});
 
 //admin-add-product
-Route::get('/add-product', function () {return view('admin.addnewproduct');});
+Route::get('/add-product', function () {
+    return view('admin.addnewproduct');
+});
 
 //admin-Promotion
-Route::get('/Promotion', function () {return view('admin.Promotion');});
+Route::get('/Promotion', function () {
+    return view('admin.Promotion');
+});
 
 //admin-offers
-Route::get('/offers', function () {return view('admin.offers');});
+Route::get('/offers', function () {
+    return view('admin.offers');
+});
 
 //admin-support
-Route::get('/support', function () {return view('admin.support');});
+Route::get('/support', function () {
+    return view('admin.support');
+});
 
+
+Route::resource("products", admin\ProductController::class);
