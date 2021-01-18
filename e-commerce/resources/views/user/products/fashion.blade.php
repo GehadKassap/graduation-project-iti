@@ -39,6 +39,7 @@ fashion
 								<div class="tab-single">
 									<div class="row">
 									@foreach($product as $pro)
+									@if($pro->category == 3)
 										<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 											<div class="single-product">
 												<div class="product-img">
@@ -66,6 +67,7 @@ fashion
 												</div>
 											</div>
 										</div>
+										@endif
 										@endforeach
 										<!-- <div class="col-xl-3 col-lg-4 col-md-4 col-12">
 											<div class="single-product">
