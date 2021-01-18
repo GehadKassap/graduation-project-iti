@@ -17,7 +17,9 @@ class ProductController extends Controller
     {
         //
         $products = Product::all();
-
+        // foreach ($products as $product) {
+        //     $product["image"] = 'product_images/' . $product["image"];
+        // }
         return view('admin.products', ["products" => $products]);
     }
 
@@ -41,19 +43,29 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        // $request->file->store('product', 'public');
+
+
+        $file = $request->file('image');
+        $extension = $file->getClientOriginalExtension();
+        $filename = time() . '.' . $extension;
+        $file->move('product_images/', $filename);
+
         Product::create([
             "name" => $request["product_name"],
             "description" => $request["product_description"],
             "price" => $request["product_price"],
-            "discount" => $request["Product_discount"],
+            // "discount" => $request["Product_discount"],
             "colors" => $request["product_color"],
             "sizes" => $request["product_size"],
-            // "category" => $request["product_category"],
+            "category" => $request["product_category"],
             "quantity" => $request["Product_quantity"],
-
+            "image" => $filename
         ]);
+
         return redirect(route('products.index'));
     }
+
 
     /**
      * Display the specified resource.
@@ -75,6 +87,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         //
+        return view("admin.editproduct", ["product" => $product]);
     }
 
     /**
@@ -87,6 +100,30 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         //
+
+        // $request->validate([
+        //     "name" => "required",
+        //     "price" => "required|numeric",
+        //     "quantity" => "required|numeric",
+        //     "describtion" => "required",
+
+        // ]);
+        if (isset($request["Product_discount"]))  $discount = $request["Product_discount"];
+        else $discount = 0;
+
+        $product->update([
+            "name" => $request["product_name"],
+            "description" => $request["product_description"],
+            "price" => $request["product_price"],
+            "discount" => $discount,
+            "colors" => $request["product_color"],
+            "sizes" => $request["product_size"],
+            "category" => $request["product_category"],
+            "quantity" => $request["Product_quantity"],
+            // "image_path "=
+
+        ]);
+        return redirect(route('products.index'));
     }
 
     /**
