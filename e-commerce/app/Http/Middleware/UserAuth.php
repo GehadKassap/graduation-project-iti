@@ -24,10 +24,16 @@ class UserAuth
         }
         // if( $request->user() == null && $request->user()->role != 'admin'  )
 
+        //     // return $next($request);
+
+        //  if( $_COOKIE('user_role') == 'user' ||$_COOKIE('user_role') == null )
+        //  {
+        //     return view("users.signin");
+        //  }
+        //  else
+        //  {
         //     return $next($request);
-
-        // //     return redirect('/');
-
+        //  }
         return $next($request);
 
     }
