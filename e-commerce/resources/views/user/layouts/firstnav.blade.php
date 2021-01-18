@@ -44,7 +44,7 @@
 					<div class="col-lg-2 col-md-2 col-12">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="home.html"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
+							<a href="/home"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
 						</div>
 						<!--/ End Logo -->
 						<!-- Search Form -->
@@ -84,13 +84,11 @@
 					<div class="col-lg-2 col-md-3 col-12">
 						<div class="right-bar">
 							<!-- Search Form -->
-
+                            @if(Session::has('user'))
 							<div class="sinlge-bar">
-								<a href="account.html" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+								<a href="/profile" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                             </div>
-                            <div class="sinlge-bar">
-								<a href="account.html" class="single-icon">logout</a>
-                            </div>
+
 
 
 							<div class="sinlge-bar shopping">
@@ -120,7 +118,7 @@
 											<span>Total</span>
 											<span class="total-amount">$134.00</span>
 										</div>
-										<a href="fav.html" class="btn animate">Checkout</a>
+										<a href="/checkout" class="btn animate">Checkout</a>
 									</div>
                                 </div>
 
@@ -130,7 +128,18 @@
 
 
 								<!--/ End Shopping Item -->
-							</div>
+                            </div>
+                            @endif
+                            @if(Session::has('user'))
+                            <div class="sinlge-bar">
+                          <a class="single-icon" href="/logout">Logout </a>
+                            </div>
+                            @else
+                            <div class="sinlge-bar">
+                          <a class="single-icon" href="/signin">signIn <i class="fas fa-sign-in-alt"></i> </a>
+                            </div>
+                            @endif
+
 						</div>
 					</div>
 				</div>
@@ -156,5 +165,21 @@
 <script type="text/javascript" src="{{ asset('js/onepage-nav.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/easing.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/active.js') }}"></script>
+
+<!-- <div class="sinlge-bar">
+                            <ul class="navbar-nav mr-auto ">
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Dropdown
+                              </a>
+                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                              <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                      </li>
+                      </ul>
+                      </div> -->
 </body>
 </html>
