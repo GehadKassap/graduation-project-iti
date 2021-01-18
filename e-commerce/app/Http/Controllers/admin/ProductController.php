@@ -41,11 +41,19 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+
+        $request->validate([
+            "name" => "required",
+            "price" => "required|numeric",
+            "quantity" => "required|numeric",
+            "describtion" => "required",
+
+        ]);
         Product::create([
             "name" => $request["product_name"],
             "description" => $request["product_description"],
             "price" => $request["product_price"],
-            "discount" => $request["Product_discount"],
+            // "discount" => $request["Product_discount"],
             "colors" => $request["product_color"],
             "sizes" => $request["product_size"],
             // "category" => $request["product_category"],
@@ -75,6 +83,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         //
+        return view("admin.editproduct", ["product" => $product]);
     }
 
     /**
@@ -87,6 +96,27 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         //
+
+        // $request->validate([
+        //     "name" => "required",
+        //     "price" => "required|numeric",
+        //     "quantity" => "required|numeric",
+        //     "describtion" => "required",
+
+        // ]);
+
+        $product->update([
+            "name" => $request["product_name"],
+            "description" => $request["product_description"],
+            "price" => $request["product_price"],
+            // "discount" => $request["Product_discount"],
+            "colors" => $request["product_color"],
+            "sizes" => $request["product_size"],
+            // "category" => $request["product_category"],
+            "quantity" => $request["Product_quantity"],
+
+        ]);
+        return redirect(route('products.index'));
     }
 
     /**
