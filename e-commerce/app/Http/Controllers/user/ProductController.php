@@ -4,7 +4,9 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Card;
 use Illuminate\Http\Request;
+use Session;
 
 class ProductController extends Controller
 {
@@ -15,7 +17,28 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+    
+    }
+    
+    function addToCart(Request $req)
+    {
+        if($req->session()->has('user'))
+        {
+           $cart= new Card;
+           $cart->user_id=$req->session()->get('user')['id'];
+           $cart->pro_id=$req->pro_id;
+           $cart->save();
+           return redirect('/');
+           
+        }
+        else
+        {
+            return redirect('/signin');
+        }
+    }
+    function cartItem(){
+        $userId=Session::get('user')['id'];
+        return Card::where('user_id',$userId)->count();
     }
 
     /**

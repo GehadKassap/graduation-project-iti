@@ -132,9 +132,14 @@
                                 <input type="number" id="numbaric" class="number" min="1" value="1">
                             </form>
                         </div>
-                        <div class="single_page_footer">
-                            <a href="#" class="add_btn">add to cart</a>
-                            <a href="fav.html" class="add_btn">whishlist</a>
+                        <div class="single_page_footer row">
+                          <form action="/add_to_cart" method="POST" class="col-md-3">
+                           @csrf
+                           {{-- <input type="hidden"  name="pro_id" value={{$product['id']}}> --}}
+                           
+                            <button class="add_btn">add to cart</button>
+                            </form>
+                            <button class="add_btn col-md-2">whishlist</button>
                         </div>
                     </div>
                 </div>
