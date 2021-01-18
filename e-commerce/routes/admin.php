@@ -29,9 +29,9 @@ use App\Http\Controllers\admin;
 //     return "you are not admin";
 // });
 //admin-dashboard
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// });
 
 //admin-orders
 Route::get('/orders', function () {
@@ -44,19 +44,19 @@ Route::get('/order-details', function () {
 });
 
 //admin-users
-Route::get('/users', function () {
-    return view('admin.users');
-});
+// Route::get('/users', function () {
+//     return view('admin.users');
+// });
 
 //admin-products
-Route::get('/products', function () {
-    return view('admin.products');
-});
+// Route::get('/products', function () {
+//     return view('admin.products');
+// });
 
 //admin-add-product
-Route::get('/add-product', function () {
-    return view('admin.addnewproduct');
-});
+// Route::get('/add-product', function () {
+//     return view('admin.addnewproduct');
+// });
 
 //admin-Promotion
 Route::get('/Promotion', function () {
@@ -75,9 +75,9 @@ Route::get('/support', function () {
 
 
 
-Route::get('admin/dashboard', function () {
-    return view('admin.dashboard');
-});
+// Route::get('admin/dashboard', function () {
+//     return view('admin.dashboard');
+// });
 
 //admin-orders
 Route::get('admin/orders', function () {
@@ -92,16 +92,16 @@ Route::get('admin/order-details', function () {
 
 
 //admin-products
-Route::get('admin/products', function () {
-    return view('admin.products');
-});
+// Route::get('admin/products', function () {
+//     return view('admin.products');
+// });
 
 //admin-add-product
-Route::get('admin/add-product', function () {
-    return view('admin.addnewproduct');
-});
+// Route::get('admin/add-product', function () {
+//     return view('admin.addnewproduct');
+// });
 
-Route::get('admin/add-user', function () {return view('admin.adduser');});
+// Route::get('admin/add-user', function () {return view('admin.adduser');});
 
 
 //admin-Promotion
