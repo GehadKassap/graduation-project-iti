@@ -29,6 +29,9 @@ class UsersController extends Controller
     public function create()
     {
         //
+        return view("admin.adduser");
+
+
     }
 
     /**
@@ -40,6 +43,26 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            "fullname"=>"required",
+            "email"=>"required",
+            "address"=>"required",
+            "password"=>"required",
+            "phone"=>"required",
+            "role"=>"required"
+        ]);
+        User::create([
+           "fullname"=>$request["fullname"],
+            "email"=>$request["email"],
+            "address"=>$request["address"],
+            "password"=>$request["password"],
+            "phone"=>$request["phone"],
+            "role"=>$request["role"]
+
+           ]);
+
+        return redirect(route("admin.index"));
+
     }
 
     /**
@@ -62,6 +85,8 @@ class UsersController extends Controller
     public function edit(User $user)
     {
         //
+        // return view("admin.updateuser",["user"=>$user]);
+
     }
 
     /**
@@ -74,6 +99,16 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
         //
+        // $user->update([
+        //     "fullname"=>$request["fullname"],
+        //     "email"=>$request["email"],
+        //     "address"=>$request["address"],
+        //     "password"=>$request["password"],
+        //     "phone"=>$request["phone"],
+        //     "role"=>$request["role"]
+
+        // ]);
+        // return redirect(route("admin.index"));
     }
 
     /**
@@ -85,5 +120,7 @@ class UsersController extends Controller
     public function destroy(User $user)
     {
         //
+        $user->delete();
+        return redirect(route("admin.index"));
     }
 }

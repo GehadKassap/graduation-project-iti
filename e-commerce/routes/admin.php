@@ -27,16 +27,16 @@ Route::get('admin/orders', function () {return view('admin.orders');});
 //admin-order-details
 Route::get('admin/order-details', function () {return view('admin.orderdetails');});
 
-//admin-users
-// Route::get('admin/users', function () {return view('admin.users');});
-// Route::get('admin/users',[admin\UsersController::class,"index"])
-// ->name("users.index");
+
 
 //admin-products
 Route::get('admin/products', function () {return view('admin.products');});
 
 //admin-add-product
 Route::get('admin/add-product', function () {return view('admin.addnewproduct');});
+
+Route::get('admin/add-user', function () {return view('admin.adduser');});
+
 
 //admin-Promotion
 Route::get('admin/Promotion', function () {return view('admin.Promotion');});
@@ -47,5 +47,5 @@ Route::get('admin/offers', function () {return view('admin.offers');});
 //admin-support
 Route::get('admin/support', function () {return view('admin.support');});
 
-//resource 
-Route::resource("admin/users",admin\UsersController::class);
+//users 
+Route::resource("admin",admin\UsersController::class);

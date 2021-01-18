@@ -46,7 +46,7 @@
       </li>
       <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span class="menu-title" data-i18n="">Orders</span></a>
       </li>
-      <li class=" nav-item"><a href="admin-users.html"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
+      <li class=" nav-item"><a href="{{route('admin.index')}}"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
       </li>
       <li class=" nav-item"><a href="admin-products.html"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
       </li>
