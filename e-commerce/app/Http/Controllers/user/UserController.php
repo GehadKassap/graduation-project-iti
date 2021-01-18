@@ -45,29 +45,34 @@ class UserController extends Controller
     //match user in db;
     function handleLogin(Request $req)
     {
-         //return $req->input();
-        //   dd($req->all());
 
-        // $cred = array('email' => $req->email , 'password'=>$req->password);
-        // if(Auth::attempt($cred))
-        // {
-        //         return "true valid" ;
-        // }
-        // else
-        // {
-        //     return "not true valid" ;
-        // }
         $user = User::where(['email'=>$req->email ])->first();
         if( !$user ||  !Hash::check($req->password , $user->password))
         {
-            return " lsssoginn in" ;
+            return redirect('signin') ;
         }
         else
         {
             $req->session()->put('user' , $user);
-            return "loginn in" ;
+            return redirect('/');
         }
     }
+    // else
+    // {
+    //     if( $user->role == 'user')
+    //     {
+    //         $req->session()->put('user' , $user);
+    //         return redirect('/');
+    //     }
+    //     else
+    //     {
+    //         $req->session()->put('user' , $user);
+    //         return view('admin.dashboard');
+    //     }
+
+    // }
+
+
 
     /**
      * Show the form for creating a new resource.
