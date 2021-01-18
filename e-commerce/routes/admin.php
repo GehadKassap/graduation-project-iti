@@ -17,7 +17,14 @@ use App\Http\Controllers\admin;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// Route::middleware('UserAuth' , function(){
+// //admin-dashboard
+// Route::get('admin/dashboard', function () {return view('admin.dashboard');});
+// });
 
+// Route::get('notauth' , function(){
+//     return "you are not admin";
+// });
 //admin-dashboard
 Route::get('admin/dashboard', function () {return view('admin.dashboard');});
 
@@ -47,5 +54,5 @@ Route::get('admin/offers', function () {return view('admin.offers');});
 //admin-support
 Route::get('admin/support', function () {return view('admin.support');});
 
-//resource 
+//resource
 Route::resource("admin/users",admin\UsersController::class);

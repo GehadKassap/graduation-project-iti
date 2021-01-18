@@ -44,7 +44,7 @@
 					<div class="col-lg-2 col-md-2 col-12">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="home.html"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
+							<a href="/home"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
 						</div>
 						<!--/ End Logo -->
 						<!-- Search Form -->
@@ -84,9 +84,9 @@
 					<div class="col-lg-2 col-md-3 col-12">
 						<div class="right-bar">
 							<!-- Search Form -->
-
+                            @if(Session::has('user'))
 							<div class="sinlge-bar">
-								<a href="account.html" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+								<a href="/profile" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                             </div>
 
 
@@ -118,7 +118,7 @@
 											<span>Total</span>
 											<span class="total-amount">$134.00</span>
 										</div>
-										<a href="fav.html" class="btn animate">Checkout</a>
+										<a href="/checkout" class="btn animate">Checkout</a>
 									</div>
                                 </div>
 
@@ -129,6 +129,7 @@
 
 								<!--/ End Shopping Item -->
                             </div>
+                            @endif
                             @if(Session::has('user'))
                             <div class="sinlge-bar">
                           <a class="single-icon" href="/logout">Logout </a>

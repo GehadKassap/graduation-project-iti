@@ -53,10 +53,21 @@ class UserController extends Controller
         }
         else
         {
-            $req->session()->put('user' , $user);
-            return redirect('/');
+            if( $user->role == 'user')
+            {
+                $req->session()->put('user' , $user);
+                return redirect('/');
+            }
+            else
+            {
+                $req->session()->put('user' , $user);
+                return view('admin.dashboard');
+            }
+
         }
     }
+
+
 
     /**
      * Show the form for creating a new resource.
