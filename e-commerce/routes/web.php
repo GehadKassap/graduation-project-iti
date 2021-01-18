@@ -22,6 +22,11 @@ Route::get('/allcategories', function () {
 Route::get('/fashion', function () {
     return view('user.products.fashion');
 });
+
+Route::get('/furniture', function () {
+    return view('user.products.furniture');
+});
+
 Route::get('/home', function () {
     return view('user.index');
 });

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class UsersController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class UsersController extends Controller
     public function index()
     {
         //
-        $users=User::all();
-        // return $users;
-        return view("admin.users",["users"=>$users]);
+        $products = Product::all();
+
+        return view('admin.products', ["products" => $products]);
     }
 
     /**
@@ -29,9 +29,7 @@ class UsersController extends Controller
     public function create()
     {
         //
-        return view("admin.adduser");
-
-
+        return view('admin.addnewproduct');
     }
 
     /**
@@ -43,35 +41,27 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            "fullname"=>"required",
-            "email"=>"required",
-            "address"=>"required",
-            "password"=>"required",
-            "phone"=>"required",
-            "role"=>"required"
+        Product::create([
+            "name" => $request["product_name"],
+            "description" => $request["product_description"],
+            "price" => $request["product_price"],
+            "discount" => $request["Product_discount"],
+            "colors" => $request["product_color"],
+            "sizes" => $request["product_size"],
+            // "category" => $request["product_category"],
+            "quantity" => $request["Product_quantity"],
+
         ]);
-        User::create([
-           "fullname"=>$request["fullname"],
-            "email"=>$request["email"],
-            "address"=>$request["address"],
-            "password"=>$request["password"],
-            "phone"=>$request["phone"],
-            "role"=>$request["role"]
-
-           ]);
-
-        return redirect(route("users.index"));
-
+        return redirect(route('products.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Product $product)
     {
         //
     }
@@ -79,39 +69,36 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Product $product)
     {
         //
-        // return view("admin.updateuser",["user"=>$user]);
-
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Product $product)
     {
         //
-       
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Product $product)
     {
         //
-        $user->delete();
-        return redirect(route("users.index"));
+        $product->delete();
+        return redirect(route('products.index'));
     }
 }
