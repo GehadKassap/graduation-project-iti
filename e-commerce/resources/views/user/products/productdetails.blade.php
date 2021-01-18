@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eshop</title>
+    <!-- @section('title')
+   product details
+    @endsection -->
     <link rel="stylesheet" type="text/css" href="{{ url('/css/nivo-slider.css') }}">
     <!-- owl-carousel -->
     <link rel="stylesheet" type="text/css" href="{{ url('/css/owl.carousel.min.css') }}">
@@ -89,52 +91,51 @@
             <!--/ End Header Inner -->
         </header>
     <!-- header -->
-   
+
     <!-- single page content area start -->
     <section class="single_prodduct_page_area sectionp">
         <div class="container">
             <div class="row">
                 <div class="col-sm-5">
+
                     <div class="single_page_img">
-                        <img src="{{asset('images/assets/images/product/1.jpg')}}" alt="">
+                        <img src="{{ asset('product_images/' . $product->image)}}" alt="">
                     </div>
+
                     <div class="img_thumbnail">
+                    @foreach($products as $prod)
+
                         <div class="single_thumb">
-                            <img src="{{asset('images/assets/images/product/1.jpg')}}" alt="">
+                            <img src="{{ asset('product_images/' . $prod->image)}}" alt="">
                         </div>
-                        <div class="single_thumb">
-                            <img src="{{asset('images/assets/images/product/3.jpg')}}" alt="">
-                        </div>
-                        <div class="single_thumb">
-                            <img src="{{asset('images/assets/images/product/9.jpg')}}" alt="">
-                        </div>
-                        <div class="single_thumb">
-                            <img src="{{asset('images/assets/images/product/14.jpg')}}" alt="">
-                        </div>
+
+                        @endforeach
+
+
                     </div>
                 </div>
                 <div class="col-sm-7">
                     <div class="single_page_content">
                         <div class="single_page_top_content">
-                            <h2>Standard Shoes</h2>
-                            <span>$30.00</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum animi nobis ex labore fuga esse vero dignissimos nemo facilis possimus suscipit quia, iusto quisquam dolores accusamus blanditiis eius ipsa itaque.</p>
+                            <h2>{{$product->name}}</h2>
+                            <span>{{$product->price}}L.E</span>
+                            <p>{{$product->description}}</p>
                         </div>
                         <div class="single_page_top_middle">
                             <div class="pro_ref">
                                 <p><span>Availability:</span><span>In Stock</span></p>
-                                <p><span>Categories:</span><span>Cloth, Shoes, Perfume</span></p>
-                                <p><span>Model:</span><span>2mr30</span></p>
+                                <p><span>Categories:</span><span>{{$product->category}}</span></p>
+                                <!-- <p><span>Model:</span><span>2mr30</span></p> -->
                                 <p><span>Tags:</span><span>Cloth, Shoes, Perfume</span></p>
                             </div>
-                            <form action="#" class="f_num">
-                                <label for="numbaric">Quantity</label>
+                            <!-- <form action="#" class="f_num">
+                                 <label for="numbaric">Quantity</label>
                                 <input type="number" id="numbaric" class="number" min="1" value="1">
-                            </form>
+                            </form> -->
                         </div>
                         <div class="single_page_footer">
-                            <a href="#" class="add_btn">add to cart</a>
-                            <a href="fav.html" class="add_btn">whishlist</a>
+                            <a href="/cart" class="add_btn">add to cart</a>
+                            <a href="/favorite" class="add_btn">whishlist</a>
                         </div>
                     </div>
                 </div>
@@ -156,13 +157,8 @@
             <div class="tab-content clearfix  tab_body">
                 <div class="tab-pane active" id="1a">
                     <div class="tab_one_c">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque consequuntur beatae temporibus voluptates voluptas sint architecto incidunt omnis iste tempora placeat sequi, illum, iure ullam similique modi veritatis quia!
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque consequuntur beatae temporibus voluptates voluptas sint architecto incidunt omnis iste tempora placeat sequi, illum, iure ullam similique modi veritatis quia!
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque consequuntur beatae temporibus voluptates voluptas sint architecto incidunt omnis iste tempora placeat sequi, illum, iure ullam similique modi veritatis quia!</p>
+                              <p>{{$product->description}}</p>
+
                     </div>
                 </div>
                 <div class="tab-pane" id="2a">
@@ -219,45 +215,20 @@
                 <h2>Related Product</h2>
                 <div class="products_area sing_page_pr_slide">
                     <!-- single-product -->
+                   @foreach($products as $prod)
+
                     <div class="single_product">
                         <div class="single_img_slide">
                             <div class="sng_im_p">
                                 <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/assets/images/product/1.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/assets/images/product/2.jpg')}}" alt=""></div>
+                                    <div class="front_img"><img src="{{ asset('product_images/' . $prod->image)}}" ></div>
+                                    <div class="back_img"><img src="{{ asset('product_images/' . $prod->image)}}" ></div>
                                 </a>
                             </div>
                             <div class="si_img_ic prod_content_area">
                                 <div class="prod_content">
-                                    <p>$3000</p>
-                                    <p>Lorem ipsum dolor.</p>
-                                </div>
-                                <div class="sic_icon">
-                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Add to Cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Product details">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_product">
-                        <div class="single_img_slide">
-                            <div class="sng_im_p">
-                                <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/assets/images/product/1.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/assets/images/product/2.jpg')}}" alt=""></div>
-                                </a>
-                            </div>
-                            <div class="si_img_ic prod_content_area">
-                                <div class="prod_content">
-                                    <p>$3000</p>
-                                    <p>Lorem ipsum dolor.</p>
+                                    <p>{{$prod->price}} L.E</p>
+                                    <p>{{$prod->name}}</p>
                                 </div>
                                 <div class="sic_icon">
                                     <a href="#" data-toggle="tooltip" title="Add to Wishlist">
@@ -274,94 +245,7 @@
                         </div>
                     </div>
 
-                    <!-- single product -->
-                    <div class="single_product">
-                        <div class="single_img_slide">
-                            <div class="sng_im_p">
-                                <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/assets/images/product/3.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/assets/images/product/4.jpg')}}" alt=""></div>
-                                </a>
-                            </div>
-                            <div class="si_img_ic prod_content_area">
-                                <div class="prod_content">
-                                    <p>$3000</p>
-                                    <p>Lorem ipsum dolor.</p>
-                                </div>
-                                <div class="sic_icon">
-                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Add to Cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Product details">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="offer_st">-10%</span>
-                    </div>
-
-                    <!-- single product -->
-                    <div class="single_product">
-                        <div class="single_img_slide">
-                            <div class="sng_im_p">
-                                <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/assets/images/product/5.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/assets/images/product/6.jpg')}}" alt=""></div>
-                                </a>
-                            </div>
-                            <div class="si_img_ic prod_content_area">
-                                <div class="prod_content">
-                                    <p>$3000</p>
-                                    <p>Lorem ipsum dolor.</p>
-                                </div>
-                                <div class="sic_icon">
-                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Add to Cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Product details">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_product">
-                        <div class="single_img_slide">
-                            <div class="sng_im_p">
-                                <a href="#">
-                                    <div class="front_img"><img src="{{asset('images/assets/images/product/7.jpg')}}" alt=""></div>
-                                    <div class="back_img"><img src="{{asset('images/assets/images/product/8.jpg')}}" alt=""></div>
-                                </a>
-                            </div>
-                            <div class="si_img_ic prod_content_area">
-                                <div class="prod_content">
-                                    <p>$3000</p>
-                                    <p>Lorem ipsum dolor.</p>
-                                </div>
-                                <div class="sic_icon">
-                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Add to Cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Product details">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <span class="offer_st">sale</span>
-                        </div>
-                    </div>
-
-                </div>
+                    @endforeach
             </div>
         </div>
     </section>
@@ -387,7 +271,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Shop Newsletter -->  
+	<!-- End Shop Newsletter -->
 
     @include("user.layouts.footer")
     <!-- js section -->
@@ -396,7 +280,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
- 
+
     <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.nivo.slider.pack.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.fancybox.min.js') }}"></script>

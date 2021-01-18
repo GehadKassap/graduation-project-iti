@@ -31,7 +31,12 @@
                             <input name="fullname" type="text" class="form-control" id="username" placeholder="Username">
                             <!-- <i class="fa fa-check-circle"></i> -->
 		                	<i class="fa fa-exclamation-circle"></i>
-			                 <small>Error message</small>
+                             <small>Error message</small>
+                             <!-- @if($errors->any)
+                              @foreach($errors->all() as $err)
+                              {{$err}}
+                              @endforeach
+                           @endif -->
                           </div>
 
                           <div class="form-group col-md-12">

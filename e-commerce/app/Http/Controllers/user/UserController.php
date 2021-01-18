@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Http\Request;
-// use  Auth;
+//  use  App\Http\middleware\UserAuth;
+//  use  Auth;
 
 class UserController extends Controller
 {
@@ -15,10 +16,15 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function __construct()
+    // {
+    //    $this->middleware('UserAuth');
+    // }
     public function index()
     {
         return view("user.index");
     }
+
     //to redirect user to signUp form
     function registerForm()
     {
@@ -27,8 +33,16 @@ class UserController extends Controller
     //to store user info in db;
     function handleForm(Request $req)
     {
-         //return $req->input();
-        //   dd($req->all());
+        $validator = \Validator::make($req->all() , [
+            'fullname' => 'required|max:100|min:5',
+            'password' => 'required|max:30|min:3',
+            'password' => 'required|unique:users|max:30|min:3',
+        ]);
+        if($validator->fails())
+        {
+            return view('user.Auth.register');
+            // ->withErrors($validator)->withInput()
+        }
         $user = new User ;
         $user->fullname = $req->fullname;
         $user->password = \Hash::make( $req->password);
@@ -42,6 +56,7 @@ class UserController extends Controller
     {
        return view('user.Auth.signin');
     }
+
     //match user in db;
     function handleLogin(Request $req)
     {
@@ -58,20 +73,20 @@ class UserController extends Controller
              {
                   $req->session()->put('user' , $user);
                   setcookie('role' , $user->role);
+
                   return view('admin.dashboard');
               }
               else
               {
                     $req->session()->put('user' , $user);
-                    setcookie('role' , $user->role);
+
+                   setcookie('role' , $user->role);
                     return redirect('/');
 
                }
 
     }
     }
-
-
 
 
     /**
