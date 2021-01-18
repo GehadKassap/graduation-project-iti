@@ -31,7 +31,7 @@
                     <div class="row mt-3">
                         <ul class="nav responsive-tab nav-material nav-material-white">
                             <li>
-                                <a class="nav-link active" href="{{route("products.index")}"><i
+                                <a class="nav-link active" href="{{route("products.index")}}"><i
                                         class="fas fa-layer-group"></i></i>All Products</a>
                             </li>
                             <li>

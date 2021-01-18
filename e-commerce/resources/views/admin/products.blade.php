@@ -81,20 +81,27 @@
 
                                                     </td>
                                                     <td>
-                                                        <a class="btn btn-fab-sm "><i
-                                                                class="far fa-edit mr-2 btn-outline-primary"></i>
+                                                        <a class="btn btn-fab-sm ">
+                                                            <i class="far fa-edit mr-2 btn-outline-primary"></i>
 
 
                                                         </a>
-                                                        <form action="{{route("products.destroy",$product)}}"
+                                                        <form class="btn btn-fab-sm "
+                                                            action="{{route("products.destroy",$product)}}"
                                                             method="Post">
                                                             @csrf
                                                             @method("delete")
-                                                            <input type="submit"
-                                                                class="far fa-trash-alt btn-outline-danger"></input>
+                                                            <button type="submit"
+                                                                class="far fa-trash-alt mr-2 btn-outline-danger"></button>
+
 
                                                         </form>
                                                     </td>
+                                                    <!-- <form>
+                                                       
+                                                        <input type="summit">delete</input>
+
+                                                    </form> -->
                                                 </tr>
                                                 @endforeach
                                             </tbody>
