@@ -36,10 +36,12 @@ class UserController extends Controller
         $validator = \Validator::make($req->all() , [
             'fullname' => 'required|max:100|min:5',
             'password' => 'required|max:30|min:3',
+            'password' => 'required|unique:users|max:30|min:3',
         ]);
         if($validator->fails())
         {
             return view('user.Auth.register');
+            // ->withErrors($validator)->withInput()
         }
         $user = new User ;
         $user->fullname = $req->fullname;

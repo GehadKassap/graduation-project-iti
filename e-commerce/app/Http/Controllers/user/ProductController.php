@@ -37,8 +37,11 @@ class ProductController extends Controller
     function detailsProduct($id)
     {
       //$product = Product::where('id' , '=' , $id)->first();
-      $product = Product::find($id)  ;
-      dd($product);
+      $product = Product::findorfail($id)  ;
+      $allProducts=product::all();
+   //$allProducts=product::where('id', "<=" , $id)->count();
+      return view('user.products.productdetails' , ['product'=>$product , 'products'=>$allProducts]);
+       //   dd($product);
     }
 
     /**

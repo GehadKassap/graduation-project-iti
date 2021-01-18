@@ -53,7 +53,7 @@ Route::get('/checkout ', function () {return view('user.products.checkout ');});
 //contactus
 Route::get('/contactus  ', function () {return view('user.products.contactus  ');});
 //productdetails
-Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
+// Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
 
 Route::post('/register',[UserController::class , "handleForm"]);
 
