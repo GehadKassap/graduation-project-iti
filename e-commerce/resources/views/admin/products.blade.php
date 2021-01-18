@@ -35,11 +35,11 @@
                     <div class="row mt-3">
                         <ul class="nav responsive-tab nav-material nav-material-white">
                             <li>
-                                <a class="nav-link active" href="admin-products.html"><i
+                                <a class="nav-link active" href="{{route('products.index')}}"><i
                                         class="fas fa-layer-group"></i></i>All Products</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="{{route("products.create")}}"><i
+                                <a class="nav-link" href="{{route('products.create')}}"><i
                                         class="fas fa-plus-circle"></i> Add New Product</a>
                             </li>
 
@@ -58,11 +58,33 @@
                                 <div class="card-body p-0">
                                     <div class="table-responsive">
                                         <table class="table table-hover ">
-                                            <tbody>0
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        image
+                                                    </th>
+                                                    <th>
+                                                        Name
+                                                    </th>
+                                                    <th>
+                                                        price
+                                                    </th>
+                                                    <th>
+                                                        discout
+                                                    </th>
+                                                    <th>
+                                                        category
+                                                    </th>
+                                                    <th>
+                                                        description
+                                                    </th>
+
+                                            </thead>
+                                            <tbody>
                                                 @foreach($products as $product)
                                                 <tr class="no-b">
                                                     <td class="w-10">
-                                                        <img src="{{asset('images/admin/pro1.png')}}" alt="">
+                                                        <img src="{{asset("product_images/$product[image]")}}" alt="">
                                                     </td>
                                                     <td>
                                                         <h6>{{$product["name"]}}</h6>
@@ -81,13 +103,14 @@
 
                                                     </td>
                                                     <td>
-                                                        <a class="btn btn-fab-sm ">
+                                                        <a href="{{route('products.edit',$product)}}"
+                                                            class="btn btn-fab-sm ">
                                                             <i class="far fa-edit mr-2 btn-outline-primary"></i>
 
 
                                                         </a>
                                                         <form class="btn btn-fab-sm "
-                                                            action="{{route("products.destroy",$product)}}"
+                                                            action="{{route('products.destroy',$product)}}"
                                                             method="Post">
                                                             @csrf
                                                             @method("delete")
