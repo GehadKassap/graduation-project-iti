@@ -74,8 +74,8 @@
 									<option>cosmatics</option>
 									<option>Electronics</option>
 								</select>
-								<form>
-									<input name="search" placeholder="Search Products Here....." type="search">
+								<form action="/search">
+									<input name="term" placeholder="Search Products Here....." type="search">
 									<button class="btnn"><i class="ti-search"></i></button>
 								</form>
 							</div>

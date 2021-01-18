@@ -27,6 +27,13 @@ class ProductController extends Controller
     {
         //
     }
+    //search function
+    function searchProduct(Request $req)
+    {
+         //return $req->input();
+     $dataHolder = Product::where( 'name','like', '%'. $req->input('term').'%')->get() ;
+     return $dataHolder ;
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -45,9 +52,17 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show()
     {
-        //
+        $data=product ::all();
+        return view('user.products.fashion',['product'=>$data]);
+        // return view('user.products.books',['product'=>$data]);
+    }
+    public function showbooks()
+    {
+        $data=product ::all();
+      
+        return view('user.products.books',['product'=>$data]);
     }
 
     /**

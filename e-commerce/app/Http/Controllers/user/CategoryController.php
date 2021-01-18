@@ -47,7 +47,9 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        $data=category::all();
+        // return view('user.products.fashion',['product'=>$data]);
+        return view('user.products.books',['product'=>$data]);
     }
 
     /**

@@ -49,7 +49,8 @@
             <!--start add product------------------------------------------------------------>
             <div class="container-fluid animatedParent animateOnce my-3">
                 <div class="animated fadeInUpShort go">
-                    <form id="needs-validation" action="{{route("products.store")}}" novalidate="" method="POST">
+                    <form id="needs-validation" action="{{route("products.store")}}" novalidate="" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-8 ">
@@ -127,7 +128,7 @@
                                         <label for="quantity">quantity</label>
                                         <input required="" type="number" class="form-control" id="quantity"
                                             name="Product_quantity">
-                                        <div class="inva    lid-feedback">
+                                        <div class="invalid-feedback">
                                             Please provide a valid quantity.
                                         </div>
                                     </div>
@@ -142,10 +143,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputGroupFile01">Product Photo Upload</label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                            class="form-control">
-                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    <div class="form-group">
+                                        <input type="file" name="image" required>
                                     </div>
                                 </div>
                                 <div class=" bg-transparent">
