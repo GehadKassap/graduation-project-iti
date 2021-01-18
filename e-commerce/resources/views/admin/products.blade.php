@@ -84,7 +84,7 @@
                                                 @foreach($products as $product)
                                                 <tr class="no-b">
                                                     <td class="w-10">
-                                                        <img src="{{asset('images/admin/pro1.png')}}" alt="">
+                                                        <img src="{{asset($product['image])}}" alt="">
                                                     </td>
                                                     <td>
                                                         <h6>{{$product["name"]}}</h6>

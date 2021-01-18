@@ -22,7 +22,8 @@ class CreateProductsTable extends Migration
             $table->enum('colors', ['red', 'white', 'green', 'babyblue', 'blue']);
             $table->enum('sizes', ['xl', 'xxl', 'large', 'small', 'medium']);
             $table->integer('quantity');
-
+            $table->string('category', 100);
+            $table->mediumText('image');
             $table->timestamps();
         });
         ###########################################################
