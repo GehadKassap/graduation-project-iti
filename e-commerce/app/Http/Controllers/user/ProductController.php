@@ -72,8 +72,8 @@ class ProductController extends Controller
 
     public function showhomeproduct()
     {
-        $data=product ::all();
-      
+        // $data=product ::all();
+        $data = product::take(8)->get(); 
         return view('user.index',['product'=>$data]);
     }
 
