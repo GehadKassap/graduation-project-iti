@@ -24,9 +24,14 @@ class UserAuth
         }
         // if( $request->user() == null && $request->user()->role != 'admin'  )
 
-        //     return $next($request);
+        //     // return $next($request);
 
-        // //     return redirect('/');
+        //  if( $_COOKIE('user_role') === 'user')
+        //  {
+        //     return redirect('/');
+        //  }
+
+
 
         return $next($request);
 

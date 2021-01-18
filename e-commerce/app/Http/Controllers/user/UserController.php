@@ -49,28 +49,35 @@ class UserController extends Controller
         $user = User::where(['email'=>$req->email ])->first();
         if( !$user ||  !Hash::check($req->password , $user->password))
         {
-            return redirect('signin') ;
-        }
-        else
-        {
-            $req->session()->put('user' , $user);
-            return redirect('/');
-        }
-    }
-    // else
-    // {
-    //     if( $user->role == 'user')
-    //     {
-    //         $req->session()->put('user' , $user);
-    //         return redirect('/');
-    //     }
-    //     else
-    //     {
-    //         $req->session()->put('user' , $user);
-    //         return view('admin.dashboard');
-    //     }
+             return redirect('signin') ;
 
-    // }
+        }
+
+        // else
+        // {
+        //     $req->session()->put('user' , $user);
+        //     return redirect('/');
+        // }
+          else
+          {
+             if( $user->role == 'admin')
+             {
+                  $req->session()->put('user' , $user);
+                  setcookie('user_role' , $user->role);
+                  return view('admin.dashboard');
+              }
+              else
+              {
+                    $req->session()->put('user' , $user);
+                   // return view('admin.dashboard');
+                    setcookie('user_role' , $user->role);
+                    return redirect('/');
+
+               }
+
+    }
+    }
+
 
 
 

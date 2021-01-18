@@ -17,9 +17,9 @@ use App\Http\Controllers\admin;
 |
 */
 
-// Route::middleware('UserAuth' , function(){
-// //admin-dashboard
-// Route::get('admin/dashboard', function () {return view('admin.dashboard');});
+
+// Route::middleware('UserAuth')->group(function(){
+//     Route::resource("admin/users",admin\UsersController::class);
 // });
 
 // Route::get('notauth' , function(){
