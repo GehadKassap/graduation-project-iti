@@ -20,7 +20,15 @@ class UserAuth
         if($request->path()=="login" && $request->session()->has('user'))
         {
             return redirect('/');
+
         }
+        // if( $request->user() == null && $request->user()->role != 'admin'  )
+
+        //     return $next($request);
+
+        // //     return redirect('/');
+
         return $next($request);
+
     }
 }
