@@ -61,7 +61,7 @@ class UsersController extends Controller
 
            ]);
 
-        return redirect(route("admin.index"));
+        return redirect(route("users.index"));
 
     }
 
@@ -99,16 +99,7 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
         //
-        // $user->update([
-        //     "fullname"=>$request["fullname"],
-        //     "email"=>$request["email"],
-        //     "address"=>$request["address"],
-        //     "password"=>$request["password"],
-        //     "phone"=>$request["phone"],
-        //     "role"=>$request["role"]
-
-        // ]);
-        // return redirect(route("admin.index"));
+       
     }
 
     /**
@@ -121,6 +112,6 @@ class UsersController extends Controller
     {
         //
         $user->delete();
-        return redirect(route("admin.index"));
+        return redirect(route("users.index"));
     }
 }

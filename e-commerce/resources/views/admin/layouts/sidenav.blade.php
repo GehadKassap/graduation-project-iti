@@ -18,48 +18,6 @@
 </head>
 
 <!--start side menue--------------------------------------------------------->
-<<<<<<< HEAD
-<div id="wrapper"  >
-<div id="sidebar-wrapper"  data-simplebar="" data-simplebar-auto-hide="true">
-  <div class="brand-logo">
-   
-    <img src="{{asset('images/admin/favicon.png')}}" class="logo-icon" alt="logo icon">
-    <h5 class="logo-text">shop Admin</h5>
- 
-</div>
-<div class="user-details">
- <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
-   <div class="avatar"><img class="mr-3 side-user-img" src="{{asset('images/admin/avatar-s-12.jpg')}}" alt="user avatar"></div>
-    <div class="media-body">
-    <h6 class="side-user-name">Mark Johnson <i class="fas fa-angle-left"></i></h6>
-   </div>
-    </div>
-  <div id="user-dropdown" class="collapse">
-   <ul class="user-setting-menu">
-         <li><a href="admin-profile.html"><i class="far fa-user"></i>  My Profile</a></li>
-         <li><a href="admin-profile-edit.html"><i class="fas fa-cog "></i> Setting</a></li>
-         <li><a href="admin-login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-   </ul>
-  </div>
-   </div>
-  <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true" >
-  <div class="main-menu-content">
-    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-      <li class=" nav-item"><a href="admin-home.html"><i class="fas fa-chart-line icons"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
-      </li>
-      <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span class="menu-title" data-i18n="">Orders</span></a>
-      </li>
-      <li class=" nav-item"><a href="{{route('admin.index')}}"><i class="fas fa-users icons"></i><span class="menu-title" data-i18n="">Users</span></a>
-      </li>
-      <li class=" nav-item"><a href="admin-products.html"><i class="fas fa-tshirt icons"></i><span class="menu-title" data-i18n="">Products</span></a>
-      </li>
-      <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span class="menu-title" data-i18n="">Promotion</span></a>
-      </li>
-      <li class=" nav-item"><a href="admin-offers.html"><i class="fas fa-hand-holding-usd icons"></i><span class="menu-title" data-i18n="">Offers</span></a>
-      </li>
-      <li class="nav-item"><a href="admin-support.html"><i class="fas fa-envelope-open-text icons"></i><span class="menu-title" data-i18n="">Support</span></a>
-      </li>
-=======
 <div id="wrapper">
     <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
         <div class="brand-logo">
@@ -94,10 +52,10 @@
                     <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span
                                 class="menu-title" data-i18n="">Orders</span></a>
                     </li>
-                    <li class=" nav-item"><a href="admin-users.html"><i class="fas fa-users icons"></i><span
+                    <li class=" nav-item"><a href="{{route('users.index')}}"><i class="fas fa-users icons"></i><span
                                 class="menu-title" data-i18n="">Users</span></a>
                     </li>
-                    <li class=" nav-item"><a href="{{route("products.index")}}"><i class="fas fa-tshirt icons"></i><span
+                    <li class=" nav-item"><a href="{{route('products.index')}}"><i class="fas fa-tshirt icons"></i><span
                                 class="menu-title" data-i18n="">Products</span></a>
                     </li>
                     <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span
@@ -114,7 +72,6 @@
                 </ul>
             </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up" href="admin-login.html"> Log
                 Out!</a>
->>>>>>> bd921166a757313ef0ad5453932352e4258eda34
 
         </div>
     </div>

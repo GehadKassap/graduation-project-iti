@@ -58,7 +58,7 @@
                                 <div class="card-body p-0">
                                     <div class="table-responsive">
                                         <table class="table table-hover ">
-                                            <tbody>
+                                            <tbody>0
                                                 @foreach($products as $product)
                                                 <tr class="no-b">
                                                     <td class="w-10">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Admin|add-product</title>
+        <title>Admin|add-user</title>
         <!--*************Internal style sheet****************-->
         <link rel="stylesheet" type="text/css" href="{{ url('/css/admin/admin-add-product.css')}}" />
     </head>
@@ -33,7 +33,9 @@
 <!--start add user------------------------------------------------------------>
 <div class="container-fluid animatedParent animateOnce my-3">
     <div class="animated fadeInUpShort go">
-        <form id="needs-validation" novalidate="" action="{{route('admin.store')}}" method="post">
+       <div class="card">
+       <div class="container">
+       <form class="mt-5 mb-5" id="needs-validation" novalidate="" action="{{route('users.store')}}" method="post">
         @csrf
 
             <div class="row">
@@ -42,7 +44,10 @@
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Name</label>
                             <input type="text" class="form-control" id="validationCustom01" name="fullname" placeholder="user Name" value="{{old('fullname')}}" required="">
-                            <label class="text-danger"> {{$errors->first("fullname")}}</label>
+                            <!-- <label class="text-danger"> {{$errors->first("fullname")}}</label> -->
+                            <div class="invalid-feedback">
+                                Please provide name.
+                            </div>
 
                         </div>
                         <div class="col-md-6  mb-3">
@@ -53,25 +58,37 @@
                             </div>
                             <input type="email" class=" form-control" id="validationCustom02" name="email" placeholder="user Email" value="{{old('email')}}" required="">
                             </div>
-                            <label class="text-danger"> {{$errors->first("email")}}</label>
+                            <!-- <label class="text-danger"> {{$errors->first("email")}}</label> -->
+                            <div class="invalid-feedback">
+                                Please provide email.
+                            </div>
 
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom03">password</label>
                             <input type="password" class="form-control" id="validationCustom03" name="password" placeholder="user password" value="{{old('password')}}" required="">
-                            <label class="text-danger"> {{$errors->first("password")}}</label>
+                            <!-- <label class="text-danger"> {{$errors->first("password")}}</label> -->
+                            <div class="invalid-feedback">
+                                Please provide password.
+                            </div>
 
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom04">Address</label>
                             <input type="text" class="form-control" id="validationCustom04" name="address" placeholder="user address" value="{{old('address')}}" required="">
-                            <label class="text-danger"> {{$errors->first("address")}}</label>
+                            <!-- <label class="text-danger"> {{$errors->first("address")}}</label> -->
+                            <div class="invalid-feedback">
+                                Please provide address.
+                            </div>
 
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom05">phone</label>
                             <input type="text" class="form-control" id="validationCustom05" name="phone" placeholder="user phone" value="{{old('phone')}}" required="">
-                            <label class="text-danger"> {{$errors->first("phone")}}</label>
+                            <!-- <label class="text-danger"> {{$errors->first("phone")}}</label> -->
+                            <div class="invalid-feedback">
+                                Please provide phone.
+                            </div>
 
                         </div>
                     
@@ -85,7 +102,10 @@
                                 <option value="2">user</option>
                                
                             </select>
-                            <label class="text-danger"> {{$errors->first("role")}}</label>
+                            <!-- <label class="text-danger"> {{$errors->first("role")}}</label> -->
+                            <div class="invalid-feedback">
+                                Please provide user role.
+                            </div>
                         </div>
                         
                         
@@ -94,10 +114,10 @@
                     
                     <div class=" bg-transparent">
                     <button class="btn btn-primary pull-up mr-2" type="submit">Submit</button>
-                    <a href="{{route('admin.index')}}" class="btn btn-danger pull-up" >cancel</a>
+                    <a href="{{route('users.index')}}" class="btn btn-danger pull-up" >cancel</a>
                 </div>
                     
-                    <!-- <script>
+                    <script>
                         (function () {
                             "use strict";
                             window.addEventListener("load", function () {
@@ -120,12 +140,15 @@
                                 }, false);
                             }, false);
                         }());
-                    </script> -->
+                    </script>
                 </div>
                 
             </div>
         </form>
-    </div>
+       </div>
+       </div>
+      
+       </div>
 </div>
 <!---------------------------------------------------------------------end add products -->
 

@@ -67,7 +67,7 @@
       <div class="card">
         <div class="card-header border-0">
            <div class="float-left"> <span>Recent Users</span> </div> 
-           <div class="float-right"><a class="btn btn-outline-info" href="{{route('admin.create')}}"><i class="fas fa-user mr-1"></i>Add User</a></div>  
+           <div class="float-right"><a class="btn btn-outline-info" href="{{route('users.create')}}"><i class="fas fa-user mr-1"></i>Add User</a></div>  
         </div>      
            <div class="card-action">
               <div class="dropdown">
@@ -94,9 +94,7 @@
               <tbody>
                 @foreach($users as $user)
                 <tr>
-                   <!-- <td>
-                     <img alt="Image placeholder" src="{{asset('images/admin/avatar-s-1.png')}}"  class="product-img">
-                   </td> -->
+                   
                   <td>{{$user->id}}</td>
                   <td>{{$user->fullname}}</td>
                   <td>
@@ -109,7 +107,7 @@
                   <td>{{$user->created_at}}</td>
                   <td>
                      <!-- <i class="far fa-trash-alt " title="delete"></i> -->
-                      <form action="{{route('admin.destroy',$user)}}" method="post">
+                      <form action="{{route('users.destroy',$user)}}" method="post">
                           @csrf
                           @method("delete")
                           <input type="submit" value="Delete" class="btn btn-outline-danger">

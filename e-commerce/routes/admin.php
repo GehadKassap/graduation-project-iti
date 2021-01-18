@@ -67,7 +67,6 @@ Route::get('/support', function () {
 });
 
 
-Route::resource("products", admin\ProductController::class);
 
 Route::get('admin/dashboard', function () {
     return view('admin.dashboard');
@@ -113,5 +112,7 @@ Route::get('admin/support', function () {
     return view('admin.support');
 });
 
-//users 
-Route::resource("admin",admin\UsersController::class);
+//resources 
+Route::resource("users",admin\UsersController::class);
+
+Route::resource("products", admin\ProductController::class);
