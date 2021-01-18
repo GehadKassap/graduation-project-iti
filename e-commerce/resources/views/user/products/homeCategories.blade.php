@@ -9,14 +9,14 @@
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	 <link rel="stylesheet" type="text/css" href="{{ url('/css/skitter.css') }}">
 	</head>
+
+<body>
+@include("user.layouts.firstnav")
 <style>
     .hero-slider .single-slider {
 	background-image: url('/images/category/top-view-shopping-cart-cropjpg.jpg');
 	background-position:bottom;}
 </style>
-<body>
-@include("user.layouts.firstnav")
-
 @include("user.layouts.secondnav")
     
 	<div class="product-area section">

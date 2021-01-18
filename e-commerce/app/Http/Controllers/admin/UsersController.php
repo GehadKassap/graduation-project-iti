@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Http\Request;
-// use  Auth;
 
-class UserController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,62 +15,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view("user.index");
+        //
+        $users=User::all();
+        // return $users;
+        return view("admin.users",["users"=>$users]);
     }
-    //to redirect user to signUp form
-    function registerForm()
-    {
-       return view('user.Auth.register');
-    }
-    //to store user info in db;
-    function handleForm(Request $req)
-    {
-         //return $req->input();
-        //   dd($req->all());
-        $user = new User ;
-        $user->fullname = $req->fullname;
-        $user->password = \Hash::make( $req->password);
-        $user->email = $req->email;
-        $user->save();
-        // return $user->password ;
-         return view("user.index");
-    }
-    //to redirect user to signIn form
-    function loginForm()
-    {
-       return view('user.Auth.signin');
-    }
-    //match user in db;
-    function handleLogin(Request $req)
-    {
-
-        $user = User::where(['email'=>$req->email ])->first();
-        if( !$user ||  !Hash::check($req->password , $user->password))
-        {
-            return redirect('signin') ;
-        }
-        else
-        {
-            $req->session()->put('user' , $user);
-            return redirect('/');
-        }
-    }
-    // else
-    // {
-    //     if( $user->role == 'user')
-    //     {
-    //         $req->session()->put('user' , $user);
-    //         return redirect('/');
-    //     }
-    //     else
-    //     {
-    //         $req->session()->put('user' , $user);
-    //         return view('admin.dashboard');
-    //     }
-
-    // }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -82,6 +29,9 @@ class UserController extends Controller
     public function create()
     {
         //
+        return view("admin.adduser");
+
+
     }
 
     /**
@@ -93,6 +43,26 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            "fullname"=>"required",
+            "email"=>"required",
+            "address"=>"required",
+            "password"=>"required",
+            "phone"=>"required",
+            "role"=>"required"
+        ]);
+        User::create([
+           "fullname"=>$request["fullname"],
+            "email"=>$request["email"],
+            "address"=>$request["address"],
+            "password"=>$request["password"],
+            "phone"=>$request["phone"],
+            "role"=>$request["role"]
+
+           ]);
+
+        return redirect(route("users.index"));
+
     }
 
     /**
@@ -115,6 +85,8 @@ class UserController extends Controller
     public function edit(User $user)
     {
         //
+        // return view("admin.updateuser",["user"=>$user]);
+
     }
 
     /**
@@ -127,6 +99,7 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         //
+       
     }
 
     /**
@@ -138,5 +111,7 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+        $user->delete();
+        return redirect(route("users.index"));
     }
 }

@@ -58,7 +58,7 @@
 
                         </div><br>
 
-                        <a href="home.html" class="login__home" id="Forget"> Back to Home >> </a>
+                        <a href="/" class="login__home" id="Forget"> Back to Home  </a>
                     </form>
 
 

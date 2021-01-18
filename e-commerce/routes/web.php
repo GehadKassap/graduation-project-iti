@@ -23,6 +23,11 @@ Route::get('/allcategories', function () {
 Route::get('/fashion', function () {
     return view('user.products.fashion');
 });
+
+Route::get('/furniture', function () {
+    return view('user.products.furniture');
+});
+
 Route::get('/home', function () {
     return view('user.index');
 });
@@ -58,5 +63,16 @@ Route::post('/login',[UserController::class , "handleLogin"]);
 Route::get('/register',[UserController::class , "registerForm"]);
 Route::post('/register',[UserController::class , "handleForm"]);
 
+<<<<<<< HEAD
 //add to cart
 Route::post("add_to_cart",[ProductController::class,'addToCart']);
+=======
+// user logout
+Route::get('/logout' , function(){
+    Session::forget('user');
+    return view('user.Auth.signin');
+});
+
+
+
+>>>>>>> 32f06d1c23dee569ef84df7ddc2dc6cd53b8216f

@@ -19,8 +19,8 @@ class CreateProductsTable extends Migration
             $table->longText('description' , 500)->nullable();
             $table->float('price');
             $table->float('discount')->nullabale();
-             $table->enum('colors',['red','white' ,'green','babyblue' , 'blue']);
-             $table->enum('sizes',['xl','xxl' ,'large','small'  ,'medium']);
+            $table->enum('colors',['red','white' ,'green','babyblue' , 'blue']);
+            $table->enum('sizes',['xl','xxl' ,'large','small'  ,'medium']);
             $table->integer('quantity');
 
             $table->timestamps();

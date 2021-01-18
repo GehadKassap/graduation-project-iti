@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Http\Request;
-// use  Auth;
 
-class UserController extends Controller
+class dashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,62 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view("user.index");
+        //
+        return view('admin.dashboard');
     }
-    //to redirect user to signUp form
-    function registerForm()
-    {
-       return view('user.Auth.register');
-    }
-    //to store user info in db;
-    function handleForm(Request $req)
-    {
-         //return $req->input();
-        //   dd($req->all());
-        $user = new User ;
-        $user->fullname = $req->fullname;
-        $user->password = \Hash::make( $req->password);
-        $user->email = $req->email;
-        $user->save();
-        // return $user->password ;
-         return view("user.index");
-    }
-    //to redirect user to signIn form
-    function loginForm()
-    {
-       return view('user.Auth.signin');
-    }
-    //match user in db;
-    function handleLogin(Request $req)
-    {
-
-        $user = User::where(['email'=>$req->email ])->first();
-        if( !$user ||  !Hash::check($req->password , $user->password))
-        {
-            return redirect('signin') ;
-        }
-        else
-        {
-            $req->session()->put('user' , $user);
-            return redirect('/');
-        }
-    }
-    // else
-    // {
-    //     if( $user->role == 'user')
-    //     {
-    //         $req->session()->put('user' , $user);
-    //         return redirect('/');
-    //     }
-    //     else
-    //     {
-    //         $req->session()->put('user' , $user);
-    //         return view('admin.dashboard');
-    //     }
-
-    // }
-
-
 
     /**
      * Show the form for creating a new resource.
