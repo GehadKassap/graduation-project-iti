@@ -29,9 +29,11 @@ Route:: get('/fashion',[ProductController::class,'show']);
 Route:: get('/books',[ProductController ::class,'showbooks']);
 Route:: get('/furniture',[ProductController ::class,'showfurniture']);
 
-Route::get('/home', function () {
-    return view('user.index');
-});
+// Route::get('/home', function () {
+//     return view('user.index');
+// });
+Route::get('/home',[ProductController ::class,'showhomeproduct']);
+
 
 Route::get('/signin', function () {
     return view('user.Auth.signin');

@@ -69,6 +69,14 @@ class ProductController extends Controller
       
         return view('user.products.furniture',['product'=>$data]);
     }
+
+    public function showhomeproduct()
+    {
+        $data=product ::all();
+      
+        return view('user.index',['product'=>$data]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
