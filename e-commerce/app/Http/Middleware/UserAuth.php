@@ -26,13 +26,14 @@ class UserAuth
 
         //     // return $next($request);
 
-        //  if( $_COOKIE('user_role') === 'user')
+        //  if( $_COOKIE('user_role') == 'user' ||$_COOKIE('user_role') == null )
         //  {
-        //     return redirect('/');
+        //     return view("users.signin");
         //  }
-
-
-
+        //  else
+        //  {
+        //     return $next($request);
+        //  }
         return $next($request);
 
     }

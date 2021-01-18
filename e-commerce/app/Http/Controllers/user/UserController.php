@@ -52,25 +52,18 @@ class UserController extends Controller
              return redirect('signin') ;
 
         }
-
-        // else
-        // {
-        //     $req->session()->put('user' , $user);
-        //     return redirect('/');
-        // }
           else
           {
              if( $user->role == 'admin')
              {
                   $req->session()->put('user' , $user);
-                  setcookie('user_role' , $user->role);
+                  setcookie('role' , $user->role);
                   return view('admin.dashboard');
               }
               else
               {
                     $req->session()->put('user' , $user);
-                   // return view('admin.dashboard');
-                    setcookie('user_role' , $user->role);
+                    setcookie('role' , $user->role);
                     return redirect('/');
 
                }

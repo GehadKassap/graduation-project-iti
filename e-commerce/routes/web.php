@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\UserController;
+use App\Http\Controllers\user\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,6 +68,7 @@ Route::get('/logout' , function(){
     Session::forget('user');
     return view('user.Auth.signin');
 });
-
+//search
+Route::get('/search',[ProductController::class , "searchProduct"]);
 
 

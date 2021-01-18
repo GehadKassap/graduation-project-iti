@@ -70,7 +70,7 @@
                     </li>
 
                 </ul>
-            </div><a class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up" href="admin-login.html"> Log
+            </div><a href="/logout" class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up" > Log
                 Out!</a>
 
         </div>
