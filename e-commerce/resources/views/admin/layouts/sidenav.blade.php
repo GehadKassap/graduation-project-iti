@@ -52,10 +52,10 @@
                     <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span
                                 class="menu-title" data-i18n="">Orders</span></a>
                     </li>
-                    <li class=" nav-item"><a href="admin-users.html"><i class="fas fa-users icons"></i><span
+                    <li class=" nav-item"><a href="{{route('users.index')}}"><i class="fas fa-users icons"></i><span
                                 class="menu-title" data-i18n="">Users</span></a>
                     </li>
-                    <li class=" nav-item"><a href="{{route("products.index")}}"><i class="fas fa-tshirt icons"></i><span
+                    <li class=" nav-item"><a href="{{route('products.index')}}"><i class="fas fa-tshirt icons"></i><span
                                 class="menu-title" data-i18n="">Products</span></a>
                     </li>
                     <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span

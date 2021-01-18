@@ -67,7 +67,6 @@ Route::get('/support', function () {
 });
 
 
-Route::resource("products", admin\ProductController::class);
 
 Route::get('admin/dashboard', function () {
     return view('admin.dashboard');
@@ -83,10 +82,7 @@ Route::get('admin/order-details', function () {
     return view('admin.orderdetails');
 });
 
-//admin-users
-// Route::get('admin/users', function () {return view('admin.users');});
-// Route::get('admin/users',[admin\UsersController::class,"index"])
-// ->name("users.index");
+
 
 //admin-products
 Route::get('admin/products', function () {
@@ -97,6 +93,9 @@ Route::get('admin/products', function () {
 Route::get('admin/add-product', function () {
     return view('admin.addnewproduct');
 });
+
+Route::get('admin/add-user', function () {return view('admin.adduser');});
+
 
 //admin-Promotion
 Route::get('admin/Promotion', function () {
@@ -113,5 +112,7 @@ Route::get('admin/support', function () {
     return view('admin.support');
 });
 
-//resource 
-Route::resource("admin/users", admin\UsersController::class);
+//resources 
+Route::resource("users",admin\UsersController::class);
+
+Route::resource("products", admin\ProductController::class);
