@@ -31,11 +31,12 @@
                     <div class="row mt-3">
                         <ul class="nav responsive-tab nav-material nav-material-white">
                             <li>
-                                <a class="nav-link active" href="admin-products.html"><i
+                                <a class="nav-link active" href="{{route("products.index")}"><i
                                         class="fas fa-layer-group"></i></i>All Products</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="admin-add-product.html"><i class="fas fa-plus-circle"></i> Add
+                                <a class="nav-link" href="{{route("products.create")}}"><i
+                                        class="fas fa-plus-circle"></i> Add
                                     New Product</a>
                             </li>
 
@@ -57,6 +58,9 @@
                                         <label for="validationCustom01">Product Name</label>
                                         <input type="text" class="form-control" id="validationCustom01"
                                             placeholder="Product Name" name="product_name" required="">
+                                        <div class="invalid-feedback">
+                                            Please provide a product name.
+                                        </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="category">Size</label>
@@ -92,14 +96,14 @@
                                         </div>
                                     </div>
                                     <div class="col-md-3 mb-3">
-                                        <label for="validationCustom04">Price</label>
-                                        <input class=" form-control" name="product_price" required="">
+                                        <label for="price">Price</label>
+                                        <input class=" form-control" id="price" name="product_price" required="">
                                         <div class="invalid-feedback">
                                             Please provide a valid price.
                                         </div>
                                     </div>
                                     <div class="col-md-3 mb-3">
-                                        <label for="sku">discount</label>
+                                        <label for="discount">discount</label>
                                         <input type="number" class="form-control" id="discount" name="Product_discount">
                                     </div>
                                 </div>
@@ -121,12 +125,16 @@
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label for="quantity">quantity</label>
-                                        <input type="number" class="form-control" id="quantity" name="Product_quantity">
+                                        <input required="" type="number" class="form-control" id="quantity"
+                                            name="Product_quantity">
+                                        <div class="inva    lid-feedback">
+                                            Please provide a valid quantity.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="productDetails">Product description</label>
-                                    <textarea id="productDescription" name="product_description"
+                                    <label for="productDescription">Product description</label>
+                                    <textarea required="" id="productDescription" name="product_description"
                                         class="form-control"></textarea>
                                     <div class="invalid-feedback">
                                         Please provide a product description.

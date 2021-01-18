@@ -59,175 +59,44 @@
                                     <div class="table-responsive">
                                         <table class="table table-hover ">
                                             <tbody>
+                                                @foreach($products as $product)
                                                 <tr class="no-b">
                                                     <td class="w-10">
                                                         <img src="{{asset('images/admin/pro1.png')}}" alt="">
                                                     </td>
                                                     <td>
-                                                        <h6>Apple Product</h6>
-                                                        <small class="text-muted">Mobile Phones</small>
+                                                        <h6>{{$product["name"]}}</h6>
+                                                        <small class="text-muted">quantity :
+                                                            {{$product["quantity"]}}</small>
                                                     </td>
-                                                    <td>$250</td>
+                                                    <td>${{$product["price"]}}</td>
+                                                    <td>discount : %{{$product["discount"]}}</td>
                                                     <td> <button type="button"
                                                             class="btn btn-sm btn-outline-warning round">Electronics</button>
                                                     </td>
                                                     <td>
                                                         <span><i
-                                                                class="fas fa-info  btn-outline-info mr-1"></i></i>Product
-                                                            details</span><br>
+                                                                class="fas fa-info  btn-outline-info mr-1"></i></i>{{$product["description"]}}
+                                                        </span><br>
 
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-fab-sm "><i
-                                                                class="far fa-edit mr-2 btn-outline-primary"></i><i
-                                                                class="far fa-trash-alt btn-outline-danger"></i></a>
+                                                                class="far fa-edit mr-2 btn-outline-primary"></i>
+
+
+                                                        </a>
+                                                        <form action="{{route("products.destroy",$product)}}"
+                                                            method="Post">
+                                                            @csrf
+                                                            @method("delete")
+                                                            <input type="submit"
+                                                                class="far fa-trash-alt btn-outline-danger"></input>
+
+                                                        </form>
                                                     </td>
                                                 </tr>
-                                                <tr class="no-b">
-                                                    <td class="w-10">
-                                                        <img src="{{asset('images/admin/pro2.png')}}" alt="">
-                                                    </td>
-                                                    <td>
-                                                        <h6>Apple Product</h6>
-                                                        <small class="text-muted">Mobile Phones</small>
-                                                    </td>
-                                                    <td>$250</td>
-                                                    <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-danger round">Furniture</button>
-                                                    </td>
-                                                    <td>
-                                                        <span><i
-                                                                class="fas fa-info btn-outline-info mr-1"></i></i>Product
-                                                            details</span><br>
-
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-fab-sm "><i
-                                                                class="far fa-edit mr-2 btn-outline-primary"></i><i
-                                                                class="far fa-trash-alt btn-outline-danger"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="no-b">
-                                                    <td class="w-10">
-                                                        <img src="{{asset('images/admin/pro3.png')}}" alt="">
-                                                    </td>
-                                                    <td>
-                                                        <h6>Apple Product</h6>
-                                                        <small class="text-muted">Mobile Phones</small>
-                                                    </td>
-                                                    <td>$250</td>
-                                                    <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-info round">cosmetics</button>
-                                                    </td>
-                                                    <td>
-                                                        <span><i
-                                                                class="fas fa-info btn-outline-info mr-1"></i></i>Product
-                                                            details</span><br>
-
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-fab-sm "><i
-                                                                class="far fa-edit mr-2 btn-outline-primary"></i><i
-                                                                class="far fa-trash-alt btn-outline-danger"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="no-b">
-                                                    <td class="w-10">
-                                                        <img src="{{asset('images/admin/pro4.png')}}" alt="">
-                                                    </td>
-                                                    <td>
-                                                        <h6>Apple Product</h6>
-                                                        <small class="text-muted">Mobile Phones</small>
-                                                    </td>
-                                                    <td>$250</td>
-                                                    <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-danger round">books</button>
-                                                    </td>
-                                                    <td>
-                                                        <span><i
-                                                                class="fas fa-info btn-outline-info mr-1"></i></i>Product
-                                                            details</span><br>
-
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-fab-sm "><i
-                                                                class="far fa-edit mr-2 btn-outline-primary"></i><i
-                                                                class="far fa-trash-alt btn-outline-danger"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="no-b">
-                                                    <td class="w-10">
-                                                        <img src="{{asset('images/admin/pro1.png')}}" alt="">
-                                                    </td>
-                                                    <td>
-                                                        <h6>Apple Product</h6>
-                                                        <small class="text-muted">Mobile Phones</small>
-                                                    </td>
-                                                    <td>$250</td>
-                                                    <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-success round">fashion</button>
-                                                    </td>
-                                                    <td>
-                                                        <span><i
-                                                                class="fas fa-info btn-outline-info mr-1"></i></i>Product
-                                                            details</span><br>
-
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-fab-sm "><i
-                                                                class="far fa-edit mr-2 btn-outline-primary"></i><i
-                                                                class="far fa-trash-alt btn-outline-danger"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="no-b">
-                                                    <td class="w-10">
-                                                        <img src="{{asset('images/admin/pro5.png')}}" alt="">
-                                                    </td>
-                                                    <td>
-                                                        <h6>Apple Product</h6>
-                                                        <small class="text-muted">Mobile Phones</small>
-                                                    </td>
-                                                    <td>$250</td>
-                                                    <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-warning round">Electronics</button>
-                                                    </td>
-                                                    <td>
-                                                        <span><i
-                                                                class="fas fa-info btn-outline-info mr-1"></i></i>Product
-                                                            details</span><br>
-
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-fab-sm "><i
-                                                                class="far fa-edit mr-2 btn-outline-primary"></i><i
-                                                                class="far fa-trash-alt btn-outline-danger"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="no-b">
-                                                    <td class="w-10">
-                                                        <img src="{{asset('images/admin/pro1.png')}}" alt="">
-                                                    </td>
-                                                    <td>
-                                                        <h6>Apple Product</h6>
-                                                        <small class="text-muted">Mobile Phones</small>
-                                                    </td>
-                                                    <td>$250</td>
-                                                    <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-warning round">Electronics</button>
-                                                    </td>
-                                                    <td>
-                                                        <span><i
-                                                                class="fas fa-info  btn-outline-info mr-1"></i></i>Product
-                                                            details</span><br>
-
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-fab-sm "><i
-                                                                class="far fa-edit mr-2 btn-outline-primary"></i><i
-                                                                class="far fa-trash-alt btn-outline-danger"></i></a>
-                                                    </td>
-                                                </tr>
-
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

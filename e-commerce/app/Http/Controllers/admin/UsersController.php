@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = Product::all();
-
-        return view('admin.products', ["products" => $products]);
+        $users=User::all();
+        // return $users;
+        return view("admin.users",["users"=>$users]);
     }
 
     /**
@@ -29,7 +29,6 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('admin.addnewproduct');
     }
 
     /**
@@ -41,27 +40,15 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        Product::create([
-            "name" => $request["product_name"],
-            "description" => $request["product_description"],
-            "price" => $request["product_price"],
-            "discount" => $request["Product_discount"],
-            "colors" => $request["product_color"],
-            "sizes" => $request["product_size"],
-            // "category" => $request["product_category"],
-            "quantity" => $request["Product_quantity"],
-
-        ]);
-        return redirect(route('products.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(User $user)
     {
         //
     }
@@ -69,10 +56,10 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(User $user)
     {
         //
     }
@@ -81,10 +68,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -92,13 +79,11 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(User $user)
     {
         //
-        $product->delete();
-        return redirect(route('products.index'));
     }
 }
