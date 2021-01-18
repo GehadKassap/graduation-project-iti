@@ -46,10 +46,10 @@
         <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true">
             <div class="main-menu-content">
                 <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                    <li class=" nav-item"><a href="admin-home.html"><i class="fas fa-chart-line icons"></i><span
+                    <li class=" nav-item"><a href="{{route('dashboard.index')}}"><i class="fas fa-chart-line icons"></i><span
                                 class="menu-title" data-i18n="">Dashboard</span></a>
                     </li>
-                    <li class=" nav-item"><a href="admin-orders.html"><i class="fas fa-shopping-basket icons"></i><span
+                    <li class=" nav-item"><a href="#"><i class="fas fa-shopping-basket icons"></i><span
                                 class="menu-title" data-i18n="">Orders</span></a>
                     </li>
                     <li class=" nav-item"><a href="{{route('users.index')}}"><i class="fas fa-users icons"></i><span
