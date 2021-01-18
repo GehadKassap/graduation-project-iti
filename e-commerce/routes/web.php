@@ -71,4 +71,4 @@ Route::get('/logout' , function(){
 //search
 Route::get('/search',[ProductController::class , "searchProduct"]);
 
-
+Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);

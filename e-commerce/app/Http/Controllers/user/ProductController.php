@@ -34,6 +34,12 @@ class ProductController extends Controller
      $dataHolder = Product::where( 'name','like', '%'. $req->input('term').'%')->get() ;
      return $dataHolder ;
     }
+    function detailsProduct($id)
+    {
+      //$product = Product::where('id' , '=' , $id)->first();
+      $product = Product::find($id)  ;
+      dd($product);
+    }
 
     /**
      * Store a newly created resource in storage.
