@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\UserController;
+use App\Http\Controllers\user\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +20,11 @@ Route::get('/', function () {
 Route::get('/allcategories', function () {
     return view('user.products.homeCategories');
 });
-Route::get('/fashion', function () {
-    return view('user.products.fashion');
-});
+// Route::get('/fashion', function () {
+//     return view('user.products.fashion');
+// });
+
+Route:: get('/fashion',[ProductController::class,'show']);
 
 Route::get('/furniture', function () {
     return view('user.products.furniture');
