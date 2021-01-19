@@ -26,6 +26,13 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/css/resp.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/style-starter.css') }}">
     <!-- <link rel="icon" type="..imgs/favicon.png" href="../imgs/favicon.png"> -->
+    <style>
+        .btnss:hover
+        {
+            background-color:white ;
+            color:black;
+        }
+    </style>
 </head>
 
 <body>
@@ -134,8 +141,8 @@
                             </form> -->
                         </div>
                         <div class="single_page_footer">
-                            <a href="/cart" class="add_btn">add to cart</a>
-                            <a href="/favorite" class="add_btn">whishlist</a>
+                            <a style="color: gray; border:none; border-radius:3px;" href="/cart" class="add_btn ">add to cart</a>
+                            <a style="color: gray; border:none; border-radius:3px; " href="/favorite" class="add_btn">whishlist</a>
                         </div>
                     </div>
                 </div>
@@ -216,7 +223,7 @@
                 <div class="products_area sing_page_pr_slide">
                     <!-- single-product -->
                    @foreach($relatedproducts as $produ)
-               
+
                     <div class="single_product">
                         <div class="single_img_slide">
                             <div class="sng_im_p">
@@ -244,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                 
+
                     @endforeach
             </div>
         </div>
