@@ -11,6 +11,7 @@ use Session;
 
 class ProductController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -155,10 +156,10 @@ class ProductController extends Controller
        }
    }
 
-static function cartItem(){
-    $userid=Session::get('user')['id'];
-    return Card::where('user_id',$userid)->count();
-}
+// static function cartItem(){
+//     $userid=Session::get('user')['id'];
+//     return Card::where('user_id',$userid)->count();
+// }
 function cartlist(){
     $userid=Session::get('user')['id'];
     $products=DB::table('cards')
