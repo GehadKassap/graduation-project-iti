@@ -28,11 +28,12 @@
 
                     <div class="form-group  col-md-12">
                     @csrf
+
                             <input name="fullname" type="text" class="form-control" id="username" placeholder="Username">
                             <!-- <i class="fa fa-check-circle"></i> -->
 		                	<i class="fa fa-exclamation-circle"></i>
                              <small>Error message</small>
-                             <!-- @if($errors->any)
+                             <!-- @if($errors->any())
                               @foreach($errors->all() as $err)
                               {{$err}}
                               @endforeach
