@@ -35,7 +35,7 @@ class ProductController extends Controller
     {
          //return $req->input();
      $dataHolder = Product::where( 'name','like', '%'. $req->input('term').'%')->get() ;
-     return $dataHolder ;
+     return view("user.products.search" , ['searchItems' => $dataHolder]) ;
     }
     function detailsProduct($id)
     {
@@ -74,33 +74,33 @@ class ProductController extends Controller
     public function showbooks()
     {
         $data=product ::all();
-      
+
         return view('user.products.books',['product'=>$data]);
     }
     public function showfurniture()
     {
         $data=product ::all();
-      
+
         return view('user.products.furniture',['product'=>$data]);
     }
 
     public function showcosmatics()
     {
         $data=product ::all();
-      
+
         return view('user.products.cosmatics',['product'=>$data]);
     }
     public function showelectronies()
     {
         $data=product ::all();
-      
+
         return view('user.products.electronics',['product'=>$data]);
     }
-    
+
     public function showhomeproduct()
     {
         // $data=product ::all();
-        $data = product::take(8)->get(); 
+        $data = product::take(8)->get();
         return view('user.index',['product'=>$data]);
     }
 

@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models;
 use Illuminate\Http\Request;
 use DB;
-
-class UsersController extends Controller
+class sidenavController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +16,9 @@ class UsersController extends Controller
     public function index()
     {
         //
-        $users=User::all();
-        // return $users;
-        return view("admin.users",["users"=>$users]);
+        $messages = DB::table('problems')->count();
+        return view('admin.layouts.sidenav',compact('messages'));
+
     }
 
     /**
@@ -30,9 +29,6 @@ class UsersController extends Controller
     public function create()
     {
         //
-        return view("admin.adduser");
-
-
     }
 
     /**
@@ -44,26 +40,6 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            "fullname"=>"required",
-            "email"=>"required",
-            "address"=>"required",
-            "password"=>"required",
-            "phone"=>"required",
-            "role"=>"required"
-        ]);
-        User::create([
-           "fullname"=>$request["fullname"],
-            "email"=>$request["email"],
-            "address"=>$request["address"],
-            "password"=>\Hash::make($request["password"]),
-            "phone"=>$request["phone"],
-            "role"=>$request["role"]
-
-           ]);
-
-        return redirect(route("users.index"));
-
     }
 
     /**
@@ -86,8 +62,6 @@ class UsersController extends Controller
     public function edit(User $user)
     {
         //
-        // return view("admin.updateuser",["user"=>$user]);
-
     }
 
     /**
@@ -100,7 +74,6 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
         //
-
     }
 
     /**
@@ -112,7 +85,5 @@ class UsersController extends Controller
     public function destroy(User $user)
     {
         //
-        $user->delete();
-        return redirect(route("users.index"));
     }
 }

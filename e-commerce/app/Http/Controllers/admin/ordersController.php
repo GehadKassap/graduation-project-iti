@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use DB;
 
-class UsersController extends Controller
+class ordersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,16 @@ class UsersController extends Controller
     public function index()
     {
         //
-        $users=User::all();
-        // return $users;
-        return view("admin.users",["users"=>$users]);
+        // $orders=Order::all();
+        $orders = DB::table('orders')
+            ->join('users', 'users.id', '=', 'orders.user_id')
+            // ->join('productorders', 'productorders.order_id', '=', 'orders.id')
+            ->select('orders.*', 'users.fullname')
+            ->get();
+
+
+        return view('admin.orders',["orders"=>$orders]);
+
     }
 
     /**
@@ -30,9 +37,6 @@ class UsersController extends Controller
     public function create()
     {
         //
-        return view("admin.adduser");
-
-
     }
 
     /**
@@ -44,35 +48,15 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            "fullname"=>"required",
-            "email"=>"required",
-            "address"=>"required",
-            "password"=>"required",
-            "phone"=>"required",
-            "role"=>"required"
-        ]);
-        User::create([
-           "fullname"=>$request["fullname"],
-            "email"=>$request["email"],
-            "address"=>$request["address"],
-            "password"=>\Hash::make($request["password"]),
-            "phone"=>$request["phone"],
-            "role"=>$request["role"]
-
-           ]);
-
-        return redirect(route("users.index"));
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Order $order)
     {
         //
     }
@@ -80,39 +64,34 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Order $order)
     {
         //
-        // return view("admin.updateuser",["user"=>$user]);
-
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Order $order)
     {
         //
-
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Order $order)
     {
         //
-        $user->delete();
-        return redirect(route("users.index"));
     }
 }

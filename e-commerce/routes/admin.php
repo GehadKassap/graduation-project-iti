@@ -34,6 +34,8 @@ use App\Http\Controllers\admin;
 //resource
 Route::resource("admin/users",admin\UsersController::class);
 Route::resource("admin/dashboard",admin\dashboardController::class);
+Route::resource("admin/orders",admin\ordersController::class);
+
 
 //admin-Promotion
 Route::get('admin/Promotion', function () {

@@ -33,23 +33,35 @@ class UserController extends Controller
     //to store user info in db;
     function handleForm(Request $req)
     {
-        $validator = \Validator::make($req->all() , [
-            'fullname' => 'required|max:100|min:5',
-            'password' => 'required|max:30|min:3',
-            'password' => 'required|unique:users|max:30|min:3',
-        ]);
-        if($validator->fails())
-        {
-            return view('user.Auth.register');
-            // ->withErrors($validator)->withInput()
-        }
+        /*****dy kant awl tare2a bs b laravel7 */
+        // $valid = \Validator::make($req->all() , [
+        //     'fullname' => 'required|max:100|min:5',
+        //     'password' => 'required|max:30|min:3',
+        //     'email' => 'required|unique:users|max:30|min:3',
+        // ]);
+        // if($valid->fails())
+        // {
+        //     return view('user.Auth.register')
+        //     ->withErrors($valid)->withInput();
+        // }
+        /******************** */
+        //vedio
+        // $req->validate([
+        //     'fullname' => 'required',
+        //    'password' => 'required',
+        //     // 'email' => 'required|unique:users|max:30|min:3',
+        // ]);
+        // return $req->input();
+        /********************* */
+        /*******ahm 7aga el db */
         $user = new User ;
         $user->fullname = $req->fullname;
         $user->password = \Hash::make( $req->password);
         $user->email = $req->email;
         $user->save();
-        // return $user->password ;
+        setcookie('role' ,"user");
          return view("user.index");
+         /***************************** */
     }
     //to redirect user to signIn form
     function loginForm()
