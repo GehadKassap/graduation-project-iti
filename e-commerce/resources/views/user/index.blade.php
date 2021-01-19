@@ -401,9 +401,8 @@
                     <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
                   
                     @foreach($product as $pro)
-                       @if($pro->category == 3 )
-                      
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
+                     
+                     <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
                                 <div class="product-image2">
                                     <a href="product_single.html">
@@ -434,11 +433,8 @@
                                 </div>
                             </div>
                         </div>
-                 
-                     
-                        @endif
-                      
-	                    @endforeach
+                          
+	                 @endforeach
                        
                         <!-- <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2">
