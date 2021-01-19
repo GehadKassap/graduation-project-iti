@@ -215,20 +215,20 @@
                 <h2>Related Product</h2>
                 <div class="products_area sing_page_pr_slide">
                     <!-- single-product -->
-                   @foreach($products as $prod)
-
+                   @foreach($relatedproducts as $produ)
+               
                     <div class="single_product">
                         <div class="single_img_slide">
                             <div class="sng_im_p">
                                 <a href="#">
-                                    <div class="front_img"><img src="{{ asset('product_images/' . $prod->image)}}" ></div>
-                                    <div class="back_img"><img src="{{ asset('product_images/' . $prod->image)}}" ></div>
+                                    <div class="front_img"><img src="{{ asset('product_images/' . $produ->image)}}" ></div>
+                                    <div class="back_img"><img src="{{ asset('product_images/' . $produ->image)}}" ></div>
                                 </a>
                             </div>
                             <div class="si_img_ic prod_content_area">
                                 <div class="prod_content">
-                                    <p>{{$prod->price}} L.E</p>
-                                    <p>{{$prod->name}}</p>
+                                    <p>{{$produ->price}} L.E</p>
+                                    <p>{{$produ->name}}</p>
                                 </div>
                                 <div class="sic_icon">
                                     <a href="#" data-toggle="tooltip" title="Add to Wishlist">
@@ -244,7 +244,7 @@
                             </div>
                         </div>
                     </div>
-
+                 
                     @endforeach
             </div>
         </div>
