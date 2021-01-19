@@ -15,9 +15,9 @@ use App\Http\Controllers\user\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index');
-});
+// Route::get('/', function () {
+//     return view('user.index');
+// });
 Route::get('/allcategories', function () {
     return view('user.products.homeCategories');
 });
@@ -27,14 +27,13 @@ Route::get('/allcategories', function () {
 
 Route:: get('/fashion',[ProductController::class,'show']);
 Route:: get('/books',[ProductController ::class,'showbooks']);
+Route:: get('/furniture',[ProductController ::class,'showfurniture']);
 
-Route::get('/furniture', function () {
-    return view('user.products.furniture');
-});
+Route::get('/',[ProductController ::class,'showhomeproduct']);
+Route::get('/home',[ProductController ::class,'showhomeproduct']);
 
-Route::get('/home', function () {
-    return view('user.index');
-});
+Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
+Route::get('/electronices',[ProductController ::class,'showelectronies']);
 
 Route::get('/signin', function () {
     return view('user.Auth.signin');
@@ -55,7 +54,7 @@ Route::get('/checkout ', function () {return view('user.products.checkout ');});
 //contactus
 Route::get('/contactus  ', function () {return view('user.products.contactus  ');});
 //productdetails
-Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
+// Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
 
 Route::post('/register',[UserController::class , "handleForm"]);
 
@@ -75,4 +74,6 @@ Route::get('/logout' , function(){
 //search
 Route::get('/search',[ProductController::class , "searchProduct"]);
 
+Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
 
+// Route::get('/details/{id}/category/{catid}',[ProductController::class , "detailsProduct"]);

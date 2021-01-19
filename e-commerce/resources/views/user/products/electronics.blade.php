@@ -1,7 +1,7 @@
 @include("user.layouts.firstnav")
 <style>
     .hero-slider .single-slider {
-	background-image: url('/images/category/coverFurniture.jpg');
+	background-image: url('/images/category/eleccover.jpg');
 	background-position:center;}
 </style>
 @include("user.layouts.secondnav")
@@ -21,8 +21,8 @@
 						<div class="nav-main">
 							<!-- Tab Nav -->
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
-								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">chairs</a></li>
-								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">Woman</a></li>
+								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">labtops</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">Phones</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">Kids</a></li>
 								
 		
@@ -35,7 +35,7 @@
 								<div class="tab-single">
 									<div class="row">
 									@foreach($product as $pro)
-									@if($pro->category == 5)
+								    	@if($pro->category == 1 )
 										<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 											<div class="single-product">
 												<div class="product-img">
@@ -752,8 +752,8 @@
 					<div class="single-product">
 						<div class="product-img">
 							<a href="product-details.html">
-								<img class="default-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
-								<img class="hover-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
+                            <img class="default-img" src="{{asset('images/category/shop4.jpg')}}" alt="#">
+								<img class="hover-img" src="{{asset('images/category/shop4.jpg')}}" alt="#">
 								<span class="out-of-stock">Hot</span>
 							</a>
 							<div class="button-head">
@@ -780,8 +780,8 @@
 					<div class="single-product">
 						<div class="product-img">
 							<a href="product-details.html">
-								<img class="default-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
-								<img class="hover-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
+                            <img class="default-img" src="{{asset('images/category/shop4.jpg')}}" alt="#">
+								<img class="hover-img" src="{{asset('images/category/shop4.jpg')}}" alt="#">
 							</a>
 							<div class="button-head">
 								<div class="product-action">
@@ -806,8 +806,8 @@
 					<div class="single-product">
 						<div class="product-img">
 							<a href="product-details.html">
-								<img class="default-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
-								<img class="hover-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
+                            <img class="default-img" src="{{asset('images/category/shop4.jpg')}}" alt="#">
+								<img class="hover-img" src="{{asset('images/category/shop4.jpg')}}" alt="#">
 								<span class="new">New</span>
 							</a>
 							<div class="button-head">
@@ -833,8 +833,8 @@
 					<div class="single-product">
 						<div class="product-img">
 							<a href="product-details.html">
-								<img class="default-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
-								<img class="hover-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#">
+                            <img class="default-img" src="{{asset('images/category/shop4.jpg')}}" alt="#">
+								<img class="hover-img" src="{{asset('images/category/shop4.jpg')}}" alt="#">
 							</a>
 							<div class="button-head">
 								<div class="product-action">
@@ -868,7 +868,7 @@
 				<div class="row">
 					<div class="col-lg-6 col-12 padding-right">
 						<div class="image">
-							<img src="{{asset('images/products/web2-12.jpg')}}" alt="#">
+							<img src="{{asset('images/category/shop3.jpg')}}" alt="#">
 						</div>	
 					</div>	
 					<div class="col-lg-6 col-12 padding-left">

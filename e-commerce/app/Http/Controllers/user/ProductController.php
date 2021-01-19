@@ -34,6 +34,17 @@ class ProductController extends Controller
      $dataHolder = Product::where( 'name','like', '%'. $req->input('term').'%')->get() ;
      return $dataHolder ;
     }
+    function detailsProduct($id)
+    {
+      //$product = Product::where('id' , '=' , $id)->first();
+      $i=3;
+      $product = Product::findorfail($id)  ;
+      $allProducts=product::where('id', ">=" , $id)->take(4)->get();
+      $relatedproduct=product::where('category', "=" ,$i )->take(4)->get();
+   //$allProducts=product::where('id', "<=" , $id)->count();
+      return view('user.products.productdetails' , ['product'=>$product , 'products'=>$allProducts,'relatedproducts'=> $relatedproduct]);
+       //   dd($product);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -56,13 +67,38 @@ class ProductController extends Controller
     {
         $data=product ::all();
         return view('user.products.fashion',['product'=>$data]);
-        // return view('user.products.books',['product'=>$data]);
     }
     public function showbooks()
     {
         $data=product ::all();
       
         return view('user.products.books',['product'=>$data]);
+    }
+    public function showfurniture()
+    {
+        $data=product ::all();
+      
+        return view('user.products.furniture',['product'=>$data]);
+    }
+
+    public function showcosmatics()
+    {
+        $data=product ::all();
+      
+        return view('user.products.cosmatics',['product'=>$data]);
+    }
+    public function showelectronies()
+    {
+        $data=product ::all();
+      
+        return view('user.products.electronics',['product'=>$data]);
+    }
+    
+    public function showhomeproduct()
+    {
+        // $data=product ::all();
+        $data = product::take(8)->get(); 
+        return view('user.index',['product'=>$data]);
     }
 
     /**

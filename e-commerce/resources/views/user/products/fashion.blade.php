@@ -1,5 +1,8 @@
 
 @include("user.layouts.firstnav")
+@section('title')
+fashion
+@endsection
 <style>
     .hero-slider .single-slider {
 	background-image: url('/images/category/stunning-barefooted-woman-trendy-fur-coat-dancing-laughing-photoshoot.jpg');
@@ -25,8 +28,8 @@
 								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">Women</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">man</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">Kids</a></li>
-								
-		
+
+
 							</ul>
 							<!--/ End Tab Nav -->
 						</div>
@@ -40,7 +43,7 @@
 										<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 											<div class="single-product">
 												<div class="product-img">
-													<a href="product_single.html">
+													<a href="{{url('/details' ,$pro->id)}}">
 														<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" alt="#">
 														<!-- <img class="hover-img" src="../imgs/category/p2.jpg" alt="#"> -->
 													</a>
@@ -56,9 +59,10 @@
 													</div>
 												</div>
 												<div class="product-content">
-													<h3><a href="product_single.html">{{$pro['description']}}</h3>
+                                                    <h3><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}}</a></h3>
+													<p><a >{{$pro['description']}}</h3>
 													<div class="product-price">
-														<span>{{$pro['price']}}$</span>
+														<span>{{$pro['price']}} L.E</span>
 													</div>
 												</div>
 											</div>
@@ -695,7 +699,7 @@
 								</div>
 							</div>
 							<!--/ End Single Tab -->
-						
+
 					</div>
 				</div>
 			</div>
@@ -870,8 +874,8 @@
 					<div class="col-lg-6 col-12 padding-right">
 						<div class="image">
 							<img src="{{asset('images/category/portrait-young-beautiful-smiling-girl-trendy-summer-light-pink-dress-sexy-carefree-woman-posing-positive-model-having-fun-dancing-round-sunglasses.jpg')}}" alt="#">
-						</div>	
-					</div>	
+						</div>
+					</div>
 					<div class="col-lg-6 col-12 padding-left">
 						<div class="content">
 							<div class="heading-block">
@@ -883,8 +887,8 @@
 									<div class="clearfix" data-countdown="2021/02/30"></div>
 								</div>
 							</div>
-						</div>	
-					</div>	
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -937,6 +941,6 @@
 
 
 <!-- End Shop Services Area -->
-	
-        
+
+
         @include("user.layouts.footer")

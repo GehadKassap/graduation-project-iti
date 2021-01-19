@@ -58,7 +58,8 @@ Route::resource("products", admin\ProductController::class);
 /*******************Gehad***/
 // user logout
 Route::get('/logout' , function(){
-    Session::forget('user');
+    //Session::forget('user');
+    Cookie::queue(Cookie::forget('user'));
     return view('user.Auth.signin');
 });
 /**************************** */
