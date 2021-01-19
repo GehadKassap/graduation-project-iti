@@ -70,12 +70,12 @@
 
                                         <select id="size" class="custom-select form-control" name="product_size"
                                             required="">
-                                            <option value="">{{$product['sizes']}}</option>
-                                            <option value="1">xl</option>
-                                            <option value="2">xxl</option>
-                                            <option value="3">large</option>
-                                            <option value="4">small</option>
-                                            <option value="5">medium</option>
+                                            <option value="{{$product['sizes']}}">{{$product['sizes']}}</option>
+                                            <option value="xl">xl</option>
+                                            <option value="xxl">xxl</option>
+                                            <option value="large">large</option>
+                                            <option value="small">small</option>
+                                            <option value="medium">medium</option>
                                         </select>
                                         <div class="invalid-feedback">
                                             Please provide a valid Size.
@@ -87,12 +87,12 @@
                                         <label for="category">Category</label>
                                         <select id="category" class="custom-select form-control" name="product_category"
                                             required="">
-                                            <option value="">{{$product['category']}}</option>
-                                            <option value="1">Electronics</option>
-                                            <option value="2">Books</option>
-                                            <option value="3">fashion</option>
-                                            <option value="4">cosmetics</option>
-                                            <option value="5">Furniture</option>
+                                            <option value="{{$product['category']}}">{{$product['category']}}</option>
+                                            <option value="Electronics">Electronics</option>
+                                            <option value="Books">Books</option>
+                                            <option value="fashion">fashion</option>
+                                            <option value="cosmetics">cosmetics</option>
+                                            <option value="Furniture">Furniture</option>
                                         </select>
                                         <div class="invalid-feedback">
                                             Please provide a valid category.
@@ -117,12 +117,12 @@
                                         <label for="Colors">Colors</label>
                                         <select id="Colors" class="custom-select form-control" name="product_color"
                                             required="">
-                                            <option value="">{{$product['colors']}}</option>
-                                            <option value="1">red</option>
-                                            <option value="2">white</option>
-                                            <option value="3">green</option>
-                                            <option value="4">babyblue</option>
-                                            <option value="5">blue</option>
+                                            <option value="{{$product['colors']}}">{{$product['colors']}}</option>
+                                            <option value="red">red</option>
+                                            <option value="white">white</option>
+                                            <option value="green">green</option>
+                                            <option value="babyblue">babyblue</option>
+                                            <option value="blue">blue</option>
                                         </select>
                                         <div class="invalid-feedback">
                                             Please provide a valid colors.
