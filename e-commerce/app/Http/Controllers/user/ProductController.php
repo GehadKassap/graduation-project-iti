@@ -75,9 +75,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show()
     {
-        //
+        $data=product ::all();
+        return view('user.products.fashion',['product'=>$data]);
     }
 
     /**
