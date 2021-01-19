@@ -128,93 +128,172 @@
             </div>
             <!--/nav-->
 
-        </header>
-        <div class="bannerhny-content">
+            <<<<<<< HEAD </header>
+                <div class="bannerhny-content">
 
-            <!--/banner-slider-->
-            <div class="content-baner-inf">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active">
-                            <div class="container">
-                                <div class="carousel-caption">
-                                    <h3>Women's Fashion
-                                        <br>50% Off
-                                    </h3>
-                                    <a href="#" class="shop-button btn">
-                                        Shop Now
+                    <!--/banner-slider-->
+                    <div class="content-baner-inf">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            </ol>
+                            <div class="carousel-inner ">
+                                <div class="carousel-item active">
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <h3>Women's Fashion
+                                                <br>50% Off
+                                            </h3>
+                                            <a href="#" class="shop-button btn">
+                                                Shop Now
+                                            </a>
+                                            <!--w3l-banner-slider-main-->
+                                            <section class="w3l-banner-slider-main">
+                                                <div class="top-header-content">
+                                                    <header class="tophny-header">
+                                                        <div class="container-fluid">
+                                                            <div class="top-right-strip row">
+                                                                <!--/left-->
+                                                                <div class="top-hny-left-content col-lg-6 pl-lg-0">
+                                                                    <h6>Upto 30% off on All styles , <a href="#"
+                                                                            target="_blank"> Click here for <span
+                                                                                class="fa fa-hand-o-right hand-icon"
+                                                                                aria-hidden="true"></span> <span
+                                                                                class="hignlaite">More
+                                                                                details</span></a></h6>
+                                                                </div>
+                                                                <!--//left-->
+                                                                <!-- right -->
+                                                                <!-- <ul class="top-hnt-right-content col-lg-6">
+
+                                <li class="button-log usernhy">
+                                    <a class="btn-open" href="#">
+                                        <span class="fa fa-user" aria-hidden="true"></span>
                                     </a>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item item2">
-                            <div class="container">
-                                <div class="carousel-caption">
-                                    <h3>Men's Fashion
-                                        <br>60% Off
-                                    </h3>
-                                    <a href="#" class="shop-button btn">
-                                        Shop Now
-                                    </a>
+                            <!--//right-->
+                                                                <div class="overlay-login text-left">
+                                                                    <button type="button" class="overlay-close1">
+                                                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                                                    </button>
+                                                                    <div class="wrap">
+                                                                        <h5 class="text-center mb-4">Login Now</h5>
+                                                                        <div
+                                                                            class="login-bghny p-md-5 p-4 mx-auto mw-100">
+                                                                            <!--/login-form-->
+                                                                            <form action="#" method="post">
+                                                                                <div class="form-group">
+                                                                                    <p class="login-texthny mb-2">Email
+                                                                                        address</p>
+                                                                                    <input type="email"
+                                                                                        class="form-control"
+                                                                                        id="exampleInputEmail1"
+                                                                                        aria-describedby="emailHelp"
+                                                                                        placeholder="" required="">
+                                                                                    <small id="emailHelp"
+                                                                                        class="form-text text-muted">We'll
+                                                                                        never share your email
+                                                                                        with anyone else.</small>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <p class="login-texthny mb-2">
+                                                                                        Password</p>
+                                                                                    <input type="password"
+                                                                                        class="form-control"
+                                                                                        id="exampleInputPassword1"
+                                                                                        placeholder="" required="">
+                                                                                </div>
+                                                                                <div class="form-check mb-2">
+                                                                                    <div class="userhny-check">
+                                                                                        <label
+                                                                                            class="check-remember container">
+                                                                                            <input type="checkbox"
+                                                                                                class="form-check">
+                                                                                            <span
+                                                                                                class="checkmark"></span>
+                                                                                            <p class="privacy-policy">
+                                                                                                Remember me</p>
+                                                                                        </label>
+                                                                                        <div class="clearfix"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <button type="submit"
+                                                                                    class="submit-login btn mb-4">Sign
+                                                                                    In</button>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item item3">
-                            <div class="container">
-                                <div class="carousel-caption">
-                                    <h3>Women's Fashion
-                                        <br>50% Off
-                                    </h3>
-                                    <a href="#" class="shop-button btn">
-                                        Shop Now
-                                    </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item item2">
+                                                                    <div class="container">
+                                                                        <div class="carousel-caption">
+                                                                            <h3>Men's Fashion
+                                                                                <br>60% Off
+                                                                            </h3>
+                                                                            <a href="#" class="shop-button btn">
+                                                                                Shop Now
+                                                                            </a>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item item4">
-                            <div class="container">
-                                <div class="carousel-caption">
-                                    <h3>Men's Fashion
-                                        <br>60% Off
-                                    </h3>
-                                    <a href="#" class="shop-button btn">
-                                        Shop Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <!--//banner-slider-->
-            <!--//banner-slider-->
-            <div class="right-banner">
-                <div class="right-1">
-                    <h4>
-                        Men's Fashion
-                        <br>50% Off
-                    </h4>
-                </div>
-            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item item3">
+                                                                    <div class="container">
+                                                                        <div class="carousel-caption">
+                                                                            <h3>Women's Fashion
+                                                                                <br>50% Off
+                                                                            </h3>
+                                                                            <a href="#" class="shop-button btn">
+                                                                                Shop Now
+                                                                            </a>
 
-        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item item4">
+                                                                    <div class="container">
+                                                                        <div class="carousel-caption">
+                                                                            <h3>Men's Fashion
+                                                                                <br>60% Off
+                                                                            </h3>
+                                                                            <a href="#" class="shop-button btn">
+                                                                                Shop Now
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a class="carousel-control-prev"
+                                                                href="#carouselExampleIndicators" role="button"
+                                                                data-slide="prev">
+                                                                <span class="carousel-control-prev-icon"
+                                                                    aria-hidden="true"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                            </a>
+                                                            <a class="carousel-control-next"
+                                                                href="#carouselExampleIndicators" role="button"
+                                                                data-slide="next">
+                                                                <span class="carousel-control-next-icon"
+                                                                    aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+                                                </div>
+                                                <!--//banner-slider-->
+                                                <!--//banner-slider-->
+                                                <div class="right-banner">
+                                                    <div class="right-1">
+                                                        <h4>
+                                                            Men's Fashion
+                                                            <br>50% Off
+                                                        </h4>
+                                                    </div>
+                                                </div>
+
+                                        </div>
 
 </section>
 <!-- //w3l-banner-slider-main -->
@@ -407,9 +486,35 @@
                         </div>
                     </div>
                 </div>
+                <<<<<<< HEAD=======</div>
+</section>
 
-                @endforeach
+<!-- //video-6-->
+<section class="w3l-ecommerce-main">
+    <!-- /products-->
+    <div class="ecom-contenthny py-5">
+        <div class="container py-lg-5">
+            <h3 class="hny-title mb-0 text-center">Shop With <span>Us</span></h3>
+            <p class="text-center">Handpicked Favourites just for you</p>
+            <!-- /row-->
+            <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
 
+                {{-- @foreach($product as $pro)
+
+                     <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
+                            <div class="product-grid2 transmitv">
+                                <div class="product-image2">
+                                    <a href="product_single.html">
+                                        <img class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
+                <img class="pic-2 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
+                </a>
+                <ul class="social">
+                    <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
+                    >>>>>>> ea82d1dd1105eacce8988efb4929f79e8b2d360e
+
+                    @endforeach
+
+                    <<<<<<< HEAD=======@endforeach>>>>>>> ea82d1dd1105eacce8988efb4929f79e8b2d360e
 
             </div>
             <!-- //row-->
@@ -436,6 +541,10 @@
                         Shop Now
                     </a>
 
+                    <<<<<<< HEAD=======</div>
+
+                        <!-- //row-->
+                        >>>>>>> ea82d1dd1105eacce8988efb4929f79e8b2d360e
                 </div>
 
             </div>
@@ -681,8 +790,8 @@
 
                 </div>
             </div>
+            <<<<<<< HEAD </div>
         </div>
-    </div>
 </section>
 <!-- //customers-->
 <section class="w3l-subscription-6" data-aos="zoom-in-down">
@@ -703,17 +812,41 @@
                                     <input type="email" name="" placeholder="Your email here" required="">
                                 </div>
                                 <div class="form-input"><button class="btn">Join</button></div>
+                                =======
+</section>
+<!-- //customers-->
+<section class="w3l-subscription-6" data-aos="zoom-in-down">
+    <!--/customers -->
+    <div class="subscription-infhny">
+        <div class="container-fluid">
+
+            <div class="subscription-grids row">
+
+                <div class="subscription-right form-right-inf col-lg-6 p-md-5 p-4">
+                    <div class="p-lg-5 py-md-0 py-3">
+                        <h3 class="hny-title">Join us for FREE to get instant <span>email updates!</span></h3>
+                        <p>Subscribe and get notified at first on the latest update and offers!</p>
+                        --}}
+                        <form action="#" method="post" class="signin-form mt-lg-5 mt-4">
+                            <div class="forms-gds">
+                                <div class="form-input">
+                                    <input type="email" name="" placeholder="Your email here" required="">
+                                </div>
+                                <div class="form-input"><button class="btn">Join</button></div>
                             </div>
                         </form>
+                        >>>>>>> ea82d1dd1105eacce8988efb4929f79e8b2d360e
                     </div>
-                </div>
-                <div class="subscription-left forms-25-info col-lg-6 " data-aos="fade-up">
-
+                    </form>
                 </div>
             </div>
+            <div class="subscription-left forms-25-info col-lg-6 " data-aos="fade-up">
 
-            <!--//customers -->
+            </div>
         </div>
+
+        <!--//customers -->
+    </div>
 </section>
 <!-- //customers-6-->
 <!-- Start Footer Area -->
