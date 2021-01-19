@@ -499,7 +499,13 @@
             <!-- /row-->
             <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
 
+<<<<<<< HEAD
+
+           {{--       @foreach($product as $pro)
+
+=======
                 {{-- @foreach($product as $pro)
+>>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
 
                      <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
@@ -851,7 +857,11 @@
 <!-- //customers-6-->
 <!-- Start Footer Area -->
 
+<<<<<<< HEAD
+    --}}    @include("user.layouts.footer")
+=======
 @include("user.layouts.footer")
+>>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
 
 <!-- end of footer -->
 
@@ -882,7 +892,7 @@
 <script src="../js/easing.js"></script>
 <script src="../js/active.js"></script>
 <script src="../js/homecategory.js"></script> -->
-
+--}}
 
 <!--/login-->
 <script>

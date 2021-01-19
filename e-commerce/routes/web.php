@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\ProductController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +14,13 @@ use App\Http\Controllers\user\ProductController;
 |
 */
 
+<<<<<<< HEAD
+Route::get('/', function () {
+    return view('user.index');
+});
+=======
 
+>>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
 Route::get('/allcategories', function () {
     return view('user.products.homeCategories');
 });
@@ -25,14 +30,14 @@ Route::get('/allcategories', function () {
 
 
 Route:: get('/fashion',[ProductController::class,'show']);
-Route:: get('/books',[ProductController ::class,'showbooks']);
-Route:: get('/furniture',[ProductController ::class,'showfurniture']);
 
-Route::get('/',[ProductController ::class,'showhomeproduct']);
-Route::get('/home',[ProductController ::class,'showhomeproduct']);
+Route::get('/furniture', function () {
+    return view('user.products.furniture');
+});
 
-Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
-Route::get('/electronices',[ProductController ::class,'showelectronies']);
+Route::get('/home', function () {
+    return view('user.index');
+});
 
 Route::get('/signin', function () {
     return view('user.Auth.signin');
@@ -53,7 +58,7 @@ Route::get('/checkout ', function () {return view('user.products.checkout ');});
 //contactus
 Route::get('/contactus  ', function () {return view('user.products.contactus  ');});
 //productdetails
-// Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
+Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
 
 Route::post('/register',[UserController::class , "handleForm"]);
 
@@ -65,6 +70,10 @@ Route::post('/login',[UserController::class , "handleLogin"]);
 Route::get('/register',[UserController::class , "registerForm"]);
 Route::post('/register',[UserController::class , "handleForm"]);
 
+
+//add to cart
+Route::post("add_to_cart",[ProductController::class,'addToCart']);
+
 // user logout
 Route::get('/logout' , function(){
     Session::forget('user');
@@ -73,8 +82,9 @@ Route::get('/logout' , function(){
 //search
 Route::get('/search',[ProductController::class , "searchProduct"]);
 
-Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
 
+<<<<<<< HEAD
+=======
 // Route::get('/details/{id}/category/{catid}',[ProductController::class , "detailsProduct"]);
 
 
@@ -84,4 +94,5 @@ Route::get("cartdetails",[ProductController::class,'cartlist']);
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
 
+>>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
 
