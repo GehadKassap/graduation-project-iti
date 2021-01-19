@@ -40,18 +40,18 @@
                                         <div class="navbar-collapse">
                                             <div class="nav-inner">
                                                 <ul class="nav main-menu menu navbar-nav">
-                                                    <li class="active"><a href="#">Home</a></li>
-                                                    <li><a href="homeCategories.html">Products</a></li>
-                                                    <li><a href="#">Service</a></li>
-                                                    <li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+                                                    <li class="active"><a href="/">Home</a></li>
+                                                    <li><a href="/allcategories">Products</a></li>
+                                                    <!-- <li><a href="#">Service</a></li> -->
+                                                    <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
-                                                            <li><a href="card.html">Cart</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="/cartdetails">Cart</a></li>
+                                                            <li><a href="/checkout">Checkout</a></li>
                                                         </ul>
                                                     </li>
 
 
-                                                    <li><a href="contactus.html">Contact Us</a></li>
+                                                    <li><a href="/contactus">Contact Us</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -74,9 +74,8 @@
                         <div class="top-right-strip row">
                             <!--/left-->
                             <div class="top-hny-left-content col-lg-6 pl-lg-0">
-                                <h6>Upto 30% off on All styles , <a href="#" target="_blank"> Click here for <span
-									class="fa fa-hand-o-right hand-icon" aria-hidden="true"></span> <span
-									class="hignlaite">More details</span></a></h6>
+                                <h6>You will get all you want..
+								</h6>
                             </div>
                             <!--//left-->
                             <!-- right -->
@@ -92,38 +91,7 @@
                                 <button type="button" class="overlay-close1">
 							<i class="fa fa-times" aria-hidden="true"></i>
 						</button>
-                                <div class="wrap">
-                                    <h5 class="text-center mb-4">Login Now</h5>
-                                    <div class="login-bghny p-md-5 p-4 mx-auto mw-100">
-                                        <!--/login-form-->
-                                        <form action="#" method="post">
-                                            <div class="form-group">
-                                                <p class="login-texthny mb-2">Email address</p>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
-                                                <small id="emailHelp" class="form-text text-muted">We'll never share your email
-											with anyone else.</small>
-                                            </div>
-                                            <div class="form-group">
-                                                <p class="login-texthny mb-2">Password</p>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
-                                            </div>
-                                            <div class="form-check mb-2">
-                                                <div class="userhny-check">
-                                                    <label class="check-remember container">
-												<input type="checkbox" class="form-check"> <span
-													class="checkmark"></span>
-												<p class="privacy-policy">Remember me</p>
-											</label>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="submit-login btn mb-4">Sign In</button>
 
-                                        </form>
-                                        <!--//login-form-->
-                                    </div>
-                                    <!---->
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -147,7 +115,7 @@
                                         <div class="carousel-caption">
                                             <h3>Women's Fashion
                                                 <br>50% Off</h3>
-                                            <a href="#" class="shop-button btn">
+                                            <a href="/fashion" class="shop-button btn">
 										Shop Now
 									</a>
 
@@ -159,7 +127,7 @@
                                         <div class="carousel-caption">
                                             <h3>Men's Fashion
                                                 <br>60% Off</h3>
-                                            <a href="#" class="shop-button btn">
+                                            <a href="/fashion" class="shop-button btn">
 										Shop Now
 									</a>
 
@@ -171,7 +139,7 @@
                                         <div class="carousel-caption">
                                             <h3>Women's Fashion
                                                 <br>50% Off</h3>
-                                            <a href="#" class="shop-button btn">
+                                            <a href="/fashion" class="shop-button btn">
 										Shop Now
 									</a>
 
@@ -183,7 +151,7 @@
                                         <div class="carousel-caption">
                                             <h3>Men's Fashion
                                                 <br>60% Off</h3>
-                                            <a href="#" class="shop-button btn">
+                                            <a href="/fashion" class="shop-button btn">
 										Shop Now
 									</a>
                                         </div>
@@ -226,7 +194,7 @@
                     <div class="welcome-grids row mt-5">
                         <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
                             <div class="boxhny13">
-                                <a href="homeCategories.html">
+                                <a href="/books">
                                     <img src="{{asset('images/assets/images/books.jpg')}}" class="img-fluid" alt="" />
                                     <div class="boxhny-content">
                                         <h3 class="title">Product
@@ -234,60 +202,60 @@
                                 </a>
                             </div>
                             <h4>
-                                <a href="#URL">Books</a>
+                                <a href="/books">Books</a>
                             </h4>
 
                         </div>
 
                         <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
                             <div class="boxhny13">
-                                <a href="homeCategories.html">
+                                <a href="/cosmatics">
                                     <img src="{{asset('images/assets/images/cosmetcs.jpg')}}" class="img-fluid" alt="" />
                                     <div class="boxhny-content">
                                         <h3 class="title">Product</h3>
                                     </div>
                                 </a>
                             </div>
-                            <h4><a href="#URL">
+                            <h4><a href="/cosmatics">
 								Cosmetics</a></h4>
 
 
                         </div>
                         <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
                             <div class="boxhny13">
-                                <a href="homeCategories.html">
+                                <a href="/furniture">
                                     <img src="{{asset('images/assets/images/furn.jpg')}}" class="img-fluid" alt="" />
                                     <div class="boxhny-content">
                                         <h3 class="title">Product</h3>
                                     </div>
                                 </a>
                             </div>
-                            <h4><a href="homeCategories.html">Furniture</a></h4>
+                            <h4><a href="/furniture">Furniture</a></h4>
 
 
                         </div>
                         <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
                             <div class="boxhny13">
-                                <a href="homeCategories.html">
+                                <a href="/fashion">
                                     <img src="{{asset('images/assets/images/grid4.jpg')}}" class="img-fluid" alt="" />
                                     <div class="boxhny-content">
                                         <h3 class="title">Product</h3>
                                     </div>
                                 </a>
                             </div>
-                            <h4><a href="fashoinCtegory.html">Fashion</a></h4>
+                            <h4><a href="/fashion">Fashion</a></h4>
 
                         </div>
                         <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
                             <div class="boxhny13">
-                                <a href="homeCategories.htmlL">
+                                <a href="/electronices">
                                     <img src="{{asset('images/assets/images/electronics.jpg')}}" class="img-fluid" alt="" />
                                     <div class="boxhny-content">
                                         <h3 class="title">Product</h3>
                                     </div>
                                 </a>
                             </div>
-                            <h4><a href="homeCategories.html">
+                            <h4><a href="/electronices">
 								Electronics</a></h4>
 
 
@@ -311,12 +279,12 @@
                         <div class="photo-6-inf-right col-lg-6" data-aos="fade-left">
                             <h3 class="hny-title text-left">All Branded Men's Suits are Flat <span>30% Discount</span></h3>
                             <p>Visit our shop to see amazing creations from our designers.</p>
-                            <a href="#" class="read-more btn">
+                            <a href="/fashion" class="read-more btn">
 										Shop Now
 								</a>
                         </div>
                         <div class="photo-6-inf-left col-lg-6" data-aos="fade-right">
-                            <img src="{{asset('images/assets/images/1.jpg')}}" class="img-fluid" alt="">
+                            <img src="{{asset('images/assets/images/1.jpg')}}" class="img-fluid" >
                         </div>
                     </div>
                 </div>
@@ -348,7 +316,7 @@
                                 <h3 class="hny-title text-left">All Branded Women's Bags are Flat <span>30% Discount</span>
                                 </h3>
                                 <p>Visit our shop to see amazing creations from our designers.</p>
-                                <a href="#" class="read-more btn">
+                                <a href="/fashion" class="read-more btn">
 							Shop Now
 						</a>
                             </div>
@@ -403,8 +371,8 @@
                             </div>
                         </div>
 
-                          
-	            
+
+
 
 
 	                 @endforeach

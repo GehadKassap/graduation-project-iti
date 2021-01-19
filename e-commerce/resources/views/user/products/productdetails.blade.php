@@ -43,27 +43,7 @@
                     <div class="cat-nav-head">
                         <div class="row">
                             <div class="col-lg-3">
-                                <!-- <div class="all-category">
-                                    <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
-                                    <ul class="main-category">
-                                        <li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                            <ul class="sub-category">
-                                                <li><a href="kitchenCategory.html">Kitchen</a></li>
-                                                <li><a href="#">Furniture</a></li>
-                                                <li><a href="fashoinCtegory.html">Fashion</a></li>
-                                                <li><a href="#">Books</a></li>
-                                                <li><a href="#">Cosmatics</a></li>
-                                                <li><a href="#">Electronics</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">mobile</a></li>
-                                        <li><a href="#">books</a></li>
-                                        <li><a href="#">cosmatics</a></li>
-                                        <li><a href="fashoinCtegory.html">fashion</a></li>
-                                        <li><a href="kitchenCategory.html">kitchen</a></li>
-                                        <li><a href="#">labtops</a></li>
-                                    </ul>
-                                </div> -->
+
                             </div>
                             <div class="col-lg-9 col-12">
                                 <div class="menu-area">

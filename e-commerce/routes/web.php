@@ -49,11 +49,11 @@ Route::get('/favorite', function () {return view('user.products.favorite');});
 //profile
 Route::get('/profile', function () {return view('user.products.profile');});
 //checkout
-Route::get('/checkout ', function () {return view('user.products.checkout ');});
+Route::get('/checkout', function () {return view('user.products.checkout ');});
 //contactus
-Route::get('/contactus  ', function () {return view('user.products.contactus  ');});
-//productdetails
-// Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
+Route::get('/contactus', function () {return view('user.products.contactus  ');});
+Route::get('/electronices',[ProductController ::class,'showelectronies']);
+
 
 Route::post('/register',[UserController::class , "handleForm"]);
 
