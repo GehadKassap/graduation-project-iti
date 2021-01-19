@@ -49,7 +49,8 @@
             <!--start add product------------------------------------------------------------>
             <div class="container-fluid animatedParent animateOnce my-3">
                 <div class="animated fadeInUpShort go">
-                    <form id="needs-validation" action="{{route("products.update",$product)}}" method="post">
+                    <form id="needs-validation" action="{{route("products.update",$product)}}" method="post"
+                        enctype="multipart/form-data">
                         @csrf
                         @method("put")
                         <div class="row">
@@ -146,10 +147,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputGroupFile01">Product Photo Upload</label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                            class="form-control">
-                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    <div class="form-group">
+                                        <input value="{{$product['image']}}" type="file" name="image">
                                     </div>
                                 </div>
                                 <div class=" bg-transparent">
