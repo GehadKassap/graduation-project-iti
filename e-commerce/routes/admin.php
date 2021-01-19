@@ -17,9 +17,9 @@ use App\Http\Controllers\admin;
 |
 */
 
-// Route::middleware('UserAuth' , function(){
-// //admin-dashboard
-// Route::get('admin/dashboard', function () {return view('admin.dashboard');});
+
+// Route::middleware('UserAuth')->group(function(){
+//     Route::resource("admin/users",admin\UsersController::class);
 // });
 
 // Route::get('notauth' , function(){
@@ -30,7 +30,7 @@ use App\Http\Controllers\admin;
 
 
 /********routes abeer */
-
+//->middleware('UserAuth')
 //resource
 Route::resource("admin/users",admin\UsersController::class);
 Route::resource("admin/dashboard",admin\dashboardController::class);
@@ -55,3 +55,10 @@ Route::get('admin/support', function () {
 
 Route::resource("products", admin\ProductController::class);
 /****************************** */
+/*******************Gehad***/
+// user logout
+Route::get('/logout' , function(){
+    Session::forget('user');
+    return view('user.Auth.signin');
+});
+/**************************** */

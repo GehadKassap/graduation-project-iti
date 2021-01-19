@@ -50,6 +50,13 @@ class ProductController extends Controller
     {
         //
     }
+    //search function
+    function searchProduct(Request $req)
+    {
+         //return $req->input();
+     $dataHolder = Product::where( 'name','like', '%'. $req->input('term').'%')->get() ;
+     return $dataHolder ;
+    }
 
     /**
      * Store a newly created resource in storage.
