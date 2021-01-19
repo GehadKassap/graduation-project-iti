@@ -32,9 +32,9 @@ use App\Http\Controllers\admin;
 /********routes abeer */
 //->middleware('UserAuth')
 //resource
-Route::resource("admin/users",admin\UsersController::class);
-Route::resource("admin/dashboard",admin\dashboardController::class);
-Route::resource("admin/orders",admin\ordersController::class);
+Route::resource("admin/users", admin\UsersController::class);
+Route::resource("admin/dashboard", admin\dashboardController::class);
+Route::resource("admin/orders", admin\ordersController::class);
 
 
 //admin-Promotion
@@ -56,10 +56,12 @@ Route::get('admin/support', function () {
 /********routesMohamed */
 
 Route::resource("products", admin\ProductController::class);
+Route::resource("problems", admin\ProblemController::class);
+
 /****************************** */
 /*******************Gehad***/
 // user logout
-Route::get('/logout' , function(){
+Route::get('/logout', function () {
     //Session::forget('user');
     Cookie::queue(Cookie::forget('user'));
     return view('user.Auth.signin');

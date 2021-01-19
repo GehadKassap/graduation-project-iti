@@ -94,7 +94,7 @@
                                                     <td>${{$product["price"]}}</td>
                                                     <td>discount : %{{$product["discount"]}}</td>
                                                     <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-warning round">Electronics</button>
+                                                            class="btn btn-sm btn-outline-warning round">{{$product["category"]}}</button>
                                                     </td>
                                                     <td>
                                                         <span><i

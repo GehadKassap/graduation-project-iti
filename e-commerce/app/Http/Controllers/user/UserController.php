@@ -34,7 +34,7 @@ class UserController extends Controller
     //to store user info in db;
     function handleForm(Request $req)
     {
-        /*****dy kant awl tare2a bs b laravel7 */
+
         $valid = \Validator::make($req->all() , [
             'fullname' => 'required|max:100|min:5',
             'password' => 'required|max:30|min:3',

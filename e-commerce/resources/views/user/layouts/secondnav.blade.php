@@ -6,16 +6,7 @@
 							<div class="all-category">
 								<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
 								<ul class="main-category">
-									<!-- <li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-										<ul class="sub-category">
-											<li><a href="kitchenCategory.html">Kitchen</a></li>
-											<li><a href="#">Furniture</a></li>
-											<li><a href="/fashion">Fashion</a></li>
-											<li><a href="#">Books</a></li>
-											<li><a href="#">Cosmatics</a></li>
-											<li><a href="#">Electronics</a></li>
-										</ul>
-									</li> -->
+
 									<li><a href="/electronices">Electronics</a></li>
 									<li><a href="/books">books</a></li>
 									<li><a href="/cosmatics">cosmatics</a></li>
