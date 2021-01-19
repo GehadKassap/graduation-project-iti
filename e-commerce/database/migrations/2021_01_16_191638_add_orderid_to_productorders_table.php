@@ -19,7 +19,7 @@ class AddOrderidToProductordersTable extends Migration
 
             $table->foreign('pro_id')->references('id')->on('products')->onDelete('cascade');
             $table->unsignedBigInteger('order_id');
-                $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
         });
     }
 
