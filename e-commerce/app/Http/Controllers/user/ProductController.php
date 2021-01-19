@@ -4,7 +4,10 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Card;
+use Illuminate\support\facades\DB;
 use Illuminate\Http\Request;
+use Session;
 
 class ProductController extends Controller
 {
@@ -134,4 +137,41 @@ class ProductController extends Controller
     {
         //
     }
+
+
+   function addtocart(request $req)
+   {
+       if($req->session()->has('user')){
+           $card= new card;
+           $card->user_id=$req->session()->get('user')['id'];
+           $card->pro_id=$req->product_id;
+           $card->quantity=$req->quantity;
+           $card->save();
+           return redirect ('/fashion');
+       }
+       else
+       {
+           return redirect('/login');
+       }
+   }
+
+static function cartItem(){
+    $userid=Session::get('user')['id'];
+    return Card::where('user_id',$userid)->count();
+}
+function cartlist(){
+    $userid=Session::get('user')['id'];
+    $products=DB::table('cards')
+    ->join('products','cards.pro_id','=','products.id')
+    ->where('cards.user_id', $userid)
+    ->select('products.*')
+    ->get();
+    return view('user.products.cartdetails',['products'=>$products]);
+}
+
+ function removecart($rowid){
+    Card::destroy($rowid);
+    return redirect('cartdetails');
+}
+
 }

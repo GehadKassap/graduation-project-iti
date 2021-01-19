@@ -15,15 +15,14 @@ use App\Http\Controllers\user\ProductController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('user.index');
-// });
+
 Route::get('/allcategories', function () {
     return view('user.products.homeCategories');
 });
 // Route::get('/fashion', function () {
 //     return view('user.products.fashion');
 // });
+
 
 Route:: get('/fashion',[ProductController::class,'show']);
 Route:: get('/books',[ProductController ::class,'showbooks']);
@@ -46,7 +45,7 @@ Route::get('/forgetpass', function () {
 //favorite
 Route::get('/favorite', function () {return view('user.products.favorite');});
 //cart details
-Route::get('/cart', function () {return view('user.products.cartdetails');});
+// Route::get('/cart', function () {return view('user.products.cartdetails');});
 //profile
 Route::get('/profile', function () {return view('user.products.profile');});
 //checkout
@@ -77,3 +76,11 @@ Route::get('/search',[ProductController::class , "searchProduct"]);
 Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
 
 // Route::get('/details/{id}/category/{catid}',[ProductController::class , "detailsProduct"]);
+
+
+Route::post("addtocart",[ProductController::class,'addtocart']);
+Route::get("cartdetails",[ProductController::class,'cartlist']);
+Route::get("removecart/{id}",[ProductController::class,'removecart']);
+
+
+

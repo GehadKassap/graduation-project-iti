@@ -1,4 +1,7 @@
-
+<?php 
+use App\Http\Controllers\user\ProductController;
+$total=ProductController::cartItem();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,9 +95,9 @@
 
 
 							<div class="sinlge-bar shopping">
-								<a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
+								<a href="/cartdetails" class="single-icon"><i class="ti-bag"></i> <span class="total-count">{{$total}}</span></a>
 								<!-- Shopping Item -->
-								<div class="shopping-item">
+								<!-- <div class="shopping-item">
 									<div class="dropdown-cart-header">
 										<span>2 Items</span>
 										<a href="card.html">View Cart</a>
@@ -119,7 +122,7 @@
 											<span class="total-amount">$134.00</span>
 										</div>
 										<a href="/checkout" class="btn animate">Checkout</a>
-									</div>
+									</div> -->
                                 </div>
 
                                 <!-- <div class="sinlge-bar">
