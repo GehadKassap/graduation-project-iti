@@ -147,7 +147,7 @@ class ProductController extends Controller
            $card->pro_id=$req->product_id;
            $card->quantity=$req->quantity;
            $card->save();
-           return redirect ('/fashion');
+           return redirect ('/cartdetails');
        }
        else
        {
