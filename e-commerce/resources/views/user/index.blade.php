@@ -80,6 +80,12 @@
                             </div>
                             <!--//left-->
                             <!-- right -->
+                            <!-- <ul class="top-hnt-right-content col-lg-6">
+
+                                <li class="button-log usernhy">
+                                    <a class="btn-open" href="#">
+                                        <span class="fa fa-user" aria-hidden="true"></span>
+                                    </a>
 
                             <!--//right-->
                             <div class="overlay-login text-left">
@@ -363,7 +369,7 @@
                     <!-- /row-->
                     <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
 
-                    @foreach($product as $pro)
+   {{--          @foreach($product as $pro)
 
                      <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
@@ -658,7 +664,7 @@
                             <div class="p-lg-5 py-md-0 py-3">
                                 <h3 class="hny-title">Join us for FREE to get instant <span>email updates!</span></h3>
                                 <p>Subscribe and get notified at first on the latest update and offers!</p>
-
+                                --}}
                                 <form action="#" method="post" class="signin-form mt-lg-5 mt-4">
                                     <div class="forms-gds">
                                         <div class="form-input">
