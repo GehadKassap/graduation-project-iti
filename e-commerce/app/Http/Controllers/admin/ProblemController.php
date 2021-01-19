@@ -39,6 +39,14 @@ class ProblemController extends Controller
     public function store(Request $request)
     {
         //
+        Problem::create([
+            "name" => $request["name"],
+            "subject" => $request["subject"],
+            "email" => $request["email"],
+            "phone" => $request["phone"],
+
+
+        ]);
     }
 
     /**
