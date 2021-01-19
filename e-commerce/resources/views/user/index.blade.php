@@ -19,7 +19,7 @@
     <link href="../webfonts/googleapisfonts2" rel="stylesheet">
     <link rel="icon" type="..imgs/favicon.png" href="../imgs/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-  
+
 </head>
 
 @include("user.layouts.firstnav")
@@ -31,27 +31,7 @@
                     <div class="cat-nav-head">
                         <div class="row">
                             <div class="col-lg-3">
-                                <!-- <div class="all-category">
-                                    <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
-                                    <ul class="main-category">
-                                        <li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                            <ul class="sub-category">
-                                                <li><a href="kitchenCategory.html">Kitchen</a></li>
-                                                <li><a href="#">Furniture</a></li>
-                                                <li><a href="fashoinCtegory.html">Fashion</a></li>
-                                                <li><a href="#">Books</a></li>
-                                                <li><a href="#">Cosmatics</a></li>
-                                                <li><a href="#">Electronics</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">mobile</a></li>
-                                        <li><a href="#">books</a></li>
-                                        <li><a href="#">cosmatics</a></li>
-                                        <li><a href="fashoinCtegory.html">fashion</a></li>
-                                        <li><a href="kitchenCategory.html">kitchen</a></li>
-                                        <li><a href="#">labtops</a></li>
-                                    </ul>
-                                </div> -->
+
                             </div>
                             <div class="col-lg-9 col-12">
                                 <div class="menu-area">
@@ -106,18 +86,7 @@
                                     <a class="btn-open" href="#">
                                         <span class="fa fa-user" aria-hidden="true"></span>
                                     </a>
-                                </li>
-                                <li class="transmitvcart galssescart2 cart cart box_1">
-                                    <form action="#" method="post" class="last">
-                                        <input type="hidden" name="cmd" value="_cart">
-                                        <input type="hidden" name="display" value="1">
-                                        <button style="outline: none;" class="top_transmitv_cart" type="submit" name="submit" value="">
-									My Cart
-									<span class="fa fa-shopping-cart"></span>
-								</button>
-                                    </form>
-                                </li>
-                            </ul> -->
+
                             <!--//right-->
                             <div class="overlay-login text-left">
                                 <button type="button" class="overlay-close1">
@@ -399,9 +368,9 @@
                     <p class="text-center">Handpicked Favourites just for you</p>
                     <!-- /row-->
                     <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
-                  
-                    @foreach($product as $pro)
-                     
+
+   {{--          @foreach($product as $pro)
+
                      <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
                                 <div class="product-image2">
@@ -433,10 +402,10 @@
                                 </div>
                             </div>
                         </div>
-                          
+
 	                 @endforeach
-                       
-                       
+
+
                     </div>
                     <!-- //row-->
                 </div>
@@ -695,7 +664,7 @@
                             <div class="p-lg-5 py-md-0 py-3">
                                 <h3 class="hny-title">Join us for FREE to get instant <span>email updates!</span></h3>
                                 <p>Subscribe and get notified at first on the latest update and offers!</p>
-
+                                --}}
                                 <form action="#" method="post" class="signin-form mt-lg-5 mt-4">
                                     <div class="forms-gds">
                                         <div class="form-input">
@@ -716,7 +685,7 @@
         </section>
         <!-- //customers-6-->
         <!-- Start Footer Area -->
-   
+
         @include("user.layouts.footer")
 
         <!-- end of footer -->
