@@ -15,9 +15,12 @@ class CreateProblemsTable extends Migration
     {
         Schema::create('problems', function (Blueprint $table) {
             $table->id();
-            $table->string('description' , 500);
-            $table->enum('state',['solved' , 'not solved']);
-
+            $table->string('name', 500);
+            $table->string('subject', 500)->nullable();
+            $table->string('email', 500);
+            $table->string('phone', 500)->nullable();
+            $table->string('message', 500);
+            $table->enum('state', ['solved', 'not solved'])->default('not solved');
             $table->timestamps();
         });
     }

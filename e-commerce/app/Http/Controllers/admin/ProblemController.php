@@ -27,6 +27,7 @@ class ProblemController extends Controller
     public function create()
     {
         //
+        return view('user.products.contactus');
     }
 
     /**
