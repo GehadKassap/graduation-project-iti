@@ -399,12 +399,15 @@
                     <p class="text-center">Handpicked Favourites just for you</p>
                     <!-- /row-->
                     <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
+                  
+                    @foreach($product as $pro)
+                     
+                     <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
                                 <div class="product-image2">
                                     <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{asset('images/assets/images/shop-1.jpg')}}">
-                                        <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-11.jpg')}}">
+                                        <img class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
+                                        <img class="pic-2 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
                                     </a>
                                     <ul class="social">
                                         <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
@@ -425,16 +428,19 @@
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3 class="title"><a href="#">Women Maroon Top </a></h3>
-                                    <span class="price"><del>$975.00</del>$899.99</span>
+                                    <h3 class="title"><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}} </a></h3>
+                                    <span class="price"><del>$975.00</del>{{$pro['price']}}</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
+                          
+	                 @endforeach
+                       
+                        <!-- <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2">
                                 <div class="product-image2">
                                     <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{asset('images/assets/images/shop-2.jpg')}}">
+                                        <img class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
                                         <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-22.jpg')}}">
                                     </a>
                                     <ul class="social">
@@ -456,13 +462,14 @@
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3 class="title"><a href="#">Men's Pink Shirt </a></h3>
-                                    <span class="price"><del>$775.00</del>$599.99</span>
+                                    <h3 class="title"><a href="#">{{$pro['name']}}$ </a></h3>
+                                    <span class="price"><del>$775.00</del>{{$pro['price']}}$</span>
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-right">
+                        </div> -->
+                      
+                        <!-- <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-right">
                             <div class="product-grid2">
                                 <div class="product-image2">
                                     <a href="product_single.html">
@@ -655,7 +662,7 @@
 
                         </div>
 
-
+ -->
                     </div>
                     <!-- //row-->
                 </div>

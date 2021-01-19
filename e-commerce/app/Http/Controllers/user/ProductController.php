@@ -20,26 +20,26 @@ class ProductController extends Controller
     
     }
     
-    function addToCart(Request $req)
-    {
-        if($req->session()->has('user'))
-        {
-           $cart= new Card;
-           $cart->user_id=$req->session()->get('user')['id'];
-           $cart->pro_id=$req->pro_id;
-           $cart->save();
-           return redirect('/');
+    // function addToCart(Request $req)
+    // {
+    //     if($req->session()->has('user'))
+    //     {
+    //        $cart= new Card;
+    //        $cart->user_id=$req->session()->get('user')['id'];
+    //        $cart->pro_id=$req->pro_id;
+    //        $cart->save();
+    //        return redirect('/');
            
-        }
-        else
-        {
-            return redirect('/signin');
-        }
-    }
-    function cartItem(){
-        $userId=Session::get('user')['id'];
-        return Card::where('user_id',$userId)->count();
-    }
+    //     }
+    //     else
+    //     {
+    //         return redirect('/signin');
+    //     }
+    // }
+    // function cartItem(){
+    //     $userId=Session::get('user')['id'];
+    //     return Card::where('user_id',$userId)->count();
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -56,6 +56,17 @@ class ProductController extends Controller
          //return $req->input();
      $dataHolder = Product::where( 'name','like', '%'. $req->input('term').'%')->get() ;
      return $dataHolder ;
+    }
+    function detailsProduct($id)
+    {
+      //$product = Product::where('id' , '=' , $id)->first();
+      $i=3;
+      $product = Product::findorfail($id)  ;
+      $allProducts=product::where('id', ">=" , $id)->take(4)->get();
+      $relatedproduct=product::where('category', "=" ,$i )->take(4)->get();
+   //$allProducts=product::where('id', "<=" , $id)->count();
+      return view('user.products.productdetails' , ['product'=>$product , 'products'=>$allProducts,'relatedproducts'=> $relatedproduct]);
+       //   dd($product);
     }
 
     /**
@@ -79,6 +90,38 @@ class ProductController extends Controller
     {
         $data=product ::all();
         return view('user.products.fashion',['product'=>$data]);
+    }
+    public function showbooks()
+    {
+        $data=product ::all();
+      
+        return view('user.products.books',['product'=>$data]);
+    }
+    public function showfurniture()
+    {
+        $data=product ::all();
+      
+        return view('user.products.furniture',['product'=>$data]);
+    }
+
+    public function showcosmatics()
+    {
+        $data=product ::all();
+      
+        return view('user.products.cosmatics',['product'=>$data]);
+    }
+    public function showelectronies()
+    {
+        $data=product ::all();
+      
+        return view('user.products.electronics',['product'=>$data]);
+    }
+    
+    public function showhomeproduct()
+    {
+        // $data=product ::all();
+        $data = product::take(8)->get(); 
+        return view('user.index',['product'=>$data]);
     }
 
     /**
