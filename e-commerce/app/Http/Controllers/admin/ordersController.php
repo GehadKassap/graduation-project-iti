@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use DB;
 
 class ordersController extends Controller
 {
@@ -16,7 +17,15 @@ class ordersController extends Controller
     public function index()
     {
         //
-        return view('admin.orders');
+        // $orders=Order::all();
+        $orders = DB::table('orders')
+            ->join('users', 'users.id', '=', 'orders.user_id')
+            // ->join('productorders', 'productorders.order_id', '=', 'orders.id')
+            ->select('orders.*', 'users.fullname')
+            ->get();
+
+
+        return view('admin.orders',["orders"=>$orders]);
 
     }
 

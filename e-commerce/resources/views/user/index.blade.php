@@ -31,27 +31,7 @@
                     <div class="cat-nav-head">
                         <div class="row">
                             <div class="col-lg-3">
-                                <!-- <div class="all-category">
-                                    <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
-                                    <ul class="main-category">
-                                        <li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                            <ul class="sub-category">
-                                                <li><a href="kitchenCategory.html">Kitchen</a></li>
-                                                <li><a href="#">Furniture</a></li>
-                                                <li><a href="fashoinCtegory.html">Fashion</a></li>
-                                                <li><a href="#">Books</a></li>
-                                                <li><a href="#">Cosmatics</a></li>
-                                                <li><a href="#">Electronics</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">mobile</a></li>
-                                        <li><a href="#">books</a></li>
-                                        <li><a href="#">cosmatics</a></li>
-                                        <li><a href="fashoinCtegory.html">fashion</a></li>
-                                        <li><a href="kitchenCategory.html">kitchen</a></li>
-                                        <li><a href="#">labtops</a></li>
-                                    </ul>
-                                </div> -->
+
                             </div>
                             <div class="col-lg-9 col-12">
                                 <div class="menu-area">
@@ -100,24 +80,7 @@
                             </div>
                             <!--//left-->
                             <!-- right -->
-                            <!-- <ul class="top-hnt-right-content col-lg-6">
 
-                                <li class="button-log usernhy">
-                                    <a class="btn-open" href="#">
-                                        <span class="fa fa-user" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li class="transmitvcart galssescart2 cart cart box_1">
-                                    <form action="#" method="post" class="last">
-                                        <input type="hidden" name="cmd" value="_cart">
-                                        <input type="hidden" name="display" value="1">
-                                        <button style="outline: none;" class="top_transmitv_cart" type="submit" name="submit" value="">
-									My Cart
-									<span class="fa fa-shopping-cart"></span>
-								</button>
-                                    </form>
-                                </li>
-                            </ul> -->
                             <!--//right-->
                             <div class="overlay-login text-left">
                                 <button type="button" class="overlay-close1">
@@ -399,9 +362,9 @@
                     <p class="text-center">Handpicked Favourites just for you</p>
                     <!-- /row-->
                     <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
-                  
+
                     @foreach($product as $pro)
-                     
+
                      <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
                                 <div class="product-image2">
@@ -433,236 +396,10 @@
                                 </div>
                             </div>
                         </div>
-                          
+
 	                 @endforeach
-                       
-                        <!-- <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
-                            <div class="product-grid2">
-                                <div class="product-image2">
-                                    <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
-                                        <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-22.jpg')}}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
 
-                                        <li><a href="#" data-tip="Add to Cart"><span class="fa fa-shopping-bag"></span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="transmitv single-item">
-                                        <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="transmitv_item" value="Men's Pink Shirt">
-                                            <input type="hidden" name="amount" value="599.99">
-                                            <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
-												Add to Cart
-											</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="#">{{$pro['name']}}$ </a></h3>
-                                    <span class="price"><del>$775.00</del>{{$pro['price']}}$</span>
-                                </div>
-                            </div>
 
-                        </div> -->
-
-                        <!-- <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-right">
-                            <div class="product-grid2">
-                                <div class="product-image2">
-                                    <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{asset('images/assets/images/shop-3.jpg')}}">
-                                        <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-33.jpg')}}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
-
-                                        <li><a href="#" data-tip="Add to Cart"><span class="fa fa-shopping-bag"></span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="transmitv single-item">
-                                        <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="transmitv_item" value="Dark Blue Top">
-                                            <input type="hidden" name="amount" value="799.99">
-                                            <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
-												Add to Cart
-											</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="#">Dark Blue Top </a></h3>
-                                    <span class="price"><del>$875.00</del>$799.99</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-right">
-                            <div class="product-grid2">
-                                <div class="product-image2">
-                                    <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{asset('images/assets/images/shop-4.jpg')}}">
-                                        <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-44.jpg')}}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
-
-                                        <li><a href="#" data-tip="Add to Cart"><span class="fa fa-shopping-bag"></span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="transmitv single-item">
-                                        <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="transmitv_item" value="Women Tunic">
-                                            <input type="hidden" name="amount" value="399.99">
-                                            <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
-												Add to Cart
-											</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="#">Women Tunic </a></h3>
-                                    <span class="price"><del>$475.00</del>$399.99</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-right">
-                            <div class="product-grid2">
-                                <div class="product-image2">
-                                    <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{asset('images/assets/images/shop-5.jpg')}}">
-                                        <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-55.jpg')}}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
-
-                                        <li><a href="#" data-tip="Add to Cart"><span class="fa fa-shopping-bag"></span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="transmitv single-item">
-                                        <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="transmitv_item" value="Yellow T-Shirt">
-                                            <input type="hidden" name="amount" value="299.99">
-                                            <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
-												Add to Cart
-											</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="#">Yellow T-Shirt</a></h3>
-                                    <span class="price"><del>$575.00</del>$299.99</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-right">
-                            <div class="product-grid2">
-                                <div class="product-image2">
-                                    <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{asset('images/assets/images/shop-6.jpg')}}">
-                                        <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-66.jpg')}}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
-
-                                        <li><a href="#" data-tip="Add to Cart"><span class="fa fa-shopping-bag"></span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="transmitv single-item">
-                                        <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="transmitv_item" value="Straight Kurta">
-                                            <input type="hidden" name="amount" value="699.99">
-                                            <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
-												Add to Cart
-											</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="#">Straight Kurta </a></h3>
-                                    <span class="price"><del>$775.00</del>$699.99</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
-                            <div class="product-grid2">
-                                <div class="product-image2">
-                                    <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{asset('images/assets/images/shop-7.jpg')}}">
-                                        <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-77.jpg')}}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
-
-                                        <li><a href="#" data-tip="Add to Cart"><span class="fa fa-shopping-bag"></span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="transmitv single-item">
-                                        <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="transmitv_item" value="White T-Shirt">
-                                            <input type="hidden" name="amount" value="599.99">
-                                            <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
-												Add to Cart
-											</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="#">White T-Shirt </a></h3>
-                                    <span class="price"><del>$675.00</del>$599.99</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
-                            <div class="product-grid2">
-                                <div class="product-image2">
-                                    <a href="product_single.html">
-                                        <img class="pic-1 img-fluid" src="{{asset('images/assets/images/shop-8.jpg')}}">
-                                        <img class="pic-2 img-fluid" src="{{asset('images/assets/images/shop-88.jpg')}}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
-
-                                        <li><a href="#" data-tip="Add to Cart"><span class="fa fa-shopping-bag"></span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="transmitv single-item">
-                                        <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="transmitv_item" value="Blue Sweater">
-                                            <input type="hidden" name="amount" value="499.99">
-                                            <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
-												Add to Cart
-											</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="#">Blue Sweater</a></h3>
-                                    <span class="price"><del>$575.00</del>$499.99</span>
-                                </div>
-                            </div>
-
-                        </div>
-
- -->
                     </div>
                     <!-- //row-->
                 </div>
