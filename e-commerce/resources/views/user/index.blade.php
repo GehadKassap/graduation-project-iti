@@ -34,28 +34,31 @@
             <div class="row">
                 <div class="col-lg-3">
 
-                </div>
-                <div class="col-lg-9 col-12">
-                    <div class="menu-area">
-                        <!-- Main Menu -->
-                        <nav class="navbar navbar-expand-lg">
-                            <div class="navbar-collapse">
-                                <div class="nav-inner">
-                                    <ul class="nav main-menu menu navbar-nav">
-                                        <li class="active"><a href="#">Home</a></li>
-                                        <li><a href="homeCategories.html">Products</a></li>
-                                        <li><a href="#">Service</a></li>
-                                        <li><a href="#">Shop<i class="ti-angle-down"></i><span
-                                                    class="new">New</span></a>
-                                            <ul class="dropdown">
-                                                <li><a href="card.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                            </ul>
-                                        </li>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <div class="menu-area">
+                                    <!-- Main Menu -->
+                                    <nav class="navbar navbar-expand-lg">
+                                        <div class="navbar-collapse">
+                                            <div class="nav-inner">
+                                                <ul class="nav main-menu menu navbar-nav">
+                                                    <li class="active"><a href="/">Home</a></li>
+                                                    <li><a href="/allcategories">Products</a></li>
+                                                    <!-- <li><a href="#">Service</a></li> -->
+                                                    <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="/cartdetails">Cart</a></li>
+                                                            <li><a href="/checkout">Checkout</a></li>
+                                                        </ul>
+                                                    </li>
 
 
-                                        <li><a href="{{route('problems.create')}}">Contact Us</a></li>
-                                    </ul>
+                                                    <li><a href="/contactus">Contact Us</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                    <!--/ End Main Menu -->
                                 </div>
                             </div>
                         </nav>
@@ -63,63 +66,35 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!--/ End Header Inner -->
-</header>
+            <!--/ End Header Inner -->
+        </header>
 
-<!--w3l-banner-slider-main-->
-<section class="w3l-banner-slider-main">
-    <div class="top-header-content">
-        <header class="tophny-header">
-            <div class="container-fluid">
-                <div class="top-right-strip row">
-                    <!--/left-->
-                    <div class="top-hny-left-content col-lg-6 pl-lg-0">
-                        <h6>Upto 30% off on All styles , <a href="#" target="_blank"> Click here for <span
-                                    class="fa fa-hand-o-right hand-icon" aria-hidden="true"></span> <span
-                                    class="hignlaite">More details</span></a></h6>
-                    </div>
-                    <!--//left-->
-                    <!-- right -->
+        <!--w3l-banner-slider-main-->
+        <section class="w3l-banner-slider-main">
+            <div class="top-header-content">
+                <header class="tophny-header">
+                    <div class="container-fluid">
+                        <div class="top-right-strip row">
+                            <!--/left-->
+                            <div class="top-hny-left-content col-lg-6 pl-lg-0">
+                                <h6>You will get all you want..
+								</h6>
+                            </div>
+                            <!--//left-->
+                            <!-- right -->
+                            <!-- <ul class="top-hnt-right-content col-lg-6">
 
-                    <!--//right-->
-                    <div class="overlay-login text-left">
-                        <button type="button" class="overlay-close1">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </button>
-                        <div class="wrap">
-                            <h5 class="text-center mb-4">Login Now</h5>
-                            <div class="login-bghny p-md-5 p-4 mx-auto mw-100">
-                                <!--/login-form-->
-                                <form action="#" method="post">
-                                    <div class="form-group">
-                                        <p class="login-texthny mb-2">Email address</p>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp" placeholder="" required="">
-                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email
-                                            with anyone else.</small>
-                                    </div>
-                                    <div class="form-group">
-                                        <p class="login-texthny mb-2">Password</p>
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="" required="">
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <div class="userhny-check">
-                                            <label class="check-remember container">
-                                                <input type="checkbox" class="form-check"> <span
-                                                    class="checkmark"></span>
-                                                <p class="privacy-policy">Remember me</p>
-                                            </label>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="submit-login btn mb-4">Sign In</button>
+                                <li class="button-log usernhy">
+                                    <a class="btn-open" href="#">
+                                        <span class="fa fa-user" aria-hidden="true"></span>
+                                    </a>
 
-                                </form>
-                                <!--//login-form-->
+                            <!--//right-->
+                            <div class="overlay-login text-left">
+                                <button type="button" class="overlay-close1">
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</button>
+
                             </div>
                             <!---->
                         </div>
@@ -145,155 +120,71 @@
                                     <div class="container">
                                         <div class="carousel-caption">
                                             <h3>Women's Fashion
-                                                <br>50% Off
-                                            </h3>
-                                            <a href="#" class="shop-button btn">
-                                                Shop Now
-                                            </a>
-                                            <!--w3l-banner-slider-main-->
-                                            <section class="w3l-banner-slider-main">
-                                                <div class="top-header-content">
-                                                    <header class="tophny-header">
-                                                        <div class="container-fluid">
-                                                            <div class="top-right-strip row">
-                                                                <!--/left-->
-                                                                <div class="top-hny-left-content col-lg-6 pl-lg-0">
-                                                                    <h6>Upto 30% off on All styles , <a href="#"
-                                                                            target="_blank"> Click here for <span
-                                                                                class="fa fa-hand-o-right hand-icon"
-                                                                                aria-hidden="true"></span> <span
-                                                                                class="hignlaite">More
-                                                                                details</span></a></h6>
-                                                                </div>
-                                                                <!--//left-->
-                                                                <!-- right -->
-                                                                <!-- <ul class="top-hnt-right-content col-lg-6">
-
-                                <li class="button-log usernhy">
-                                    <a class="btn-open" href="#">
-                                        <span class="fa fa-user" aria-hidden="true"></span>
-                                    </a>
-
-                            <!--//right-->
-                                                                <div class="overlay-login text-left">
-                                                                    <button type="button" class="overlay-close1">
-                                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                                    </button>
-                                                                    <div class="wrap">
-                                                                        <h5 class="text-center mb-4">Login Now</h5>
-                                                                        <div
-                                                                            class="login-bghny p-md-5 p-4 mx-auto mw-100">
-                                                                            <!--/login-form-->
-                                                                            <form action="#" method="post">
-                                                                                <div class="form-group">
-                                                                                    <p class="login-texthny mb-2">Email
-                                                                                        address</p>
-                                                                                    <input type="email"
-                                                                                        class="form-control"
-                                                                                        id="exampleInputEmail1"
-                                                                                        aria-describedby="emailHelp"
-                                                                                        placeholder="" required="">
-                                                                                    <small id="emailHelp"
-                                                                                        class="form-text text-muted">We'll
-                                                                                        never share your email
-                                                                                        with anyone else.</small>
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <p class="login-texthny mb-2">
-                                                                                        Password</p>
-                                                                                    <input type="password"
-                                                                                        class="form-control"
-                                                                                        id="exampleInputPassword1"
-                                                                                        placeholder="" required="">
-                                                                                </div>
-                                                                                <div class="form-check mb-2">
-                                                                                    <div class="userhny-check">
-                                                                                        <label
-                                                                                            class="check-remember container">
-                                                                                            <input type="checkbox"
-                                                                                                class="form-check">
-                                                                                            <span
-                                                                                                class="checkmark"></span>
-                                                                                            <p class="privacy-policy">
-                                                                                                Remember me</p>
-                                                                                        </label>
-                                                                                        <div class="clearfix"></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <button type="submit"
-                                                                                    class="submit-login btn mb-4">Sign
-                                                                                    In</button>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="carousel-item item2">
-                                                                    <div class="container">
-                                                                        <div class="carousel-caption">
-                                                                            <h3>Men's Fashion
-                                                                                <br>60% Off
-                                                                            </h3>
-                                                                            <a href="#" class="shop-button btn">
-                                                                                Shop Now
-                                                                            </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="carousel-item item3">
-                                                                    <div class="container">
-                                                                        <div class="carousel-caption">
-                                                                            <h3>Women's Fashion
-                                                                                <br>50% Off
-                                                                            </h3>
-                                                                            <a href="#" class="shop-button btn">
-                                                                                Shop Now
-                                                                            </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="carousel-item item4">
-                                                                    <div class="container">
-                                                                        <div class="carousel-caption">
-                                                                            <h3>Men's Fashion
-                                                                                <br>60% Off
-                                                                            </h3>
-                                                                            <a href="#" class="shop-button btn">
-                                                                                Shop Now
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <a class="carousel-control-prev"
-                                                                href="#carouselExampleIndicators" role="button"
-                                                                data-slide="prev">
-                                                                <span class="carousel-control-prev-icon"
-                                                                    aria-hidden="true"></span>
-                                                                <span class="sr-only">Previous</span>
-                                                            </a>
-                                                            <a class="carousel-control-next"
-                                                                href="#carouselExampleIndicators" role="button"
-                                                                data-slide="next">
-                                                                <span class="carousel-control-next-icon"
-                                                                    aria-hidden="true"></span>
-                                                                <span class="sr-only">Next</span>
-                                                            </a>
-                                                        </div>
-                                                </div>
-                                                <!--//banner-slider-->
-                                                <!--//banner-slider-->
-                                                <div class="right-banner">
-                                                    <div class="right-1">
-                                                        <h4>
-                                                            Men's Fashion
-                                                            <br>50% Off
-                                                        </h4>
-                                                    </div>
-                                                </div>
+                                                <br>50% Off</h3>
+                                            <a href="/fashion" class="shop-button btn">
+										Shop Now
+									</a>
 
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item item2">
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <h3>Men's Fashion
+                                                <br>60% Off</h3>
+                                            <a href="/fashion" class="shop-button btn">
+										Shop Now
+									</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item item3">
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <h3>Women's Fashion
+                                                <br>50% Off</h3>
+                                            <a href="/fashion" class="shop-button btn">
+										Shop Now
+									</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item item4">
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <h3>Men's Fashion
+                                                <br>60% Off</h3>
+                                            <a href="/fashion" class="shop-button btn">
+										Shop Now
+									</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--//banner-slider-->
+                    <!--//banner-slider-->
+                    <div class="right-banner">
+                        <div class="right-1">
+                            <h4>
+                                Men's Fashion
+                                <br>50% Off</h4>
+                        </div>
+                    </div>
+
+                </div>
 
 </section>
 <!-- //w3l-banner-slider-main -->
@@ -304,74 +195,74 @@
     <div class="grids-hny-2-mian py-5">
         <div class="container py-lg-5">
 
-            <h3 class="hny-title mb-0 text-center">Shop With <span>Us</span></h3>
-            <p class="mb-4 text-center">Handpicked Favourites just for you</p>
-            <div class="welcome-grids row mt-5">
-                <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
-                    <div class="boxhny13">
-                        <a href="homeCategories.html">
-                            <img src="{{asset('images/assets/images/books.jpg')}}" class="img-fluid" alt="" />
-                            <div class="boxhny-content">
-                                <h3 class="title">Product
+                    <h3 class="hny-title mb-0 text-center">Shop With <span>Us</span></h3>
+                    <p class="mb-4 text-center">Handpicked Favourites just for you</p>
+                    <div class="welcome-grids row mt-5">
+                        <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
+                            <div class="boxhny13">
+                                <a href="/books">
+                                    <img src="{{asset('images/assets/images/books.jpg')}}" class="img-fluid" alt="" />
+                                    <div class="boxhny-content">
+                                        <h3 class="title">Product
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <h4>
-                        <a href="#URL">Books</a>
-                    </h4>
+                            <h4>
+                                <a href="/books">Books</a>
+                            </h4>
 
                 </div>
 
-                <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
-                    <div class="boxhny13">
-                        <a href="homeCategories.html">
-                            <img src="{{asset('images/assets/images/cosmetcs.jpg')}}" class="img-fluid" alt="" />
-                            <div class="boxhny-content">
-                                <h3 class="title">Product</h3>
+                        <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
+                            <div class="boxhny13">
+                                <a href="/cosmatics">
+                                    <img src="{{asset('images/assets/images/cosmetcs.jpg')}}" class="img-fluid" alt="" />
+                                    <div class="boxhny-content">
+                                        <h3 class="title">Product</h3>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <h4><a href="#URL">
-                            Cosmetics</a></h4>
+                            <h4><a href="/cosmatics">
+								Cosmetics</a></h4>
 
 
-                </div>
-                <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
-                    <div class="boxhny13">
-                        <a href="homeCategories.html">
-                            <img src="{{asset('images/assets/images/furn.jpg')}}" class="img-fluid" alt="" />
-                            <div class="boxhny-content">
-                                <h3 class="title">Product</h3>
+                        </div>
+                        <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
+                            <div class="boxhny13">
+                                <a href="/furniture">
+                                    <img src="{{asset('images/assets/images/furn.jpg')}}" class="img-fluid" alt="" />
+                                    <div class="boxhny-content">
+                                        <h3 class="title">Product</h3>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <h4><a href="homeCategories.html">Furniture</a></h4>
+                            <h4><a href="/furniture">Furniture</a></h4>
 
 
-                </div>
-                <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
-                    <div class="boxhny13">
-                        <a href="homeCategories.html">
-                            <img src="{{asset('images/assets/images/grid4.jpg')}}" class="img-fluid" alt="" />
-                            <div class="boxhny-content">
-                                <h3 class="title">Product</h3>
+                        </div>
+                        <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
+                            <div class="boxhny13">
+                                <a href="/fashion">
+                                    <img src="{{asset('images/assets/images/grid4.jpg')}}" class="img-fluid" alt="" />
+                                    <div class="boxhny-content">
+                                        <h3 class="title">Product</h3>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <h4><a href="fashoinCtegory.html">Fashion</a></h4>
+                            <h4><a href="/fashion">Fashion</a></h4>
 
-                </div>
-                <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
-                    <div class="boxhny13">
-                        <a href="homeCategories.htmlL">
-                            <img src="{{asset('images/assets/images/electronics.jpg')}}" class="img-fluid" alt="" />
-                            <div class="boxhny-content">
-                                <h3 class="title">Product</h3>
+                        </div>
+                        <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
+                            <div class="boxhny13">
+                                <a href="/electronices">
+                                    <img src="{{asset('images/assets/images/electronics.jpg')}}" class="img-fluid" alt="" />
+                                    <div class="boxhny-content">
+                                        <h3 class="title">Product</h3>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <h4><a href="homeCategories.html">
-                            Electronics</a></h4>
+                            <h4><a href="/electronices">
+								Electronics</a></h4>
 
 
                 </div>
@@ -402,27 +293,27 @@
                     <img src="{{asset('images/assets/images/1.jpg')}}" class="img-fluid" alt="">
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- //specification-6-->
+        </section>
+        <!-- //content-6-section -->
+        <!------------------------------------------------>
 
-<section class="w3l-video-6" data-aos="fade-up">
-    <!-- /video-6-->
-    <div class="video-66-info">
-        <div class="container-fluid">
-            <div class="video-grids-info row">
-                <div class="video-gd-right col-lg-8">
-                    <div class="video-inner text-center" data-aos="fade-up">
-                        <!--popup-->
-                        <a class="play-button btn popup-with-zoom-anim" href="#small-dialog">
-                            <span class="fa fa-play" aria-hidden="true"></span>
-                        </a>
-                        <div id="small-dialog" class="mfp-hide">
-                            <div class="search-top notify-popup">
-                                <iframe src="https://player.vimeo.com/video/246139491" frameborder="0"
-                                    allow="autoplay; fullscreen" allowfullscreen></iframe>
-                            </div>
+        <!----------------------------------------------------->
+
+        <section class="w3l-content-w-photo-6" data-aos="fade-zoom-in-up">
+            <!-- /specification-6-->
+            <div class="content-photo-6-mian py-5">
+                <div class="container py-lg-5">
+                    <div class="align-photo-6-inf-cols row">
+
+                        <div class="photo-6-inf-right col-lg-6" data-aos="fade-left">
+                            <h3 class="hny-title text-left">All Branded Men's Suits are Flat <span>30% Discount</span></h3>
+                            <p>Visit our shop to see amazing creations from our designers.</p>
+                            <a href="/fashion" class="read-more btn">
+										Shop Now
+								</a>
+                        </div>
+                        <div class="photo-6-inf-left col-lg-6" data-aos="fade-right">
+                            <img src="{{asset('images/assets/images/1.jpg')}}" class="img-fluid" >
                         </div>
                         <!--//popup-->
                     </div>
@@ -480,13 +371,19 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}} </a></h3>
-                            <span class="price"><del>$975.00</del>{{$pro['price']}}</span>
+                        <div class="video-gd-left col-lg-4 p-lg-5 p-4" data-aos="fade-right">
+                            <div class="p-xl-4 p-0 video-wrap">
+                                <h3 class="hny-title text-left">All Branded Women's Bags are Flat <span>30% Discount</span>
+                                </h3>
+                                <p>Visit our shop to see amazing creations from our designers.</p>
+                                <a href="/fashion" class="read-more btn">
+							Shop Now
+						</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <<<<<<< HEAD=======</div>
+                </div>
 </section>
 
 <!-- //video-6-->
@@ -499,13 +396,7 @@
             <!-- /row-->
             <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
 
-<<<<<<< HEAD
-
-           {{--       @foreach($product as $pro)
-
-=======
                 {{-- @foreach($product as $pro)
->>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
 
                      <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
@@ -516,11 +407,11 @@
                 </a>
                 <ul class="social">
                     <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
-                    >>>>>>> ea82d1dd1105eacce8988efb4929f79e8b2d360e
+
 
                     @endforeach
 
-                    <<<<<<< HEAD=======@endforeach>>>>>>> ea82d1dd1105eacce8988efb4929f79e8b2d360e
+                   @endforeach
 
             </div>
             <!-- //row-->
@@ -547,10 +438,10 @@
                         Shop Now
                     </a>
 
-                    <<<<<<< HEAD=======</div>
+                    </div>
 
                         <!-- //row-->
-                        >>>>>>> ea82d1dd1105eacce8988efb4929f79e8b2d360e
+
                 </div>
 
             </div>
@@ -832,7 +723,7 @@
                     <div class="p-lg-5 py-md-0 py-3">
                         <h3 class="hny-title">Join us for FREE to get instant <span>email updates!</span></h3>
                         <p>Subscribe and get notified at first on the latest update and offers!</p>
-                        --}}
+
                         <form action="#" method="post" class="signin-form mt-lg-5 mt-4">
                             <div class="forms-gds">
                                 <div class="form-input">
@@ -841,7 +732,6 @@
                                 <div class="form-input"><button class="btn">Join</button></div>
                             </div>
                         </form>
-                        >>>>>>> ea82d1dd1105eacce8988efb4929f79e8b2d360e
                     </div>
                     </form>
                 </div>
@@ -857,11 +747,7 @@
 <!-- //customers-6-->
 <!-- Start Footer Area -->
 
-<<<<<<< HEAD
-    --}}    @include("user.layouts.footer")
-=======
-@include("user.layouts.footer")
->>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
+       @include("user.layouts.footer")
 
 <!-- end of footer -->
 
@@ -892,7 +778,7 @@
 <script src="../js/easing.js"></script>
 <script src="../js/active.js"></script>
 <script src="../js/homecategory.js"></script> -->
---}}
+
 
 <!--/login-->
 <script>
