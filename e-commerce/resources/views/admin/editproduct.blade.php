@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Admin|add-product</title>
+    <title>Admin|edit-product</title>
     <!--*************Internal style sheet****************-->
     <link rel="stylesheet" type="text/css" href="{{ url('/css/admin/admin-add-product.css')}}" />
 </head>
@@ -49,16 +49,17 @@
             <!--start add product------------------------------------------------------------>
             <div class="container-fluid animatedParent animateOnce my-3">
                 <div class="animated fadeInUpShort go">
-                    <form id="needs-validation" action="{{route("products.store")}}" novalidate="" method="POST"
-                        enctype="multipart/form-data">
+                    <form id="needs-validation" action="{{route("products.update",$product)}}" method="post">
                         @csrf
+                        @method("put")
                         <div class="row">
                             <div class="col-md-8 ">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustom01">Product Name</label>
-                                        <input type="text" class="form-control" id="validationCustom01"
-                                            placeholder="Product Name" name="product_name" required="">
+                                        <input value="{{$product['name']}}" type="text" class="form-control"
+                                            id="validationCustom01" placeholder="Product Name" name="product_name"
+                                            required="">
                                         <div class="invalid-feedback">
                                             Please provide a product name.
                                         </div>
@@ -68,7 +69,7 @@
 
                                         <select id="size" class="custom-select form-control" name="product_size"
                                             required="">
-                                            <option value="">Select Product Size</option>
+                                            <option value="">{{$product['sizes']}}</option>
                                             <option value="1">xl</option>
                                             <option value="2">xxl</option>
                                             <option value="3">large</option>
@@ -85,7 +86,7 @@
                                         <label for="category">Category</label>
                                         <select id="category" class="custom-select form-control" name="product_category"
                                             required="">
-                                            <option value="">Select Product Category</option>
+                                            <option value="">{{$product['category']}}</option>
                                             <option value="1">Electronics</option>
                                             <option value="2">Books</option>
                                             <option value="3">fashion</option>
@@ -98,14 +99,16 @@
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label for="price">Price</label>
-                                        <input class=" form-control" id="price" name="product_price" required="">
+                                        <input value="{{$product['price']}}" class=" form-control" id="price"
+                                            name="product_price" required="">
                                         <div class="invalid-feedback">
                                             Please provide a valid price.
                                         </div>
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label for="discount">discount</label>
-                                        <input type="number" class="form-control" id="discount" name="Product_discount">
+                                        <input value="{{$product['discount']}}" type="number" class="form-control"
+                                            id="discount" name="Product_discount">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -113,7 +116,7 @@
                                         <label for="Colors">Colors</label>
                                         <select id="Colors" class="custom-select form-control" name="product_color"
                                             required="">
-                                            <option value="">Select Product Colors</option>
+                                            <option value="">{{$product['colors']}}</option>
                                             <option value="1">red</option>
                                             <option value="2">white</option>
                                             <option value="3">green</option>
@@ -126,8 +129,8 @@
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label for="quantity">quantity</label>
-                                        <input required="" type="number" class="form-control" id="quantity"
-                                            name="Product_quantity">
+                                        <input value="{{$product['quantity']}}" required="" type="number"
+                                            class="form-control" id="quantity" name="Product_quantity">
                                         <div class="invalid-feedback">
                                             Please provide a valid quantity.
                                         </div>
@@ -135,16 +138,18 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="productDescription">Product description</label>
-                                    <textarea required="" id="productDescription" name="product_description"
-                                        class="form-control"></textarea>
+                                    <input value="{{$product['description']}}" required="" id="productDescription"
+                                        name="product_description" class="form-control"></input>
                                     <div class="invalid-feedback">
                                         Please provide a product description.
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputGroupFile01">Product Photo Upload</label>
-                                    <div class="form-group">
-                                        <input type="file" name="image" required>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                            class="form-control">
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                     </div>
                                 </div>
                                 <div class=" bg-transparent">
