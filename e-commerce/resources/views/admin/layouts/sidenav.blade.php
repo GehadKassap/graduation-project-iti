@@ -32,14 +32,14 @@
                 <div class="avatar"><img class="mr-3 side-user-img" src="{{asset('images/admin/avatar-s-12.jpg')}}"
                         alt="user avatar"></div>
                 <div class="media-body">
-                    <h6 class="side-user-name">Mark Johnson <i class="fas fa-angle-left"></i></h6>
+                    <h6 class="side-user-name">{{session('user.fullname')}}<i class="fas fa-angle-left"></i></h6>
                 </div>
             </div>
             <div id="user-dropdown" class="collapse">
                 <ul class="user-setting-menu">
                     <li><a href="admin-profile.html"><i class="far fa-user"></i> My Profile</a></li>
                     <li><a href="admin-profile-edit.html"><i class="fas fa-cog "></i> Setting</a></li>
-                    <li><a href="admin-login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -49,7 +49,7 @@
                     <li class=" nav-item"><a href="{{route('dashboard.index')}}"><i class="fas fa-chart-line icons"></i><span
                                 class="menu-title" data-i18n="">Dashboard</span></a>
                     </li>
-                    <li class=" nav-item"><a href="#"><i class="fas fa-shopping-basket icons"></i><span
+                    <li class=" nav-item"><a href="{{route('orders.index')}}"><i class="fas fa-shopping-basket icons"></i><span
                                 class="menu-title" data-i18n="">Orders</span></a>
                     </li>
                     <li class=" nav-item"><a href="{{route('users.index')}}"><i class="fas fa-users icons"></i><span
@@ -98,7 +98,7 @@
             <ul class="navbar-nav align-items-center right-nav-link">
                 <li class="nav-item dropdown-lg">
                     <a class="nav-link  waves-effect" href="admin-support.html">
-                        <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up ">12</span></a>
+                        <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up "></span></a>
                 </li>
                 <li><a href="admin-profile-edit.html"><i class="bx bx-cog bx-spin"></i></a></li>
 

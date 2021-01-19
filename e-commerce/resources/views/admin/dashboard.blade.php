@@ -18,7 +18,7 @@
         <div class="col-12 col-lg-6 col-xl-3 ">
           <div class="card gradient-deepblue pull-up">
             <div class="card-body">
-               <h5 class="text-white mb-0">9526 <span class="float-right"><i class="fa fa-shopping-cart"></i></span></h5>
+               <h5 class="text-white mb-0">{{$orders}}<span class="float-right"><i class="fa fa-shopping-cart"></i></span></h5>
                  <div class="progress my-3" style="height:3px;">
                     <div class="progress-bar" style="width:55%"></div>
                  </div>
@@ -29,7 +29,7 @@
       <div class="col-12 col-lg-6 col-xl-3">
         <div class="card gradient-orange pull-up">
           <div class="card-body">
-             <h5 class="text-white mb-0">8323 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h5>
+             <h5 class="text-white mb-0">{{$products}} <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h5>
                <div class="progress my-3" style="height:3px;">
                   <div class="progress-bar" style="width:55%"></div>
                </div>
@@ -40,7 +40,7 @@
       <div class="col-12 col-lg-6 col-xl-3">
         <div class="card gradient-ohhappiness pull-up">
            <div class="card-body">
-             <h5 class="text-white mb-0">6200 <span class="float-right"><i class="far fa-user"></i></span></h5>
+             <h5 class="text-white mb-0">{{$users}} <span class="float-right"><i class="far fa-user"></i></span></h5>
                <div class="progress my-3" style="height:3px;">
                   <div class="progress-bar" style="width:55%"></div>
                </div>
@@ -51,7 +51,7 @@
       <div class="col-12 col-lg-6 col-xl-3">
         <div class="card gradient-ibiza pull-up">
            <div class="card-body">
-             <h5 class="text-white mb-0">5630 <span class="float-right"><i class="fas fa-feather-alt"></i></span></h5>
+             <h5 class="text-white mb-0">{{$messages}} <span class="float-right"><i class="fas fa-feather-alt"></i></span></h5>
                <div class="progress my-3" style="height:3px;">
                   <div class="progress-bar" style="width:55%"></div>
                </div>
@@ -125,22 +125,22 @@
             <tbody>
               <tr>
                 <td><i class="fa fa-circle mr-2" style="color: #14abef"></i> Sales</td>
-                <td>$5856</td>
+                <td>{{$orders}}</td>
                 <td>+55%</td>
               </tr>
               <tr>
                 <td><i class="fa fa-circle mr-2" style="color: #02ba5a"></i>Products</td>
-                <td>$2602</td>
+                <td>{{$products}}</td>
                 <td>+25%</td>
               </tr>
               <tr>
                 <td><i class="fa fa-circle mr-2" style="color: #d13adf"></i>Users</td>
-                <td>$1802</td>
+                <td>{{$users}}</td>
                 <td>+15%</td>
               </tr>
               <tr>
-                <td><i class="fa fa-circle mr-2" style="color: #fba540"></i>Category</td>
-                <td>$1105</td>
+                <td><i class="fa fa-circle mr-2" style="color: #fba540"></i>Reviews</td>
+                <td>{{$reviews}}</td>
                 <td>+5%</td>
               </tr>
             </tbody>

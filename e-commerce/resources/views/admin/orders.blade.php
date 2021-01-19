@@ -88,159 +88,46 @@
                                 <th class="border-top-0">#Order Id</th>                                
                                 <th class="border-top-0">Customer Name</th>
                                 <th class="border-top-0">Products</th>
-                                <th class="border-top-0">Categories</th>
-                                <th class="border-top-0">Shipping</th>
+                                <th class="border-top-0">shipping</th>
+                                <th class="border-top-0">Date</th>
+                                <th class="border-top-0">Quantity</th>
                                 <th class="border-top-0">Amount</th>
+
                             </tr>
                         </thead>
+                        @foreach($orders as $order)
                         <tbody>
                             <tr>
-                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>3212</td>
+                                <td class="text-truncate"><a href="#" title="view details"><i class="fas fa-info-circle mr-2"></i></a>{{$order->id}}</td>
                                 <td class="text-truncate">
-                                    <span class="avatar avatar-xs">
-                                        <img class="box-shadow-2" src="{{asset('images/admin/avatar-s-1.png')}}" alt="avatar">
-                                    </span>
-                                    <span>Walter R.</span>
+                                   
+                                    <span>{{$order->fullname}}</span>
                                 </td>
                                 <td class="text-truncate p-1">
                                     <ul class="list-unstyled users-list m-0">                                               
                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
                                             <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro2.png')}}" alt="Avatar">
                                         </li>
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro4.png')}}" alt="Avatar">
-                                        </li>
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro5.png')}}" alt="Avatar">
-                                        </li>
-                                        
                                     </ul>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-danger round">books</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger round">{{$order->state}}</button>
                                 </td>
                                 <td>
-                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                                        <div class="progress-bar bg-gradient-x-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                {{$order->created_at}}
                                 </td>
-                                <td class="text-truncate">$ 1200.00</td>
+                                <td>
+                                {{$order->quantity}}
+                                </td>
+                                <td class="text-truncate">{{$order->total}}</td>
                             </tr>
-                            <tr>
-                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>4332</td>
-                                <td class="text-truncate">
-                                    <span class="avatar avatar-xs">
-                                        <img class="box-shadow-2" src="{{asset('images/admin/avatar-s-10.jpg')}}" alt="avatar">
-                                    </span>
-                                    <span>Doris R.</span>
-                                </td>
-                                <td class="text-truncate p-1">
-                                    <ul class="list-unstyled users-list m-0">                                               
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro1.png')}}" alt="Avatar">
-                                        </li>
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro4.png')}}" alt="Avatar">
-                                        </li>                                        
-                                        
-                                    </ul>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-outline-warning round">Electronics</button>
-                                </td>
-                                <td>
-                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                                        <div class="progress-bar bg-gradient-x-warning" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td class="text-truncate">$ 1850.00</td>
-                            </tr>
-                            <tr>
-                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>7654</td>
-                                <td class="text-truncate">
-                                    <span class="avatar avatar-xs">
-                                        <img class="box-shadow-2" src="{{asset('images/admin/avatar-s-4.jpg')}}" alt="avatar">
-                                    </span>
-                                    <span>Megan S.</span>
-                                </td>
-                                <td class="text-truncate p-1">
-                                    <ul class="list-unstyled users-list m-0">                                               
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro6.png')}}" alt="Avatar">
-                                        </li>
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro5.png')}}" alt="Avatar">
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-outline-success round">fashion</button>
-                                </td>
-                                <td>
-                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                                        <div class="progress-bar bg-gradient-x-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td class="text-truncate">$ 3200.00</td>
-                            </tr>
-                            <tr>
-                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>8765</td>
-                                <td class="text-truncate">
-                                    <span class="avatar avatar-xs">
-                                        <img class="box-shadow-2" src="{{asset('images/admin/avatar-s-5.jpg')}}" alt="avatar">
-                                    </span>
-                                    <span>Andrew D.</span>
-                                </td>
-                                <td class="text-truncate p-1">
-                                    <ul class="list-unstyled users-list m-0">                                               
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro4.png')}}" alt="Avatar">
-                                        </li>
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro3.png')}}" alt="Avatar">
-                                        </li>
-                                        
-                                    </ul>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-outline-info round">cosmetics</button>
-                                </td>
-                                <td>
-                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                                        <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td class="text-truncate">$ 4500.00</td>
-                            </tr>
-                            <tr>
-                                <td class="text-truncate"><a href="admin-order-details.html" title="view details"><i class="fas fa-info-circle mr-2"></i></a>2589</td>
-                                <td class="text-truncate">
-                                    <span class="avatar avatar-xs">
-                                        <img class="box-shadow-2" src="{{asset('images/admin/avatar-s-12.jpg')}}" alt="avatar">
-                                    </span>
-                                    <span>Elizabeth W.</span>
-                                </td>
-                                <td class="text-truncate p-1">
-                                    <ul class="list-unstyled users-list m-0">                                               
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro2.png')}}" alt="Avatar">
-                                        </li>
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro1.png')}}" alt="Avatar">
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-outline-danger round">Furniture</button>
-                                </td>
-                                <td>
-                                    <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                                        <div class="progress-bar bg-gradient-x-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td class="text-truncate">$ 1500.00</td>
-                            </tr>
+                           
+                            
+                            
+                            
                         </tbody>
+                        @endforeach
+
                     </table>
                 </div>
             </div>
