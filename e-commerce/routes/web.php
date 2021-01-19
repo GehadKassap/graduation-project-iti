@@ -78,7 +78,8 @@ Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
 // Route::get('/details/{id}/category/{catid}',[ProductController::class , "detailsProduct"]);
 
 
-Route::post("addtocart",[ProductController::class,'addtocart']);
+Route::post("fashion",[ProductController::class,'addtocart']);
+Route::post("furniture",[ProductController::class,'addtocart']);
 Route::get("cartdetails",[ProductController::class,'cartlist']);
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
