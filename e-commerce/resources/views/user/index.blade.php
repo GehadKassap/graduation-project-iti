@@ -19,7 +19,7 @@
     <link href="../webfonts/googleapisfonts2" rel="stylesheet">
     <link rel="icon" type="..imgs/favicon.png" href="../imgs/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-  
+
 </head>
 
 @include("user.layouts.firstnav")
@@ -466,7 +466,7 @@
                             </div>
 
                         </div> -->
-                      
+
                         <!-- <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-right">
                             <div class="product-grid2">
                                 <div class="product-image2">
@@ -940,7 +940,7 @@
         </section>
         <!-- //customers-6-->
         <!-- Start Footer Area -->
-   
+
         @include("user.layouts.footer")
 
         <!-- end of footer -->
