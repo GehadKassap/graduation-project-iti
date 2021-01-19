@@ -5,8 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use DB;
-class dashboardController extends Controller
+
+class sidenavController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,15 +16,9 @@ class dashboardController extends Controller
     public function index()
     {
         //
-        $users = DB::table('users')->count();
-        $products = DB::table('products')->count();
-        $orders = DB::table('orders')->count();
         $messages = DB::table('problems')->count();
-        $reviews = DB::table('reviews')->count();
+        return view('admin.layouts.sidenav',compact('messages'));
 
-
-        //dd($users);
-        return view('admin.dashboard',compact('users','products','orders','messages','reviews'));
     }
 
     /**
@@ -36,7 +30,7 @@ class dashboardController extends Controller
     {
         //
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
