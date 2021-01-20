@@ -400,7 +400,7 @@
                     <!-- /row-->
                     <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
                   
-                    @foreach($product as $pro)
+        {{--            @foreach($product as $pro)
                      
                      <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
@@ -748,7 +748,7 @@
 <script src="../js/easing.js"></script>
 <script src="../js/active.js"></script>
 <script src="../js/homecategory.js"></script> -->
-
+--}}
 
 <!--/login-->
 <script>

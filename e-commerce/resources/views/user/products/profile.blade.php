@@ -18,15 +18,18 @@
     <div class="container py-5" id="user">
         <div class="row">
             <!------contain username and small nav for choice card/..-->
+            
+            @if(session::has('user'))
+           
             <div class="col-md-3">
                <div class="row">
                    <!--for display user name-->
                    <div class=" col-md-12 my-5 py-3 text-center" >
                       <i class="fas fa-user fa-2x mr-2 mt-4 "></i>
                       <!--this icon will change if user man/women-->
-                      <span>user Name</span>
+                      <span>{{session('user.fullname')}}</span>
                       <br>
-                      <small class="ml-5 text-muted">xxx@xxx.com</small>
+                      <small class="ml-5 text-muted">{{session('user.email')}}</small>
                    </div>
                    <!--for navbar of cards /favs and setting-->
                   <div class="col-md-12 usrNav py-2">
@@ -50,7 +53,9 @@
                         </li>
                     </ul>   
                   </div>
-     
+                 
+              @endif
+             
                </div>
             </div>
             <!----------------display cards/fav/ordersand track it---------------------------->
