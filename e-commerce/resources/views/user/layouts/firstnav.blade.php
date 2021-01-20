@@ -75,7 +75,7 @@
 									<option>Electronics</option>
 								</select>
 								<form action="/search">
-									<input name="search" placeholder="Search Products Here....." type="search">
+									<input name="term" placeholder="Search Products Here....." type="search">
 									<button class="btnn"><i class="ti-search"></i></button>
 								</form>
 							</div>
