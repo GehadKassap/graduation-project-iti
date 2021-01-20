@@ -121,8 +121,10 @@
 										<a href="/checkout" class="btn animate">Checkout</a>
 									</div> -->
                                 </div>
-
-                                <!-- <div class="sinlge-bar">
+								<div class="sinlge-bar shopping">
+								<a href="/favdetails" class="single-icon"><i class="ti-heart"></i> </a>
+                                </div>
+								<!-- <div class="sinlge-bar">
 								<a href="account.html" class="single-icon">logout</a>
                                 </div> -->
 

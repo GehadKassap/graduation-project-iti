@@ -25,12 +25,13 @@
         <div class="container">
           <h3 class="mb-5 text-center font-italic">Favorite Products</h3>
             <div class="row">
- 
-                <div class="col-md-4">
-                 <div class="proudct-top">
-                 <img src="{{asset('images/category/shop3.jpg')}}" class="w-100" alt="">
-                    <div class="overLay"> <!--over lay to the img-->
-                        <button type="button" class="btn btn-secondary mb-2" title="quick shop">
+            @foreach($products as $pro)
+                <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                  <div class="proudct-top">
+                 <img src="{{ asset('product_images/' . $pro->image)}}" class="w-100" alt="">
+                    <div class="overLay">
+                     <!--over lay to the img-->
+                        <!-- <button type="button" class="btn btn-secondary mb-2" title="quick shop">
                           <i class="fas fa-eye "></i>
                         </button>
                         <button type="button" class="btn btn-secondary mb-2" title="add to wish list">
@@ -38,7 +39,7 @@
                         </button>
                         <button type="button" class="btn btn-secondary mb-2" title="add to cart">
                           <i class="fas fa-shopping-cart"></i>
-                        </button>
+                        </button> -->
      
                     </div>
                  </div>
@@ -49,17 +50,20 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                   <i class="far fa-star"></i>
-                  <h6 class="mb-1">Watch </h6>
-                  <p class="mb-1">Lorem product summary for fav </p>
-                  <span>300 L.E</span><span class="badge badge-danger ml-2 p-2 remove">Remove from cart</span>
-
+                  <h6 class="mb-1">{{$pro->name}} </h6>
+                  <p class="mb-1">{{$pro->description}}</p>
+                  <span>{{$pro->price}}</span><a href="removefav/{{$pro->id}}"><span class="badge badge-danger ml-2 p-2 remove">Remove from cart</span></a><br>
+                  <p><a href="removeall/{{$pro->id}}"><i class="ti-trash remove-icon fa-7x"></i></a></p>
      
                  </div>
              
+                 
       
             </div>
+            @endforeach
         </div>
          </section>
+        
      
       <!-------------------------------->
       <section class="py-5 container slider">
