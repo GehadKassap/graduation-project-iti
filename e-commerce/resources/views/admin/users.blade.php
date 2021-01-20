@@ -87,6 +87,7 @@
                     <th>City</th>
                     <th>Phone</th>
                     <th>Date</th>
+                    <th>Role</th>
                     <th>Action</th>
                   </tr>
               </thead>
@@ -105,6 +106,13 @@
                   </td>
                   <td>{{$user->phone}}</td>
                   <td>{{$user->created_at}}</td>
+                  <td>
+                  @if($user['role']=='admin')
+                  <a href="#" title="edit"><i class="fas fa-user-edit" style="font-size:1rem;"></i></a>{{$user->role}}
+                  @else
+                  {{$user->role}}
+                  @endif
+                  </td>
                   <td>
                      <!-- <i class="far fa-trash-alt " title="delete"></i> -->
                       <form action="{{route('users.destroy',$user)}}" method="post">

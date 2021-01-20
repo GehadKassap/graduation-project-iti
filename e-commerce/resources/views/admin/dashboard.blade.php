@@ -69,8 +69,8 @@
   </div>
   <div class="card-body">
      <ul class="list-inline">
-     <li class="list-inline-item"><i class="fa fa-circle mr-2" style="color: #14abef"></i>New Visitor</li>
-     <li class="list-inline-item"><i class="fa fa-circle mr-2" style="color: #ade2f9"></i>Old Visitor</li>
+     <li class="list-inline-item"><i class="fa fa-circle mr-2" style="color: #14abef"></i>old Visitor</li>
+     <li class="list-inline-item"><i class="fa fa-circle mr-2" style="color: #ade2f9"></i>new Visitor</li>
    </ul>
    <div class="chart-container-1"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
        <canvas id="chart1" width="592" height="325" class="chartjs-render-monitor" style="display: block; height: 260px; width: 474px;"></canvas>
@@ -80,20 +80,20 @@
   <div class="row m-0 row-group text-center border-top border-light-3">
     <div class="col-12 col-lg-4">
       <div class="p-3">
-        <h5 class="mb-0">45.87M</h5>
+        <h5 class="mb-0">{{$users}}</h5>
       <small class="mb-0">Overall Visitor <span> <i class="fa fa-arrow-up"></i> 2.43%</span></small>
       </div>
     </div>
     <div class="col-12 col-lg-4">
       <div class="p-3">
-        <h5 class="mb-0">15:48</h5>
-      <small class="mb-0">Visitor Duration <span> <i class="fa fa-arrow-up"></i> 12.65%</span></small>
+        <h5 class="mb-0">{{$products}}</h5>
+      <small class="mb-0">Overall products <span> <i class="fa fa-arrow-up"></i> 12.65%</span></small>
       </div>
     </div>
     <div class="col-12 col-lg-4">
       <div class="p-3">
-        <h5 class="mb-0">245.65</h5>
-      <small class="mb-0">Pages/Visit <span> <i class="fa fa-arrow-up"></i> 5.62%</span></small>
+        <h5 class="mb-0">{{$reviews}}</h5>
+      <small class="mb-0">Overall reviews <span> <i class="fa fa-arrow-up"></i> 5.62%</span></small>
       </div>
     </div>
   </div>
@@ -159,7 +159,7 @@
 		     
 			 <div class="media-body ml-3">
 			   <h6 class="mb-0">Facebook Followers</h6>
-			   <small class="mb-0">22.14% <i class="fa fa-arrow-up"></i> Last Week</small>
+			   <small class="mb-0">0% <i class="fa fa-arrow-up"></i> Last Week</small>
 			 </div>
 			 <i class="fab fa-facebook-f text-facebook text-right fa-2x"></i>
 		   </div>
@@ -173,7 +173,7 @@
 		     
 			 <div class="media-body ml-3">
 			   <h6 class="mb-0">Twitter Tweets</h6>
-			   <small class="mb-0">32.15% <i class="fa fa-arrow-up"></i> Last Week</small>
+			   <small class="mb-0">0% <i class="fa fa-arrow-up"></i> Last Week</small>
 			 </div>
 			 <i class="fab fa-twitter text-twitter text-right fa-2x"></i>
 		   </div>
@@ -186,7 +186,7 @@
 		   <div class="media align-items-center">
 			 <div class="media-body ml-3">
 			   <h6 class="mb-0">Youtube Subscribers</h6>
-			   <small class="mb-0">58.24% <i class="fa fa-arrow-up"></i>  Last Week</small>
+			   <small class="mb-0">0% <i class="fa fa-arrow-up"></i>  Last Week</small>
 			 </div>
 			 <i class="fab fa-youtube text-youtube fa-2x"></i>
 		   </div>
@@ -199,7 +199,7 @@
       <div class="media align-items-center">
       <div class="media-body ml-3">
         <h6 class="mb-0">pinterest Followers</h6>
-        <small class="mb-0">58.24% <i class="fa fa-arrow-up"></i> Last Week</small>
+        <small class="mb-0">0% <i class="fa fa-arrow-up"></i> Last Week</small>
       </div>
       <i class="fab fa-pinterest-p text-youtube fa-2x"></i>
       </div>
@@ -231,16 +231,16 @@ $(function() {
 			var myChart = new Chart(ctx, {
 				type: 'line',
 				data: {
-					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+					labels: ["Jan", "Feb", "Mar", "Apr", "May","jun", "jul"],
 					datasets: [{
-						label: 'New Visitor',
-						data: [3, 3, 8, 5, 7, 4, 6, 4, 6, 3],
+						label: 'old Visitor',
+						data: ['{{$users}}','{{$products}}','{{$orders}}','{{$reviews}}','{{$messages}}','{{$favs}}'],
 						backgroundColor: '#14abef',
 						borderColor: "transparent",
 						pointRadius :"0",
 						borderWidth: 3
 					}, {
-						label: 'Old Visitor',
+						label: 'new vistors',
 						data: [7, 5, 14, 7, 12, 6, 10, 6, 11, 5],
 						backgroundColor: "rgba(20, 171, 239, 0.35)",
 						borderColor: "transparent",
