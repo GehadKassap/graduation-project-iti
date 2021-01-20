@@ -98,7 +98,9 @@
                         @foreach($orders as $order)
                         <tbody>
                             <tr>
-                                <td class="text-truncate"><a href="#" title="view details"><i class="fas fa-info-circle mr-2"></i></a>{{$order->id}}</td>
+                                <td class="text-truncate">
+                                    <a href="#" title="view details">
+                                        <i class="fas fa-info-circle mr-2"></i></a>{{$order->id}}</td>
                                 <td class="text-truncate">
                                    
                                     <span>{{$order->fullname}}</span>
@@ -126,9 +128,6 @@
                                 <td class="text-truncate">{{$order->total}}</td>
                             </tr>
                            
-                            
-                            
-                            
                         </tbody>
                         @endforeach
 
