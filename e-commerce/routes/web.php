@@ -81,6 +81,7 @@ Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
 Route::post("fashion",[ProductController::class,'addtocart']);
 Route::post("furniture",[ProductController::class,'addtocart']);
 Route::get("cartdetails",[ProductController::class,'cartlist']);
+
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
 
