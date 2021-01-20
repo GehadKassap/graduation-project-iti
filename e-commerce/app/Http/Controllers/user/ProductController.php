@@ -5,7 +5,11 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Card;
+use App\Models\Fav;
+
+
 use Illuminate\support\facades\DB;
+
 use Illuminate\Http\Request;
 use Session;
 
@@ -19,8 +23,29 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+
     }
+
+    // function addToCart(Request $req)
+    // {
+    //     if($req->session()->has('user'))
+    //     {
+    //        $cart= new Card;
+    //        $cart->user_id=$req->session()->get('user')['id'];
+    //        $cart->pro_id=$req->pro_id;
+    //        $cart->save();
+    //        return redirect('/');
+
+    //     }
+    //     else
+    //     {
+    //         return redirect('/signin');
+    //     }
+    // }
+    // function cartItem(){
+    //     $userId=Session::get('user')['id'];
+    //     return Card::where('user_id',$userId)->count();
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -74,13 +99,13 @@ class ProductController extends Controller
     }
     public function showbooks()
     {
-        $data=product ::all();
+        $data=product::all();
 
         return view('user.products.books',['product'=>$data]);
     }
     public function showfurniture()
     {
-        $data=product ::all();
+        $data=Product::all();
 
         return view('user.products.furniture',['product'=>$data]);
     }
@@ -168,12 +193,12 @@ function cartlist(){
     ->where('cards.user_id', $userid)
     ->select('products.*')
     ->get();
-   
+
     $total=DB::table('cards')
     ->join('products','cards.pro_id','=','products.id')
     ->where('cards.user_id', $userid)
     ->sum('products.price');
-  
+
     return view('user.products.cartdetails',['products'=>$products,'total'=>$total]);
 }
 
@@ -181,6 +206,43 @@ function cartlist(){
     // Card::destroy($id);
     Card::destroy($id);
     return redirect('cartdetails');
+}
+
+//favorite function
+function addtofav(request $req)
+{
+    if($req->session()->has('user')){
+        $fav= new fav;
+        $fav->user_id=$req->session()->get('user')['id'];
+        $fav->pro_id=$req->product_id;
+        $fav->save();
+        return back();
+    }
+    else
+    {
+        return redirect('/login');
+    }
+}
+
+
+function favlist(){
+    $userid=Session::get('user')['id'];
+    $products=DB::table('favs')
+    ->join('products','favs.pro_id','=','products.id')
+    ->where('favs.user_id', $userid)
+    ->select('products.*')
+    ->get();
+    return view('user.products.favorite',['products'=>$products]);
+}
+
+ function removefav($rowid){
+    Fav::destroy($rowid);
+    return redirect('favdetails');
+}
+public function removeall()
+{
+    DB::table('favs')->delete();
+    return redirect('favdetails');
 }
 
 }

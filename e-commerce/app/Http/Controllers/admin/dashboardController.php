@@ -22,9 +22,10 @@ class dashboardController extends Controller
         $messages = DB::table('problems')->count();
         $reviews = DB::table('reviews')->count();
 
-
+        $data=[$users,$products,$orders,$reviews];
+        // return $data;
         //dd($users);
-        return view('admin.dashboard',compact('users','products','orders','messages','reviews'));
+        return view('admin.dashboard',compact('users','products','orders','messages','reviews'))->with($data);
     }
 
     /**

@@ -23,8 +23,12 @@
                             <h1 class="login__title"> Forgot your password? </h1>
                             <div class="form-group col-md-12">
 
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your Email">
+                                <input type="email" class="form-control" name='email' placeholder="Enter your Email">
                               </div>
+                              <div class="form-group col-md-12">
+
+                               <input name='password' type="password" class="form-control"  placeholder="Enter your new password">
+                            </div>
                                    <p class=""> If you’ve forgotten your password, please enter
                                      your registered email address.We’ll send you a link to reset your password.
                                     </p>

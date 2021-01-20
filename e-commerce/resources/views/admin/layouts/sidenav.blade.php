@@ -99,7 +99,7 @@
 
             <ul class="navbar-nav align-items-center right-nav-link">
                 <li class="nav-item dropdown-lg">
-                    <a class="nav-link  waves-effect" href="admin-support.html">
+                    <a class="nav-link  waves-effect" href="{{route('problems.index')}}">
                         <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up "></span></a>
                 </li>
                 <li><a href="admin-profile-edit.html"><i class="bx bx-cog bx-spin"></i></a></li>

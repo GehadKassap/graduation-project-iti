@@ -6,22 +6,13 @@
 							<div class="all-category">
 								<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
 								<ul class="main-category">
-									<li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-										<ul class="sub-category">
-											<li><a href="kitchenCategory.html">Kitchen</a></li>
-											<li><a href="#">Furniture</a></li>
-											<li><a href="/fashion">Fashion</a></li>
-											<li><a href="#">Books</a></li>
-											<li><a href="#">Cosmatics</a></li>
-											<li><a href="#">Electronics</a></li>
-										</ul>
-									</li>
-									<li><a href="#">mobile</a></li>
-									<li><a href="#">books</a></li>
-									<li><a href="#">cosmatics</a></li>
-									<li><a href="fashion">fashion</a></li>
-									<li><a href="kitchenCategory.html">kitchen</a></li>
-									<li><a href="#">labtops</a></li>
+
+									<li><a href="/electronices">Electronics</a></li>
+									<li><a href="/books">books</a></li>
+									<li><a href="/cosmatics">cosmatics</a></li>
+									<li><a href="/fashion">fashion</a></li>
+									<li><a href="/furniture">Furiuture</a></li>
+
 								</ul>
 							</div>
 						</div>
@@ -29,26 +20,26 @@
 							<div class="menu-area">
 								<!-- Main Menu -->
 								<nav class="navbar navbar-expand-lg">
-									<div class="navbar-collapse">	
-										<div class="nav-inner">	
+									<div class="navbar-collapse">
+										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav">
 													<li class="active"><a href="home.html">Home</a></li>
-													<li><a href="homeCategories.html">Products</a></li>												
-													<li><a href="#">Service</a></li>
-													<li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+													<li><a href="homeCategories.html">Products</a></li>
+
+													<li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 														<ul class="dropdown">
-															<li><a href="card.html">Cart</a></li>
-															<li><a href="fav.html">Checkout</a></li>
+															<li><a href="/cartdetails">Cart</a></li>
+															<li><a href="/checkout">Checkout</a></li>
 														</ul>
 													</li>
-																				
-													
-													<li><a href="contactus.html">Contact Us</a></li>
+
+
+													<li><a href="/contactus">Contact Us</a></li>
 												</ul>
 										</div>
 									</div>
 								</nav>
-								<!--/ End Main Menu -->	
+								<!--/ End Main Menu -->
 							</div>
 						</div>
 					</div>
@@ -58,7 +49,7 @@
 		<!--/ End Header Inner -->
 	</header>
 	<!--/ End Header -->
-	
+
 	<!-- Slider Area -->
 	<section class="hero-slider">
 		<!-- Single Slider -->
@@ -70,11 +61,11 @@
 							<div class="row">
 								<div class="col-lg-7 col-12">
 									<div class="hero-text">
-										<h1><span>UP TO 50% OFF </span>Shopping</h1>
+										<h1>We are here for you</h1>
 										<p>Happiness is not in money <br> but in <br> shopping.</p>
-										<div class="button">
-											<a href="#" class="btn">Shop Now!</a>
-										</div>
+										<!-- <div class="button">
+											<a  class="btn">Shop Now!</a>
+										</div> -->
 									</div>
 								</div>
 							</div>

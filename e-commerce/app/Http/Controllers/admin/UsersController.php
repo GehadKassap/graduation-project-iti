@@ -17,9 +17,11 @@ class UsersController extends Controller
     public function index()
     {
         //
+        $messages = DB::table('problems')->count();
+
         $users=User::all();
         // return $users;
-        return view("admin.users",["users"=>$users]);
+        return view("admin.users",["users"=>$users],compact('messages'));
     }
 
     /**

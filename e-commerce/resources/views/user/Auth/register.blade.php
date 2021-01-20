@@ -32,12 +32,8 @@
                             <input name="fullname" type="text" class="form-control" id="username" placeholder="Username">
                             <!-- <i class="fa fa-check-circle"></i> -->
 		                	<i class="fa fa-exclamation-circle"></i>
-                             <small>Error message</small>
-                             <!-- @if($errors->any())
-                              @foreach($errors->all() as $err)
-                              {{$err}}
-                              @endforeach
-                           @endif -->
+                             <span class="text-muted">Your Name should between 5 to 100 character</span>
+                     
                           </div>
 
                           <div class="form-group col-md-12">
@@ -45,7 +41,8 @@
                             <input  name="email" type="email" class="form-control" id="email" placeholder=" Email">
                             <!-- <i class="fa fa-check-circle"></i> -->
 			                <i class="fa fa-exclamation-circle"></i>
-			                <small>Error message</small>
+			                
+                       
                           </div>
 
                           <div class="form-group col-md-12">
@@ -53,15 +50,9 @@
                             <input  name="password" type="password" class="form-control" id="password" placeholder="Password">
                             <!-- <i class="fa fa-check-circle"></i> -->
 			                <i class="fa fa-exclamation-circle"></i>
-			                <small>Error message</small>
-                          </div>
+			                <span class="text-muted">Password should between 3 to 30 character</span>
 
-                          <div class="form-group col-md-12">
-
-                            <input  name="confirmpassword" type="password" class="form-control" id="password2" placeholder="Confirm Password">
-                            <!-- <i class="fa fa-check-circle"></i> -->
-			                <i class="fa fa-exclamation-circle"></i>
-			                <small>Error message</small>
+                        
                           </div>
 
 
