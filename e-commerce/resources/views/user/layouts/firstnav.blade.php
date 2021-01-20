@@ -67,7 +67,7 @@
 							<div class="search-bar">
 								<select>
 									<option selected="selected">All Category</option>
-									<option>Kitchen</option>
+
 									<option>Furniture</option>
 									<option>Fashion</option>
 									<option>Books</option>
