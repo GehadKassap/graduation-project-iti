@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Problem;
 use Illuminate\Http\Request;
+use DB;
 
 class ProblemController extends Controller
 {
@@ -16,8 +17,10 @@ class ProblemController extends Controller
     public function index()
     {
         //
+        $messages = DB::table('problems')->count();
+
         $problems = Problem::all();
-        return view('admin.support', ["problems" => $problems]);
+        return view('admin.support', ["problems" => $problems],compact('messages'));
     }
 
     /**

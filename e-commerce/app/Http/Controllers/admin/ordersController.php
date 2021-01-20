@@ -17,6 +17,7 @@ class ordersController extends Controller
     public function index()
     {
         //
+        $messages = DB::table('problems')->count();
         // $orders=Order::all();
         $orders = DB::table('orders')
             ->join('users', 'users.id', '=', 'orders.user_id')
@@ -25,7 +26,7 @@ class ordersController extends Controller
             ->get();
 
 
-        return view('admin.orders',["orders"=>$orders]);
+        return view('admin.orders',["orders"=>$orders],compact('messages'));
 
     }
 
