@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Http\Request;
 //  use  App\Http\middleware\UserAuth;
-//  use  Auth;
+// use  Auth;
+
 
 class UserController extends Controller
 {
@@ -33,18 +34,7 @@ class UserController extends Controller
     //to store user info in db;
     function handleForm(Request $req)
     {
-        // $validateData = $req->validate([
-        //     'fullname' => 'required|max:100|min:5',
-        //     'password' => 'required|max:30|min:3',
-        //     'email' => 'required|email|unique:users|max:30|min:3',
 
-        // ]);
-        // $email = $req->input('email');
-        // $password = $req->input('password');
-        // $fullname = $req->input('fullname');
-        // return 'email : '.$email .'password : '.$password .'fullname : '.$fullname;
-
-        /*****dy kant awl tare2a bs b laravel7 */
         $valid = \Validator::make($req->all() , [
             'fullname' => 'required|max:100|min:5',
             'password' => 'required|max:30|min:3',
@@ -53,10 +43,10 @@ class UserController extends Controller
         if($valid->fails())
         {
             return view('user.Auth.register');
-            // ->withErrors($valid)->withInput();
         }
- 
-        /*******ahm 7aga el db */
+
+        /********************* */
+
         $user = new User ;
         $user->fullname = $req->fullname;
         $user->password = \Hash::make( $req->password);

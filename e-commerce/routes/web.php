@@ -54,11 +54,17 @@ Route::get('/favorite', function () {return view('user.products.favorite');});
 //profile
 Route::get('/profile', function () {return view('user.products.profile');});
 //checkout
-Route::get('/checkout ', function () {return view('user.products.checkout ');});
+Route::get('/checkout', function () {return view('user.products.checkout ');});
 //contactus
+<<<<<<< HEAD
+Route::get('/contactus', function () {return view('user.products.contactus  ');});
+Route::get('/electronices',[ProductController ::class,'showelectronies']);
+
+=======
 Route::get('/contactus  ', function () {return view('user.products.contactus  ');});
 //productdetails
 Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
+>>>>>>> d5707bdccbacd4ae56c32f742ba6958f56051dae
 
 Route::post('/register',[UserController::class , "handleForm"]);
 
