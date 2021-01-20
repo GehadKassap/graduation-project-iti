@@ -14,12 +14,13 @@
 <body>
 @include("user.layouts.firstnav")
 </header>
+@if(session::has('user'))
 <section id="organizeStyle" >
     <div class="container py-5" id="user">
         <div class="row">
             <!------contain username and small nav for choice card/..-->
             
-            @if(session::has('user'))
+            
            
             <div class="col-md-3">
                <div class="row">
@@ -53,11 +54,9 @@
                         </li>
                     </ul>   
                   </div>
-                 
-              @endif
-             
                </div>
             </div>
+            @endif
             <!----------------display cards/fav/ordersand track it---------------------------->
             
             <div class="col-md-4">
