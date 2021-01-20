@@ -173,7 +173,8 @@ class ProductController extends Controller
            $card->pro_id=$req->product_id;
            $card->quantity=$req->quantity;
            $card->save();
-           return redirect ('/cartdetails');
+        //    return redirect ('/cartdetails');
+        return back();
        }
        else
        {
@@ -192,11 +193,18 @@ function cartlist(){
     ->where('cards.user_id', $userid)
     ->select('products.*')
     ->get();
-    return view('user.products.cartdetails',['products'=>$products]);
+   
+    $total=DB::table('cards')
+    ->join('products','cards.pro_id','=','products.id')
+    ->where('cards.user_id', $userid)
+    ->sum('products.price');
+  
+    return view('user.products.cartdetails',['products'=>$products,'total'=>$total]);
 }
 
- function removecart($rowid){
-    Card::destroy($rowid);
+ function removecart($id){
+    // Card::destroy($id);
+    Card::destroy($id);
     return redirect('cartdetails');
 }
 

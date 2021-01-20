@@ -93,6 +93,7 @@ Route::post("furniture",[ProductController::class,'addtocart']);
 Route::post("electronices",[ProductController::class,'addtocart']);
 Route::post("books",[ProductController::class,'addtocart']);
 Route::get("cartdetails",[ProductController::class,'cartlist']);
+
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
 
