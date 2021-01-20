@@ -73,7 +73,7 @@
                                     <div class="col-lg-6 col-12">
                                         <div class="form-group">
                                             <label>Your Name<span>*</span></label>
-                                            <input name="name" type="text" placeholder="">
+                                            <input required name="name" type="text" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-12">
@@ -85,7 +85,7 @@
                                     <div class="col-lg-6 col-12">
                                         <div class="form-group">
                                             <label>Your Email<span>*</span></label>
-                                            <input name="email" type="email" placeholder="">
+                                            <input required name="email" type="email" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-12">
@@ -97,7 +97,7 @@
                                     <div class="col-12">
                                         <div class="form-group message">
                                             <label>your message<span>*</span></label>
-                                            <textarea name="message" placeholder=""></textarea>
+                                            <textarea required name="message" placeholder=""></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">

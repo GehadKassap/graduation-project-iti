@@ -78,7 +78,7 @@
                                                     <th>
                                                         description
                                                     </th>
-
+                                                </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach($products as $product)
