@@ -14,13 +14,13 @@ use App\Http\Controllers\user\ProductController;
 |
 */
 
-<<<<<<< HEAD
+
 Route::get('/', function () {
     return view('user.index');
 });
-=======
 
->>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
+
+
 Route::get('/allcategories', function () {
     return view('user.products.homeCategories');
 });
@@ -83,8 +83,8 @@ Route::get('/logout' , function(){
 Route::get('/search',[ProductController::class , "searchProduct"]);
 
 
-<<<<<<< HEAD
-=======
+
+
 // Route::get('/details/{id}/category/{catid}',[ProductController::class , "detailsProduct"]);
 
 
@@ -94,5 +94,5 @@ Route::get("cartdetails",[ProductController::class,'cartlist']);
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
 
->>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
+
 
