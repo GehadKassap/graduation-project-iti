@@ -107,10 +107,10 @@ Route::get("removefav/{id}",[ProductController::class,'removefav']);
 Route::get("removeall/{id}",[ProductController::class,'removeall']);
 
 //electronics showcosmatics showbooks furniture
-// Route::get('/electronices',[ProductController ::class,'showelectronies']);
-// Route::get('/books',[ProductController ::class,'showbooks']);
-// Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
-// Route::get('/furniture',[ProductController ::class,'showfurniture']);
+Route::get('/electronices',[ProductController ::class,'showelectronies']);
+Route::get('/books',[ProductController ::class,'showbooks']);
+Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
+Route::get('/furniture',[ProductController ::class,'showfurniture']);
 
 
 
