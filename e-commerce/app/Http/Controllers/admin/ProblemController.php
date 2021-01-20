@@ -44,8 +44,8 @@ class ProblemController extends Controller
             "subject" => $request["subject"],
             "email" => $request["email"],
             "phone" => $request["phone"],
-
-
+            "message" => $request["message"],
+            "state" => 'not solved',
         ]);
     }
 
