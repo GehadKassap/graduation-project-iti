@@ -16,7 +16,8 @@ class ProblemController extends Controller
     public function index()
     {
         //
-        return view('admin.support');
+        $problems = Problem::all();
+        return view('admin.support', ["problems" => $problems]);
     }
 
     /**
@@ -47,6 +48,7 @@ class ProblemController extends Controller
             "message" => $request["message"],
             "state" => 'not solved',
         ]);
+        return redirect(route('problems.index'));
     }
 
     /**
@@ -81,6 +83,10 @@ class ProblemController extends Controller
     public function update(Request $request, Problem $problem)
     {
         //
+        $problem->update([
+            "state" => "solved"
+        ]);
+        return redirect(route('problems.index'));
     }
 
     /**
@@ -92,5 +98,7 @@ class ProblemController extends Controller
     public function destroy(Problem $problem)
     {
         //
+        $problem->delete();
+        return redirect(route('problems.index'));
     }
 }
