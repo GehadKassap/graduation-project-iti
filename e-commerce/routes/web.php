@@ -48,7 +48,7 @@ Route::get('/forgetpass', function () {
 
 
 //favorite
-Route::get('/favorite', function () {return view('user.products.favorite');});
+// Route::get('/favorite', function () {return view('user.products.favorite');});
 //cart details
 // Route::get('/cart', function () {return view('user.products.cartdetails');});
 //profile
@@ -56,15 +56,9 @@ Route::get('/profile', function () {return view('user.products.profile');});
 //checkout
 Route::get('/checkout', function () {return view('user.products.checkout ');});
 //contactus
-<<<<<<< HEAD
-Route::get('/contactus', function () {return view('user.products.contactus  ');});
-Route::get('/electronices',[ProductController ::class,'showelectronies']);
-
-=======
 Route::get('/contactus  ', function () {return view('user.products.contactus  ');});
 //productdetails
 Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
->>>>>>> d5707bdccbacd4ae56c32f742ba6958f56051dae
 
 Route::post('/register',[UserController::class , "handleForm"]);
 
@@ -96,6 +90,8 @@ Route::get('/search',[ProductController::class , "searchProduct"]);
 
 Route::post("fashion",[ProductController::class,'addtocart']);
 Route::post("furniture",[ProductController::class,'addtocart']);
+Route::post("electronices",[ProductController::class,'addtocart']);
+Route::post("books",[ProductController::class,'addtocart']);
 Route::get("cartdetails",[ProductController::class,'cartlist']);
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
@@ -104,12 +100,17 @@ Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
 Route::post("fashion",[ProductController::class,'addtofav']);
 Route::post("furniture",[ProductController::class,'addtofav']);
+Route::post("electronics",[ProductController::class,'addtofav']);
+Route::post("books",[ProductController::class,'addtofav']);
 Route::get("favdetails",[ProductController::class,'favlist']);
 Route::get("removefav/{id}",[ProductController::class,'removefav']);
 Route::get("removeall/{id}",[ProductController::class,'removeall']);
 
-//electronics
-Route::get('/electronices',[ProductController ::class,'showelectronies']);
+//electronics showcosmatics showbooks furniture
+// Route::get('/electronices',[ProductController ::class,'showelectronies']);
+// Route::get('/books',[ProductController ::class,'showbooks']);
+// Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
+// Route::get('/furniture',[ProductController ::class,'showfurniture']);
 
 
 

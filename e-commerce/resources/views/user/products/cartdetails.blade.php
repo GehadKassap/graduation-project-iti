@@ -100,7 +100,7 @@
 							</tr>
 							
 							@endforeach
-							@endforeach
+							
 							<!-- <tr>
 								<td class="image" data-title="No"><img src="https://via.placeholder.com/100x100" alt="#"></td>
 								<td class="product-des" data-title="Description">
