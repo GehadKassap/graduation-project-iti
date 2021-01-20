@@ -61,11 +61,11 @@
 							<div class="row">
 								<div class="col-lg-7 col-12">
 									<div class="hero-text">
-										<h1><span>UP TO 50% OFF </span>Shopping</h1>
+										<h1>We are here for you</h1>
 										<p>Happiness is not in money <br> but in <br> shopping.</p>
-										<div class="button">
+										<!-- <div class="button">
 											<a  class="btn">Shop Now!</a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
