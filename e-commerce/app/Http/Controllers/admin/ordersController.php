@@ -38,6 +38,9 @@ class ordersController extends Controller
     public function create()
     {
         //
+        return redirect (route('orderdetails.index'));
+
+
     }
 
     /**

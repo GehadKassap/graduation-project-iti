@@ -13,7 +13,7 @@
     box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
 }
  .hovercard .cardheader {
-    background: url(../imgs/bg5.jpg) !important;
+   
     background-size: cover !important;
     background-position: 10% !important;
     height: 470px !important;
