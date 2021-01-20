@@ -49,7 +49,7 @@ fashion
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 															<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
@@ -57,7 +57,7 @@ fashion
 														<form action="fashion" method="POST">
 														@csrf
 														<input type="hidden" name="product_id" value ="{{$pro['id']}}">
-															<button>Add to cart</button>
+															<button class="made">Add to cart</button>
 															<input type="hidden" name="quantity" value ="{{$pro['quantity']}}">
 														</form>
 														</div>
@@ -523,7 +523,7 @@ fashion
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+														<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 															<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
@@ -549,7 +549,7 @@ fashion
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+														<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 															<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
@@ -576,7 +576,7 @@ fashion
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+														<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 															<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
@@ -602,7 +602,7 @@ fashion
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+														<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 															<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
@@ -629,7 +629,7 @@ fashion
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+														<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 															<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
@@ -655,7 +655,7 @@ fashion
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+														<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 															<a title="Wishlist" href="fav.html"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
@@ -682,7 +682,7 @@ fashion
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+														<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 															<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
@@ -768,12 +768,12 @@ fashion
 							</a>
 							<div class="button-head">
 								<div class="product-action">
-									<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+								<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 									<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 									<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 								</div>
 								<div class="product-action-2">
-									<a title="Add to cart" href="#">Add to cart</a>
+									<burron class="made">Add to cart</button>
 								</div>
 							</div>
 						</div>
@@ -795,12 +795,12 @@ fashion
 							</a>
 							<div class="button-head">
 								<div class="product-action">
-									<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+								<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 									<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 									<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 								</div>
 								<div class="product-action-2">
-									<a title="Add to cart" href="#">Add to cart</a>
+								<button class="made">Add to cart</button>
 								</div>
 							</div>
 						</div>
@@ -822,12 +822,12 @@ fashion
 							</a>
 							<div class="button-head">
 								<div class="product-action">
-									<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+								<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 									<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 									<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 								</div>
 								<div class="product-action-2">
-									<a title="Add to cart" href="#">Add to cart</a>
+								<button class="made">Add to cart</button>
 								</div>
 							</div>
 						</div>
@@ -848,12 +848,12 @@ fashion
 							</a>
 							<div class="button-head">
 								<div class="product-action">
-									<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+								<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span >Quick Shop<a href= "{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
 									<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
 									<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 								</div>
 								<div class="product-action-2">
-									<a title="Add to cart" href="#">Add to cart</a>
+								<button class="made">Add to cart</button>
 								</div>
 							</div>
 						</div>

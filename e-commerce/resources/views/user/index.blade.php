@@ -87,7 +87,7 @@
                                         <span class="fa fa-user" aria-hidden="true"></span>
                                     </a>
 
-                            <!--//right-->
+                           //right-->
                             <div class="overlay-login text-left">
                                 <button type="button" class="overlay-close1">
 							<i class="fa fa-times" aria-hidden="true"></i>
