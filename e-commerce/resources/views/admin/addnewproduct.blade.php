@@ -109,11 +109,11 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-3 mb-3">
                                         <label for="Colors">Colors</label>
                                         <select id="Colors" class="custom-select form-control" name="product_color"
                                             required="">
-                                            <option value="">Select Product Colors</option>
+                                            <option value="">Select Color</option>
                                             <option value="red">red</option>
                                             <option value="white">white</option>
                                             <option value="green">green</option>
@@ -130,6 +130,27 @@
                                             name="Product_quantity">
                                         <div class="invalid-feedback">
                                             Please provide a valid quantity.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="sub_category">Sub Category</label>
+                                        <select id="sub_category" class="custom-select form-control" name="sub_category"
+                                            required="">
+                                            <option value="">Select sub category</option>
+                                            <option value="Women">Women </option>
+                                            <option value="Men">Men </option>
+                                            <option value="Makup">Makup</option>
+                                            <option value="Haircare">Haircare</option>
+                                            <option value="Chairs">Chairs</option>
+                                            <option value="Tables">Tables</option>
+                                            <option value="Laptops">Laptops</option>
+                                            <option value="Mobiles">Mobiles</option>
+                                            <option value="Novels">Novels</option>
+                                            <option value="Stories">Stories</option>
+
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid Sub category.
                                         </div>
                                     </div>
                                 </div>

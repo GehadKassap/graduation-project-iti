@@ -20,13 +20,13 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $messages = DB::table('problems')->count();
+
 
         $products = Product::all();
         // foreach ($products as $product) {
         //     $product["image"] = 'product_images/' . $product["image"];
         // }
-        return view('admin.products', ["products" => $products],compact('messages'));
+        return view('admin.products', ["products" => $products]);
     }
 
     /**
@@ -70,6 +70,7 @@ class ProductController extends Controller
             "colors" => $request["product_color"],
             "sizes" => $request["product_size"],
             "category" => $request["product_category"],
+            "sub_category" => $request["sub_category"],
             "quantity" => $request["Product_quantity"],
             "image" => $filename
         ]);
@@ -137,6 +138,7 @@ class ProductController extends Controller
             "colors" => $request["product_color"],
             "sizes" => $request["product_size"],
             "category" => $request["product_category"],
+            "sub_category" => $request["sub_category"],
             "quantity" => $request["Product_quantity"],
             "image" => $filename
         ]);
