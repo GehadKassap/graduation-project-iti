@@ -45,7 +45,7 @@ class ordersController extends Controller
     public function create()
     {
         //
-        return redirect (route('orderdetails.index'));
+        // return redirect (route('orderdetails.index'));
 
 
     }
@@ -70,6 +70,8 @@ class ordersController extends Controller
     public function show(Order $order)
     {
         //
+        return view("admin.orderdetails",["order"=>$order]);
+        // return $order;
     }
 
     /**

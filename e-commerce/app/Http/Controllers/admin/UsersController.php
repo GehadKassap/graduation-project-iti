@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use DB;
 
 class UsersController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -32,7 +34,10 @@ class UsersController extends Controller
     public function create()
     {
         //
-        return view("admin.adduser");
+        $messages = DB::table('problems')->count();
+
+
+        return view("admin.adduser",compact('messages'));
 
 
     }
