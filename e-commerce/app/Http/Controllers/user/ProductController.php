@@ -5,6 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Card;
+use App\Models\Fav;
 
 
 use Illuminate\support\facades\DB;
@@ -197,6 +198,43 @@ function cartlist(){
  function removecart($rowid){
     Card::destroy($rowid);
     return redirect('cartdetails');
+}
+
+//favorite function
+function addtofav(request $req)
+{
+    if($req->session()->has('user')){
+        $fav= new fav;
+        $fav->user_id=$req->session()->get('user')['id'];
+        $fav->pro_id=$req->product_id;
+        $fav->save();
+        return back();
+    }
+    else
+    {
+        return redirect('/login');
+    }
+}
+
+
+function favlist(){
+    $userid=Session::get('user')['id'];
+    $products=DB::table('favs')
+    ->join('products','favs.pro_id','=','products.id')
+    ->where('favs.user_id', $userid)
+    ->select('products.*')
+    ->get();
+    return view('user.products.favorite',['products'=>$products]);
+}
+
+ function removefav($rowid){
+    Fav::destroy($rowid);
+    return redirect('favdetails');
+}
+public function removeall()
+{
+    DB::table('favs')->delete();
+    return redirect('favdetails');
 }
 
 }

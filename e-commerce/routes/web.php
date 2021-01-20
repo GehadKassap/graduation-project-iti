@@ -94,5 +94,16 @@ Route::get("cartdetails",[ProductController::class,'cartlist']);
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
 
+//wishlist
+
+Route::post("fashion",[ProductController::class,'addtofav']);
+Route::post("furniture",[ProductController::class,'addtofav']);
+Route::get("favdetails",[ProductController::class,'favlist']);
+Route::get("removefav/{id}",[ProductController::class,'removefav']);
+Route::get("removeall/{id}",[ProductController::class,'removeall']);
+
+//electronics
+Route::get('/electronices',[ProductController ::class,'showelectronies']);
+
 
 
