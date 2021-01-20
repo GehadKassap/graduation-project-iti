@@ -21,7 +21,7 @@ class ProductController extends Controller
     {
         //
         $messages = DB::table('problems')->count();
-
+           
         $products = Product::all();
         // foreach ($products as $product) {
         //     $product["image"] = 'product_images/' . $product["image"];
