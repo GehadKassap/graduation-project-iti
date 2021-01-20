@@ -14,15 +14,20 @@ use App\Http\Controllers\user\ProductController;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('user.index');
 });
+=======
+
+>>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
 Route::get('/allcategories', function () {
     return view('user.products.homeCategories');
 });
 // Route::get('/fashion', function () {
 //     return view('user.products.fashion');
 // });
+
 
 Route:: get('/fashion',[ProductController::class,'show']);
 
@@ -45,7 +50,7 @@ Route::get('/forgetpass', function () {
 //favorite
 Route::get('/favorite', function () {return view('user.products.favorite');});
 //cart details
-Route::get('/cart', function () {return view('user.products.cartdetails');});
+// Route::get('/cart', function () {return view('user.products.cartdetails');});
 //profile
 Route::get('/profile', function () {return view('user.products.profile');});
 //checkout
@@ -78,4 +83,16 @@ Route::get('/logout' , function(){
 Route::get('/search',[ProductController::class , "searchProduct"]);
 
 
+<<<<<<< HEAD
+=======
+// Route::get('/details/{id}/category/{catid}',[ProductController::class , "detailsProduct"]);
+
+
+Route::post("fashion",[ProductController::class,'addtocart']);
+Route::post("furniture",[ProductController::class,'addtocart']);
+Route::get("cartdetails",[ProductController::class,'cartlist']);
+Route::get("removecart/{id}",[ProductController::class,'removecart']);
+
+
+>>>>>>> eb2710e5499dc5d786db2aa503070da931eb5f3c
 

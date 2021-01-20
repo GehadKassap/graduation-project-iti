@@ -62,6 +62,7 @@ class UserController extends Controller
         $user->password = \Hash::make( $req->password);
         $user->email = $req->email;
         $user->save();
+        setcookie('role' ,"user");
          return view("user.index");
          /***************************** */
     }

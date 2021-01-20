@@ -32,7 +32,7 @@
                 <div class="avatar"><img class="mr-3 side-user-img" src="{{asset('images/admin/avatar-s-12.jpg')}}"
                         alt="user avatar"></div>
                 <div class="media-body">
-                    <h6 class="side-user-name">Mark Johnson <i class="fas fa-angle-left"></i></h6>
+                    <h6 class="side-user-name">{{session('user.fullname')}}<i class="fas fa-angle-left"></i></h6>
                 </div>
             </div>
             <div id="user-dropdown" class="collapse">
@@ -46,11 +46,13 @@
         <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true">
             <div class="main-menu-content">
                 <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                    <li class=" nav-item"><a href="{{route('dashboard.index')}}"><i class="fas fa-chart-line icons"></i><span
-                                class="menu-title" data-i18n="">Dashboard</span></a>
+                    <li class=" nav-item"><a href="{{route('dashboard.index')}}"><i
+                                class="fas fa-chart-line icons"></i><span class="menu-title"
+                                data-i18n="">Dashboard</span></a>
                     </li>
-                    <li class=" nav-item"><a href="{{route('orders.index')}}"><i class="fas fa-shopping-basket icons"></i><span
-                                class="menu-title" data-i18n="">Orders</span></a>
+                    <li class=" nav-item"><a href="{{route('orders.index')}}"><i
+                                class="fas fa-shopping-basket icons"></i><span class="menu-title"
+                                data-i18n="">Orders</span></a>
                     </li>
                     <li class=" nav-item"><a href="{{route('users.index')}}"><i class="fas fa-users icons"></i><span
                                 class="menu-title" data-i18n="">Users</span></a>
@@ -64,13 +66,13 @@
                     <li class=" nav-item"><a href="admin-offers.html"><i class="fas fa-hand-holding-usd icons"></i><span
                                 class="menu-title" data-i18n="">Offers</span></a>
                     </li>
-                    <li class="nav-item"><a href="admin-support.html"><i
+                    <li class="nav-item"><a href="{{route('problems.index')}}"><i
                                 class="fas fa-envelope-open-text icons"></i><span class="menu-title"
                                 data-i18n="">Support</span></a>
                     </li>
 
                 </ul>
-            </div><a href="/logout" class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up" > Log
+            </div><a href="/logout" class="btn btn-danger btn-block btn-glow btn-log-out mx-1 pull-up"> Log
                 Out!</a>
 
         </div>

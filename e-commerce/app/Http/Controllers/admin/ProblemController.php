@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Card;
+use App\Models\Problem;
 use Illuminate\Http\Request;
 
-class CardController extends Controller
+class ProblemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,6 +16,7 @@ class CardController extends Controller
     public function index()
     {
         //
+        return view('admin.support');
     }
 
     /**
@@ -26,6 +27,7 @@ class CardController extends Controller
     public function create()
     {
         //
+        return view('user.products.contactus');
     }
 
     /**
@@ -37,15 +39,23 @@ class CardController extends Controller
     public function store(Request $request)
     {
         //
+        Problem::create([
+            "name" => $request["name"],
+            "subject" => $request["subject"],
+            "email" => $request["email"],
+            "phone" => $request["phone"],
+
+
+        ]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\Problem  $problem
      * @return \Illuminate\Http\Response
      */
-    public function show(Card $card)
+    public function show(Problem $problem)
     {
         //
     }
@@ -53,10 +63,10 @@ class CardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\Problem  $problem
      * @return \Illuminate\Http\Response
      */
-    public function edit(Card $card)
+    public function edit(Problem $problem)
     {
         //
     }
@@ -65,10 +75,10 @@ class CardController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\Problem  $problem
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Card $card)
+    public function update(Request $request, Problem $problem)
     {
         //
     }
@@ -76,15 +86,11 @@ class CardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\Problem  $problem
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Card $card)
+    public function destroy(Problem $problem)
     {
         //
-        // $card->delete();
-        // return redirect('cartdetails');
     }
-
-    
 }

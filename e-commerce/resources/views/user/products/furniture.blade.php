@@ -50,7 +50,12 @@
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
 														<div class="product-action-2">
-															<a title="Add to cart" href="#">Add to cart</a>
+														<form action="furniture" method="POST">
+														@csrf
+														<input type="hidden" name="product_id" value ="{{$pro['id']}}">
+															<button title="Add to cart" href="#">Add to cart</button>
+															<input type="hidden" name="quantity" value ="{{$pro['quantity']}}">
+														</form>
 														</div>
 													</div>
 												</div>
