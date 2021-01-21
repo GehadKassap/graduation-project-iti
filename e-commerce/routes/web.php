@@ -105,4 +105,4 @@ Route::get('/logout' , function(){
 
 // checkout 
 Route::post('success', [ UserController::class, "userUpdate" ]);
-
+Route::post("checkout",[ProductController::class,'showCheckout']);
