@@ -32,8 +32,8 @@
                             <input name="fullname" type="text" class="form-control" id="username" placeholder="Username">
                             <!-- <i class="fa fa-check-circle"></i> -->
 		                	<i class="fa fa-exclamation-circle"></i>
-                             <span class="text-muted">Your Name should between 5 to 100 character</span>
-                     
+                             <span class="text-muted text-lowercase font-italic">Your Name should between 5 to 100 character</span>
+
                           </div>
 
                           <div class="form-group col-md-12">
@@ -41,8 +41,8 @@
                             <input  name="email" type="email" class="form-control" id="email" placeholder=" Email">
                             <!-- <i class="fa fa-check-circle"></i> -->
 			                <i class="fa fa-exclamation-circle"></i>
-			                
-                       
+
+
                           </div>
 
                           <div class="form-group col-md-12">
@@ -50,9 +50,9 @@
                             <input  name="password" type="password" class="form-control" id="password" placeholder="Password">
                             <!-- <i class="fa fa-check-circle"></i> -->
 			                <i class="fa fa-exclamation-circle"></i>
-			                <span class="text-muted">Password should between 3 to 30 character</span>
+			                <span class="text-muted font-italic">Password should between 3 to 30 character</span>
 
-                        
+
                           </div>
 
 
@@ -71,7 +71,7 @@
                             <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
                             <a href="#" class="login__social-icon"><i class='bx bxl-linkedin' ></i></a>
                         </div><br>
-                        <a href="home.html" class="login__home" id="Forget"> Back to Home >> </a>
+                        <a href="home.html" class="login__home" id="Forget"> Back to Home  </a>
                     </form>
 
                 </div>
