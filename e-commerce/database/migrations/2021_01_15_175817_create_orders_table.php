@@ -18,8 +18,8 @@ class CreateOrdersTable extends Migration
             $table->float('sub_total'); //quantity*its price
             $table->float('total'); // add of sub totals
             $table->integer('quantity'); //number of products
-            $table->enum('state',['deliver' , 'cancel'])->default('deliver');//deliver , cancel ,fltare2
-
+            $table->enum('state',['deliver' , 'cancel','inprogress'])->default('inprogress');//deliver , cancel ,fltare2
+            $table->integer('cancel')->default('0');
             $table->timestamps();
         });
     }

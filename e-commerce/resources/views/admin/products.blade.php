@@ -140,15 +140,19 @@
                                                     </td>
                                                     <td>
                                                         <a class="edit"style="text-decoration:none;" href="{{route('products.edit',$product)}}">
-                                                        <i class="fas fa-pencil-alt  btn-outline-info"></i>
+                                                        <!-- <i class="fas fa-pencil-alt  btn-outline-info"></i> -->
+                                                        <button type="submit" class="btn btn-sm btn-outline-info round"><i class="fas fa-pencil-alt"></i></button>
+
                                                         </a>
                                                         <form class="btn btn-fab-sm "
                                                             action="{{route('products.destroy',$product)}}"
                                                             method="Post">
                                                             @csrf
                                                             @method("delete")
-                                                            <button type="submit"
-                                                                class="far fa-trash-alt  btn-outline-danger"></button>
+                                                            <!-- <button type="submit"
+                                                                class="far fa-trash-alt  btn-outline-danger"></button> -->
+                                                                <button type="submit" class="btn btn-sm btn-outline-danger round"><i class="far fa-trash-alt"></i></button>
+
                                                         </form>
                                                     </td>
                                                     <!-- <form>

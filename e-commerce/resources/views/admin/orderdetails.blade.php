@@ -71,15 +71,15 @@
 						<div class="d-flex justify-content-between lh-condensed">
 							<div class="order-details text-center">
 								<div class="product-img d-flex align-items-center">
-									<img class="img-fluid" src="{{asset('images/admin/pro1.png')}}" alt="Card image cap">
+									<img class="img-fluid" style="width:200px;height:200px;" src='{{asset("product_images/$item->image")}}' alt="Card image cap">
 								</div>
 							</div>
 							<div class="order-details">
-								<h6 class="my-0">Fitbit Alta HR Special Edition x 1</h6>
-								<small class="text-muted">Brief description</small>
+								<h6 class="my-0">{{$item->description}}</h6>
+								<small class="text-muted">{{$item->category}},{{$item->sub_category}}</small>
 							</div>
 							<div class="order-details">
-								<div class="order-info">$250</div>
+								<div class="order-info">{{$item->price}}</div>
 							</div>
 							<div class="order-details">
 								<h6 class="my-0">Delivered on :{{$item->updated_at}}</h6>

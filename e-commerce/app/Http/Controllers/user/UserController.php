@@ -80,7 +80,7 @@ class UserController extends Controller
              {
                   $req->session()->put('admin' , $user);
                   setcookie('role' , $user->role);
-                  return view('admin.adduser');
+                  return view('admin.profile');
               }
               else
               {

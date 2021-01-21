@@ -99,7 +99,7 @@
                         <tbody>
                             <tr>
                                 <td >
-                                    <a href="{{route('orders.edit',$order->id)}}" title="view details">
+                                    <a href="{{route('orders.show',$order->id)}}" title="view details">
                                         <i class="fas fa-info-circle mr-2"></i></a>{{$order->id}}</td>
                                 <td class="text-truncate">
                                    
@@ -108,7 +108,7 @@
                                 <td class="text-truncate p-1">
                                     <ul class="list-unstyled users-list m-0">                                               
                                         <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset('images/admin/pro2.png')}}" alt="Avatar">
+                                            <img class="media-object rounded-circle no-border-top-radius no-border-bottom-radius" src="{{asset("product_images/$order->image")}}" alt="Avatar">
                                         </li>
                                     </ul>
                                 </td>
