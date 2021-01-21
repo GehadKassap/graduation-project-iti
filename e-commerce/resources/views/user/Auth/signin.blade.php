@@ -43,11 +43,8 @@
 			                 <small>Error message</small>
                           </div>
 
-                          <div class="form-group form-check  ml-4 row">
-                            <input type="checkbox" class="form-check-input login__remember" id="exampleCheck1">
-                            <label class="form-check-label login__remember" for="exampleCheck1">Remember me</label>
-                           </div>
-                 <br>
+
+                            <br>
                            <a href="/forgetpass" class="login__remember ml-4" id="Forget"> Forgot Password ?</a>
 
                         <button type="submit" class="btn btn-primary " id="login__button">Sign In</button>

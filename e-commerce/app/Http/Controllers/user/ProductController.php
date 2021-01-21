@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Card;
 use App\Models\Fav;
+use App\Models\Review;
+
 
 
 use Illuminate\support\facades\DB;
@@ -274,4 +276,33 @@ public function updateCartProduct($id=null,$quantity=null){
     return redirect('/cartdetails');
 }
 
+
+//review
+// function addreview(request $req)
+// {
+//     if($req->session()->has('user')){
+//         $review= new review;
+//         $review->user_id=$req->session()->get('user')['id'];
+//         $review->pro_id=$req->product_id;
+//         $review->content=$req->content;
+//         $review->save();
+//      return back();
+//     }
+//     else
+//     {
+//         return redirect('/login');
+//     }
+// }
+
+
+// function reviewlist(){
+//  $userid=Session::get('user')['id'];
+//  $products=DB::table('reviews')
+//  ->join('products','reviews.pro_id','=','products.id')
+//  ->where('reviews.user_id', $userid)
+//  ->select('products.*')
+//  ->get();
+
+//  return view('user.products.productdetails',['products'=>$products]);
+// }
 }

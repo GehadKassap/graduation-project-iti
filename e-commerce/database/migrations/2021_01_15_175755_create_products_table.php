@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->enum('sizes', ['xl', 'xxl', 'large', 'small', 'medium']);
             $table->integer('quantity');
             $table->string('category', 100);
+            $table->string('sub_category', 100);
             $table->mediumText('image');
             $table->timestamps();
         });

@@ -34,9 +34,14 @@ use App\Http\Controllers\admin;
 //resource
 Route::resource("admin/users", admin\UsersController::class);
 Route::resource("admin/dashboard", admin\dashboardController::class);
-Route::resource("admin/orders", admin\ordersController::class);
-Route::resource("admin/orderdetails", admin\orderdetailsController::class);
 Route::resource("admin/profile", admin\profileController::class);
+Route::resource("admin/editprofile", admin\editprofileController::class);
+Route::resource("admin/offers", admin\offersController::class);
+Route::resource("admin/orders", admin\ordersController::class);
+
+
+
+ 
 
 
 
@@ -47,13 +52,13 @@ Route::resource("admin/profile", admin\profileController::class);
 // });
 
 //admin-offers
-Route::get('admin/offers', function () {
-    return view('admin.offers');
+Route::get('admin/login', function () {
+    return view('admin.auth.adminlogin');
 });
 
 //admin-support
-Route::get('admin/support', function () {
-    return view('admin.support');
+Route::get('admin/forgetpass', function () {
+    return view('admin.auth.forgetpass');
 });
 /****************************** */
 

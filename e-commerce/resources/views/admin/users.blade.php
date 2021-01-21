@@ -108,7 +108,7 @@
                   <td>{{$user->created_at}}</td>
                   <td>
                   @if($user['role']=='admin')
-                  <a href="#" title="edit"><i class="fas fa-user-edit" style="font-size:1rem;"></i></a>{{$user->role}}
+                  <a href="{{route('users.edit',$user)}}" title="edit"><i class="fas fa-user-edit" style="font-size:1rem;"></i></a>{{$user->role}}
                   @else
                   {{$user->role}}
                   @endif

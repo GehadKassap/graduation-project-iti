@@ -17,39 +17,79 @@
 				<div class="col-lg-8 col-12">
 					<div class="checkout-form">
 						<h2>Make Your Checkout Here</h2>
-						<p>Please register in order to checkout more quickly</p>
+						<br><br>
 						<!-- Form -->
-						<form class="form" method="post" action="#">
-							<div class="row">
+						<form class="form" method="POST" action="/success" id="needs-validation">
+						       @csrf
+							   <input type="hidden" name="id" placeholder=""  value="{{session('user.id')}}" >
+							 <div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<label>Full Name<span>*</span></label>
-										<input type="text" name="name" placeholder="" required="required">
+										<input type="text" name="fullname" placeholder=""  value="{{session('user.fullname')}}" id="validationCustom01" required>
+										<div class="invalid-feedback">
+                                        Please Enter Your Name.
+                                        </div>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<label>Email Address<span>*</span></label>
-										<input type="email" name="email" placeholder="" required="required">
+										<input type="email" name="email" placeholder=""  value="{{session('user.email')}}" id="validationCustom02" required>
+										<div class="invalid-feedback">
+                                          Please Enter Your email.
+                                         </div>
 									</div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
 										<label>Address<span>*</span></label>
-										<textarea type="text" name="address" placeholder="" required="required"></textarea>
+										<textarea type="text" name="address" placeholder="" id="validationCustom04" required></textarea>
+										<div class="invalid-feedback">
+                                         Please provide address.
+                                          </div>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
+									<div class="form-group mr-5">
 										<label>Phone Number<span>*</span></label>
-										<input type="number" name="number" placeholder="" required="required">
+										<input type="number" name="phone" placeholder="" id="validationCustom05"  required>
+										<div class="invalid-feedback">
+                                         Please Enter Your phone.
+                                        </div>
 									</div>
 								</div>
 								
 							
 							
 						
-								
+								<div class="button ml-5">
+									<button type="submit" class="btn mt-4 mr-3">proceed to checkout</button>
+								</div>
+								<script>
+                        (function () {
+                            "use strict";
+                            window.addEventListener("load", function () {
+                                var form = document.getElementById("needs-validation");
+                                form.addEventListener("submit", function (event) {
+                                    if (form.checkValidity() == false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add("was-validated");
+                                    var editorElement = document.getElementById("productDetails");
+                                    if (editorElement.value == '') {
+                                        editorElement.parentNode.classList.add("is-invalid");
+                                        editorElement.parentNode.classList.remove("is-valid");
+                                    } else {
+                                        editorElement.parentNode.classList.remove("is-invalid");
+                                        editorElement.parentNode.classList.add("is-valid");
+                                    }
+
+                                }, false);
+                            }, false);
+                        }());
+                    </script>
 							</div>
 						</form>
 						<!--/ End Form -->
@@ -75,9 +115,7 @@
 						<!-- Button Widget -->
 						<div class="single-widget get-button">
 							<div class="content">
-								<div class="button">
-									<a href="#" class="btn">proceed to checkout</a>
-								</div>
+							
 							</div>
 						</div>
 						<!--/ End Button Widget -->

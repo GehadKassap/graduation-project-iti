@@ -38,7 +38,7 @@
             <div id="user-dropdown" class="collapse">
                 <ul class="user-setting-menu">
                     <li><a href="{{route('profile.index')}}"><i class="far fa-user"></i> My Profile</a></li>
-                    <li><a href="admin-profile-edit.html"><i class="fas fa-cog "></i> Setting</a></li>
+                    <li><a href="/"><i class="fas fa-cog "></i> Eshop</a></li>
                     <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                 </ul>
             </div>
@@ -63,7 +63,7 @@
                     <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span
                                 class="menu-title" data-i18n="">Promotion</span></a>
                     </li>
-                    <li class=" nav-item"><a href="admin-offers.html"><i class="fas fa-hand-holding-usd icons"></i><span
+                    <li class=" nav-item"><a href="{{route('offers.index')}}"><i class="fas fa-hand-holding-usd icons"></i><span
                                 class="menu-title" data-i18n="">Offers</span></a>
                     </li>
                     <li class="nav-item"><a href="{{route('problems.index')}}"><i
@@ -100,9 +100,10 @@
             <ul class="navbar-nav align-items-center right-nav-link">
                 <li class="nav-item dropdown-lg">
                     <a class="nav-link  waves-effect" href="{{route('problems.index')}}">
+
                         <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up "></span></a>
                 </li>
-                <li><a href="admin-profile-edit.html"><i class="bx bx-cog bx-spin"></i></a></li>
+                <li><a href="/"><i class="bx bx-cog bx-spin"></i></a></li>
 
                 <li class="nav-item">
                     <a class="nav-link " href="{{route('profile.index')}}">

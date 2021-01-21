@@ -25,40 +25,41 @@
   
       <div class="tab-content pt-1">
 		<div class="tab-pane active" id="comp-order-tab" aria-expanded="true" role="tablist" aria-labelledby="complete-order">
+		@foreach($order as $item)
 			<div class="card">
 				<div class="card-header">
-					<h4 class="card-title text-center">Order Details User Name.</h4>
+					<h4 class="card-title text-center">Order Details {{$item->fullname}}</h4>
 				</div>
 			</div>
+
 			<div class="card">
 				<div class="card-content">
 					<div class="card-body">
 						<div class="d-flex justify-content-around lh-condensed">
 							<div class="order-details text-center ">
 								<div class="order-title ">Order Number</div>
-								<div class="order-info">#CV45632</div>
+								<div class="order-info">#{{$item->id}}</div>
 							</div>
 							<div class="order-details text-center">
 								<div class="order-title">Date</div>
-								<div class="order-info">10<sup>th</sup> Oct, 2018</div>
+								<div class="order-info">{{$item->created_at}}</div>
 							</div>
 							<div class="order-details text-center">
 								<div class="order-title">Amount Paid</div>
-								<div class="order-info">$2550</div>
+								<div class="order-info">{{$item->total}} LE</div>
 							</div>
 							<div class="order-details text-center">
 								<div class="order-title">Payment Method</div>
-								<div class="order-info">Credit Card</div>
+								<div class="order-info">cash</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
 			<div class="card pull-up">
 				<div class="card-header">
 					<div class="float-left">
-						<a href="#" class="btn btn-info">#CV45632</a>
+						<a href="#" class="btn btn-info">#{{$item->id}}</a>
 					</div>
 					<div class="float-right">
 						<a href="#" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</a>
@@ -81,8 +82,8 @@
 								<div class="order-info">$250</div>
 							</div>
 							<div class="order-details">
-								<h6 class="my-0">Delivered on Sun, Oct 15th 2018</h6>
-								<small class="text-muted">Brief description</small>
+								<h6 class="my-0">Delivered on :{{$item->updated_at}}</h6>
+								<small class="text-muted">Location:{{$item->address}}</small>
 							</div>
 						</div>
 					</div>
@@ -90,15 +91,16 @@
 				<div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
 					<span class="float-left">
 						<span class="text-muted">Ordered On</span>
-						<strong>Wed, Oct 3rd 2018</strong>
+						<strong>{{$item->created_at}}</strong>
 					</span>
 					<span class="float-right">
 						<span class="text-muted">Ordered Amount</span>
-						<strong>$250</strong>
+						<strong>{{$item->total}}</strong>
 					</span>
 				</div>
 			</div>
-			
+			@endforeach
+
 		</div>
 	</div>
 
