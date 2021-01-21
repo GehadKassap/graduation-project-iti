@@ -50,13 +50,13 @@ Route::resource("admin/editprofile", admin\editprofileController::class);
 // });
 
 //admin-offers
-Route::get('admin/offers', function () {
-    return view('admin.offers');
+Route::get('admin/login', function () {
+    return view('admin.auth.adminlogin');
 });
 
 //admin-support
-Route::get('admin/support', function () {
-    return view('admin.support');
+Route::get('admin/forgetpass', function () {
+    return view('admin.auth.forgetpass');
 });
 /****************************** */
 
