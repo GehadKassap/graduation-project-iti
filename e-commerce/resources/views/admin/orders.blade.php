@@ -91,7 +91,7 @@
                                 <th class="border-top-0">shipping</th>
                                 <th class="border-top-0">Date</th>
                                 <th class="border-top-0">Quantity</th>
-                                <th class="border-top-0">Amount</th>
+                                <th class="border-top-0">AMOUNT</th>
 
                             </tr>
                         </thead>
