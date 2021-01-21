@@ -166,9 +166,26 @@ class ProductController extends Controller
 
 
    function addtocart(request $req)
-   {
-       if($req->session()->has('user')){
-           $card= new card;
+   {   $i=0;
+      
+       $cards= Card::all();
+       foreach($cards as $card){
+           if($card->pro_id == $req->product_id){
+            $i++;
+           }
+       }
+         if($i==1){
+        //  $carddd= new card; 
+        //  $carddd->user_id=$req->session()->get('user')['id']; 
+        //  $carddd->pro_id=$req->product_id;
+        $card->quantity=$card->quantity+1;
+        $card->save();
+        $i=0;
+        return back();
+       }
+       else
+       { if($req->session()->has('user')){
+            $card= new card;
            $card->user_id=$req->session()->get('user')['id'];
            $card->pro_id=$req->product_id;
            $card->quantity=$req->quantity;
@@ -179,7 +196,7 @@ class ProductController extends Controller
        else
        {
            return redirect('/login');
-       }
+       }}
    }
 
 // static function cartItem(){
@@ -193,19 +210,27 @@ function cartlist(){
     ->where('cards.user_id', $userid)
     ->select('products.*')
     ->get();
+    $carddb=card::all();
+    $i=0;
+    $card=[];
+    foreach ($carddb as $item){
+        $card[$i]=array("id"=>$item['id'], "cquantity"=>$item['quantity'], "pro_id"=>$item['pro_id']); 
+        $i++;
+    }
 
     $total=DB::table('cards')
     ->join('products','cards.pro_id','=','products.id')
     ->where('cards.user_id', $userid)
     ->sum('products.price');
-
-    return view('user.products.cartdetails',['products'=>$products,'total'=>$total]);
+    return view('user.products.cartdetails',['products'=>$products,'total'=>$total, 'card'=>$card]);
 }
 
  function removecart($id){
-    // Card::destroy($id);
-    Card::destroy($id);
+     
+    $del=Card::destroy($id);
     return redirect('cartdetails');
+    // DB::table('cards')->where('id',$id)->delete();
+    //   return redirect('cartdetails');
 }
 
 //favorite function
@@ -243,6 +268,10 @@ public function removeall()
 {
     DB::table('favs')->delete();
     return redirect('favdetails');
+}
+public function updateCartProduct($id=null,$quantity=null){
+    DB::table('cards')->where('id',$id)->increment('quantity',$quantity);
+    return redirect('/cartdetails');
 }
 
 }
