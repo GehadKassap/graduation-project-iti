@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Card;
+use Illuminate\support\facades\DB;
 //  use  App\Http\middleware\UserAuth;
 // use  Auth;
 
@@ -166,6 +168,8 @@ class UserController extends Controller
           $data->address=$req->address;
           $data->phone=$req->phone;
           $data->save();
+
+          DB::table('cards')->delete();
           return view('user.products.success');
       } 
 }
