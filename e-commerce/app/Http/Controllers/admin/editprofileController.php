@@ -3,14 +3,11 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-
 use App\Models\User;
 use Illuminate\Http\Request;
 use DB;
-
-class UsersController extends Controller
+class editprofileController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -21,9 +18,7 @@ class UsersController extends Controller
         //
         $messages = DB::table('problems')->count();
 
-        $users=User::all();
-        // return $users;
-        return view("admin.users",["users"=>$users],compact('messages'));
+        return view('admin.editprofile',compact('messages'));
     }
 
     /**
@@ -34,12 +29,6 @@ class UsersController extends Controller
     public function create()
     {
         //
-        $messages = DB::table('problems')->count();
-
-
-        return view("admin.adduser",compact('messages'));
-
-
     }
 
     /**
@@ -51,26 +40,6 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            "fullname"=>"required",
-            "email"=>"required",
-            "address"=>"required",
-            "password"=>"required",
-            "phone"=>"required",
-            "role"=>"required"
-        ]);
-        User::create([
-           "fullname"=>$request["fullname"],
-            "email"=>$request["email"],
-            "address"=>$request["address"],
-            "password"=>\Hash::make($request["password"]),
-            "phone"=>$request["phone"],
-            "role"=>$request["role"]
-
-           ]);
-
-        return redirect(route("users.index"));
-
     }
 
     /**
@@ -93,9 +62,6 @@ class UsersController extends Controller
     public function edit(User $user)
     {
         //
-        return view("admin.editprofile",["User"=>$user]);
-
-
     }
 
     /**
@@ -108,15 +74,6 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
         //
-        $user->update([
-            "fullname"=>$request["fullname"],
-            "email"=>$request["email"],
-            "address"=>$request["address"],
-            "password"=>$request["password"],
-            "phone"=>$request["phone"]
-        ]);
-        return redirect(route("users.index"));
-
     }
 
     /**
@@ -128,7 +85,5 @@ class UsersController extends Controller
     public function destroy(User $user)
     {
         //
-        $user->delete();
-        return redirect(route("users.index"));
     }
 }

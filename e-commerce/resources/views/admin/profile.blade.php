@@ -28,7 +28,7 @@
             <div class="cardheader" style="background-image:url('{{ asset('images/admin/bg5.jpg')}}')"></div>
             <div class="user-image">
               <div class="avatar"><img alt="" src="{{asset('images/admin/avatar-s-12.jpg')}}" class="pull-up" data-original-title="" title=""></div>
-              <div class="icon-wrapper"><a href="admin-profile-edit.html"><i class="fas fa-pencil-alt"></i></a></div>
+              <!-- <div class="icon-wrapper"><a href="admin-profile-edit.html"><i class="fas fa-pencil-alt"></i></a></div> -->
             </div>
             <div class="info">
               <div class="row">
