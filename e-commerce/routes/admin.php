@@ -39,6 +39,7 @@ Route::resource("admin/orderdetails", admin\orderdetailsController::class);
 Route::resource("admin/profile", admin\profileController::class);
 Route::resource("admin/editprofile", admin\editprofileController::class);
 
+ 
 
 
 
