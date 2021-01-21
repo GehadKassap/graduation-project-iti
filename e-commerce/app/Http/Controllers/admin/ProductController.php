@@ -21,7 +21,6 @@ class ProductController extends Controller
     {
         //
 
-
         $products = Product::all();
         // foreach ($products as $product) {
         //     $product["image"] = 'product_images/' . $product["image"];

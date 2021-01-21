@@ -86,7 +86,7 @@
                                         <span class="fa fa-user" aria-hidden="true"></span>
                                     </a>
 
-                            <!--//right-->
+                           //right-->
                             <div class="overlay-login text-left">
                                 <button type="button" class="overlay-close1">
 							<i class="fa fa-times" aria-hidden="true"></i>
@@ -209,7 +209,7 @@
 
                         <div class="col-lg col-md-4 col-6 welcome-image" data-aos="zoom-in-up">
                             <div class="boxhny13">
-                                <a href="l">
+                                <a href="/cosmatics">
                                     <img src="{{asset('images/assets/images/cosmetcs.jpg')}}" class="img-fluid" alt="" />
                                     <div class="boxhny-content">
                                         <h3 class="title">Product</h3>
