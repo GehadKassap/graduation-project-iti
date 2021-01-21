@@ -51,13 +51,14 @@ Route::get('/forgetpass', function () {
 //profile
 Route::get('/profile', function () {return view('user.products.profile');});
 
-
+Route::get('/cartdetails/{id}/{quantity}',[ProductController::class,'updateCartProduct']);
 
 
 //add to cart
 Route::post("add_to_cart",[ProductController::class,'addToCart']);
 
 Route::post("fashioncart",[ProductController::class,'addtocart']);
+
 Route::post("furniturecart",[ProductController::class,'addtocart']);
 Route::post("electronicescart",[ProductController::class,'addtocart']);
 Route::post("cosmaticscart",[ProductController::class,'addtocart']);
@@ -100,5 +101,8 @@ Route::get('/logout' , function(){
 });
 
 
+
+
 // checkout 
 Route::post('success', [ UserController::class, "userUpdate" ]);
+
