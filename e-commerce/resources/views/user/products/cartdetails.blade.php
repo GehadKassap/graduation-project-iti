@@ -8,6 +8,7 @@
 
 </head>
 <body>
+
 @include("user.layouts.firstnav")
 	
 
@@ -71,7 +72,10 @@
 							</tr>
 						</thead>
 						<tbody>
+						<?php $i=0; 
+						 $subTotal=0; ?>
 						@foreach($products as $pro)
+					
 							<tr>
 								<td class="image" data-title="No"><img src="{{ asset('product_images/' . $pro->image)}}" alt="#"></td>
 								<td class="product-des" data-title="Description">
@@ -79,26 +83,36 @@
 									<p class="product-des">{{$pro->description}}</p>
 								</td>
 								<td class="price" data-title="Price"><span>{{$pro->price}}$ </span></td>
-								<td class="qty" data-title="Qty"><!-- Input Order -->
+								<td class="qty" data-title="Qty">
 									<div class="input-group">
+									
 										<div class="button minus">
-											<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-												<i class="ti-minus"></i>
-											</button>
+									
+										
 										</div>
-										<input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="100" value="{{$pro->quantity}}">
+										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/1')}}">+</a>
+										<input type="text" name="quant[1]" class="input-number"  data-minn="1" data-max="100" value="{{$card[$i]['cquantity']}}">
+										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/-1')}}">-</a>
+								
 										<div class="button plus">
-											<button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
-												<i class="ti-plus"></i>
-											</button>
+										
 										</div>
+								
 									</div>
 									<!--/ End Input Order -->
 								</td>
-								<td class="total-amount" data-title="Total"><span>{{$pro->price}}$</span></td>
-								<td class="action" data-title="Remove"><a href="removecart/{{$pro->id}}"><i class="ti-trash remove-icon"></i></a></td>
+								<td class="total-amount" data-title="Total"><span>{{$pro->price * $card[$i]['cquantity']}}$</span></td>
+								
+								<td class="action" data-title="Remove"><a href="removecart/{{$card[$i]['id']}}"><i class="ti-trash remove-icon"></i></a></td>
 							</tr>
 							
+							<?php
+							
+								
+								 $subTotal=$subTotal+($pro->price * $card[$i]['cquantity']);
+								 
+							$i++; 
+							?>
 							@endforeach
 							
 							<!-- <tr>
@@ -179,10 +193,10 @@
 							<div class="col-lg-4 col-md-7 col-12">
 								<div class="right">
 									<ul>
-										<li>Cart Subtotal<span>{{$total}}$</span></li>
-										<li>Shipping<span>Free</span></li>
+										<li>Cart Subtotal<span>{{$subTotal}}$</span></li>
+										<li>Shipping<span>10$</span></li>
 										<!-- <li>You Save<span></span></li> -->
-										<li class="last" >Total<span>{{$total}}$</span></li>
+										<li class="last" >{{$subTotal + 10}}$<span></span></li>
 									</ul>
 									<div class="button5">
 										<a href="checkout.html" class="btn">Checkout</a>
