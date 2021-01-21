@@ -76,6 +76,9 @@
                                                         category
                                                     </th>
                                                     <th>
+                                                        sub category
+                                                    </th>
+                                                    <th>
                                                         description
                                                     </th>
                                                 </tr>
@@ -92,9 +95,12 @@
                                                             {{$product["quantity"]}}</small>
                                                     </td>
                                                     <td>${{$product["price"]}}</td>
-                                                    <td>discount : %{{$product["discount"]}}</td>
+                                                    <td> %{{$product["discount"]}}</td>
                                                     <td> <button type="button"
                                                             class="btn btn-sm btn-outline-warning round">{{$product["category"]}}</button>
+                                                    </td>
+                                                    <td> <button type="button"
+                                                            class="btn btn-sm btn-outline-warning round">{{$product["sub_category"]}}</button>
                                                     </td>
                                                     <td>
                                                         <span><i
