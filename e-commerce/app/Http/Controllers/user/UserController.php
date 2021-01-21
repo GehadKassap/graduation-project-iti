@@ -159,19 +159,13 @@ class UserController extends Controller
     {
         //
     }
-
-    // update user record
-    function updateUserFun(request $req)
-    {
-     if($req->session()->has('user')){
-        $user= new user;
-        $user->user_id=$req->session()->get('user')['id'];
-        $user->save();
-        return back();
-      }
-        else
-      {
-        return redirect('/login');
-      }
-    }
+      public function userUpdate(Request $req){
+          $data=User::find($req->id);
+          $data->fullname=$req->fullname;
+          $data->email=$req->email;
+          $data->address=$req->address;
+          $data->phone=$req->phone;
+          $data->save();
+          return view('user.products.success');
+      } 
 }
