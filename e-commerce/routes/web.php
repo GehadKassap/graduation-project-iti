@@ -98,3 +98,7 @@ Route::get('/logout' , function(){
     Session::forget('user');
     return view('user.Auth.signin');
 });
+
+
+// checkout 
+Route::post('success', [ UserController::class, "userUpdate" ]);

@@ -56,7 +56,11 @@
 															
 														</div>
 														<div class="product-action-2">
+<<<<<<< HEAD
+														<form action="electronics" method="POST">
+=======
 														<form action="electronicescart" method="POST">
+>>>>>>> fac244525722d1357437e0b22a330f63bc2e9e1c
 														@csrf
 														<input type="hidden" name="product_id" value ="{{$pro['id']}}">
 															<button class="made">Add to cart</button>

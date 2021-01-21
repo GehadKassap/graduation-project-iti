@@ -159,4 +159,13 @@ class UserController extends Controller
     {
         //
     }
+      public function userUpdate(Request $req){
+          $data=User::find($req->id);
+          $data->fullname=$req->fullname;
+          $data->email=$req->email;
+          $data->address=$req->address;
+          $data->phone=$req->phone;
+          $data->save();
+          return view('user.products.success');
+      } 
 }

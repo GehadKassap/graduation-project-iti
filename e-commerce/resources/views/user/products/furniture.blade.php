@@ -45,7 +45,6 @@
 													</a>
 													<div class="button-head">
 														<div class="product-action">
-
 															<form action="furniturefav" method="POST">
 														        @csrf
 														       <input type="hidden" name="product_id" value ="{{$pro['id']}}">
