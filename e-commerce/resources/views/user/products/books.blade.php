@@ -45,7 +45,7 @@
 													<div class="button-head">
 														<div class="product-action">
 															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Quick Shop</span></a>
-															<form action="fashion" method="POST">
+															<form action="booksfav" method="POST">
 														        @csrf
 														       <input type="hidden" name="product_id" value ="{{$pro['id']}}">
 														     	<button><i class=" ti-heart "></i></button>
