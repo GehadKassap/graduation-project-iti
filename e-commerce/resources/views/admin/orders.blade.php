@@ -95,11 +95,11 @@
 
                             </tr>
                         </thead>
-                        @foreach($orders as $order)
+                      @foreach($orders as $order)
                         <tbody>
                             <tr>
-                                <td class="text-truncate">
-                                    <a href="#" title="view details">
+                                <td >
+                                    <a href="{{route('orders.edit',$order->id)}}" title="view details">
                                         <i class="fas fa-info-circle mr-2"></i></a>{{$order->id}}</td>
                                 <td class="text-truncate">
                                    

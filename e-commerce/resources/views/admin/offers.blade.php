@@ -27,11 +27,7 @@
                 <div class="col">
                   <div class="form-group">
                     <label>Product Name</label>
-                    <select class="form-control">
-                        <option>select product name..</option>
-                        <option>iphone</option>
-                        <option>samsung</option>
-                      </select>
+                   <input class="form-control" type="text" placeholder="Enter product name" data-original-title="" title="" >
                   </div>
                 </div>
               </div>
@@ -39,11 +35,8 @@
                 <div class="col">
                   <div class="form-group">
                     <label>Category Name</label>
-                    <select class="form-control">
-                        <option>select Category Name..</option>
-                        <option>Books</option>
-                        <option>Electronics</option>
-                      </select>
+                    <input class="form-control" type="text" placeholder="Enter category name" data-original-title="" title="" >
+
                   </div>
                 </div>
               </div>
