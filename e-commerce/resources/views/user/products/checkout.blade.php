@@ -19,18 +19,18 @@
 						<h2>Make Your Checkout Here</h2>
 						<p>Please register in order to checkout more quickly</p>
 						<!-- Form -->
-						<form class="form" method="post" action="#">
+						<form class="form" action="updateUser" method="POST" >
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<label>Full Name<span>*</span></label>
-										<input type="text" name="name" placeholder="" required="required">
+										<input type="text" name="name" placeholder="" required="required" value="{{session('user.fullname')}}">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<label>Email Address<span>*</span></label>
-										<input type="email" name="email" placeholder="" required="required">
+										<input type="email" name="email" placeholder="" required="required" value="{{session('user.email')}}">
 									</div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -40,7 +40,7 @@
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
+									<div class="form-group mr-5">
 										<label>Phone Number<span>*</span></label>
 										<input type="number" name="number" placeholder="" required="required">
 									</div>
@@ -49,7 +49,9 @@
 							
 							
 						
-								
+								<div class="button ml-5">
+									<button type="submit" class="btn mt-4 mr-3">proceed to checkout</button>
+								</div>
 							</div>
 						</form>
 						<!--/ End Form -->
@@ -75,9 +77,7 @@
 						<!-- Button Widget -->
 						<div class="single-widget get-button">
 							<div class="content">
-								<div class="button">
-									<a href="#" class="btn">proceed to checkout</a>
-								</div>
+							
 							</div>
 						</div>
 						<!--/ End Button Widget -->

@@ -159,4 +159,19 @@ class UserController extends Controller
     {
         //
     }
+
+    // update user record
+    function updateUserFun(request $req)
+    {
+     if($req->session()->has('user')){
+        $user= new user;
+        $user->user_id=$req->session()->get('user')['id'];
+        $user->save();
+        return back();
+      }
+        else
+      {
+        return redirect('/login');
+      }
+    }
 }

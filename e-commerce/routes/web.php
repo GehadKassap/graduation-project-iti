@@ -85,12 +85,13 @@ Route::get('/search',[ProductController::class , "searchProduct"]);
 
 
 
-// Route::get('/details/{id}/category/{catid}',[ProductController::class , "detailsProduct"]);
+Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
 
 
 Route::post("fashion",[ProductController::class,'addtocart']);
 Route::post("furniture",[ProductController::class,'addtocart']);
-Route::post("electronices",[ProductController::class,'addtocart']);
+Route::post("electronics",[ProductController::class,'addtocart']);
+Route::post("cosmatics",[ProductController::class,'addtocart']);
 Route::post("books",[ProductController::class,'addtocart']);
 Route::get("cartdetails",[ProductController::class,'cartlist']);
 
@@ -99,10 +100,11 @@ Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
 //wishlist
 
-Route::post("fashion",[ProductController::class,'addtofav']);
-Route::post("furniture",[ProductController::class,'addtofav']);
-Route::post("electronics",[ProductController::class,'addtofav']);
-Route::post("books",[ProductController::class,'addtofav']);
+Route::post("fashionfav",[ProductController::class,'addtofav']);
+Route::post("furniturefav",[ProductController::class,'addtofav']);
+Route::post("electronicsfav",[ProductController::class,'addtofav']);
+Route::post("cosmaticsfav",[ProductController::class,'addtofav']);
+Route::post("booksfav",[ProductController::class,'addtofav']);
 Route::get("favdetails",[ProductController::class,'favlist']);
 Route::get("removefav/{id}",[ProductController::class,'removefav']);
 Route::get("removeall/{id}",[ProductController::class,'removeall']);
@@ -113,5 +115,6 @@ Route::get('/books',[ProductController ::class,'showbooks']);
 Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
 Route::get('/furniture',[ProductController ::class,'showfurniture']);
 
-
+//chechout process updateUser
+// Route::post('updateUser',[UserController::class , "updateUserFun"]);
 

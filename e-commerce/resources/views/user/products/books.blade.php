@@ -46,7 +46,7 @@
 													<div class="button-head">
 														<div class="product-action">
 															<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-															<form action="fashion" method="POST">
+															<form action="booksfav" method="POST">
 														        @csrf
 														       <input type="hidden" name="product_id" value ="{{$pro['id']}}">
 														     	<button><i class=" ti-heart "></i></button>
@@ -55,7 +55,7 @@
 															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
 														</div>
 														<div class="product-action-2">
-														<form action="fashion" method="POST">
+														<form action="books" method="POST">
 														@csrf
 														<input type="hidden" name="product_id" value ="{{$pro['id']}}">
 															<button>Add to cart</button>
