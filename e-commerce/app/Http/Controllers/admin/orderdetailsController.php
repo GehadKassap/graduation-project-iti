@@ -6,8 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use DB;
-
-class ordersController extends Controller
+class orderdetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,23 +17,8 @@ class ordersController extends Controller
     {
         //
         $messages = DB::table('problems')->count();
-        $price = DB::table('orders')->sum('total');
-        $maxPrice = DB::table('orders')->max('total');
-        $minPrice = DB::table('orders')->min('total');
 
-
-
-        // $orders=Order::all();
-        $orders = DB::table('orders')
-            ->join('users', 'users.id', '=', 'orders.user_id')
-            // ->join('productorders', 'productorders.order_id', '=', 'orders.id')
-            ->select('orders.*', 'users.fullname')
-            ->orderBy('id')
-            ->get();
-
-
-        return view('admin.orders',["orders"=>$orders],compact('messages','price','maxPrice','minPrice'));
-
+        return view('admin.orderdetails',compact('messages'));
     }
 
     /**
@@ -45,9 +29,6 @@ class ordersController extends Controller
     public function create()
     {
         //
-        return redirect (route('orderdetails.index'));
-
-
     }
 
     /**
@@ -70,6 +51,7 @@ class ordersController extends Controller
     public function show(Order $order)
     {
         //
+        
     }
 
     /**

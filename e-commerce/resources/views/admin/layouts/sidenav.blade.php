@@ -37,7 +37,7 @@
             </div>
             <div id="user-dropdown" class="collapse">
                 <ul class="user-setting-menu">
-                    <li><a href="admin-profile.html"><i class="far fa-user"></i> My Profile</a></li>
+                    <li><a href="{{route('profile.index')}}"><i class="far fa-user"></i> My Profile</a></li>
                     <li><a href="admin-profile-edit.html"><i class="fas fa-cog "></i> Setting</a></li>
                     <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                 </ul>
@@ -105,7 +105,7 @@
                 <li><a href="admin-profile-edit.html"><i class="bx bx-cog bx-spin"></i></a></li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="admin-profile.html">
+                    <a class="nav-link " href="{{route('profile.index')}}">
                         <span class="user-profile"><img src="{{asset('images/admin/avatar-s-12.jpg')}}"
                                 class="img-circle pull-up" alt="user avatar"></span>
                     </a>

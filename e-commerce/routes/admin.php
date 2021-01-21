@@ -35,12 +35,16 @@ use App\Http\Controllers\admin;
 Route::resource("admin/users", admin\UsersController::class);
 Route::resource("admin/dashboard", admin\dashboardController::class);
 Route::resource("admin/orders", admin\ordersController::class);
+Route::resource("admin/orderdetails", admin\orderdetailsController::class);
+Route::resource("admin/profile", admin\profileController::class);
+
+
 
 
 //admin-Promotion
-Route::get('admin/Promotion', function () {
-    return view('admin.Promotion');
-});
+// Route::get('admin/profile', function () {
+//     return view('admin.profile');
+// });
 
 //admin-offers
 Route::get('admin/offers', function () {

@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 use DB;
-
-class ordersController extends Controller
+class profileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,23 +17,9 @@ class ordersController extends Controller
     {
         //
         $messages = DB::table('problems')->count();
-        $price = DB::table('orders')->sum('total');
-        $maxPrice = DB::table('orders')->max('total');
-        $minPrice = DB::table('orders')->min('total');
 
 
-
-        // $orders=Order::all();
-        $orders = DB::table('orders')
-            ->join('users', 'users.id', '=', 'orders.user_id')
-            // ->join('productorders', 'productorders.order_id', '=', 'orders.id')
-            ->select('orders.*', 'users.fullname')
-            ->orderBy('id')
-            ->get();
-
-
-        return view('admin.orders',["orders"=>$orders],compact('messages','price','maxPrice','minPrice'));
-
+        return view('admin.profile',compact('messages'));
     }
 
     /**
@@ -45,9 +30,6 @@ class ordersController extends Controller
     public function create()
     {
         //
-        return redirect (route('orderdetails.index'));
-
-
     }
 
     /**
@@ -64,10 +46,10 @@ class ordersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show(User $user)
     {
         //
     }
@@ -75,10 +57,10 @@ class ordersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
+    public function edit(User $user)
     {
         //
     }
@@ -87,10 +69,10 @@ class ordersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -98,10 +80,10 @@ class ordersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function destroy(User $user)
     {
         //
     }

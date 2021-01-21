@@ -21,11 +21,13 @@ class dashboardController extends Controller
         $orders = DB::table('orders')->count();
         $messages = DB::table('problems')->count();
         $reviews = DB::table('reviews')->count();
+        $favs = DB::table('favs')->count();
 
-        $data=[$users,$products,$orders,$reviews];
+
+        // $data=[$users,$products,$orders,$reviews];
         // return $data;
         //dd($users);
-        return view('admin.dashboard',compact('users','products','orders','messages','reviews'))->with($data);
+        return view('admin.dashboard',compact('users','products','orders','messages','reviews','favs'));
     }
 
     /**
