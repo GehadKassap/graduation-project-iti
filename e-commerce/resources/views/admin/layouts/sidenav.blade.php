@@ -63,7 +63,7 @@
                     <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span
                                 class="menu-title" data-i18n="">Promotion</span></a>
                     </li>
-                    <li class=" nav-item"><a href="#"><i class="fas fa-hand-holding-usd icons"></i><span
+                    <li class=" nav-item"><a href="{{route('offers.index')}}"><i class="fas fa-hand-holding-usd icons"></i><span
                                 class="menu-title" data-i18n="">Offers</span></a>
                     </li>
                     <li class="nav-item"><a href="{{route('problems.index')}}"><i
