@@ -95,10 +95,14 @@ Route::post('/register',[UserController::class , "handleForm"]);
 
 // user logout
 Route::get('/logout' , function(){
+    //
+    //Session::flush();
+    Auth::logout();
     Session::forget('user');
+    Session::flush();
     return view('user.Auth.signin');
 });
 
 
-// checkout 
+// checkout
 Route::post('success', [ UserController::class, "userUpdate" ]);

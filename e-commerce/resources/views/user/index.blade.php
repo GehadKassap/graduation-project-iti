@@ -46,7 +46,7 @@
                                                     <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
                                                             <li><a href="/cartdetails">Cart</a></li>
-                                                            <li><a href="/checkout">Checkout</a></li>
+                                                            <li><a href="/favdetails">Favorite</a></li>
                                                         </ul>
                                                     </li>
 
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <!--/ End Header Inner -->
-        </header>
+
 
         <!--w3l-banner-slider-main-->
         <section class="w3l-banner-slider-main">
@@ -277,14 +277,14 @@
                     <div class="align-photo-6-inf-cols row">
 
                         <div class="photo-6-inf-right col-lg-6" data-aos="fade-left">
-                            <h3 class="hny-title text-left">All Branded Men's Suits are Flat <span>30% Discount</span></h3>
+                            <h3 class="hny-title text-left">All Branded furniture are Here <span>30% Discount</span></h3>
                             <p>Visit our shop to see amazing creations from our designers.</p>
-                            <a href="/fashion" class="read-more btn">
+                            <a href="/furniture" class="read-more btn">
 										Shop Now
 								</a>
                         </div>
                         <div class="photo-6-inf-left col-lg-6" data-aos="fade-right">
-                            <img src="{{asset('images/assets/images/1.jpg')}}" class="img-fluid">
+                            <img src="{{asset('images/assets/images/b22.jpg')}}" class="img-fluid">
                         </div>
                     </div>
                 </div>
