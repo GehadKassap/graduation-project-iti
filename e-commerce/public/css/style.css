@@ -2857,3 +2857,15 @@
 /*======================================
    End Shopping Cart CSS
 ========================================*/
+
+.product-img img{
+	width:200px;
+	height:260px
+}
+
+.made{
+	height: 40px;
+	width: 100px;
+	background-color: #F7941D;
+	margin-left: 10px;
+}

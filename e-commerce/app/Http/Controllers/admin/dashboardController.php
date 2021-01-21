@@ -24,10 +24,10 @@ class dashboardController extends Controller
         $favs = DB::table('favs')->count();
 
 
-        $data=[$users,$products,$orders,$reviews];
+        // $data=[$users,$products,$orders,$reviews];
         // return $data;
         //dd($users);
-        return view('admin.dashboard',compact('users','products','orders','messages','reviews','favs'))->with($data);
+        return view('admin.dashboard',compact('users','products','orders','messages','reviews','favs'));
     }
 
     /**

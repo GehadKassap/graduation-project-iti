@@ -78,7 +78,7 @@
 									<p class="product-name"><a href="#">{{$pro->name}}</a></p>
 									<p class="product-des">{{$pro->description}}</p>
 								</td>
-								<td class="price" data-title="Price"><span>{{$pro->price}} </span></td>
+								<td class="price" data-title="Price"><span>{{$pro->price}}$ </span></td>
 								<td class="qty" data-title="Qty"><!-- Input Order -->
 									<div class="input-group">
 										<div class="button minus">
@@ -95,7 +95,7 @@
 									</div>
 									<!--/ End Input Order -->
 								</td>
-								<td class="total-amount" data-title="Total"><span>$220.88</span></td>
+								<td class="total-amount" data-title="Total"><span>{{$pro->price}}$</span></td>
 								<td class="action" data-title="Remove"><a href="removecart/{{$pro->id}}"><i class="ti-trash remove-icon"></i></a></td>
 							</tr>
 							
@@ -166,27 +166,27 @@
 							<div class="col-lg-8 col-md-5 col-12">
 								<div class="left">
 									<div class="coupon">
-										<form action="#" target="_blank">
+										<!-- <form action="#" target="_blank">
 											<input name="Coupon" placeholder="Enter Your Coupon">
 											<button class="btn">Apply</button>
-										</form>
+										</form> -->
 									</div>
-									<div class="checkbox">
+									<!-- <div class="checkbox">
 										<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox"> Shipping (+10$)</label>
-									</div>
+									</div> -->
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-7 col-12">
 								<div class="right">
 									<ul>
-										<li>Cart Subtotal<span>{{$total}}</span></li>
+										<li>Cart Subtotal<span>{{$total}}$</span></li>
 										<li>Shipping<span>Free</span></li>
-										<li>You Save<span></span></li>
-										<li class="last">You Pay<span></span></li>
+										<!-- <li>You Save<span></span></li> -->
+										<li class="last" >Total<span>{{$total}}$</span></li>
 									</ul>
 									<div class="button5">
 										<a href="checkout.html" class="btn">Checkout</a>
-										<a href="homeCategories.html" class="btn">Continue shopping</a>
+										<!-- <a href="homeCategories.html" class="btn">Continue shopping</a> -->
 									</div>
 								</div>
 							</div>

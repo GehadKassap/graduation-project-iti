@@ -57,10 +57,11 @@ Route::get('/profile', function () {return view('user.products.profile');});
 //add to cart
 Route::post("add_to_cart",[ProductController::class,'addToCart']);
 
-Route::post("fashion",[ProductController::class,'addtocart']);
-Route::post("furniture",[ProductController::class,'addtocart']);
-Route::post("electronices",[ProductController::class,'addtocart']);
-Route::post("books",[ProductController::class,'addtocart']);
+Route::post("fashioncart",[ProductController::class,'addtocart']);
+Route::post("furniturecart",[ProductController::class,'addtocart']);
+Route::post("electronicescart",[ProductController::class,'addtocart']);
+Route::post("cosmaticscart",[ProductController::class,'addtocart']);
+Route::post("bookscart",[ProductController::class,'addtocart']);
 Route::get("cartdetails",[ProductController::class,'cartlist']);
 
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
@@ -68,10 +69,11 @@ Route::get("removecart/{id}",[ProductController::class,'removecart']);
 
 //wishlist
 
-Route::post("fashion",[ProductController::class,'addtofav']);
-Route::post("furniture",[ProductController::class,'addtofav']);
-Route::post("electronics",[ProductController::class,'addtofav']);
-Route::post("books",[ProductController::class,'addtofav']);
+Route::post("fashionfav",[ProductController::class,'addtofav']);
+Route::post("furniturefav",[ProductController::class,'addtofav']);
+Route::post("electronicesfav",[ProductController::class,'addtofav']);
+Route::post("cosmaticsfav",[ProductController::class,'addtofav']);
+Route::post("booksfav",[ProductController::class,'addtofav']);
 Route::get("favdetails",[ProductController::class,'favlist']);
 Route::get("removefav/{id}",[ProductController::class,'removefav']);
 Route::get("removeall/{id}",[ProductController::class,'removeall']);
@@ -96,3 +98,7 @@ Route::get('/logout' , function(){
     Session::forget('user');
     return view('user.Auth.signin');
 });
+
+
+// checkout 
+Route::post('success', [ UserController::class, "userUpdate" ]);

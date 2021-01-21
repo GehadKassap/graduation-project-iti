@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use DB;
 
 class UsersController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -32,7 +34,10 @@ class UsersController extends Controller
     public function create()
     {
         //
-        return view("admin.adduser");
+        $messages = DB::table('problems')->count();
+
+
+        return view("admin.adduser",compact('messages'));
 
 
     }
@@ -88,7 +93,8 @@ class UsersController extends Controller
     public function edit(User $user)
     {
         //
-        // return view("admin.updateuser",["user"=>$user]);
+        return view("admin.editprofile",["User"=>$user]);
+
 
     }
 
@@ -102,6 +108,14 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
         //
+        $user->update([
+            "fullname"=>$request["fullname"],
+            "email"=>$request["email"],
+            "address"=>$request["address"],
+            "password"=>$request["password"],
+            "phone"=>$request["phone"]
+        ]);
+        return redirect(route("users.index"));
 
     }
 

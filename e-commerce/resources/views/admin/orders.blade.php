@@ -21,7 +21,7 @@
           <div class="card-body">
               <p class="mb-0 ">Earnings <span class="float-right badge badge-primary">Monthly</span></p>
                <div class="">
-               <h4 class="mb-0 py-3 text-primary">$92,403 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
+               <h4 class="mb-0 py-3 text-primary">{{$price}} LE<span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
                </div>
                <div class="progress-wrapper">
                 <div class="progress" style="height:5px;">
@@ -38,7 +38,7 @@
           <div class="card-body">
               <p class="text-danger mb-0">Earnings <span class="float-right badge badge-danger">Weekly</span></p>
                <div class="">
-               <h4 class="mb-0 py-3 text-danger">$15,456 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
+               <h4 class="mb-0 py-3 text-danger">{{$maxPrice}} LE<span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
                </div>
                <div class="progress-wrapper">
                 <div class="progress" style="height:5px;">
@@ -55,7 +55,7 @@
             <div class="card-body">
                 <p class="text-success mb-0">Earnings <span class="float-right badge badge-success">Today</span></p>
                  <div class="">
-                 <h4 class="mb-0 py-3 text-success">$7,803 <span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
+                 <h4 class="mb-0 py-3 text-success">{{$minPrice}} LE<span class="float-right"><i class="fas fa-dollar-sign"></i></span></h4>
                  </div>
                  <div class="progress-wrapper">
                   <div class="progress" style="height:5px;">
@@ -98,7 +98,9 @@
                         @foreach($orders as $order)
                         <tbody>
                             <tr>
-                                <td class="text-truncate"><a href="{{route('orders.create')}}" title="view details"><i class="fas fa-info-circle mr-2"></i></a>{{$order->id}}</td>
+                                <td class="text-truncate">
+                                    <a href="#" title="view details">
+                                        <i class="fas fa-info-circle mr-2"></i></a>{{$order->id}}</td>
                                 <td class="text-truncate">
                                    
                                     <span>{{$order->fullname}}</span>
@@ -126,9 +128,6 @@
                                 <td class="text-truncate">{{$order->total}}</td>
                             </tr>
                            
-                            
-                            
-                            
                         </tbody>
                         @endforeach
 
