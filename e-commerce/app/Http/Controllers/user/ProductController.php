@@ -25,9 +25,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-    
+
     }
-    
+
     // function addToCart(Request $req)
     // {
     //     if($req->session()->has('user'))
@@ -37,7 +37,7 @@ class ProductController extends Controller
     //        $cart->pro_id=$req->pro_id;
     //        $cart->save();
     //        return redirect('/');
-           
+
     //     }
     //     else
     //     {
@@ -101,13 +101,13 @@ class ProductController extends Controller
     }
     public function showbooks()
     {
-        $data=product ::all();
+        $data=product::all();
 
         return view('user.products.books',['product'=>$data]);
     }
     public function showfurniture()
     {
-        $data=product ::all();
+        $data=Product::all();
 
         return view('user.products.furniture',['product'=>$data]);
     }
@@ -195,12 +195,12 @@ function cartlist(){
     ->where('cards.user_id', $userid)
     ->select('products.*')
     ->get();
-   
+
     $total=DB::table('cards')
     ->join('products','cards.pro_id','=','products.id')
     ->where('cards.user_id', $userid)
     ->sum('products.price');
-  
+
     return view('user.products.cartdetails',['products'=>$products,'total'=>$total]);
 }
 

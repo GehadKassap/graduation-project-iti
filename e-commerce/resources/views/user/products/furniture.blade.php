@@ -24,8 +24,8 @@
 								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">chairs</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">Woman</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">Kids</a></li>
-								
-		
+
+
 							</ul>
 							<!--/ End Tab Nav -->
 						</div>
@@ -704,7 +704,7 @@
 								</div>
 							</div>
 							<!--/ End Single Tab -->
-						
+
 					</div>
 				</div>
 			</div>
@@ -879,8 +879,8 @@
 					<div class="col-lg-6 col-12 padding-right">
 						<div class="image">
 							<img src="{{asset('images/products/web2-12.jpg')}}" alt="#">
-						</div>	
-					</div>	
+						</div>
+					</div>
 					<div class="col-lg-6 col-12 padding-left">
 						<div class="content">
 							<div class="heading-block">
@@ -892,8 +892,8 @@
 									<div class="clearfix" data-countdown="2021/02/30"></div>
 								</div>
 							</div>
-						</div>	
-					</div>	
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -946,6 +946,6 @@
 
 
 <!-- End Shop Services Area -->
-	
-        
+
+
         @include("user.layouts.footer")

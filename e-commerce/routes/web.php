@@ -18,27 +18,24 @@ use App\Http\Controllers\user\ProductController;
 Route::get('/', function () {
     return view('user.index');
 });
-
-
-
-Route::get('/allcategories', function () {
-    return view('user.products.homeCategories');
-});
-// Route::get('/fashion', function () {
-//     return view('user.products.fashion');
-// });
-
-
-Route:: get('/fashion',[ProductController::class,'show']);
-
-Route::get('/furniture', function () {
-    return view('user.products.furniture');
-});
-
 Route::get('/home', function () {
     return view('user.index');
 });
+/********* our categories (show)****** */
+Route::get('/allcategories', function () {
+    return view('user.products.homeCategories');
+});
+Route::get('/electronices',[ProductController ::class,'showelectronies']);
+Route::get('/books',[ProductController ::class,'showbooks']);
+Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
+Route::get('/furniture',[ProductController ::class,'showfurniture']);
+Route:: get('/fashion',[ProductController::class,'show']);
 
+
+//checkout
+Route::get('/checkout', function () {return view('user.products.checkout ');});
+//contactus
+Route::get('/contactus', function () {return view('user.products.contactus  ');});
 Route::get('/signin', function () {
     return view('user.Auth.signin');
 });
@@ -53,40 +50,12 @@ Route::get('/forgetpass', function () {
 // Route::get('/cart', function () {return view('user.products.cartdetails');});
 //profile
 Route::get('/profile', function () {return view('user.products.profile');});
-//checkout
-Route::get('/checkout', function () {return view('user.products.checkout ');});
-//contactus
-Route::get('/contactus  ', function () {return view('user.products.contactus  ');});
-//productdetails
-Route::get('/productdetails   ', function () {return view('user.products.productdetails   ');});
 
-Route::post('/register',[UserController::class , "handleForm"]);
 
-//user signIn
-Route::get('/login',[UserController::class , "loginForm"]);
-Route::post('/login',[UserController::class , "handleLogin"]);
-
-//user signUp
-Route::get('/register',[UserController::class , "registerForm"]);
-Route::post('/register',[UserController::class , "handleForm"]);
 
 
 //add to cart
 Route::post("add_to_cart",[ProductController::class,'addToCart']);
-
-// user logout
-Route::get('/logout' , function(){
-    Session::forget('user');
-    return view('user.Auth.signin');
-});
-//search
-Route::get('/search',[ProductController::class , "searchProduct"]);
-
-
-
-
-Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
-
 
 Route::post("fashion",[ProductController::class,'addtocart']);
 Route::post("furniture",[ProductController::class,'addtocart']);
@@ -108,13 +77,24 @@ Route::post("booksfav",[ProductController::class,'addtofav']);
 Route::get("favdetails",[ProductController::class,'favlist']);
 Route::get("removefav/{id}",[ProductController::class,'removefav']);
 Route::get("removeall/{id}",[ProductController::class,'removeall']);
+/**************search and product details routes************ */
+//search
+Route::get('/search',[ProductController::class , "searchProduct"]);
 
-//electronics showcosmatics showbooks furniture
-Route::get('/electronices',[ProductController ::class,'showelectronies']);
-Route::get('/books',[ProductController ::class,'showbooks']);
-Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
-Route::get('/furniture',[ProductController ::class,'showfurniture']);
+//details for each product
+ Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
 
-//chechout process updateUser
-// Route::post('updateUser',[UserController::class , "updateUserFun"]);
+/*********** registration routes************** */
+//user signIn
+Route::get('/login',[UserController::class , "loginForm"]);
+Route::post('/login',[UserController::class , "handleLogin"]);
 
+//user signUp
+Route::get('/register',[UserController::class , "registerForm"]);
+Route::post('/register',[UserController::class , "handleForm"]);
+
+// user logout
+Route::get('/logout' , function(){
+    Session::forget('user');
+    return view('user.Auth.signin');
+});

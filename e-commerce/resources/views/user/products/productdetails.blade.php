@@ -53,17 +53,16 @@
                                             <div class="nav-inner">
                                                 <ul class="nav main-menu menu navbar-nav">
                                                     <li class="active"><a href="#">Home</a></li>
-                                                    <li><a href="homeCategories.html">Products</a></li>
-                                                    <li><a href="#">Service</a></li>
-                                                    <li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+                                                    <li><a href="/allcategories">Products</a></li>
+                                                    <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
-                                                            <li><a href="card.html">Cart</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="/cartdetails">Cart</a></li>
+                                                            <li><a href="/checkout">Checkout</a></li>
                                                         </ul>
                                                     </li>
 
 
-                                                    <li><a href="contactus.html">Contact Us</a></li>
+                                                    <li><a href="/contactus">Contact Us</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -122,19 +121,6 @@
                         </div>
 
                         <div class="single_page_footer row">
-                          <form action="/add_to_cart" method="POST" class="col-md-3">
-                           @csrf
-                           {{-- <input type="hidden"  name="pro_id" value={{$product['id']}}> --}}
-                           
-                            <button class="add_btn">add to cart</button>
-                            </form>
-                            <button class="add_btn col-md-2">whishlist</button>
-
-                        <div class="single_page_footer">
-
-                            <a href="/cart" class="add_btn">add to cart</a>
-                            <a href="/favorite" class="add_btn">whishlist</a>
-
 
                             <a style="color: gray; border:none; border-radius:3px;" href="/cart" class="add_btn ">add to cart</a>
                             <a style="color: gray; border:none; border-radius:3px; " href="/favorite" class="add_btn">whishlist</a>
