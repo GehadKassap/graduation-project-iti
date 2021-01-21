@@ -75,7 +75,7 @@ class ordersController extends Controller
         //
         $order=DB::table('orders')
         ->join('users', 'users.id', '=', 'orders.user_id')
-        ->join('products',)
+        // ->join('products',)
         ->select('orders.*','users.fullname','users.address')
         ->where('orders.id','=',$order->id)
         ->get();
