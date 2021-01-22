@@ -15,12 +15,14 @@ use App\Http\Controllers\user\ProductController;
 */
 
 
-Route::get('/', function () {
-    return view('user.index');
-});
-Route::get('/home', function () {
-    return view('user.index');
-});
+// Route::get('/', function () {
+//     return view('user.index');
+// });
+// Route::get('/home', function () {
+//     return view('user.index');
+// });
+Route::get('/',[ProductController ::class,'showhomeproduct']);
+    
 /********* our categories (show)****** */
 Route::get('/allcategories', function () {
     return view('user.products.homeCategories');
