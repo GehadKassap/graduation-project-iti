@@ -273,6 +273,7 @@ class ProductController extends Controller
 
     function favlist()
     {
+        $suggest= product::take(8)->get();
         $userid = Session::get('user')['id'];
         $products = DB::table('favs')
             ->join('products', 'favs.pro_id', '=', 'products.id')
@@ -286,10 +287,12 @@ class ProductController extends Controller
             $fav[$i] = array("id" => $item['id'], "pro_id" => $item['pro_id']);
             $i++;
         }
-        return view('user.products.favorite',['products'=>$products,'fav'=>$fav]);
+        return view('user.products.favorite', ['products' => $products, 'fav' => $fav, 'suggest' =>$suggest]);
     }
-    
-     function removefav($rowid){
+
+
+    function removefav($rowid)
+    {
         Fav::destroy($rowid);
         return redirect('favdetails');
     }

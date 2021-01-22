@@ -90,11 +90,14 @@
 
                     <div class="img_thumbnail">
                     @foreach($products as $prod)
-
+                   
                         <div class="single_thumb">
-                            <img src="{{ asset('product_images/' . $prod->image)}}" alt="">
+                          
+                     <img style="width:200px;height:140px;" class="pic-1 img-fluid" src="{{ asset('product_images/' . $prod->image)}}">
+                                       
+                                   
                         </div>
-
+                        
                         @endforeach
 
 
@@ -104,7 +107,7 @@
                     <div class="single_page_content">
                         <div class="single_page_top_content">
                             <h2>{{$product->name}}</h2>
-                            <span>{{$product->price}}L.E</span>
+                            <span>{{$product->price}}$</span>
                             <p>{{$product->description}}</p>
                         </div>
                         <div class="single_page_top_middle">
