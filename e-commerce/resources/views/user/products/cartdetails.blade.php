@@ -86,16 +86,16 @@
 								<td class="qty" data-title="Qty">
 									<div class="input-group">
 									
-										<div class="button minus">
+										<div class="button minus" style="margin-top:10px;margin-left:10px;">
 									
-										
-										</div>
 										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/1')}}">+</a>
-										<input type="text" name="quant[1]" class="input-number"  data-minn="1" data-max="100" value="{{$card[$i]['cquantity']}}">
-										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/-1')}}">-</a>
-								
-										<div class="button plus">
+										</div>
 										
+										<input type="text" name="quant[1]" class="input-number"  data-minn="1" data-max="100" value="{{$card[$i]['cquantity']}}">
+									
+								
+										<div class="button plus" style="margin-top:10px;margin-right:10px;">
+										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/-1')}}">-</a>
 										</div>
 								
 									</div>
