@@ -57,7 +57,7 @@ class UserController extends Controller
         $user->save();
         setcookie('role' ,"user");
         $req->session()->put('user' , $user);
-         return view("user.index");
+         return redirect("/");
          /***************************** */
     }
     //to redirect user to signIn form

@@ -347,16 +347,16 @@
                                         <img style="width:200px;height:240px;" class="pic-2 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
                                     </a>
                                     <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
+                                        <li><a href="{{url('/details' ,$pro->id)}}" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
 
-                                       
+
                                         </li>
                                     </ul>
-                
+
                                 </div>
                                 <div class="product-content">
                                     <h3 class="title"><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}} </a></h3>
-                                    <span class="price">{{$pro['price']}}</span>
+                                    <span class="price">{{$pro['price']}} L.E</span>
                                 </div>
                             </div>
                         </div>
@@ -384,7 +384,7 @@
                             <p>Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing elitFuga, suscipit totam animi consequatur saepe blanditiis.Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing
                                 elit..
                             </p>
-                            <a href="" class="read-more-btn2 btn">
+                            <a href="/fashion" class="read-more-btn2 btn">
 						Shop Now
 					</a>
 
@@ -395,9 +395,9 @@
                 </div>
             </div>
         </section>
-        <!-- //content-6-section -->
+        <!-- //content-6-section
         <section class="w3l-post-grids-6" data-aos="zoom-in-up">
-            <!-- /post-grids-->
+
             <div class="post-6-mian py-5">
                 <div class="container py-lg-5">
                     <h3 class="hny-title text-center mb-0 ">Latest Blog <span>Posts</span></h3>
@@ -465,8 +465,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- //post-grids-->
+        </section>  -->
+
         <section class="w3l-customers-sec-6" data-aos="zoom-in-down">
             <div class="customers-sec-6-cintent py-5">
                 <!-- /customers-->
@@ -624,7 +624,7 @@
                             <div class="p-lg-5 py-md-0 py-3">
                                 <h3 class="hny-title">Join us for FREE to get instant <span>email updates!</span></h3>
                                 <p>Subscribe and get notified at first on the latest update and offers!</p>
-                                
+
                                 <form action="#" method="post" class="signin-form mt-lg-5 mt-4">
                                     <div class="forms-gds">
                                         <div class="form-input">

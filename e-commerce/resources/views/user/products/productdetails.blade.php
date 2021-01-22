@@ -209,7 +209,7 @@
                     <div class="single_product">
                         <div class="single_img_slide">
                             <div class="sng_im_p">
-                                <a href="#">
+                                <a href="{{url('/details' ,[$produ->id , $produ->category])}}">
                                     <div class="front_img"><img style="width:280px;height:240px;" src="{{ asset('product_images/' . $produ->image)}}" ></div>
                                     <div class="back_img"><img style="width:280px;height:240px;" src="{{ asset('product_images/' . $produ->image)}}" ></div>
                                 </a>
@@ -226,7 +226,7 @@
                                     <a href="#" data-toggle="tooltip" title="Add to Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a> -->
-                                    <a href="{{url('/details' ,$produ->id)}}" data-toggle="tooltip" title="Product details">
+                                    <a href="{{url('/details' ,[$produ->id , $produ->category])}}" data-toggle="tooltip" title="Product details">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>

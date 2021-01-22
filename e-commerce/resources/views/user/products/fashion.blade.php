@@ -27,7 +27,7 @@ fashion
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
 								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">Women</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">Men</a></li>
-							
+
 
 
 							</ul>
@@ -43,7 +43,7 @@ fashion
 										<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 											<div class="single-product">
 												<div class="product-img">
-													<a href="product_single.html">
+													<a href="{{url('/details' ,[$pro->id , $pro->category])}}">
 														<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" alt="#">
 														<!-- <img class="hover-img" src="../imgs/category/p2.jpg" alt="#"> -->
 													</a>
@@ -69,7 +69,7 @@ fashion
 													</div>
 												</div>
 												<div class="product-content">
-													<h3><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}}</a></h3>
+													<h3><a href="{{url('/details' ,[$pro->id , $pro->category])}}">{{$pro['name']}}</a></h3>
 													<div class="product-price">
 														<span>{{$pro['price']}}$</span>
 													</div>
@@ -91,7 +91,7 @@ fashion
 										<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 											<div class="single-product">
 												<div class="product-img">
-													<a href="product-details.html">
+													<a href="{{url('/details' ,[$pro->id , $pro->category])}}">
 														<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" alt="#">
 														<!-- <img class="hover-img" src="../imgs/category/bliss.jpg" alt="#"> -->
 													</a>
@@ -132,7 +132,7 @@ fashion
 								</div>
 							</div> -->
 							<!--/ End Single Tab -->
-						
+
 					</div>
 				</div>
 			</div>
@@ -152,7 +152,7 @@ fashion
 			</div>
 		</div>
 		<div class="row">
-	
+
 			<div class="col-12">
 				<div class="owl-carousel popular-slider">
 				@foreach($product as $pro)
@@ -160,7 +160,7 @@ fashion
 					<!-- Start Single Product -->
 					<div class="single-product">
 						<div class="product-img">
-							<a href="product-details.html">
+							<a href="{{url('/details' ,[$pro->id , $pro->category])}}">
 								<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" alt="#">
 								<!-- <img class="hover-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#"> -->
 							</a>
@@ -173,7 +173,7 @@ fashion
 														     	<button><i class=" ti-heart "></i></button>
 														     	<input type="hidden" name="quantity" value ="{{$pro['quantity']}}">
 														 </form>
-								
+
 								</div>
 								<div class="product-action-2">
 								<form action="fashionecart" method="POST">
@@ -186,7 +186,7 @@ fashion
 							</div>
 						</div>
 						<div class="product-content">
-						<h3><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}}</a></h3>
+						<h3><a href="{{url('/details' ,[$pro->id , $pro->category])}}">{{$pro['name']}}</a></h3>
 				<div class="product-price">
 						<span>{{$pro['price']}}$</span>
 							</div>
@@ -194,10 +194,10 @@ fashion
 					</div>
 					@endif
 					@endforeach
-			
+
 							</div>
 						</div>
-					</div> 
+					</div>
 					<!-- End Single Product -->
 				</div>
 			</div>

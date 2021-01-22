@@ -64,16 +64,16 @@ class ProductController extends Controller
         $dataHolder = Product::where('name', 'like', '%' . $req->input('term') . '%')->get();
         return view("user.products.search", ['searchItems' => $dataHolder]);
     }
-    function detailsProduct($id)
+    function detailsProduct($id , $category)
     {
         //$product = Product::where('id' , '=' , $id)->first();
-        $i = "Electronics";
+        $i = $category;
         $product = Product::findorfail($id);
         $allProducts = product::where('category', "=", $i)->take(4)->get();
         $relatedproduct = product::where('category', "=", $i)->take(4)->get();
         //$allProducts=product::where('id', "<=" , $id)->count();
         return view('user.products.productdetails', ['product' => $product, 'products' => $allProducts, 'relatedproducts' => $relatedproduct]);
-        //   dd($product);
+
     }
 
     /**
@@ -184,8 +184,8 @@ class ProductController extends Controller
             }
         }
         if ($i == 1) {
-            //  $carddd= new card; 
-            //  $carddd->user_id=$req->session()->get('user')['id']; 
+            //  $carddd= new card;
+            //  $carddd->user_id=$req->session()->get('user')['id'];
             //  $carddd->pro_id=$req->product_id;
             $card->quantity = $card->quantity + 1;
             $card->save();
@@ -206,10 +206,7 @@ class ProductController extends Controller
         }
     }
 
-    // static function cartItem(){
-    //     $userid=Session::get('user')['id'];
-    //     return Card::where('user_id',$userid)->count();
-    // }
+
     function cartlist()
     {
         $userid = Session::get('user')['id'];
@@ -288,7 +285,7 @@ class ProductController extends Controller
         }
         return view('user.products.favorite',['products'=>$products,'fav'=>$fav]);
     }
-    
+
      function removefav($rowid){
         Fav::destroy($rowid);
         return redirect('favdetails');
@@ -302,9 +299,9 @@ class ProductController extends Controller
         DB::table('cards')->where('id',$id)->increment('quantity',$quantity);
         return redirect('/cartdetails');
     }
-    
+
     // show checkout page
-     function showCheckout(request $req){ 
+     function showCheckout(request $req){
         $userid=Session::get('user')['id'];
         $orderr= new Order;
         $orderr->sub_total=$req['sub_total'];
@@ -312,10 +309,10 @@ class ProductController extends Controller
         $orderr->user_id=$userid;
         $orderr->quantity=$req['qty'];
         $orderr->save();
-    
-          
-        $order=array("sub_total"=>$req['sub_total'], "total"=>$req['total'],"quantity"=>$req['qty']); 
-        
+
+
+        $order=array("sub_total"=>$req['sub_total'], "total"=>$req['total'],"quantity"=>$req['qty']);
+
         return view('user.products.checkout',['order'=>$order]);
      }
     }

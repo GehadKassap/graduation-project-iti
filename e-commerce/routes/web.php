@@ -86,7 +86,7 @@ Route::get("removeall/{id}",[ProductController::class,'removeall']);
 Route::get('/search',[ProductController::class , "searchProduct"]);
 
 //details for each product
- Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
+ Route::get('/details/{id}/{category}',[ProductController::class , "detailsProduct"]);
 
 /*********** registration routes************** */
 //user signIn

@@ -17,7 +17,8 @@
         <div class="row">
             <!------contain username and small nav for choice card/..-->
 
-
+               <div class="col-md-4">
+               </div>
 
             <div class="col-md-3">
                <div class="row">
@@ -56,38 +57,6 @@
             @endif
             <!----------------display cards/fav/ordersand track it---------------------------->
 
-            <div class="col-md-4">
-                 <div class="proudct-top">
-                 <img src="{{asset('images/category/shop3.jpg')}}" class="w-100" alt="">
-                    <div class="overLay">
-                        <button type="button" class="btn btn-secondary mb-2" title="quick shop">
-                          <i class="fas fa-eye "></i>
-                        </button>
-                        <button type="button" class="btn btn-secondary mb-2" title="add to wish list">
-                          <i class="far fa-heart"></i>
-                        </button>
-                        <button type="button" class="btn btn-secondary mb-2" title="add to cart">
-                          <i class="fas fa-shopping-cart"></i>
-                        </button>
-
-                    </div>
-                 </div>
-                 <!--for the bottom of the img-->
-                 <div class="product-bottom text-center">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-                  <h6 class="mb-1">Watch </h6>
-                  <p class="mb-1">Lorem product summary for fav </p>
-                  <span>300 L.E</span><span class="badge badge-danger ml-2 p-2 remove">Remove from cart</span>
-
-
-                 </div>
-
-
-            </div> -->
 
         </div>
     </div>
