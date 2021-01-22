@@ -64,7 +64,7 @@
                 </div>
             </div>
             <!--/ End Header Inner -->
-
+</header>
 
         <!--w3l-banner-slider-main-->
         <section class="w3l-banner-slider-main">
