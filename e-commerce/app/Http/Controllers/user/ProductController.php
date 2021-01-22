@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Card;
 use App\Models\Fav;
-use App\Models\Order;
+use App\Models\Review;
 
 
 
@@ -301,20 +301,24 @@ class ProductController extends Controller
         DB::table('favs')->delete();
         return redirect('favdetails');
     }
-    public function updateCartProduct($id = null, $quantity = null)
-    {
-        DB::table('cards')->where('id', $id)->increment('quantity', $quantity);
+    public function updateCartProduct($id=null,$quantity=null){
+        DB::table('cards')->where('id',$id)->increment('quantity',$quantity);
         return redirect('/cartdetails');
     }
-
+    
     // show checkout page
-    function showCheckout()
-    {
-        $userid = Session::get('user')['id'];
-        $order = DB::table('orders')
-            ->where('orders.user_id', $userid)
-            ->select('orders.*')
-            ->get();
-        return view('user.products.checkout', ['order' => $order]);
+     function showCheckout(request $req){ 
+        $userid=Session::get('user')['id'];
+        $orderr= new Order;
+        $orderr->sub_total=$req['sub_total'];
+        $orderr->total=$req['total'];
+        $orderr->user_id=$userid;
+        $orderr->quantity=$req['qty'];
+        $orderr->save();
+    
+          
+        $order=array("sub_total"=>$req['sub_total'], "total"=>$req['total'],"quantity"=>$req['qty']); 
+        
+        return view('user.products.checkout',['order'=>$order]);
+     }
     }
-}

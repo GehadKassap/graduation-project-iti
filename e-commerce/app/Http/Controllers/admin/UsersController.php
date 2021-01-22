@@ -20,6 +20,7 @@ class UsersController extends Controller
     {
         //
         $messages = DB::table('problems')->count();
+        
 
         $users=User::all();
         // return $users;

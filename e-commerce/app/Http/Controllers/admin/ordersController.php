@@ -22,9 +22,12 @@ class ordersController extends Controller
         $minPrice = DB::table('orders')->min('total');
          // $orders=Order::all();
          $orders = DB::table('orders')
+         ->join('productorders', 'productorders.order_id', '=', 'orders.id')
+         ->join('products', 'products.id', '=', 'productorders.pro_id')
          ->join('users', 'users.id', '=', 'orders.user_id')
-         // ->join('productorders', 'productorders.order_id', '=', 'orders.id')
-         ->select('orders.*', 'users.fullname')
+         ->select('orders.*', 'users.fullname','users.address','products.image',
+               'products.description','products.price','products.category','products.sub_category')
+         ->where('orders.cancel','0')
          ->orderBy('id')
          ->get();
 
@@ -61,6 +64,17 @@ class ordersController extends Controller
     public function show(Order $order)
     {
         //
+        $order=DB::table('orders')
+        ->join('productorders', 'productorders.order_id', '=', 'orders.id')
+        ->join('products', 'products.id', '=', 'productorders.pro_id')
+        ->join('users', 'users.id', '=', 'orders.user_id')
+        ->select('orders.*', 'users.fullname','users.address','products.image',
+              'products.description','products.price','products.category','products.sub_category')
+        ->where('orders.id','=',$order->id)
+        ->get();
+        // dd($order);
+        return view('admin.orderdetails',["order"=>$order]);
+
 
     }
 
@@ -73,15 +87,7 @@ class ordersController extends Controller
     public function edit(Order $order)
     {
         //
-        $order=DB::table('orders')
-        ->join('users', 'users.id', '=', 'orders.user_id')
-        ->join('products',)
-        ->select('orders.*','users.fullname','users.address')
-        ->where('orders.id','=',$order->id)
-        ->get();
-        // dd($order);
-        return view('admin.orderdetails',["order"=>$order]);
-
+        
     }
 
     /**

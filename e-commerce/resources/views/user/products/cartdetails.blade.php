@@ -90,15 +90,13 @@
 									
 										
 										</div>
-										<div class="button plus" style="margin-top:10px;margin-right:10px">
 										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/1')}}">+</a>
-										  </div>
-										 
 										<input type="text" name="quant[1]" class="input-number"  data-minn="1" data-max="100" value="{{$card[$i]['cquantity']}}">
-										
-										<div class="button minus" style="margin-top:10px;margin-left:10px">
 										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/-1')}}">-</a>
-                                          </div>
+								
+										<div class="button plus">
+										
+										</div>
 								
 									</div>
 									<!--/ End Input Order -->
@@ -117,7 +115,59 @@
 							?>
 							@endforeach
 							
-                     	</tbody>
+							<!-- <tr>
+								<td class="image" data-title="No"><img src="https://via.placeholder.com/100x100" alt="#"></td>
+								<td class="product-des" data-title="Description">
+									<p class="product-name"><a href="#">Women Dress</a></p>
+									<p class="product-des">Maboriosam in a tonto nesciung eget  distingy magndapibus.</p>
+								</td>
+								<td class="price" data-title="Price"><span>$110.00 </span></td>
+								<td class="qty" data-title="Qty">
+									<div class="input-group">
+										<div class="button minus">
+											<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
+												<i class="ti-minus"></i>
+											</button>
+										</div>
+										<input type="text" name="quant[2]" class="input-number"  data-min="1" data-max="100" value="2">
+										<div class="button plus">
+											<button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[2]">
+												<i class="ti-plus"></i>
+											</button>
+										</div>
+									</div> -->
+									<!--/ End Input Order -->
+								<!-- </td>
+								<td class="total-amount" data-title="Total"><span>$220.88</span></td>
+								<td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
+							</tr>
+							<tr>
+								<td class="image" data-title="No"><img src="https://via.placeholder.com/100x100" alt="#"></td>
+								<td class="product-des" data-title="Description">
+									<p class="product-name"><a href="#">Women Dress</a></p>
+									<p class="product-des">Maboriosam in a tonto nesciung eget  distingy magndapibus.</p>
+								</td> -->
+								<!-- <td class="price" data-title="Price"><span>$110.00 </span></td>
+								<td class="qty" data-title="Qty">
+									<div class="input-group">
+										<div class="button minus">
+											<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+												<i class="ti-minus"></i>
+											</button> -->
+										<!-- </div>
+										<input type="text" name="quant[3]" class="input-number"  data-min="1" data-max="100" value="3">
+										<div class="button plus">
+											<button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[3]">
+												<i class="ti-plus"></i>
+											</button>
+										</div>
+									</div> -->
+									<!--/ End Input Order -->
+								<!-- </td>
+								<td class="total-amount" data-title="Total"><span>$220.88</span></td>
+								<td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
+							</tr> -->
+						</tbody>
 					</table>
 					<!--/ End Shopping Summery -->
 				</div>
@@ -146,14 +196,10 @@
 										<li>Cart Subtotal<span>{{$subTotal}}$</span></li>
 										<li>Shipping<span>10$</span></li>
 										<!-- <li>You Save<span></span></li> -->
-										<li class="last" >Total <span> {{$subTotal + 10}}$</span></li>
+										<li class="last" >{{$subTotal + 10}}$<span></span></li>
 									</ul>
 									<div class="button5">
-									  <form action="checkout" method="POST">
-										@csrf
-										<button class="btn">Checkout<button>
-									   </form>
-										
+										<a href="checkout.html" class="btn">Checkout</a>
 										<!-- <a href="homeCategories.html" class="btn">Continue shopping</a> -->
 									</div>
 								</div>

@@ -22,7 +22,7 @@
 				<div class="card-body">
 					<div class="media">
 						<div class="media-body text-left">
-							<h4 class="text-white mb-0">45240</h4>
+							<h4 class="text-white mb-0">0</h4>
 							<span class="text-white">Total Likes</span>
 						</div>
 						<div class="align-self-center w-circle-icon rounded border border-white">
@@ -36,7 +36,7 @@
 				<div class="card-body">
 					<div class="media">
 						<div class="media-body text-left">
-							<h4 class="text-white mb-0">78,325</h4>
+							<h4 class="text-white mb-0">0</h4>
 							<span class="text-white">Comments</span>
 						</div>
 						<div class="align-self-center w-circle-icon rounded border border-white">
@@ -50,7 +50,7 @@
 				<div class="card-body">
 					<div class="media">
 						<div class="media-body text-left">
-							<h4 class="text-white mb-0">25,354</h4>
+							<h4 class="text-white mb-0">0</h4>
 							<span class="text-white">Total Shares</span>
 						</div>
 						<div class="align-self-center w-circle-icon rounded border border-white">
