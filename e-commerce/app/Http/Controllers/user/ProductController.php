@@ -296,12 +296,18 @@ public function updateCartProduct($id=null,$quantity=null){
 }
 
 // show checkout page
- function showCheckout(){
+ function showCheckout(request $req){ 
     $userid=Session::get('user')['id'];
-    $order=DB::table('orders')
-    ->where('orders.user_id', $userid)
-    ->select('orders.*')
-    ->get();
+    $orderr= new Order;
+    $orderr->sub_total=$req['sub_total'];
+    $orderr->total=$req['total'];
+    $orderr->user_id=$userid;
+    $orderr->quantity=$req['qty'];
+    $orderr->save();
+
+      
+    $order=array("sub_total"=>$req['sub_total'], "total"=>$req['total'],"quantity"=>$req['qty']); 
+    
     return view('user.products.checkout',['order'=>$order]);
  }
 }
