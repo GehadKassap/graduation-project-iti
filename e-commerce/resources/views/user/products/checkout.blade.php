@@ -95,7 +95,7 @@
 						<!--/ End Form -->
 					</div>
                 </div>
-                
+                @foreach($order as $ord)
 				<div class="col-lg-4 col-12">
 					<div class="order-details">
 						<!-- Order Widget -->
@@ -103,14 +103,14 @@
 							<h2>CART  TOTALS</h2>
 							<div class="content">
 								<ul>
-									<li>Sub Total<span>$330.00</span></li>
+									<li>Sub Total<span>{{$ord['total']}}</span></li>
 									<li>(+) Shipping<span>$10.00</span></li>
-									<li class="last">Total<span>$340.00</span></li>
+									<li class="last">Total<span>{{$ord['total+10']}}</span></li>
 								</ul>
 							</div>
 						</div>
 						<!--/ End Order Widget -->
-				
+				     @endforeach
 					
 						<!-- Button Widget -->
 						<div class="single-widget get-button">
