@@ -63,7 +63,7 @@
                     <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span
                                 class="menu-title" data-i18n="">Promotion</span></a>
                     </li>
-                    <li class=" nav-item"><a href="#"><i class="fas fa-hand-holding-usd icons"></i><span
+                    <li class=" nav-item"><a href="{{route('offers.index')}}"><i class="fas fa-hand-holding-usd icons"></i><span
                                 class="menu-title" data-i18n="">Offers</span></a>
                     </li>
                     <li class="nav-item"><a href="{{route('problems.index')}}"><i
@@ -100,6 +100,7 @@
             <ul class="navbar-nav align-items-center right-nav-link">
                 <li class="nav-item dropdown-lg">
                     <a class="nav-link  waves-effect" href="{{route('problems.index')}}">
+
                         <i class="far fa-bell bx-tada"></i><span class="badge badge-primary badge-up "></span></a>
                 </li>
                 <li><a href="/"><i class="bx bx-cog bx-spin"></i></a></li>

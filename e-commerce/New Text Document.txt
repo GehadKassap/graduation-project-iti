@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use DB;
+
 class ordersController extends Controller
 {
     /**
@@ -20,15 +21,20 @@ class ordersController extends Controller
         $price = DB::table('orders')->sum('total');
         $maxPrice = DB::table('orders')->max('total');
         $minPrice = DB::table('orders')->min('total');
-         // $orders=Order::all();
-         $orders = DB::table('orders')
-         ->join('users', 'users.id', '=', 'orders.user_id')
-         // ->join('productorders', 'productorders.order_id', '=', 'orders.id')
-         ->select('orders.*', 'users.fullname')
-         ->orderBy('id')
-         ->get();
+
+
+
+        // $orders=Order::all();
+        $orders = DB::table('orders')
+            ->join('users', 'users.id', '=', 'orders.user_id')
+            // ->join('productorders', 'productorders.order_id', '=', 'orders.id')
+            ->select('orders.*', 'users.fullname')
+            ->orderBy('id')
+            ->get();
+
 
         return view('admin.orders',["orders"=>$orders],compact('messages','price','maxPrice','minPrice'));
+
     }
 
     /**
@@ -39,6 +45,9 @@ class ordersController extends Controller
     public function create()
     {
         //
+        // return redirect (route('orderdetails.index'));
+
+
     }
 
     /**
@@ -61,7 +70,8 @@ class ordersController extends Controller
     public function show(Order $order)
     {
         //
-
+        return view("admin.orderdetails",["order"=>$order]);
+        // return $order;
     }
 
     /**
@@ -73,15 +83,6 @@ class ordersController extends Controller
     public function edit(Order $order)
     {
         //
-        $order=DB::table('orders')
-        ->join('users', 'users.id', '=', 'orders.user_id')
-        ->join('products',)
-        ->select('orders.*','users.fullname','users.address')
-        ->where('orders.id','=',$order->id)
-        ->get();
-        // dd($order);
-        return view('admin.orderdetails',["order"=>$order]);
-
     }
 
     /**

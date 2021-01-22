@@ -78,15 +78,13 @@ class UserController extends Controller
           {
              if( $user->role == 'admin')
              {
-                  $req->session()->put('user' , $user);
+                  $req->session()->put('admin' , $user);
                   setcookie('role' , $user->role);
-
-                  return view('admin.dashboard');
+                  return view('admin.adduser');
               }
               else
               {
-                    $req->session()->put('user' , $user);
-
+                  $req->session()->put('user' , $user);
                    setcookie('role' , $user->role);
                     return redirect('/');
 
