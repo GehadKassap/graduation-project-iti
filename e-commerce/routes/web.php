@@ -103,9 +103,6 @@ Route::get('/logout' , function(){
     Session::flush();
     return view('user.Auth.signin');
 });
-
-
-
 // checkout
 Route::post('success', [ UserController::class, "userUpdate" ]);
 Route::post("checkout",[ProductController::class,'showCheckout']);

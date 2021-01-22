@@ -59,7 +59,7 @@
             <div class="col-md-4">
                  <div class="proudct-top">
                  <img src="{{asset('images/category/shop3.jpg')}}" class="w-100" alt="">
-                    <div class="overLay"> <!--over lay to the img-->
+                    <div class="overLay">
                         <button type="button" class="btn btn-secondary mb-2" title="quick shop">
                           <i class="fas fa-eye "></i>
                         </button>
@@ -87,7 +87,7 @@
                  </div>
 
 
-            </div>
+            </div> -->
 
         </div>
     </div>
