@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Card;
 use App\Models\Fav;
-use App\Models\Review;
+use App\Models\Order;
 
 
 
@@ -237,8 +237,20 @@ function cartlist(){
 
 //favorite function
 function addtofav(request $req)
-{
-    if($req->session()->has('user')){
+{$i=0;
+    $fav= new fav;
+    $favs= Fav::all();
+    foreach($favs as $fav){
+        if($fav->pro_id == $req->product_id){
+         $i++;
+        }
+     } 
+     if($i==1){
+        $fav->save();
+        $i=0;
+        return back();
+       } else {
+     if($req->session()->has('user')){
         $fav= new fav;
         $fav->user_id=$req->session()->get('user')['id'];
         $fav->pro_id=$req->product_id;
@@ -248,7 +260,7 @@ function addtofav(request $req)
     else
     {
         return redirect('/login');
-    }
+    }}
 }
 
 
@@ -259,7 +271,14 @@ function favlist(){
     ->where('favs.user_id', $userid)
     ->select('products.*')
     ->get();
-    return view('user.products.favorite',['products'=>$products]);
+    $favddb=Fav::all();
+    $i=0;
+    $fav=[];
+    foreach ($favddb as $item){
+        $fav[$i]=array("id"=>$item['id'], "pro_id"=>$item['pro_id']); 
+        $i++;
+    }
+    return view('user.products.favorite',['products'=>$products,'fav'=>$fav]);
 }
 
  function removefav($rowid){
@@ -276,33 +295,13 @@ public function updateCartProduct($id=null,$quantity=null){
     return redirect('/cartdetails');
 }
 
-
-//review
-// function addreview(request $req)
-// {
-//     if($req->session()->has('user')){
-//         $review= new review;
-//         $review->user_id=$req->session()->get('user')['id'];
-//         $review->pro_id=$req->product_id;
-//         $review->content=$req->content;
-//         $review->save();
-//      return back();
-//     }
-//     else
-//     {
-//         return redirect('/login');
-//     }
-// }
-
-
-// function reviewlist(){
-//  $userid=Session::get('user')['id'];
-//  $products=DB::table('reviews')
-//  ->join('products','reviews.pro_id','=','products.id')
-//  ->where('reviews.user_id', $userid)
-//  ->select('products.*')
-//  ->get();
-
-//  return view('user.products.productdetails',['products'=>$products]);
-// }
+// show checkout page
+ function showCheckout(){
+    $userid=Session::get('user')['id'];
+    $order=DB::table('orders')
+    ->where('orders.user_id', $userid)
+    ->select('orders.*')
+    ->get();
+    return view('user.products.checkout',['order'=>$order]);
+ }
 }
