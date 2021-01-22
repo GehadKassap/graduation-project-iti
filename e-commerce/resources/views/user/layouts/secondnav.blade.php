@@ -29,7 +29,7 @@
 													<li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 														<ul class="dropdown">
 															<li><a href="/cartdetails">Cart</a></li>
-															<li><a href="/checkout">Checkout</a></li>
+															<li><a href="/favdetails">Favorite</a></li>
 														</ul>
 													</li>
 
@@ -62,7 +62,7 @@
 								<div class="col-lg-7 col-12">
 									<div class="hero-text">
 										<h1>We are here for you</h1>
-										<p>Happiness is not in money <br> but in <br> shopping.</p>
+										<p class="text-white">Happiness is not in money <br> but in <br> shopping.</p>
 										<!-- <div class="button">
 											<a  class="btn">Shop Now!</a>
 										</div> -->

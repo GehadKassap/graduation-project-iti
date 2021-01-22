@@ -199,7 +199,13 @@
 										<li class="last" >{{$subTotal + 10}}$<span></span></li>
 									</ul>
 									<div class="button5">
-										<a href="checkout.html" class="btn">Checkout</a>
+									<form action="checkout" method="POST">
+										@csrf
+										<input type="hidden" name="sub_total" value="{{$subTotal}}">
+										<input type="hidden" name="total" value="{{$subTotal + 10}}">
+										<input type="hidden" name="qty" value="{{$i}}">
+										<button class="btn">Checkout<button>
+									   </form>
 										<!-- <a href="homeCategories.html" class="btn">Continue shopping</a> -->
 									</div>
 								</div>

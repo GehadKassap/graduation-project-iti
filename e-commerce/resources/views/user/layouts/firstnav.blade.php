@@ -85,29 +85,25 @@
 						<div class="right-bar">
 							<!-- Search Form -->
                             @if(Session::has('user'))
-
-							<div class="sinlge-bar">
+                            <div class=" shopping">
+                                   <a class="single-icon " href="/logout">Logout </a>
+                                 </div>
+							<div class="sinlge-bar shopping">
 								<a href="/profile" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                             </div>
-                            <div class="sinlge-bar shopping ml-5">
+                            <div class="sinlge-bar shopping">
 								<a href="/cartdetails" class="single-icon"><i class="ti-bag"></i> <span class="total-count"></span></a>
 
                                 </div>
-
-                                <div class="sinlge-bar shopping">
-                                   <a class="single-icon " href="/logout">Logout </a>
-                                 </div>
                                  <div class="sinlge-bar shopping ">
 								<a href="/favdetails" class="single-icon"><i class="ti-heart"></i> </a>
                                 </div>
 
 
 
-
-
                                @else
                             <div class="sinlge-bar">
-                          <a class="single-icon" href="/signin">signIn <i class="fas fa-sign-in-alt"></i> </a>
+                          <a class="single-icon" href="/signin">Signin <i class="fas fa-sign-in-alt"></i> </a>
                             </div>
                             @endif
 

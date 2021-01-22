@@ -90,14 +90,14 @@
 
                     <div class="img_thumbnail">
                     @foreach($products as $prod)
-                   
+
                         <div class="single_thumb">
-                          
+
                      <img style="width:200px;height:140px;" class="pic-1 img-fluid" src="{{ asset('product_images/' . $prod->image)}}">
-                                       
-                                   
+
+
                         </div>
-                        
+
                         @endforeach
 
 
@@ -212,9 +212,9 @@
                     <div class="single_product">
                         <div class="single_img_slide">
                             <div class="sng_im_p">
-                                <a href="#">
-                                    <div class="front_img"><img src="{{ asset('product_images/' . $produ->image)}}" ></div>
-                                    <div class="back_img"><img src="{{ asset('product_images/' . $produ->image)}}" ></div>
+                                <a href="{{url('/details' ,[$produ->id , $produ->category])}}">
+                                    <div class="front_img"><img style="width:280px;height:240px;" src="{{ asset('product_images/' . $produ->image)}}" ></div>
+                                    <div class="back_img"><img style="width:280px;height:240px;" src="{{ asset('product_images/' . $produ->image)}}" ></div>
                                 </a>
                             </div>
                             <div class="si_img_ic prod_content_area">
@@ -228,8 +228,8 @@
                                     </a>
                                     <a href="#" data-toggle="tooltip" title="Add to Cart">
                                         <i class="fa fa-shopping-cart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Product details">
+                                    </a> -->
+                                    <a href="{{url('/details' ,[$produ->id , $produ->category])}}" data-toggle="tooltip" title="Product details">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
