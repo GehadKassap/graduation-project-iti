@@ -92,7 +92,7 @@
                     @foreach($products as $prod)
 
                         <div class="single_thumb">
-                            <img src="{{ asset('product_images/' . $prod->image)}}" alt="">
+                            <img style="width:200px;height:100px;" src="{{ asset('product_images/' . $prod->image)}}" alt="">
                         </div>
 
                         @endforeach
@@ -122,8 +122,8 @@
 
                         <div class="single_page_footer row">
 
-                            <a style="color: gray; border:none; border-radius:3px;" href="/cart" class="add_btn ">add to cart</a>
-                            <a style="color: gray; border:none; border-radius:3px; " href="/favorite" class="add_btn">whishlist</a>
+                            <button class="made" href="/cart" class="add_btn ">add to cart</button>
+                            <button class="made" href="/favorite" class="add_btn">whishlist</button>
 
                         </div>
                     </div>
