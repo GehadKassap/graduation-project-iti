@@ -62,6 +62,7 @@ Route::post("furniturecart",[ProductController::class,'addtocart']);
 Route::post("electronicescart",[ProductController::class,'addtocart']);
 Route::post("cosmaticscart",[ProductController::class,'addtocart']);
 Route::post("bookscart",[ProductController::class,'addtocart']);
+Route::post("/singlecart",[ProductController::class,'addtocart']);
 Route::get("cartdetails",[ProductController::class,'cartlist']);
 
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
@@ -74,6 +75,7 @@ Route::post("furniturefav",[ProductController::class,'addtofav']);
 Route::post("electronicesfav",[ProductController::class,'addtofav']);
 Route::post("cosmaticsfav",[ProductController::class,'addtofav']);
 Route::post("booksfav",[ProductController::class,'addtofav']);
+Route::post("/singlefav",[ProductController::class,'addtofav']);
 Route::get("favdetails",[ProductController::class,'favlist']);
 Route::get("removefav/{id}",[ProductController::class,'removefav']);
 Route::get("removeall/{id}",[ProductController::class,'removeall']);

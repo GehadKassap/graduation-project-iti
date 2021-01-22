@@ -54,8 +54,8 @@
                   <i class="far fa-star"></i>
                   <h6 class="mb-1">{{$pro->name}} </h6>
                   <p class="mb-1">{{$pro->description}}</p>
-                  <span>{{$pro->price}}$</span><a href="removefav/{{$fav[$i]['id']}}"><span class="badge badge-danger ml-2 p-2 remove">Remove</span></a><br>
-                  <p><a href="removeall/{{$pro->id}}"><i class="ti-trash remove-icon fa-7x"></i></a></p>
+                  <span>{{$pro->price}}$</span><a  href="removefav/{{$fav[$i]['id']}}"><span class="badge badge-danger ml-2 p-2 remove">Remove</span></a><br>
+                  <p><a  href="removeall/{{$pro->id}}">delete all favorites</a></p>
      
                  </div>
              
@@ -66,7 +66,7 @@
             @endforeach
         </div>
          </section>
-        
+   
      
       <!-------------------------------->
       <section class="py-5 container slider">
