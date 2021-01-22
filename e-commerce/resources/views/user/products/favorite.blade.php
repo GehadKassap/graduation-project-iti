@@ -71,7 +71,7 @@
 		<div class="owl-carousel">
     @foreach($suggest as $prod)
 			<div> 
-           <a href="{{url('/details' ,$pro->id)}}"><img src="{{ asset('product_images/' . $prod->image)}}" ></a>
+           <a href="{{url('/details' ,$prod->id)}}"><img src="{{ asset('product_images/' . $prod->image)}}" ></a>
 			 </div>
        @endforeach
 			<!-- <div> 
