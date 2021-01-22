@@ -23,7 +23,7 @@
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
 								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">chairs</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">Tables</a></li>
-							
+
 
 
 							</ul>
@@ -39,7 +39,7 @@
 										<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 											<div class="single-product">
 												<div class="product-img">
-													<a href="product_single.html">
+													<a href="{{url('/details' ,[$pro->id , $pro->category])}}">
 														<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" alt="#">
 														<!-- <img class="hover-img" src="../imgs/category/p2.jpg" alt="#"> -->
 													</a>
@@ -48,7 +48,7 @@
 															<form action="cosmaticsfav" method="POST">
 														        @csrf
 														       <input type="hidden" name="product_id" value ="{{$pro['id']}}">
-															   <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span ><a href="{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
+															   <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span ><a href="{{url('/details' ,[$pro->id , $pro->category])}}">Quick Shop</a></span></a>
 														     	<button><i class=" ti-heart "></i></button>
 														     	<input type="hidden" name="quantity" value ="{{$pro['quantity']}}">
 														 </form>
@@ -65,7 +65,7 @@
 													</div>
 												</div>
 												<div class="product-content">
-													<h3><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}}</a></h3>
+													<h3><a href="{{url('/details' ,[$pro->id , $pro->category])}}">{{$pro['name']}}</a></h3>
 													<div class="product-price">
 														<span>{{$pro['price']}}$</span>
 													</div>
@@ -87,8 +87,8 @@
 										<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 											<div class="single-product">
 												<div class="product-img">
-													<a href="product-details.html">
-														<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" alt="#">
+													<a href="{{url('/details' ,[$pro->id , $pro->category])}}">
+														<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" >
 														<!-- <img class="hover-img" src="../imgs/category/bliss.jpg" alt="#"> -->
 													</a>
 													<div class="button-head">
@@ -96,7 +96,7 @@
 														<form action="cosmaticscart" method="POST">
 														        @csrf
 														       <input type="hidden" name="product_id" value ="{{$pro['id']}}">
-															   <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span ><a href="{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
+															   <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span ><a href="{{url('/details' ,[$pro->id , $pro->category])}}">Quick Shop</a></span></a>
 														     	<button><i class=" ti-heart "></i></button>
 														     	<input type="hidden" name="quantity" value ="{{$pro['quantity']}}">
 														 </form>
@@ -112,23 +112,17 @@
 													</div>
 												</div>
 												<div class="product-content">
-												<h3><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}}</a></h3>
+												<h3><a href="{{url('/details' ,[$pro->id , $pro->category])}}">{{$pro['name']}}</a></h3>
 													<div class="product-price">
-														<span>{{$pro['price']}}$</span>
+														<span>{{$pro['price']}} L.E</span>
 													</div>
 												</div>
 											</div>
 										</div>
 										@endif
 										@endforeach
-                                         	<!-- </div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> -->
-							<!--/ End Single Tab -->
-						
+
+
 					</div>
 				</div>
 			</div>
@@ -148,7 +142,7 @@
 			</div>
 		</div>
 		<div class="row">
-	
+
 			<div class="col-12">
 				<div class="owl-carousel popular-slider">
 				@foreach($product as $pro)
@@ -156,20 +150,20 @@
 					<!-- Start Single Product -->
 					<div class="single-product">
 						<div class="product-img">
-							<a href="product-details.html">
+							<a href="{{url('/details' ,[$pro->id , $pro->category])}}">
 								<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" alt="#">
-								<!-- <img class="hover-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#"> -->
+
 							</a>
 							<div class="button-head">
 								<div class="product-action">
 								<form action="cosmaticsfav" method="POST">
 														        @csrf
 														       <input type="hidden" name="product_id" value ="{{$pro['id']}}">
-															   <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span ><a href="{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
+															   <a data-toggle="modal"   data-target="#exampleModal" title="Quick View" ><span ><a href="{{url('/details' ,[$pro->id , $pro->category])}}">Quick Shop</a></span></a>
 														     	<button><i class=" ti-heart "></i></button>
 														     	<input type="hidden" name="quantity" value ="{{$pro['quantity']}}">
 														 </form>
-								
+
 								</div>
 								<div class="product-action-2">
 								<form action="cosmaticscart" method="POST">
@@ -182,18 +176,18 @@
 							</div>
 						</div>
 						<div class="product-content">
-						<h3><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}}</a></h3>
+						<h3><a href="{{url('/details' ,[$pro->id , $pro->category])}}">{{$pro['name']}}</a></h3>
 				<div class="product-price">
-						<span>{{$pro['price']}}$</span>
+						<span>{{$pro['price']}} L.E</span>
 							</div>
 						</div>
 					</div>
 					@endif
 					@endforeach
-			
+
 							</div>
 						</div>
-					</div> 
+					</div>
 					<!-- End Single Product -->
 				</div>
 			</div>

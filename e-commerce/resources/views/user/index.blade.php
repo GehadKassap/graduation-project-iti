@@ -77,16 +77,7 @@
                                 <h6>We are here for you ,  <span
 									class="hignlaite">Be careful</span></a></h6>
                             </div>
-                            <!--//left-->
-                            <!-- right -->
-                            <!-- <ul class="top-hnt-right-content col-lg-6">
 
-                                <li class="button-log usernhy">
-                                    <a class="btn-open" href="#">
-                                        <span class="fa fa-user" aria-hidden="true"></span>
-                                    </a>
-
-                           //right-->
                             <div class="overlay-login text-left">
                                 <button type="button" class="overlay-close1">
 							<i class="fa fa-times" aria-hidden="true"></i>
@@ -337,36 +328,26 @@
                     <!-- /row-->
                     <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
 
-   {{--          @foreach($product as $pro)
+          @foreach($product as $pro)
 
                      <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
                                 <div class="product-image2">
-                                    <a href="product_single.html">
+                                    <a href="{{url('/details' ,[$pro->id , $pro->category])}}">
                                         <img class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
                                         <img class="pic-2 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
                                     </a>
                                     <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
+                                        <li><a href="{{url('/details' ,[$pro->id , $pro->category])}}" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
 
-                                        <li><a href="#" data-tip="Add to Cart"><span class="fa fa-shopping-bag"></span></a>
+
                                         </li>
                                     </ul>
-                                    <div class="transmitv single-item">
-                                        <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="transmitv_item" value="Women Maroon Top">
-                                            <input type="hidden" name="amount" value="899.99">
-                                            <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
-										Add to Cart
-									</button>
-                                        </form>
-                                    </div>
+
                                 </div>
                                 <div class="product-content">
-                                    <h3 class="title"><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}} </a></h3>
-                                    <span class="price"><del>$975.00</del>{{$pro['price']}}</span>
+                                    <h3 class="title"><a href="{{url('/details' ,[$pro->id , $pro->category])}}">{{$pro['name']}} </a></h3>
+                                    <span class="price">{{$pro['price']}} L.E</span>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +378,7 @@
                             <p>Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing elitFuga, suscipit totam animi consequatur saepe blanditiis.Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing
                                 elit..
                             </p>
-                            <a href="" class="read-more-btn2 btn">
+                            <a href="/fashion" class="read-more-btn2 btn">
 						Shop Now
 					</a>
 
@@ -408,9 +389,9 @@
                 </div>
             </div>
         </section>
-        <!-- //content-6-section -->
+        <!-- //content-6-section
         <section class="w3l-post-grids-6" data-aos="zoom-in-up">
-            <!-- /post-grids-->
+
             <div class="post-6-mian py-5">
                 <div class="container py-lg-5">
                     <h3 class="hny-title text-center mb-0 ">Latest Blog <span>Posts</span></h3>
@@ -478,8 +459,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- //post-grids-->
+        </section>  -->
+
         <section class="w3l-customers-sec-6" data-aos="zoom-in-down">
             <div class="customers-sec-6-cintent py-5">
                 <!-- /customers-->
@@ -637,7 +618,6 @@
                             <div class="p-lg-5 py-md-0 py-3">
                                 <h3 class="hny-title">Join us for FREE to get instant <span>email updates!</span></h3>
                                 <p>Subscribe and get notified at first on the latest update and offers!</p>
-                                --}}
                                 <form action="#" method="post" class="signin-form mt-lg-5 mt-4">
                                     <div class="forms-gds">
                                         <div class="form-input">

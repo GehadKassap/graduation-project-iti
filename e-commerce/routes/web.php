@@ -15,12 +15,14 @@ use App\Http\Controllers\user\ProductController;
 */
 
 
-Route::get('/', function () {
-    return view('user.index');
-});
-Route::get('/home', function () {
-    return view('user.index');
-});
+// Route::get('/', function () {
+//     return view('user.index');
+// });
+// Route::get('/home', function () {
+//     return redirect('/');
+// });
+Route::get('/home',[ProductController ::class,'showhomeproduct']);
+Route::get('/',[ProductController ::class,'showhomeproduct']);
 /********* our categories (show)****** */
 Route::get('/allcategories', function () {
     return view('user.products.homeCategories');
@@ -80,7 +82,7 @@ Route::get("removeall/{id}",[ProductController::class,'removeall']);
 Route::get('/search',[ProductController::class , "searchProduct"]);
 
 //details for each product
- Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
+ Route::get('/details/{id}/{category}',[ProductController::class , "detailsProduct"]);
 
 /*********** registration routes************** */
 //user signIn
@@ -100,7 +102,7 @@ Route::get('/logout' , function(){
 
 
 
-// checkout 
+// checkout
 Route::post('success', [ UserController::class, "userUpdate" ]);
 Route::post("checkout",[ProductController::class,'showCheckout']);
 

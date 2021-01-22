@@ -55,7 +55,8 @@ class UserController extends Controller
         $user->email = $req->email;
         $user->save();
         setcookie('role' ,"user");
-         return view("user.index");
+        $req->session()->put('user' , $user);
+         return redirect("/");
          /***************************** */
     }
     //to redirect user to signIn form
@@ -169,5 +170,5 @@ class UserController extends Controller
 
           DB::table('cards')->delete();
           return view('user.products.success');
-      } 
+      }
 }
