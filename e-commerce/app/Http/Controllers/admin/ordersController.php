@@ -61,6 +61,9 @@ class ordersController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
+    
+
+
     public function show(Order $order)
     {
         //
@@ -86,7 +89,6 @@ class ordersController extends Controller
      */
     public function edit(Order $order)
     {
-        //
         
     }
 

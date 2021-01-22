@@ -61,10 +61,29 @@
 					<div class="float-left">
 						<a href="#" class="btn btn-info">#{{$order->id}}</a>
 					</div>
+					@if($order->state =='deliver')
 					<div class="float-right">
-						<a href="{{route('orderdetails.edit',$order->id)}}" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</a>
-						<a href="#" class="btn btn-outline-danger"><i class="fas fa-recycle"></i>Decline</a>
+						<a href="{{route('orders.update',$order->id)}}" class="btn btn-outline-info mr-1"><i class="fas fa-recycle"></i>return</a>
 					</div>
+					@elseif($order->state =='cancel')
+					<div class="float-right">
+						<a href="" class="btn btn-outline-danger mr-1 disabled"><i class="fas fa-times"></i></i>canceled</a>
+					</div>
+					@else
+					<form action="{{route('orderdetails.edit',$order->id)}}" method="get">
+                        @csrf
+						@method('post')
+						<div class="float-right">
+                        <button type="submit" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</button>
+						<!-- <button type="submit" class="btn btn-outline-danger "><i class="fas fa-recycle"></i>cancel</button> -->
+						</div>
+
+                        </form>
+					<!-- <div class="float-right">
+						<a href="#" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</a>
+						<a href="#" class="btn btn-outline-danger"><i class="fas fa-recycle"></i>cancel</a>
+					</div> -->
+					@endif
 				</div>
 				<div class="card-content">
 					<div class="card-body py-0">
