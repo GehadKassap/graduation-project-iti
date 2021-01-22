@@ -15,16 +15,19 @@ use App\Http\Controllers\user\ProductController;
 */
 
 
-Route::get('/', function () {
-    return view('user.index');
-});
-Route::get('/home', function () {
-    return view('user.index');
-});
+// Route::get('/', function () {
+//     return view('user.index');
+// });
+// Route::get('/home', function () {
+//     return redirect('/');
+// });
+Route::get('/home',[ProductController ::class,'showhomeproduct']);
+Route::get('/',[ProductController ::class,'showhomeproduct']);
 /********* our categories (show)****** */
-Route::get('/allcategories', function () {
-    return view('user.products.homeCategories');
-});
+
+
+Route::get('/allcategories',[ProductController ::class,'showhome']);
+
 Route::get('/electronices',[ProductController ::class,'showelectronies']);
 Route::get('/books',[ProductController ::class,'showbooks']);
 Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
@@ -55,14 +58,12 @@ Route::get('/cartdetails/{id}/{quantity}',[ProductController::class,'updateCartP
 
 
 //add to cart
-Route::post("add_to_cart",[ProductController::class,'addToCart']);
-
 Route::post("fashioncart",[ProductController::class,'addtocart']);
-
 Route::post("furniturecart",[ProductController::class,'addtocart']);
 Route::post("electronicescart",[ProductController::class,'addtocart']);
 Route::post("cosmaticscart",[ProductController::class,'addtocart']);
 Route::post("bookscart",[ProductController::class,'addtocart']);
+Route::post("/singlecart",[ProductController::class,'addtocart']);
 Route::get("cartdetails",[ProductController::class,'cartlist']);
 
 Route::get("removecart/{id}",[ProductController::class,'removecart']);
@@ -75,6 +76,7 @@ Route::post("furniturefav",[ProductController::class,'addtofav']);
 Route::post("electronicesfav",[ProductController::class,'addtofav']);
 Route::post("cosmaticsfav",[ProductController::class,'addtofav']);
 Route::post("booksfav",[ProductController::class,'addtofav']);
+Route::post("/singlefav",[ProductController::class,'addtofav']);
 Route::get("favdetails",[ProductController::class,'favlist']);
 Route::get("removefav/{id}",[ProductController::class,'removefav']);
 Route::get("removeall/{id}",[ProductController::class,'removeall']);
@@ -83,7 +85,7 @@ Route::get("removeall/{id}",[ProductController::class,'removeall']);
 Route::get('/search',[ProductController::class , "searchProduct"]);
 
 //details for each product
- Route::get('/details/{id}',[ProductController::class , "detailsProduct"]);
+ Route::get('/details/{id}/{category}',[ProductController::class , "detailsProduct"]);
 
 /*********** registration routes************** */
 //user signIn
@@ -103,6 +105,7 @@ Route::get('/logout' , function(){
 
 
 
-// checkout 
+// checkout
 Route::post('success', [ UserController::class, "userUpdate" ]);
+Route::post("checkout",[ProductController::class,'showCheckout']);
 

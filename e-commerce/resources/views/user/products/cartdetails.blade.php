@@ -86,16 +86,16 @@
 								<td class="qty" data-title="Qty">
 									<div class="input-group">
 									
-										<div class="button minus">
+										<div class="button minus" style="margin-top:10px;margin-left:10px;">
 									
-										
-										</div>
 										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/1')}}">+</a>
-										<input type="text" name="quant[1]" class="input-number"  data-minn="1" data-max="100" value="{{$card[$i]['cquantity']}}">
-										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/-1')}}">-</a>
-								
-										<div class="button plus">
+										</div>
 										
+										<input type="text" name="quant[1]" class="input-number"  data-minn="1" data-max="100" value="{{$card[$i]['cquantity']}}">
+									
+								
+										<div class="button plus" style="margin-top:10px;margin-right:10px;">
+										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/-1')}}">-</a>
 										</div>
 								
 									</div>
@@ -199,7 +199,13 @@
 										<li class="last" >{{$subTotal + 10}}$<span></span></li>
 									</ul>
 									<div class="button5">
-										<a href="checkout.html" class="btn">Checkout</a>
+									<form action="checkout" method="POST">
+										@csrf
+										<input type="hidden" name="sub_total" value="{{$subTotal}}">
+										<input type="hidden" name="total" value="{{$subTotal + 10}}">
+										<input type="hidden" name="qty" value="{{$i}}">
+										<button class="btn">Checkout<button>
+									   </form>
 										<!-- <a href="homeCategories.html" class="btn">Continue shopping</a> -->
 									</div>
 								</div>

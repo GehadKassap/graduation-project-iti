@@ -32,7 +32,7 @@
                 <div class="avatar"><img class="mr-3 side-user-img" src="{{asset('images/admin/avatar-s-12.jpg')}}"
                         alt="user avatar"></div>
                 <div class="media-body">
-                    <h6 class="side-user-name">{{session('user.fullname')}}<i class="fas fa-angle-left"></i></h6>
+                    <h6 class="side-user-name">{{session('admin.fullname')}}<i class="fas fa-angle-left"></i></h6>
                 </div>
             </div>
             <div id="user-dropdown" class="collapse">

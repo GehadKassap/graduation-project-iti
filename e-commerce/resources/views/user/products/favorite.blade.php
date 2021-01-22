@@ -25,6 +25,8 @@
         <div class="container">
           <h3 class="mb-5 text-center font-italic">Favorite Products</h3>
             <div class="row">
+            <?php $i=0; 
+						 ?>
             @foreach($products as $pro)
                 <div class="col-xl-3 col-lg-4 col-md-4 col-12">
                   <div class="proudct-top">
@@ -52,18 +54,19 @@
                   <i class="far fa-star"></i>
                   <h6 class="mb-1">{{$pro->name}} </h6>
                   <p class="mb-1">{{$pro->description}}</p>
-                  <span>{{$pro->price}}</span><a href="removefav/{{$pro->id}}"><span class="badge badge-danger ml-2 p-2 remove">Remove from cart</span></a><br>
-                  <p><a href="removeall/{{$pro->id}}"><i class="ti-trash remove-icon fa-7x"></i></a></p>
+                  <span>{{$pro->price}}$</span><a  href="removefav/{{$fav[$i]['id']}}"><span class="badge badge-danger ml-2 p-2 remove">Remove</span></a><br>
+                  <p><a  href="removeall/{{$pro->id}}">delete all favorites</a></p>
      
                  </div>
              
                  
       
             </div>
+            <?php $i++; ?>
             @endforeach
         </div>
          </section>
-        
+   
      
       <!-------------------------------->
       <section class="py-5 container slider">
@@ -71,7 +74,7 @@
 		<div class="owl-carousel">
     @foreach($suggest as $prod)
 			<div> 
-           <a href="{{url('/details' ,$pro->id)}}"><img src="{{ asset('product_images/' . $prod->image)}}" ></a>
+           <a href="{{url('/details' ,$prod->id)}}"><img src="{{ asset('product_images/' . $prod->image)}}" ></a>
 			 </div>
        @endforeach
 			<!-- <div> 
