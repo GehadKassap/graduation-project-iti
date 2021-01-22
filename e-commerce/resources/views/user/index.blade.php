@@ -334,8 +334,8 @@
                             <div class="product-grid2 transmitv">
                                 <div class="product-image2">
                                     <a href="{{url('/details' ,[$pro->id , $pro->category])}}">
-                                        <img class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
-                                        <img class="pic-2 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
+                                        <img style="width:200px;height:200px;" class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
+                                        <img  style="width:200px;height:200px;" class="pic-2 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
                                     </a>
                                     <ul class="social">
                                         <li><a href="{{url('/details' ,[$pro->id , $pro->category])}}" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
