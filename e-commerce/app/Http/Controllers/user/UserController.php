@@ -8,7 +8,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Card;
 use Illuminate\support\facades\DB;
-use Session ;
 //  use  App\Http\middleware\UserAuth;
 // use  Auth;
 
@@ -56,7 +55,6 @@ class UserController extends Controller
         $user->email = $req->email;
         $user->save();
         setcookie('role' ,"user");
-        $req->session()->put('user' , $user);
          return view("user.index");
          /***************************** */
     }
@@ -82,7 +80,7 @@ class UserController extends Controller
              {
                   $req->session()->put('admin' , $user);
                   setcookie('role' , $user->role);
-                  return view('admin.adduser');
+                  return view('admin.profile');
               }
               else
               {
@@ -171,5 +169,5 @@ class UserController extends Controller
 
           DB::table('cards')->delete();
           return view('user.products.success');
-      }
+      } 
 }

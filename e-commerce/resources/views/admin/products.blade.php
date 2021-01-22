@@ -57,7 +57,7 @@
                             <div class="card no-b shadow">
                                 <div class="card-body p-0">
                                     <div class="table-responsive">
-                                        <table class="table table-hover ">
+                                        <table class="table align-items-center table-flush table-hover">
                                             <thead>
                                                 <tr>
                                                     <th>
@@ -81,6 +81,9 @@
                                                     <th>
                                                         description
                                                     </th>
+                                                    <th>
+                                                        Action
+                                                    </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -94,25 +97,51 @@
                                                         <small class="text-muted">quantity :
                                                             {{$product["quantity"]}}</small>
                                                     </td>
-                                                    <td>${{$product["price"]}}</td>
+                                                    <td>{{$product["price"]}} LE</td>
                                                     <td> %{{$product["discount"]}}</td>
-                                                    <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-warning round">{{$product["category"]}}</button>
+                                                    <td> 
+                                                    @if($product["category"]=='Electronics')
+                                                           <button type="button" class="btn btn-sm btn-outline-danger round">{{$product["category"]}}</button>
+                                                    @elseif($product["category"]=='Books')
+                                                           <button type="button" class="btn btn-sm btn-outline-info round">{{$product["category"]}}</button>
+                                                    @elseif($product["category"]=='fashion')
+                                                           <button type="button" class="btn btn-sm btn-outline-warning round">{{$product["category"]}}</button>
+                                                    @elseif($product["category"]=='cosmetics')
+                                                           <button type="button" class="btn btn-sm btn-outline-primary round">{{$product["category"]}}</button>
+                                                    @else
+                                                         <button type="button" class="btn btn-sm btn-outline-info round">{{$product["category"]}}</button>
+                                                    @endif
                                                     </td>
-                                                    <td> <button type="button"
-                                                            class="btn btn-sm btn-outline-warning round">{{$product["sub_category"]}}</button>
+                                                    <td> 
+                                                    @if($product["sub_category"]=='Women')
+                                                           <button type="button" class="btn btn-sm btn-outline-info round">{{$product["sub_category"]}}</button>
+                                                    @elseif($product["sub_category"]=='Men')
+                                                           <button type="button" class="btn btn-sm btn-outline-info round">{{$product["sub_category"]}}</button>
+                                                    @elseif($product["sub_category"]=='Makup')
+                                                           <button type="button" class="btn btn-sm btn-outline-primary round">{{$product["sub_category"]}}</button>
+                                                    @elseif($product["sub_category"]=='Haircare')
+                                                           <button type="button" class="btn btn-sm btn-outline-warning round">{{$product["sub_category"]}}</button>
+                                                    @elseif($product["sub_category"]=='Chairs')
+                                                           <button type="button" class="btn btn-sm btn-outline-warning round">{{$product["sub_category"]}}</button>
+                                                    @elseif($product["sub_category"]=='Tables')
+                                                           <button type="button" class="btn btn-sm btn-outline-danger round">{{$product["sub_category"]}}</button>
+                                                    @elseif($product["sub_category"]=='Laptops')
+                                                           <button type="button" class="btn btn-sm btn-outline-primary round">{{$product["sub_category"]}}</button>
+                                                    @elseif($product["sub_category"]=='Mobiles')
+                                                           <button type="button" class="btn btn-sm btn-outline-warning round">{{$product["sub_category"]}}</button>
+                                                    @elseif($product["sub_category"]=='Novels')
+                                                           <button type="button" class="btn btn-sm btn-outline-info round">{{$product["sub_category"]}}</button>
+                                                    @else
+                                                           <button type="button" class="btn btn-sm btn-outline-primary round">{{$product["sub_category"]}}</button>
+                                                    @endif
                                                     </td>
                                                     <td>
-                                                        <span><i
-                                                                class="fas fa-info  btn-outline-info mr-1"></i></i>{{$product["description"]}}
-                                                        </span><br>
-
+                                                        <span>{{$product["description"]}}</span><br>
                                                     </td>
                                                     <td>
-                                                        <a href="{{route('products.edit',$product)}}"
-                                                            class="btn btn-fab-sm ">
-                                                            <i class="far fa-edit mr-2 btn-outline-primary"></i>
-
+                                                        <a class="edit"style="text-decoration:none;" href="{{route('products.edit',$product)}}">
+                                                        <!-- <i class="fas fa-pencil-alt  btn-outline-info"></i> -->
+                                                        <button type="submit" class="btn btn-sm btn-outline-info round"><i class="fas fa-pencil-alt"></i></button>
 
                                                         </a>
                                                         <form class="btn btn-fab-sm "
@@ -120,9 +149,9 @@
                                                             method="Post">
                                                             @csrf
                                                             @method("delete")
-                                                            <button type="submit"
-                                                                class="far fa-trash-alt mr-2 btn-outline-danger"></button>
-
+                                                            <!-- <button type="submit"
+                                                                class="far fa-trash-alt  btn-outline-danger"></button> -->
+                                                                <button type="submit" class="btn btn-sm btn-outline-danger round"><i class="far fa-trash-alt"></i></button>
 
                                                         </form>
                                                     </td>

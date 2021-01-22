@@ -15,19 +15,16 @@ use App\Http\Controllers\user\ProductController;
 */
 
 
-// Route::get('/', function () {
-//     return view('user.index');
-// });
-
-// Route::get('/home', function () {
-//     return view('user.index');
-// });
-Route::get('/',[ProductController ::class,'showhomeproduct']);
-Route::get('/home',[ProductController ::class,'showhomeproduct']);
+Route::get('/', function () {
+    return view('user.index');
+});
+Route::get('/home', function () {
+    return view('user.index');
+});
 /********* our categories (show)****** */
-
-Route::get('/allcategories',[ProductController ::class,'showhome']);
-
+Route::get('/allcategories', function () {
+    return view('user.products.homeCategories');
+});
 Route::get('/electronices',[ProductController ::class,'showelectronies']);
 Route::get('/books',[ProductController ::class,'showbooks']);
 Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
@@ -99,16 +96,13 @@ Route::post('/register',[UserController::class , "handleForm"]);
 
 // user logout
 Route::get('/logout' , function(){
-    //
-    //Session::flush();
-    Auth::logout();
     Session::forget('user');
-    Session::flush();
     return view('user.Auth.signin');
 });
 
 
 
-// checkout
+
+// checkout 
 Route::post('success', [ UserController::class, "userUpdate" ]);
-Route::post("checkout",[ProductController::class,'showCheckout']);
+
