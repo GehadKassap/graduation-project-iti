@@ -55,10 +55,7 @@ Route::get('/cartdetails/{id}/{quantity}',[ProductController::class,'updateCartP
 
 
 //add to cart
-Route::post("add_to_cart",[ProductController::class,'addToCart']);
-
 Route::post("fashioncart",[ProductController::class,'addtocart']);
-
 Route::post("furniturecart",[ProductController::class,'addtocart']);
 Route::post("electronicescart",[ProductController::class,'addtocart']);
 Route::post("cosmaticscart",[ProductController::class,'addtocart']);
@@ -105,4 +102,5 @@ Route::get('/logout' , function(){
 
 // checkout 
 Route::post('success', [ UserController::class, "userUpdate" ]);
+Route::post("checkout",[ProductController::class,'showCheckout']);
 
