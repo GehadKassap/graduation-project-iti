@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Card;
 use App\Models\Fav;
+use App\Models\Review;
 use App\Models\Order;
 
 
@@ -27,26 +28,6 @@ class ProductController extends Controller
     {
     }
 
-    // function addToCart(Request $req)
-    // {
-    //     if($req->session()->has('user'))
-    //     {
-    //        $cart= new Card;
-    //        $cart->user_id=$req->session()->get('user')['id'];
-    //        $cart->pro_id=$req->pro_id;
-    //        $cart->save();
-    //        return redirect('/');
-
-    //     }
-    //     else
-    //     {
-    //         return redirect('/signin');
-    //     }
-    // }
-    // function cartItem(){
-    //     $userId=Session::get('user')['id'];
-    //     return Card::where('user_id',$userId)->count();
-    // }
 
     /**
      * Show the form for creating a new resource.
@@ -270,6 +251,7 @@ class ProductController extends Controller
 
     function favlist()
     {
+        $suggest= product::take(8)->get();
         $userid = Session::get('user')['id'];
         $products = DB::table('favs')
             ->join('products', 'favs.pro_id', '=', 'products.id')
@@ -283,11 +265,12 @@ class ProductController extends Controller
             $fav[$i] = array("id" => $item['id'], "pro_id" => $item['pro_id']);
             $i++;
         }
-        return view('user.products.favorite',['products'=>$products,'fav'=>$fav]);
+        return view('user.products.favorite', ['products' => $products, 'fav' => $fav, 'suggest' =>$suggest]);
     }
 
-     function removefav($rowid){
-        Fav::destroy($rowid);
+    function removefav($id)
+    {
+        $del = Fav::destroy($id);
         return redirect('favdetails');
     }
     public function removeall()

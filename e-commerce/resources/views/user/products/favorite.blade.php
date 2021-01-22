@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
+    <title>Favourites</title>
     <link rel="stylesheet" type="text/css" href="{{ url('/css/fav.css') }}">
 
       <link rel="stylesheet" type="text/css" href="{{ url('/css/all.min.css') }}">
@@ -25,7 +25,8 @@
         <div class="container">
           <h3 class="mb-5 text-center font-italic">Favorite Products</h3>
             <div class="row">
-            <?php $i=0;  ?>
+            <?php $i=0; 
+						 ?>
             @foreach($products as $pro)
                 <div class="col-xl-3 col-lg-4 col-md-4 col-12">
                   <div class="proudct-top">
@@ -53,7 +54,7 @@
                   <i class="far fa-star"></i>
                   <h6 class="mb-1">{{$pro->name}} </h6>
                   <p class="mb-1">{{$pro->description}}</p>
-                  <span>{{$pro->price}}$</span><a href="removefav/{{$fav[$i]['id']}}"><span class="badge badge-danger ml-2 p-2 remove">Remove from cart</span></a><br>
+                  <span>{{$pro->price}}$</span><a href="removefav/{{$fav[$i]['id']}}"><span class="badge badge-danger ml-2 p-2 remove">Remove</span></a><br>
                   <p><a href="removeall/{{$pro->id}}"><i class="ti-trash remove-icon fa-7x"></i></a></p>
      
                  </div>
@@ -61,7 +62,7 @@
                  
       
             </div>
-            <?php $i++;  ?>
+            <?php $i++; ?>
             @endforeach
         </div>
          </section>
@@ -71,10 +72,12 @@
       <section class="py-5 container slider">
 		  <h3 class="my-3 font-italic">Suggested for you</h3>
 		<div class="owl-carousel">
+    @foreach($suggest as $prod)
 			<div> 
-              <img src="{{asset('images/test.jpg')}}" >
+           <a href="{{url('/details' ,$prod->id)}}"><img src="{{ asset('product_images/' . $prod->image)}}" ></a>
 			 </div>
-			<div> 
+       @endforeach
+			<!-- <div> 
               <img src="{{asset('images/category/slider2.jpg')}}" alt="">
 			 </div>
 			<div> 
@@ -104,7 +107,7 @@
 			 <div> 
                 <img src="{{asset('images/kitchen/1225.jpg')}}" alt="">
 				
-			</div>
+			</div> -->
 	
 		  </div>
 

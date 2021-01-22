@@ -18,16 +18,15 @@ use App\Http\Controllers\user\ProductController;
 // Route::get('/', function () {
 //     return view('user.index');
 // });
-
 // Route::get('/home', function () {
-//     return view('user.index');
+//     return redirect('/');
 // });
-Route::get('/',[ProductController ::class,'showhomeproduct']);
 Route::get('/home',[ProductController ::class,'showhomeproduct']);
+Route::get('/',[ProductController ::class,'showhomeproduct']);
 /********* our categories (show)****** */
-
-Route::get('/allcategories',[ProductController ::class,'showhome']);
-
+Route::get('/allcategories', function () {
+    return view('user.products.homeCategories');
+});
 Route::get('/electronices',[ProductController ::class,'showelectronies']);
 Route::get('/books',[ProductController ::class,'showbooks']);
 Route::get('/cosmatics',[ProductController ::class,'showcosmatics']);
@@ -58,10 +57,7 @@ Route::get('/cartdetails/{id}/{quantity}',[ProductController::class,'updateCartP
 
 
 //add to cart
-Route::post("add_to_cart",[ProductController::class,'addToCart']);
-
 Route::post("fashioncart",[ProductController::class,'addtocart']);
-
 Route::post("furniturecart",[ProductController::class,'addtocart']);
 Route::post("electronicescart",[ProductController::class,'addtocart']);
 Route::post("cosmaticscart",[ProductController::class,'addtocart']);
@@ -99,13 +95,14 @@ Route::post('/register',[UserController::class , "handleForm"]);
 
 // user logout
 Route::get('/logout' , function(){
-    //
-    //Session::flush();
-    Auth::logout();
     Session::forget('user');
-    Session::flush();
     return view('user.Auth.signin');
 });
+
+
+
+
 // checkout
 Route::post('success', [ UserController::class, "userUpdate" ]);
 Route::post("checkout",[ProductController::class,'showCheckout']);
+

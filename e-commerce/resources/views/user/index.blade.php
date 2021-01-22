@@ -46,7 +46,7 @@
                                                     <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
                                                             <li><a href="/cartdetails">Cart</a></li>
-                                                            <li><a href="/favdetails">Favorite</a></li>
+                                                            <li><a href="/checkout">Checkout</a></li>
                                                         </ul>
                                                     </li>
 
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <!--/ End Header Inner -->
-
+</header>
 
         <!--w3l-banner-slider-main-->
         <section class="w3l-banner-slider-main">
@@ -77,16 +77,7 @@
                                 <h6>We are here for you ,  <span
 									class="hignlaite">Be careful</span></a></h6>
                             </div>
-                            <!--//left-->
-                            <!-- right -->
-                            <!-- <ul class="top-hnt-right-content col-lg-6">
 
-                                <li class="button-log usernhy">
-                                    <a class="btn-open" href="#">
-                                        <span class="fa fa-user" aria-hidden="true"></span>
-                                    </a>
-
-                           //right-->
                             <div class="overlay-login text-left">
                                 <button type="button" class="overlay-close1">
 							<i class="fa fa-times" aria-hidden="true"></i>
@@ -277,14 +268,14 @@
                     <div class="align-photo-6-inf-cols row">
 
                         <div class="photo-6-inf-right col-lg-6" data-aos="fade-left">
-                            <h3 class="hny-title text-left">All Branded furniture are Here <span>30% Discount</span></h3>
+                            <h3 class="hny-title text-left">All Branded Men's Suits are Flat <span>30% Discount</span></h3>
                             <p>Visit our shop to see amazing creations from our designers.</p>
-                            <a href="/furniture" class="read-more btn">
+                            <a href="/fashion" class="read-more btn">
 										Shop Now
 								</a>
                         </div>
                         <div class="photo-6-inf-left col-lg-6" data-aos="fade-right">
-                            <img src="{{asset('images/assets/images/b22.jpg')}}" class="img-fluid">
+                            <img src="{{asset('images/assets/images/1.jpg')}}" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -337,17 +328,17 @@
                     <!-- /row-->
                     <div class="ecom-products-grids row mt-lg-5 mt-3" data-aos="fade-right">
 
-                 @foreach($product as $pro)
+          @foreach($product as $pro)
 
                      <div class="col-lg-3 col-6 product-incfhny mt-4" data-aos="fade-up-left">
                             <div class="product-grid2 transmitv">
                                 <div class="product-image2">
-                                    <a href="{{url('/details' ,$pro->id)}}" >
-                                        <img style="width:200px;height:240px;" class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
-                                        <img style="width:200px;height:240px;" class="pic-2 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
+                                    <a href="{{url('/details' ,[$pro->id , $pro->category])}}">
+                                        <img class="pic-1 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
+                                        <img class="pic-2 img-fluid" src="{{ asset('product_images/' . $pro->image)}}">
                                     </a>
                                     <ul class="social">
-                                        <li><a href="{{url('/details' ,$pro->id)}}" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
+                                        <li><a href="{{url('/details' ,[$pro->id , $pro->category])}}" data-tip="Quick View"><span class="fa fa-eye"></span></a></li>
 
 
                                         </li>
@@ -355,11 +346,14 @@
 
                                 </div>
                                 <div class="product-content">
-                                    <h3 class="title"><a href="{{url('/details' ,$pro->id)}}">{{$pro['name']}} </a></h3>
+                                    <h3 class="title"><a href="{{url('/details' ,[$pro->id , $pro->category])}}">{{$pro['name']}} </a></h3>
                                     <span class="price">{{$pro['price']}} L.E</span>
                                 </div>
                             </div>
                         </div>
+
+
+
 
 
 	                 @endforeach
@@ -624,7 +618,6 @@
                             <div class="p-lg-5 py-md-0 py-3">
                                 <h3 class="hny-title">Join us for FREE to get instant <span>email updates!</span></h3>
                                 <p>Subscribe and get notified at first on the latest update and offers!</p>
-
                                 <form action="#" method="post" class="signin-form mt-lg-5 mt-4">
                                     <div class="forms-gds">
                                         <div class="form-input">

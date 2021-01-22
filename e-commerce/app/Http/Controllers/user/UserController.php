@@ -8,7 +8,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Card;
 use Illuminate\support\facades\DB;
-use Session ;
 //  use  App\Http\middleware\UserAuth;
 // use  Auth;
 
@@ -82,7 +81,7 @@ class UserController extends Controller
              {
                   $req->session()->put('admin' , $user);
                   setcookie('role' , $user->role);
-                  return view('admin.adduser');
+                  return view('admin.profile');
               }
               else
               {

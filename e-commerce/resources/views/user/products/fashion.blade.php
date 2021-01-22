@@ -176,7 +176,7 @@ fashion
 
 								</div>
 								<div class="product-action-2">
-								<form action="fashionecart" method="POST">
+								<form action="fashioncart" method="POST">
 										@csrf
 										<input type="hidden" name="product_id" value ="{{$pro['id']}}">
 										<button class="made">Add to cart</button>

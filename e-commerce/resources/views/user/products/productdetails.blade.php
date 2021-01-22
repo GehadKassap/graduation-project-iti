@@ -92,7 +92,10 @@
                     @foreach($products as $prod)
 
                         <div class="single_thumb">
-                            <img style="width:200px;height:100px;" src="{{ asset('product_images/' . $prod->image)}}" alt="">
+
+                     <img style="width:200px;height:140px;" class="pic-1 img-fluid" src="{{ asset('product_images/' . $prod->image)}}">
+
+
                         </div>
 
                         @endforeach
@@ -104,7 +107,7 @@
                     <div class="single_page_content">
                         <div class="single_page_top_content">
                             <h2>{{$product->name}}</h2>
-                            <span>{{$product->price}}L.E</span>
+                            <span>{{$product->price}}$</span>
                             <p>{{$product->description}}</p>
                         </div>
                         <div class="single_page_top_middle">
@@ -122,8 +125,8 @@
 
                         <div class="single_page_footer row">
 
-                            <button class="made" href="/cart" class="add_btn ">add to cart</button>
-                            <button class="made" href="/favorite" class="add_btn">whishlist</button>
+                            <a style="color: gray; border:none; border-radius:3px;" href="/cart" class="add_btn ">add to cart</a>
+                            <a style="color: gray; border:none; border-radius:3px; " href="/favorite" class="add_btn">whishlist</a>
 
                         </div>
                     </div>
@@ -220,7 +223,7 @@
                                     <p>{{$produ->name}}</p>
                                 </div>
                                 <div class="sic_icon">
-                                    <!-- <a href="#" data-toggle="tooltip" title="Add to Wishlist">
+                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist">
                                         <i class="fa fa-heart"></i>
                                     </a>
                                     <a href="#" data-toggle="tooltip" title="Add to Cart">
