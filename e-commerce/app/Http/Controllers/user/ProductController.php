@@ -99,6 +99,11 @@ class ProductController extends Controller
         $data=product ::all();
         return view('user.products.fashion',['product'=>$data]);
     }
+    public function showhome()
+    {   $allproducts = product::take(8)->get();
+        $data=product ::all();
+        return view('user.products.homeCategories',['product'=>$data, 'allproducts'=>$allproducts]);
+    }
     public function showbooks()
     {
         $data=product::all();
