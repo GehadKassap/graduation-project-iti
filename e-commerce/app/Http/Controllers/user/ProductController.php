@@ -68,9 +68,9 @@ class ProductController extends Controller
     function detailsProduct($id)
     {
       //$product = Product::where('id' , '=' , $id)->first();
-      $i=3;
+      $i="Electronics";
       $product = Product::findorfail($id)  ;
-      $allProducts=product::where('id', ">=" , $id)->take(4)->get();
+      $allProducts=product::where('category', "=" ,$i)->take(4)->get();
       $relatedproduct=product::where('category', "=" ,$i )->take(4)->get();
    //$allProducts=product::where('id', "<=" , $id)->count();
       return view('user.products.productdetails' , ['product'=>$product , 'products'=>$allProducts,'relatedproducts'=> $relatedproduct]);

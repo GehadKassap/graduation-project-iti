@@ -303,19 +303,19 @@
 <div class="skitter skitter-large m-auto">
 	<ul>
 		<li>
-			 <a href="#cut"><img src="{{asset('images/obi-onyeador-2JrpkyZ2ruQ-unsplash.jpg')}}" class="cut"></a>
+			 <a href="#cut"><img src="{{asset('images/1.jpg')}}" class="cut"></a>
 			<div class="label_text"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
 		</li>
 		<li>
-			<a href="#cut"><img src="{{asset('images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg')}}" class="cut"></a>
+			<a href="#cut"><img src="{{asset('images/1.jpg')}}" class="cut"></a>
 			<div class="label_text"><p>Lorem, ipsum dolor.</p></div>
 		</li>
 		<li> 
-			<a href="#cut"><img src="{{asset('images/christopher-gower-_aXa21cf7rY-unsplash.jpg')}}" class="cut"></a>
+			<a href="#cut"><img src="{{asset('images/1.jpg')}}" class="cut"></a>
 			<div class="label_text"><p>Lorem ipsum dolor sit amet.</p></div>
 		</li>
 		<li> 
-			<a href="#cut"><img src="{{asset('images/category/slider3.jpg')}}" class="cut"></a>
+			<a href="#cut"><img src="{{asset('images/1.jpg')}}" class="cut"></a>
 			<div class="label_text"><p>Lorem ipsum dolor sit amet.</p></div>
 		</li>
 	</ul>
