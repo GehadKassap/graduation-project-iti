@@ -45,16 +45,23 @@ class ProductController extends Controller
         $dataHolder = Product::where('name', 'like', '%' . $req->input('term') . '%')->get();
         return view("user.products.search", ['searchItems' => $dataHolder]);
     }
-    function detailsProduct($id , $category)
+    function detailsProduct($id, $category)
     {
-        //$product = Product::where('id' , '=' , $id)->first();
+
+        $reviews = Review::all();
+        $pro_reviews = [];
+        foreach ($reviews as $review) {
+            if ($review['pro_id'] == $id) {
+                $pro_reviews[] = $review['content'];
+            }
+        }
+
         $i = $category;
         $product = Product::findorfail($id);
         $allProducts = product::where('category', "=", $i)->take(4)->get();
         $relatedproduct = product::where('category', "=", $i)->take(4)->get();
         //$allProducts=product::where('id', "<=" , $id)->count();
-        return view('user.products.productdetails', ['product' => $product, 'products' => $allProducts, 'relatedproducts' => $relatedproduct]);
-
+        return view('user.products.productdetails', ['product' => $product, 'products' => $allProducts, 'relatedproducts' => $relatedproduct, 'reviews' => $pro_reviews]);
     }
 
     /**
@@ -66,6 +73,15 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        $id = $request["pro_id"];
+        Review::create([
+            'content' => $request["content"],
+            'user_id' => Session()->get('user')['id'],
+            'pro_id' => $id,
+        ]);
+        $idd = (int)$id;
+        $category = $request['pro_category'];
+        return $this->detailsProduct($idd, $category);
     }
 
     /**
@@ -251,7 +267,7 @@ class ProductController extends Controller
 
     function favlist()
     {
-        $suggest= product::take(8)->get();
+        $suggest = product::take(8)->get();
         $userid = Session::get('user')['id'];
         $products = DB::table('favs')
             ->join('products', 'favs.pro_id', '=', 'products.id')
@@ -265,7 +281,7 @@ class ProductController extends Controller
             $fav[$i] = array("id" => $item['id'], "pro_id" => $item['pro_id']);
             $i++;
         }
-        return view('user.products.favorite', ['products' => $products, 'fav' => $fav, 'suggest' =>$suggest]);
+        return view('user.products.favorite', ['products' => $products, 'fav' => $fav, 'suggest' => $suggest]);
     }
 
     function removefav($id)
@@ -278,24 +294,26 @@ class ProductController extends Controller
         DB::table('favs')->delete();
         return redirect('favdetails');
     }
-    public function updateCartProduct($id=null,$quantity=null){
-        DB::table('cards')->where('id',$id)->increment('quantity',$quantity);
+    public function updateCartProduct($id = null, $quantity = null)
+    {
+        DB::table('cards')->where('id', $id)->increment('quantity', $quantity);
         return redirect('/cartdetails');
     }
 
     // show checkout page
-     function showCheckout(request $req){
-        $userid=Session::get('user')['id'];
-        $orderr= new Order;
-        $orderr->sub_total=$req['sub_total'];
-        $orderr->total=$req['total'];
-        $orderr->user_id=$userid;
-        $orderr->quantity=$req['qty'];
+    function showCheckout(request $req)
+    {
+        $userid = Session::get('user')['id'];
+        $orderr = new Order;
+        $orderr->sub_total = $req['sub_total'];
+        $orderr->total = $req['total'];
+        $orderr->user_id = $userid;
+        $orderr->quantity = $req['qty'];
         $orderr->save();
 
 
-        $order=array("sub_total"=>$req['sub_total'], "total"=>$req['total'],"quantity"=>$req['qty']);
+        $order = array("sub_total" => $req['sub_total'], "total" => $req['total'], "quantity" => $req['qty']);
 
-        return view('user.products.checkout',['order'=>$order]);
-     }
+        return view('user.products.checkout', ['order' => $order]);
     }
+}
