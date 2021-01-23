@@ -375,8 +375,7 @@
                             <h3 class="hny-title two">
                                 Tons of Products & Options to
                                 <span>change</span></h3>
-                            <p>Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing elitFuga, suscipit totam animi consequatur saepe blanditiis.Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing
-                                elit..
+                            <p> You Can find all the new about the Fashion .
                             </p>
                             <a href="/fashion" class="read-more-btn2 btn">
 						Shop Now

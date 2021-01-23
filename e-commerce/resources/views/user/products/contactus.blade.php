@@ -27,14 +27,14 @@
                                 <div class="navbar-collapse">
                                     <div class="nav-inner">
                                         <ul class="nav main-menu menu navbar-nav">
-                                            <li class="active"><a href="home.html">Home</a></li>
-                                            <li><a href="homeCategories.html">Products</a></li>
-                                            <li><a href="#">Service</a></li>
-                                            <li><a href="#">Shop<i class="ti-angle-down"></i><span
+                                            <li class="active"><a href="/">Home</a></li>
+                                            <li><a href="/allcategories">Products</a></li>
+
+                                            <li><a href="">Shop<i class="ti-angle-down"></i><span
                                                         class="new">New</span></a>
                                                 <ul class="dropdown">
-                                                    <li><a href="card.html">Cart</a></li>
-                                                    <li><a href="fav.html">Checkout</a></li>
+                                                    <li><a href="/cartdetails">Cart</a></li>
+                                                    <li><a href="/favdetails">Favorite</a></li>
                                                 </ul>
                                             </li>
 
@@ -115,23 +115,22 @@
                                 <i class="fa fa-phone"></i>
                                 <h4 class="title">Call us Now:</h4>
                                 <ul>
-                                    <li>+123 456-789-1120</li>
-                                    <li>+522 672-452-1120</li>
+                                    <li>01097816790</li>
+
                                 </ul>
                             </div>
                             <div class="single-info">
                                 <i class="fa fa-envelope-open"></i>
                                 <h4 class="title">Email:</h4>
                                 <ul>
-                                    <li><a href="mailto:info@yourwebsite.com">info@yourwebsite.com</a></li>
-                                    <li><a href="mailto:info@yourwebsite.com">support@yourwebsite.com</a></li>
+                                    <li><a href="mohamed.ahmad.hassaan@gmail.com">mohamed.ahmad.hassaan@gmail.com</a></li>
                                 </ul>
                             </div>
                             <div class="single-info">
                                 <i class="fa fa-location-arrow"></i>
                                 <h4 class="title">Our Address:</h4>
                                 <ul>
-                                    <li>KA-62/1, Travel Agency, 45 Grand Central Terminal, New York.</li>
+                                    <li>Shebin El-Kom.</li>
                                 </ul>
                             </div>
                         </div>

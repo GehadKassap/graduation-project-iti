@@ -38,7 +38,7 @@ class ProductController extends Controller
         //
         $messages = DB::table('problems')->count();
 
-        return view('admin.addnewproduct',compact('messages'));
+        return view('admin.addnewproduct', compact('messages'));
     }
 
     /**

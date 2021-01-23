@@ -4,7 +4,9 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\Review;
+
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Type\Integer;
 
 class ReviewController extends Controller
 {
@@ -13,6 +15,8 @@ class ReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
         //
@@ -27,7 +31,6 @@ class ReviewController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -36,7 +39,6 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
