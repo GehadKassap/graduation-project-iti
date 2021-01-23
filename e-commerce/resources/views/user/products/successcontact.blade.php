@@ -16,10 +16,6 @@
           font-size: 40px;
           margin-bottom: 10px;
         }
-        .button a
-      {
-          background-color:orange;
-      }
         p {
           color: #404F5E;
           font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
@@ -40,6 +36,10 @@
         display: inline-block;
         margin: 0 auto;
       }
+      .button a
+      {
+          background-color:orange;
+      }
     </style>
     <body>
       <div class="card">
@@ -47,7 +47,7 @@
         <i class="checkmark">✓</i>
       </div>
         <h1>Success</h1>
-        <p>We received your order request</p><br>
+        <p>We received your Message</p><br>
         <div class="container">
       <div class="button">
           <div class="text-center">
