@@ -90,8 +90,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <form class="search-bar">
-                        <input type="text" class="form-control typeahead" placeholder="What You Want To Find ?">
+                    <form class="search-bar" action="{{route('sidenav.store')}}">
+                        <input type="text" class="form-control typeahead" placeholder="What You Want To Find ?"name="search">
                         <a href="#"><i class="fas fa-search"></i></a>
                     </form>
                 </li>

@@ -63,7 +63,7 @@
 					</div>
 					@if($order->state =='deliver')
 					<div class="float-right">
-						<a href="{{route('orders.update',$order->id)}}" class="btn btn-outline-info mr-1"><i class="fas fa-recycle"></i>return</a>
+						<a href="" class="btn btn-outline-info mr-1 disabled"><i class="far fa-check-circle"></i></i>Delivered</a>
 					</div>
 					@elseif($order->state =='cancel')
 					<div class="float-right">
@@ -75,7 +75,7 @@
 						@method('post')
 						<div class="float-right">
                         <button type="submit" class="btn btn-outline-info mr-1"><i class="far fa-check-circle"></i>Deliver</button>
-						<!-- <button type="submit" class="btn btn-outline-danger "><i class="fas fa-recycle"></i>cancel</button> -->
+						<button type="submit" class="btn btn-outline-danger "><i class="fas fa-recycle"></i>cancel</button>
 						</div>
 
                         </form>

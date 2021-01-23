@@ -52,8 +52,9 @@ class sidenavController extends Controller
         ->select('name')
         ->where('name','LIKE','%'.$request->terms.'%')
         ->get();
-        return view('admin.products', ['searchItems' => $data]);
         // dd($data);
+        return view('admin.products');
+        
     }
 
     /**
