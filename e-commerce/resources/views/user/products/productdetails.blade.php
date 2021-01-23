@@ -219,18 +219,18 @@
                                     <p>{{$produ->name}}</p>
                                 </div>
                                 <div class="sic_icon">
-                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist">
+                                    <!-- <a href="#" data-toggle="tooltip" title="Add to Wishlist">
                                         <i class="fa fa-heart"></i>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" title="Add to Cart">
+                                    </a> -->
+                                    <!-- <a href="#" data-toggle="tooltip" title="Add to Cart">
                                         <i class="fa fa-shopping-cart"></i>
-                                    </a>
-                                    <<<<<<< HEAD <a href="{{url('/details' ,[$produ->id , $produ->category])}}"
+                                    </a> -->
+                                    <a href="{{url('/details' ,[$produ->id , $produ->category])}}"
                                         data-toggle="tooltip" title="Product details">
-                                        =======
+                                      
                                         <a href="{{url('/details' ,[$produ->id , $produ->category])}}"
                                             data-toggle="tooltip" title="Product details">
-                                            >>>>>>> 0cafd4759cbd3ac291e70ff17fff219a5aac208c
+                                           
                                             <i class="fa fa-link"></i>
                                         </a>
                                 </div>
