@@ -290,10 +290,9 @@ class ProductController extends Controller
         return view('user.products.favorite', ['products' => $products, 'fav' => $fav, 'suggest' =>$suggest]);
     }
 
-
-    function removefav($rowid)
+    function removefav($id)
     {
-        Fav::destroy($rowid);
+        $del = Fav::destroy($id);
         return redirect('favdetails');
     }
     public function removeall()
