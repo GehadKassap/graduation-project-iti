@@ -109,6 +109,7 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
         //
+        
         $user->update([
             "fullname"=>$request["fullname"],
             "email"=>$request["email"],

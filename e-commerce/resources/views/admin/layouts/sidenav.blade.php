@@ -60,7 +60,7 @@
                     <li class=" nav-item"><a href="{{route('products.index')}}"><i class="fas fa-tshirt icons"></i><span
                                 class="menu-title" data-i18n="">Products</span></a>
                     </li>
-                    <li class=" nav-item"><a href="admin-prmotion.html"><i class="fas fa-ad icons"></i><span
+                    <li class=" nav-item"><a href="{{route('promotion.index')}}"><i class="fas fa-ad icons"></i><span
                                 class="menu-title" data-i18n="">Promotion</span></a>
                     </li>
                     <li class=" nav-item"><a href="{{route('offers.index')}}"><i class="fas fa-hand-holding-usd icons"></i><span
@@ -90,8 +90,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <form class="search-bar">
-                        <input type="text" class="form-control" placeholder="What You Want To Find ?">
+                    <form class="search-bar" action="{{route('sidenav.store')}}">
+                        <input type="text" class="form-control typeahead" placeholder="What You Want To Find ?"name="search">
                         <a href="#"><i class="fas fa-search"></i></a>
                     </form>
                 </li>
@@ -122,6 +122,22 @@
     <script type="text/javascript" src="{{ asset('js/admin/jquery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/admin/bootstrap.bundle.js')}}"></script>
     <script type="text/javascript" src="{{ asset('js/admin/bootstrap.min.js')}}"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" /> -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+
+    <script>
+    var path="{{route('sidenav.store')}}";
+    $('input.typeahead').typeahead({
+        source: function(terms,process){
+            return $.get(path,{terms:terms},function(data){
+                return process(data);
+            });
+
+        }
+
+    });
+    </script>
 
     </body>
 

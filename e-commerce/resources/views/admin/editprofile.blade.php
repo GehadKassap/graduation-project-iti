@@ -88,10 +88,10 @@
                         <div class="author">
                           <a href="#">
                             <img class="avatar border-gray pull-up" src="{{asset('images/admin/avatar-s-12.jpg')}}" alt="...">
-                            <h5 class="title">{{session('user.fullname')}}</h5>
+                            <h5 class="title">{{session('admin.fullname')}}</h5>
                           </a>
                           <p class="description">
-                          {{session('user.email')}}
+                          {{session('admin.email')}}
                           </p>
                         </div>
                       </div>

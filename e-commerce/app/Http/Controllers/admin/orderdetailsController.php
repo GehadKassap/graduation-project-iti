@@ -17,6 +17,7 @@ class orderdetailsController extends Controller
     public function index()
     {
         //
+        return view('admin.orderdetails');
     }
 
     /**
@@ -59,23 +60,38 @@ class orderdetailsController extends Controller
      */
     public function edit(Order $order)
     {
+        
         //
-        $state=DB::table('orders')
-        ->select('orders.state')
-        ->where('orders.id','=',$order->id)
-        ->get();
-       dd($state);
-        // if($order->state=='inprogress')
-        // { 
+          // $order=DB::table('orders')
+        // ->where('id','=',$order->id)
+        // ->update([
+        //     'state'=>'deliver',
+        // ]);
+        // $order->update([
+        //     "deliver"=>$request["state"]
+
+        // ]);
+        // $order->status = 'deliver';
+        // $order->update();
+        // return redirect(route("orderdetails.index"));
+
+        //
+        //     $state=DB::table('orders')
+    //     ->select('orders.state')
+    //     ->where('orders.id','=',$order->id)
+    //     ->get();
+    //    dd($state);
+    // if($order->state=='inprogress')
+    // { 
         //     // dd($order);
         //     // // $state->state='deliver';
         //     // // // dd($state);
         //     return view('admin.orders');
         // }
-       
+        
     }
     
-
+    
     /**
      * Update the specified resource in storage.
      *
@@ -83,12 +99,38 @@ class orderdetailsController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    // public function update(Request $request, Order $order)
+    // {
+    //     //
+    //     $order->update([
+    //         "state" => "deliver"
+    //     ]);
+    //     dd($request->id);
+    //     // return redirect(route('orders.index'));
+    // }
+    public  function change(Request $request)
     {
-        //
-        
-    }
+         $order=DB::table('orders')
+        ->where('id','=',$request->id)
+        ->update([
+            'state'=>'deliver',
+         ]);
+                // dd($request->id);
+        return redirect(route('orders.index'));
 
+    }
+    public  function cancel(Request $request)
+    {
+         $order=DB::table('orders')
+        ->where('id','=',$request->id)
+        ->update([
+            'state'=>'cancel',
+         ]);
+                // dd($request->id);
+        return redirect(route('orders.index'));
+
+    }
+   
     /**
      * Remove the specified resource from storage.
      *
