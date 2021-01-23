@@ -18,8 +18,7 @@ class promotionController extends Controller
     {
         //
         $messages = DB::table('problems')->count();
-        return view('admin.layouts.sidenav',compact('messages'));
-        return view('admin.Promotion',compact('messages'));
+        return view('admin.Promotion', compact('messages'));
     }
 
     /**
