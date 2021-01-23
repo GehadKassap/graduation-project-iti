@@ -57,7 +57,7 @@
                                                     <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
                                                             <li><a href="/cartdetails">Cart</a></li>
-                                                            <li><a href="/checkout">Checkout</a></li>
+                                                            <li><a href="/favdetails">Favorite</a></li>
                                                         </ul>
                                                     </li>
 
@@ -228,7 +228,7 @@
                                     </a>
                                     <a href="#" data-toggle="tooltip" title="Add to Cart">
                                         <i class="fa fa-shopping-cart"></i>
-                                    </a> -->
+                                    </a>
                                     <a href="{{url('/details' ,[$produ->id , $produ->category])}}" data-toggle="tooltip" title="Product details">
                                         <i class="fa fa-link"></i>
                                     </a>
