@@ -34,7 +34,7 @@
                   <div class="col-md-12 usrNav py-2">
                     <ul class="navbar-nav mr-auto  ">
                         <li class="nav-item active userBorder ">
-                          <a class="nav-link" href="/checkout"><i class="fas fa-book mr-2"></i>My Orders </a>
+                          <a class="nav-link" href="/cartdetails"><i class="fas fa-book mr-2"></i>My Card </a>
                         </li>
                         <li class="nav-item active userBorder">
                           <a class="nav-link" href=""><i class="fas fa-map-marker-alt mr-2"></i>Shipping Adresses</a>

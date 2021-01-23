@@ -26,7 +26,7 @@
 									<div class="navbar-collapse">
 										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav">
-													<li class="active"><a href="home.html">Home</a></li>
+													<li class="active"><a href="/">Home</a></li>
 													<li><a href="/allcategories">Products</a></li>
 
 													<li><a href="">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>

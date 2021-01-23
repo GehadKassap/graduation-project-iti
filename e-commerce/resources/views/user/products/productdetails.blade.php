@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/css/single_product.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/resp.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/style-starter.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/comment.css') }}">
     <!-- <link rel="icon" type="..imgs/favicon.png" href="../imgs/favicon.png"> -->
     <style>
     .btnss:hover {
@@ -174,17 +175,28 @@
                             <label for="r_sum">review</label>
                             <input name="content" type="text" id="r_sum" class="c_email email" required>
                             <input name="pro_id" type="hidden" id="pro_id" value="{{$product->id}}">
-                            <button class="btnn wr_c_btn c_btn reb_btn">Sumbit</button>
+                            <button class="btnn wr_c_btn c_btn reb_btn">Add review</button>
                             <input name="pro_category" type="hidden" id="pro_cat" value="{{$product->category}}">
                         </form>
-                        @if(isset($reviews)&&!empty($reviews))
-                        @foreach($reviews as $review)
-                        <p>{{$review}}</p>
-                        @endforeach
-                        @else
-                        <p>No reviews yet</p>
-                        @endif
-                        <p>{{session('user.fullname')}}</p>
+                       <h6> <span class="font-weight-bold">{{session('user.fullname')}}&nbsp:</h6></p>
+                        <div class="container">
+                          <div class="dialogbox">
+                              <div class="body">
+                               <span class="tip tip-up"></span>
+                                    <div class="message">
+                                    @if(isset($reviews)&&!empty($reviews))
+                                      @foreach($reviews as $review)
+                                         <p>{{$review}}</p>
+                                            @endforeach
+                                               @else
+                                          <p>No reviews yet</p>
+                                              @endif
+                                 </div>
+                                    </div>
+                                        </div>
+                       
+                       
+                       
                         <p></p>
                     </div>
                 </div>
@@ -225,10 +237,18 @@
                                     <a href="" data-toggle="tooltip" title="Add to Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
+<<<<<<< HEAD
                                     <a href="{{url('/details' ,[$produ->id , $produ->category])}}" data-toggle="tooltip"
                                         title="Product details">
                                         <i class="fa fa-link"></i>
                                     </a>
+=======
+                                     <a href="{{url('/details' ,[$produ->id , $produ->category])}}"
+                                        data-toggle="tooltip" title="Product details">
+
+                                            <i class="fa fa-link"></i>
+                                        </a>
+>>>>>>> de515edf61e40492d60c59f763d96bfd16d782bb
                                 </div>
                             </div>
                         </div>

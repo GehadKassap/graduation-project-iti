@@ -31,7 +31,7 @@
                     <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table  table-hover r-0">
-                                <thead style="color: lime;background-color:slategrey;">
+                                <thead >
                                     <tr>
                                         <th>
                                             Name
@@ -49,7 +49,7 @@
                                             delete
                                         </th>
                                         <th>
-                                            Status icon
+                                           Action
                                         </th>
                                     </tr>
                                 </thead>
@@ -92,14 +92,14 @@
                                             </form>
                                         </td>
                                         <td>
-                                            <form style="text-align: center;"
+                                            <form 
                                                 action="{{route('problems.update',$problem)}}" method="POST">
                                                 @csrf
                                                 @method("put")
                                                 @if($problem['state']=='solved')
                                                 <button type="submit" class="fas fa-check"
-                                                    onMouseOver="style.color='red'" onMouseOut="style.color='green'"
-                                                    style="background-color: transparent;border: none;color:lightskyblue;"></button>
+                                                    onMouseOver="style.color='red'" onMouseOut="style.color='green'" 
+                                                    style="background-color: transparent;border: none;color:lightskyblue; "></button>
                                                 </a>
 
                                                 @else

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Http\Controllers\Controller;
+use App
+\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use DB;
@@ -20,12 +21,13 @@ class ProductController extends Controller
     public function index()
     {
         //
+        $messages = DB::table('problems')->count();
 
         $products = Product::all();
         // foreach ($products as $product) {
         //     $product["image"] = 'product_images/' . $product["image"];
         // }
-        return view('admin.products', ["products" => $products]);
+        return view('admin.products', ["products" => $products],compact('messages'));
     }
 
     /**
