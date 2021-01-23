@@ -77,7 +77,7 @@
 						</div>
 
                         </form>
-						<form action="{{route('change',$order->id)}}" method="get">
+						<form action="{{route('cancel',$order->id)}}" method="get">
                         @csrf
 						<div class="float-right">
 						<button type="submit" class="btn btn-outline-danger "><i class="fas fa-recycle"></i>cancel</button>
