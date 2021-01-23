@@ -16,7 +16,9 @@ class promotionController extends Controller
     public function index()
     {
         //
-        return view('admin.Promotion');
+        $messages = DB::table('problems')->count();
+        return view('admin.layouts.sidenav',compact('messages'));
+        return view('admin.Promotion',compact('messages'));
     }
 
     /**
