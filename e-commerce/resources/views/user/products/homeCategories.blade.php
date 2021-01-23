@@ -296,35 +296,7 @@
 			</div>
 		</div>
 </div>
-<!-- End Product Area -->
-<!-------------------for plugin slider--------->
-<div class="container py-5 ">
-	
-<div class="skitter skitter-large m-auto">
-	<ul>
-		<li>
-			 <a href="#cut"><img src="{{asset('images/1.jpg')}}" class="cut"></a>
-			<div class="label_text"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
-		</li>
-		<li>
-			<a href="#cut"><img src="{{asset('images/1.jpg')}}" class="cut"></a>
-			<div class="label_text"><p>Lorem, ipsum dolor.</p></div>
-		</li>
-		<li> 
-			<a href="#cut"><img src="{{asset('images/1.jpg')}}" class="cut"></a>
-			<div class="label_text"><p>Lorem ipsum dolor sit amet.</p></div>
-		</li>
-		<li> 
-			<a href="#cut"><img src="{{asset('images/1.jpg')}}" class="cut"></a>
-			<div class="label_text"><p>Lorem ipsum dolor sit amet.</p></div>
-		</li>
-	</ul>
 
-</div>
-</div>
-
-
-<!----------------------------------------------------->
 
 <!-- Start Midium Banner  -->
 <section class="midium-banner my-5">

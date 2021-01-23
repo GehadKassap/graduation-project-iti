@@ -52,12 +52,12 @@
                                         <div class="navbar-collapse">
                                             <div class="nav-inner">
                                                 <ul class="nav main-menu menu navbar-nav">
-                                                    <li class="active"><a href="#">Home</a></li>
+                                                    <li class="active"><a href="/">Home</a></li>
                                                     <li><a href="/allcategories">Products</a></li>
                                                     <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
                                                             <li><a href="/cartdetails">Cart</a></li>
-                                                            <li><a href="/checkout">Checkout</a></li>
+                                                            <li><a href="/favdetails">Favorite</a></li>
                                                         </ul>
                                                     </li>
 
@@ -107,7 +107,7 @@
                     <div class="single_page_content">
                         <div class="single_page_top_content">
                             <h2>{{$product->name}}</h2>
-                            <span>{{$product->price}}$</span>
+                            <span>{{$product->price}} L.E</span>
                             <p>{{$product->description}}</p>
                         </div>
                         <div class="single_page_top_middle">
@@ -238,7 +238,7 @@
                                     </a>
                                     <a href="#" data-toggle="tooltip" title="Add to Cart">
                                         <i class="fa fa-shopping-cart"></i>
-                                    </a> 
+                                    </a>
                                     <a href="{{url('/details' ,[$produ->id , $produ->category])}}" data-toggle="tooltip" title="Product details">
                                         <i class="fa fa-link"></i>
                                     </a>

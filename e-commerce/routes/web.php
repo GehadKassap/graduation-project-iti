@@ -15,12 +15,7 @@ use App\Http\Controllers\user\ProductController;
 */
 
 
-// Route::get('/', function () {
-//     return view('user.index');
-// });
-// Route::get('/home', function () {
-//     return redirect('/');
-// });
+
 Route::get('/home',[ProductController ::class,'showhomeproduct']);
 Route::get('/',[ProductController ::class,'showhomeproduct']);
 /********* our categories (show)****** */

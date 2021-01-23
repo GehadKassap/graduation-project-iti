@@ -10,39 +10,39 @@
 <body>
 
 @include("user.layouts.firstnav")
-	
+
 
         <div class="header-inner">
 			<div class="container">
 				<div class="cat-nav-head">
 					<div class="row">
 						<div class="col-lg-3">
-							
+
 						</div>
 						<div class="col-lg-9 col-12">
 							<div class="menu-area">
 								<!-- Main Menu -->
 								<nav class="navbar navbar-expand-lg">
-									<div class="navbar-collapse">	
-										<div class="nav-inner">	
+									<div class="navbar-collapse">
+										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav">
 													<li class="active"><a href="home.html">Home</a></li>
-													<li><a href="homeCategories.html">Products</a></li>												
-													<li><a href="#">Service</a></li>
-													<li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+													<li><a href="/allcategories">Products</a></li>
+
+													<li><a href="">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 														<ul class="dropdown">
-															<li><a href="card.html">Cart</a></li>
-															<li><a href="fav.html">Checkout</a></li>
+															<li><a href="/cartdetails">Cart</a></li>
+															<li><a href="/favdetails">Favorite</a></li>
 														</ul>
 													</li>
-																				
-													
-													<li><a href="contactus.html">Contact Us</a></li>
+
+
+													<li><a href="/contactus">Contact Us</a></li>
 												</ul>
 										</div>
 									</div>
 								</nav>
-								<!--/ End Main Menu -->	
+								<!--/ End Main Menu -->
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 		</div>
 		<!--/ End Header Inner -->
 	</header>
-	
+
 
     <!--/ End Slider Area -->
 	<!-- Shopping Cart -->
@@ -67,15 +67,15 @@
 								<th>NAME</th>
 								<th class="text-center">UNIT PRICE</th>
 								<th class="text-center">QUANTITY</th>
-								<th class="text-center">TOTAL</th> 
+								<th class="text-center">TOTAL</th>
 								<th class="text-center"><i class="ti-trash remove-icon"></i></th>
 							</tr>
 						</thead>
 						<tbody>
-						<?php $i=0; 
+						<?php $i=0;
 						 $subTotal=0; ?>
 						@foreach($products as $pro)
-					
+
 							<tr>
 								<td class="image" data-title="No"><img src="{{ asset('product_images/' . $pro->image)}}" alt="#"></td>
 								<td class="product-des" data-title="Description">
@@ -85,36 +85,36 @@
 								<td class="price" data-title="Price"><span>{{$pro->price}}$ </span></td>
 								<td class="qty" data-title="Qty">
 									<div class="input-group">
-									
+
 										<div class="button minus" style="margin-top:10px;margin-left:10px;">
-									
+
 										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/1')}}">+</a>
 										</div>
-										
+
 										<input type="text" name="quant[1]" class="input-number"  data-minn="1" data-max="100" value="{{$card[$i]['cquantity']}}">
-									
-								
+
+
 										<div class="button plus" style="margin-top:10px;margin-right:10px;">
 										<a href="{{url('/cartdetails/'.$card[$i]['id'].'/-1')}}">-</a>
 										</div>
-								
+
 									</div>
 									<!--/ End Input Order -->
 								</td>
 								<td class="total-amount" data-title="Total"><span>{{$pro->price * $card[$i]['cquantity']}}$</span></td>
-								
+
 								<td class="action" data-title="Remove"><a href="removecart/{{$card[$i]['id']}}"><i class="ti-trash remove-icon"></i></a></td>
 							</tr>
-							
+
 							<?php
-							
-								
+
+
 								 $subTotal=$subTotal+($pro->price * $card[$i]['cquantity']);
-								 
-							$i++; 
+
+							$i++;
 							?>
 							@endforeach
-							
+
 							<!-- <tr>
 								<td class="image" data-title="No"><img src="https://via.placeholder.com/100x100" alt="#"></td>
 								<td class="product-des" data-title="Description">
@@ -218,7 +218,7 @@
 		</div>
 	</div>
 	<!--/ End Shopping Cart -->
-			
+
 	<!-- Start Shop Services Area  -->
 	<section class="shop-services section">
 		<div class="container">
@@ -263,7 +263,7 @@
 		</div>
 	</section>
 	<!-- End Shop Newsletter -->
-	
+
 	<!-- Start Shop Newsletter  -->
 	<section class="shop-newsletter section">
 		<div class="container">
@@ -286,6 +286,6 @@
 		</div>
 	</section>
 	<!-- End Shop Newsletter -->
-	@include("user.layouts.footer") 
+	@include("user.layouts.footer")
 </body>
 </html>

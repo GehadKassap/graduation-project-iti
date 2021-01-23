@@ -10,7 +10,7 @@
              <div class="card-body">
              <h5 class="card-title">{{$item->name}}</h5>
               <p class="card-text my-2">{{$item->description}}</p>
-             <a  style="color: white; border:none; border-radius:3px;" href="{{url('/details' ,$item->id)}}" class="btn btn-primary ml-3">Show Details</a>
+             <a  style="color: white; border:none; border-radius:3px;" href="{{url('/details' ,[$item->id , $item->category])}}" class="btn btn-primary ml-3">Show Details</a>
              </div>
            </div>
         </div>

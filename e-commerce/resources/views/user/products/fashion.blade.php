@@ -52,11 +52,11 @@ fashion
 															<form action="fashionfav" method="POST">
 														        @csrf
 														       <input type="hidden" name="product_id" value ="{{$pro['id']}}">
-															   <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span ><a href="{{url('/details' ,$pro->id)}}">Quick Shop</a></span></a>
+															   <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><span ><a href="{{url('/details' ,[$pro->id , $pro->category])}}">Quick Shop</a></span></a>
 														     	<button><i class=" ti-heart "></i></button>
 														     	<input type="hidden" name="quantity" value ="{{$pro['quantity']}}">
 														 </form>
-															<!-- <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a> -->
+
 														</div>
 														<div class="product-action-2">
 														<form action="fashioncart" method="POST">
