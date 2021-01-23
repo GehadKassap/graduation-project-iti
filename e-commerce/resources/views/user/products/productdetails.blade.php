@@ -52,7 +52,7 @@
                                         <div class="navbar-collapse">
                                             <div class="nav-inner">
                                                 <ul class="nav main-menu menu navbar-nav">
-                                                    <li class="active"><a href="#">Home</a></li>
+                                                    <li class="active"><a href="/">Home</a></li>
                                                     <li><a href="/allcategories">Products</a></li>
                                                     <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
@@ -107,7 +107,7 @@
                     <div class="single_page_content">
                         <div class="single_page_top_content">
                             <h2>{{$product->name}}</h2>
-                            <span>{{$product->price}}$</span>
+                            <span>{{$product->price}} L.E</span>
                             <p>{{$product->description}}</p>
                         </div>
                         <div class="single_page_top_middle">
