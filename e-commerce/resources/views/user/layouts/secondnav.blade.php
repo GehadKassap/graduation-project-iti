@@ -24,7 +24,7 @@
 										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav">
 													<li class="active"><a href="home.html">Home</a></li>
-													<li><a href="homeCategories.html">Products</a></li>
+													<li><a href="/allcategories">Products</a></li>
 
 													<li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 														<ul class="dropdown">

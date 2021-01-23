@@ -152,7 +152,7 @@
 						<div class="product-img">
 							<a href="{{url('/details' ,[$pro->id  , $pro->category])}}">
 								<img class="default-img" src="{{ asset('product_images/' . $pro->image)}}" alt="#">
-								<!-- <img class="hover-img" src="{{asset('images/category/subbanner2.jpg')}}" alt="#"> -->
+								
 							</a>
 							<div class="button-head">
 								<div class="product-action">

@@ -125,8 +125,18 @@
 
                         <div class="single_page_footer row">
 
-                            <a style="color: gray; border:none; border-radius:3px;" href="/cart" class="add_btn ">add to cart</a>
-                            <a style="color: gray; border:none; border-radius:3px; " href="/favorite" class="add_btn">whishlist</a>
+                        <form action="/singlecart" method="POST">
+										@csrf
+										<input type="hidden" name="product_id" value ="{{$product->id}}">
+										<button class="made">Add to cart</button>
+											<input type="hidden" name="quantity" value ="{{$product->quantity}}">
+										</form>
+                                        <form action="/singlefav" method="POST">
+										@csrf
+										<input type="hidden" name="product_id" value ="{{$product->id}}">
+										<button class="made">Add To Wishlist</button>
+											<input type="hidden" name="quantity" value ="{{$product->quantity}}">
+										</form>
 
                         </div>
                     </div>
