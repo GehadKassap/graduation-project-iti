@@ -296,7 +296,7 @@
 			</div>
 		</div>
 </div>
-<!-- End Product Area -->
+
 
 <!-- Start Midium Banner  -->
 <section class="midium-banner my-5">
