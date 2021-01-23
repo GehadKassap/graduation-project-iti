@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models;
+use App\Models\Product;
 use Illuminate\Http\Request;
-use DB;
-class sidenavController extends Controller
+
+class promotionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,18 +16,8 @@ class sidenavController extends Controller
     public function index()
     {
         //
-        $messages = DB::table('problems')->count();
-        return view('admin.layouts.sidenav',compact('messages'));
-
+        return view('admin.Promotion');
     }
-    // public function search(Request $request){
-    //     $data = DB::table('Products')
-    //     ->select('name')
-    //     ->where("name","LIKE","%{$request->terms}%")
-    //     ->get();
-    //     return response()->json($data);
-
-    // }
 
     /**
      * Show the form for creating a new resource.
@@ -48,21 +38,15 @@ class sidenavController extends Controller
     public function store(Request $request)
     {
         //
-        $data = DB::table('Products')
-        ->select('name')
-        ->where('name','LIKE','%'.$request->terms.'%')
-        ->get();
-        return view('admin.products', ['searchItems' => $data]);
-        // dd($data);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Product $product)
     {
         //
     }
@@ -70,10 +54,10 @@ class sidenavController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Product $product)
     {
         //
     }
@@ -82,10 +66,10 @@ class sidenavController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -93,10 +77,10 @@ class sidenavController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Product $product)
     {
         //
     }
