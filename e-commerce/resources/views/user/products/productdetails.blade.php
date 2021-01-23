@@ -178,31 +178,32 @@
                             <button class="btnn wr_c_btn c_btn reb_btn">Add review</button>
                             <input name="pro_category" type="hidden" id="pro_cat" value="{{$product->category}}">
                         </form>
-                       <h6> <span class="font-weight-bold">{{session('user.fullname')}}&nbsp:</h6></p>
+                        <h6> <span class="font-weight-bold">{{session('user.fullname')}}&nbsp:</h6>
+                        </p>
                         <div class="container">
-                          <div class="dialogbox">
-                              <div class="body">
-                               <span class="tip tip-up"></span>
+                            <div class="dialogbox">
+                                <div class="body">
+                                    <span class="tip tip-up"></span>
                                     <div class="message">
-                                    @if(isset($reviews)&&!empty($reviews))
-                                      @foreach($reviews as $review)
-                                         <p>{{$review}}</p>
-                                            @endforeach
-                                               @else
-                                          <p>No reviews yet</p>
-                                              @endif
-                                 </div>
+                                        @if(isset($reviews)&&!empty($reviews))
+                                        @foreach($reviews as $review)
+                                        <p>{{$review}}</p>
+                                        @endforeach
+                                        @else
+                                        <p>No reviews yet</p>
+                                        @endif
                                     </div>
-                                        </div>
-                       
-                       
-                       
-                        <p></p>
-                    </div>
-                </div>
+                                </div>
+                            </div>
 
+
+
+                            <p></p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
     </section>
     <!-- table area end -->
 
@@ -237,11 +238,11 @@
                                     <a href="" data-toggle="tooltip" title="Add to Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
-                                     <a href="{{url('/details' ,[$produ->id , $produ->category])}}"
-                                        data-toggle="tooltip" title="Product details">
+                                    <a href="{{url('/details' ,[$produ->id , $produ->category])}}" data-toggle="tooltip"
+                                        title="Product details">
 
-                                            <i class="fa fa-link"></i>
-                                        </a>
+                                        <i class="fa fa-link"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
