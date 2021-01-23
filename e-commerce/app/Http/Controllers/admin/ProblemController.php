@@ -20,7 +20,7 @@ class ProblemController extends Controller
         $messages = DB::table('problems')->count();
 
         $problems = Problem::all();
-        return view('admin.support', ["problems" => $problems],compact('messages'));
+        return view('admin.support', ["problems" => $problems], compact('messages'));
     }
 
     /**
