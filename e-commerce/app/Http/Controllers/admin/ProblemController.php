@@ -51,7 +51,7 @@ class ProblemController extends Controller
             "message" => $request["message"],
             "state" => 'not solved',
         ]);
-        return redirect(route('problems.index'));
+        return view('user.products.successcontact');
     }
 
     /**
