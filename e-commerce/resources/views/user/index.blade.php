@@ -46,7 +46,7 @@
                                                     <li><a >Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
                                                             <li><a href="/cartdetails">Cart</a></li>
-                                                            <li><a href="/checkout">Checkout</a></li>
+                                                            <li><a href="/favdetails">Favorite</a></li>
                                                         </ul>
                                                     </li>
 
