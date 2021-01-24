@@ -8,6 +8,8 @@ use App\Models\Card;
 use App\Models\Fav;
 use App\Models\Review;
 use App\Models\Order;
+use App\Models\Productorder;
+
 
 
 
@@ -304,14 +306,46 @@ class ProductController extends Controller
     function showCheckout(request $req)
     {
         $userid = Session::get('user')['id'];
+       
         $orderr = new Order;
         $orderr->sub_total = $req['sub_total'];
         $orderr->total = $req['total'];
         $orderr->user_id = $userid;
         $orderr->quantity = $req['qty'];
+        
+        
         $orderr->save();
-
-
+        
+        $orderId = DB::getPdo()->lastInsertId();
+        
+        // dd($orderId);
+        $getproductid=DB::table('cards')
+        ->select('cards.pro_id')
+        ->where('user_id','=',$userid)
+        ->get();
+        $productidconvert=json_decode($getproductid,true);
+        for($i=0;$i<count($productidconvert);$i++){
+            $orderfk=new Productorder;
+            $orderfk->order_id =$orderId;
+            $orderfk->pro_id =$productidconvert[$i]['pro_id'];
+            $orderfk->quantity =$req['qty'];
+            $orderfk->save();
+        }
+        // dd($orderidconvert);
+        
+        // $getorderid=DB::table('orders')
+        // ->select('orders.id')
+        // ->where('user_id','=',$userid)
+        // ->get();
+        // $orderidconvert=json_decode($getorderid,true);
+        // dd($orderidconvert);
+        // $orderid=$orderidconvert[0]['id'];
+        // dd($orderid);
+        
+        // $productid=$productidconvert[0]['pro_id'];
+        // // dd($productid);
+        
+        
         $order = array("sub_total" => $req['sub_total'], "total" => $req['total'], "quantity" => $req['qty']);
 
         return view('user.products.checkout', ['order' => $order]);
