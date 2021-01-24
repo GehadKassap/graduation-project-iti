@@ -20,7 +20,7 @@
         <div class="container-fluid">
           <div class="row ">
             <div class="col-6 mt-3 mb-3">
-              <h3>Admin Profile</h3>
+              <h3>{{session('admin.fullname')}} Profile</h3>
             </div>
           </div>
 
@@ -36,19 +36,19 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="ttl-info text-left">
-                        <h6><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;Email</h6><span>{{session('user.email')}}</span>
+                        <h6><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;Email</h6><span>{{session('admin.email')}}</span>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="ttl-info text-left">
-                        <h6><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Hire Date</h6><span>{{session('user.created_at')}}</span>
+                        <h6><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Hire Date</h6><span>{{session('admin.created_at')}}</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-12 col-lg-4 order-sm-0 order-xl-1">
                   <div class="user-designation">
-                    <div class="title"><a target="_blank" href="#" data-original-title="" title="">{{session('user.fullname')}}</a></div>
+                    <div class="title"><a target="_blank" href="#" data-original-title="" title="">{{session('admin.fullname')}}</a></div>
                     <div class="desc mt-2">designer</div>
                   </div>
                 </div>
@@ -56,12 +56,12 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="ttl-info text-left">
-                        <h6><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;Contact Us</h6><span>EGYPT {{session('user.phone')}}</span>
+                        <h6><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;Contact Us</h6><span>EGYPT {{session('admin.phone')}}</span>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="ttl-info text-left">
-                        <h6><i class="fa fa-location-arrow"></i>&nbsp;&nbsp;&nbsp;Location</h6><span>{{session('user.address')}}</span>
+                        <h6><i class="fa fa-location-arrow"></i>&nbsp;&nbsp;&nbsp;Location</h6><span>{{session('admin.address')}}</span>
                       </div>
                     </div>
                   </div>

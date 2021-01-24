@@ -115,6 +115,8 @@
                                 <td>
                                 @if($order->state =='deliver')
                                     <button type="button" class="btn btn-sm btn-outline-primary round">{{$order->state}}</button>
+                                @elseif($order->state=='cancel')
+                                <button type="button" class="btn btn-sm btn-outline-danger round">{{$order->state}}</button>
                                 @else
                                 <button type="button" class="btn btn-sm btn-outline-warning round">{{$order->state}}</button>
                                 @endif

@@ -13,7 +13,7 @@ class CreateProblemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('problems', function (Blueprint $table) {
+        Schema::create('problems', function (Blueprint $table) { 
             $table->id();
             $table->string('name', 500);
             $table->string('subject', 500)->nullable();

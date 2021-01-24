@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\admin\orderdetailsController;
+
 use App\Http\Controllers\admin;
 
 /*
@@ -39,6 +41,14 @@ Route::resource("admin/editprofile", admin\editprofileController::class);
 Route::resource("admin/offers", admin\offersController::class);
 Route::resource("admin/orders", admin\ordersController::class);
 Route::resource("admin/orderdetails", admin\orderdetailsController::class);
+Route::resource("admin/sidenav", admin\sidenavController::class);
+Route::resource("admin/promotion", admin\promotionController::class);
+
+Route::get("/change/{id}",[orderdetailsController::class, 'change'])->name('change');
+Route::get("/cancel/{id}",[orderdetailsController::class, 'cancel'])->name('cancel');
+
+
+
 
 
 
